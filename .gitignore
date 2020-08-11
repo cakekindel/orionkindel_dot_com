@@ -1,5 +1,5 @@
 *.bs.js
-node_modules
+**/node_modules
 
 *.exe
 *.obj
