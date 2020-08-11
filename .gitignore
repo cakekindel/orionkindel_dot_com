@@ -1,5 +1,6 @@
 bundleOutput
 index*.html
+*.bs.js
 **/node_modules
 
 *.exe
