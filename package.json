@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "scripts": {
     "build": "bsb -make-world",
-    "build:pub": "npm run build:re && npm run build:index && npm run build:bundle",
+    "build:pub": "npm run build:re && npm run build:bundle",
     "build:re": "npm run build",
-    "build:index": "rm index.html && mv indexProduction.html index.html",
     "build:bundle": "webpack-cli",
     "start": "bsb -make-world -w -ws _ ",
     "clean": "bsb -clean-world",
