@@ -1,19 +1,21 @@
 {
   "name": "orionkindel_dot_com",
-  "version": "0.1.0",
+  "reason": {
+    "react-jsx": 3
+  },
   "sources": {
     "dir" : "src",
     "subdirs" : true
   },
-  "package-specs": {
+  "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
+  "package-specs": [{
     "module": "commonjs",
     "in-source": true
-  },
+  }],
   "suffix": ".bs.js",
+  "namespace": true,
   "bs-dependencies": [
+    "reason-react"
   ],
-  "warnings": {
-    "error" : "+101"
-  },
   "refmt": 3
 }
