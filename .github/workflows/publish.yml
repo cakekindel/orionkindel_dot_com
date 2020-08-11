@@ -20,5 +20,5 @@ jobs:
         restore-keys: ${{runner.os}}-node-
     - run: npm ci
     - run: npm run build
-    - run: npm run prepublish
+    - run: npm run prepublishOnly
     # push to origin/hostme
