@@ -2,7 +2,10 @@
 
 module DummyComponent = {
   [@react.component]
-  let make = () => <div><h2>{React.string("Hello, World!")}</h2></div>;
+  let make = () =>
+    <div>
+      <h2>{React.string("Hello, World!")}</h2>
+    </div>;
 };
 
 let component = text =>
