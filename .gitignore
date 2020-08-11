@@ -1,3 +1,5 @@
+bundleOutput
+index*.html
 **/node_modules
 
 *.exe
