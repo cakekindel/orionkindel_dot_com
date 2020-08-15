@@ -21,7 +21,7 @@ jobs:
     - run: npm ci
     - run: npm run build:pub
     - run: git fetch --all
-    - run: git switch origin hostme
+    - run: git switch hostme
     - run: git add -A
     - run: git commit -m 'published'
     - run: git push
