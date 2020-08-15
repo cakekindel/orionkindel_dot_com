@@ -20,4 +20,7 @@ jobs:
         restore-keys: ${{runner.os}}-node-
     - run: npm ci
     - run: npm run build:pub
-    # push to origin/hostme
+    - run: git switch hostme
+    - run: git add -A
+    - run: git commit -m 'published'
+    - run: git push
