@@ -1,3 +1,5 @@
+bundleOutput
+*.bs.js
 **/node_modules
 
 *.exe

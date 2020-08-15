@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "scripts": {
     "build": "bsb -make-world",
+    "build:pub": "npm run build:re && npm run build:bundle",
+    "build:re": "npm run build",
+    "build:bundle": "webpack-cli",
     "start": "bsb -make-world -w -ws _ ",
     "clean": "bsb -clean-world",
     "server": "moduleserve ./ --port 8000",
@@ -18,7 +21,8 @@
   "dependencies": {
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "reason-react": ">=0.7.1"
+    "reason-react": ">=0.7.1",
+    "reprocessing": "^1.0.0"
   },
   "devDependencies": {
     "bs-platform": "^8.2.0",
