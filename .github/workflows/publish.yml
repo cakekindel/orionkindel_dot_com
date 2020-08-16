@@ -28,5 +28,5 @@ jobs:
     - run: git merge --strategy-option=ours
     - run: git commit -m 'merge master'
     - run: git add -A
-    - run: git commit -m 'ci: publish'
+    - run: "git commit -m 'ci: publish'"
     - run: git push
