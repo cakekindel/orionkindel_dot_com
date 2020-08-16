@@ -1,0 +1,19 @@
+[package]
+name = "flow_field"
+version = "0.1.0"
+authors = ["Orion Kindel <cakekindel@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+noise = "0.6.0"
+nalgebra = "0.21.1"
+rand = "0.7.3"
+wasm-bindgen = { version = "0.2", features = ["serde-serialize"] }
+js-sys = "0.3.44"
+serde = { version = "1.0.115", features = ["derive"] }
+console_error_panic_hook = "0.1.6"

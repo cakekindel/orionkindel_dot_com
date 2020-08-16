@@ -1,41 +1,52 @@
 open React;
 open Reprocessing;
 
+let drawParticle = (env, par: FlowField.particle) => {
+  Draw.linef(
+    ~p1=(par.pos.x, par.pos.y),
+    ~p2=(par.pos_prev.x, par.pos_prev.y),
+    env
+  );
+  ();
+};
+
+let rendered = ref(false);
+
 let renderReprocessing = () => {
-  setScreenId("canvas");
-  let setup = env => {
-    Env.size(~width=1000, ~height=200, env);
-    0.
-  };
+  let _ = FlowField.init()
+    |> Js.Promise.then_((flowField: FlowField.flowFieldModule) => {
 
-  let draw = (x, env) => {
-    let rect = Draw.rect(~width=2, ~height=2, env);
-    let incArray = size => Array.make(size, ())
-      |> Array.mapi((ix, _) => ix);
+      setScreenId("canvas");
+      let setup = env => {
+        let width = 2000;
+        let height = 1000;
+        Env.size(~width, ~height, env);
+        Draw.background(Constants.white, env);
+        flowField.setup(width, height);
+      };
 
-    Draw.background(Constants.black, env);
-    Draw.fill(Constants.white, env);
+      let draw = (state: FlowField.state, env) => {
+        /* Draw each particle in the field */
+        Draw.strokeCap(Square, env);
+        Draw.stroke(Constants.white, env);
+        Draw.strokeWeight(1, env);
+        Array.iter(drawParticle(env), state.particles);
 
-    incArray(1000)
-      |> Array.map(ix => int_of_float(x) + ix)
-      |> Array.iter(x => {
-        incArray(100)
-          |> Array.map(y => y * 2)
-          |> Array.iter(y => rect(~pos=(x, y)))
-      })
+        flowField.tick(state);
+      };
 
-
-    Env.deltaTime(env)
-      |> t => (t *. 1.) +. x
-  };
-
-  run(~setup, ~draw, ());
+      run(~setup, ~draw, ());
+      rendered := true;
+      Js.Promise.resolve(());
+    });
 
   None;
 };
 
 [@react.component]
 let make = () => {
-  useEffect0(renderReprocessing);
+  if (!rendered^) {
+    let _ = renderReprocessing();
+  };
   <div><canvas id="canvas" /></div>;
 };

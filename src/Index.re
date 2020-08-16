@@ -1,3 +1,5 @@
+[%%raw "import('./flow_field/pkg')"]
+
 let component = text =>
   <div className="container">
     <div className="containerTitle">

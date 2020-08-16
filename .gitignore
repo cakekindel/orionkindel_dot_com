@@ -1,6 +1,8 @@
 bundleOutput
 *.bs.js
 **/node_modules
+target
+**/pkg
 
 *.exe
 *.obj
