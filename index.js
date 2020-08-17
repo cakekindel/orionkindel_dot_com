@@ -55,14 +55,11 @@
 /******/ 		"./src/flow_field/pkg/index_bg.wasm": function() {
 /******/ 			return {
 /******/ 				"./index_bg.js": {
-/******/ 					"__wbindgen_json_parse": function(p0i32,p1i32) {
-/******/ 						return installedModules["./src/flow_field/pkg/index_bg.js"].exports["__wbindgen_json_parse"](p0i32,p1i32);
-/******/ 					},
-/******/ 					"__wbindgen_json_serialize": function(p0i32,p1i32) {
-/******/ 						return installedModules["./src/flow_field/pkg/index_bg.js"].exports["__wbindgen_json_serialize"](p0i32,p1i32);
-/******/ 					},
 /******/ 					"__wbg_log_975a12305b88c99f": function(p0i32,p1i32) {
 /******/ 						return installedModules["./src/flow_field/pkg/index_bg.js"].exports["__wbg_log_975a12305b88c99f"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbindgen_number_new": function(p0f64) {
+/******/ 						return installedModules["./src/flow_field/pkg/index_bg.js"].exports["__wbindgen_number_new"](p0f64);
 /******/ 					},
 /******/ 					"__wbindgen_object_drop_ref": function(p0i32) {
 /******/ 						return installedModules["./src/flow_field/pkg/index_bg.js"].exports["__wbindgen_object_drop_ref"](p0i32);
@@ -75,6 +72,12 @@
 /******/ 					},
 /******/ 					"__wbg_stack_558ba5917b466edd": function(p0i32,p1i32) {
 /******/ 						return installedModules["./src/flow_field/pkg/index_bg.js"].exports["__wbg_stack_558ba5917b466edd"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbg_of_949c33f61193cb77": function(p0i32,p1i32,p2i32,p3i32) {
+/******/ 						return installedModules["./src/flow_field/pkg/index_bg.js"].exports["__wbg_of_949c33f61193cb77"](p0i32,p1i32,p2i32,p3i32);
+/******/ 					},
+/******/ 					"__wbg_apply_e7d7fd46ecc6760a": function(p0i32,p1i32,p2i32) {
+/******/ 						return installedModules["./src/flow_field/pkg/index_bg.js"].exports["__wbg_apply_e7d7fd46ecc6760a"](p0i32,p1i32,p2i32);
 /******/ 					},
 /******/ 					"__wbg_random_5af91a0f7daf1188": function() {
 /******/ 						return installedModules["./src/flow_field/pkg/index_bg.js"].exports["__wbg_random_5af91a0f7daf1188"]();
@@ -183,7 +186,7 @@
 /******/ 				promises.push(installedWasmModuleData);
 /******/ 			else {
 /******/ 				var importObject = wasmImportObjects[wasmModuleId]();
-/******/ 				var req = fetch(__webpack_require__.p + "" + {"./src/flow_field/pkg/index_bg.wasm":"c9092dedac9a745b2781"}[wasmModuleId] + ".module.wasm");
+/******/ 				var req = fetch(__webpack_require__.p + "" + {"./src/flow_field/pkg/index_bg.wasm":"ea81a34eb823bdb8a5ae"}[wasmModuleId] + ".module.wasm");
 /******/ 				var promise;
 /******/ 				if(importObject instanceof Promise && typeof WebAssembly.compileStreaming === 'function') {
 /******/ 					promise = Promise.all([WebAssembly.compileStreaming(req), importObject]).then(function(items) {
@@ -1183,7 +1186,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"init\", function() { return init; });\n\n\n\nfunction init(param) {\n  return (__webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./flow_field/pkg */ \"./src/flow_field/pkg/index.js\")));\n}\n\n\n/* No side effect */\n\n\n//# sourceURL=webpack:///./src/FlowField.bs.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"init\", function() { return init; });\n\n\n\nfunction init() {\n  return (__webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./flow_field/pkg */ \"./src/flow_field/pkg/index.js\")));\n}\n\n\n/* No side effect */\n\n\n//# sourceURL=webpack:///./src/FlowField.bs.js?");
 
 /***/ }),
 
@@ -1199,15 +1202,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./src/Infix.bs.js":
+/*!*************************!*\
+  !*** ./src/Infix.bs.js ***!
+  \*************************/
+/*! exports provided: $neg$less$neg */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"$neg$less$neg\", function() { return $neg$less$neg; });\n/* harmony import */ var bs_platform_lib_es6_curry_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bs-platform/lib/es6/curry.js */ \"./node_modules/bs-platform/lib/es6/curry.js\");\n\n\n\n\nfunction $neg$less$neg(a, fn) {\n  bs_platform_lib_es6_curry_js__WEBPACK_IMPORTED_MODULE_0__[\"_1\"](fn, a);\n  return a;\n}\n\n\n/* No side effect */\n\n\n//# sourceURL=webpack:///./src/Infix.bs.js?");
+
+/***/ }),
+
 /***/ "./src/ReprocessingDemo.bs.js":
 /*!************************************!*\
   !*** ./src/ReprocessingDemo.bs.js ***!
   \************************************/
-/*! exports provided: drawParticle, rendered, renderReprocessing, make */
+/*! exports provided: canvasId, to_float_rgb, bg_color, fg_color, render, make */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"drawParticle\", function() { return drawParticle; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"rendered\", function() { return rendered; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"renderReprocessing\", function() { return renderReprocessing; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"make\", function() { return make; });\n/* harmony import */ var bs_platform_lib_es6_array_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bs-platform/lib/es6/array.js */ \"./node_modules/bs-platform/lib/es6/array.js\");\n/* harmony import */ var bs_platform_lib_es6_curry_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bs-platform/lib/es6/curry.js */ \"./node_modules/bs-platform/lib/es6/curry.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var reprocessing_src_Reprocessing_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reprocessing/src/Reprocessing.js */ \"./node_modules/reprocessing/src/Reprocessing.js\");\n/* harmony import */ var reprocessing_src_Reprocessing_Env_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reprocessing/src/Reprocessing_Env.js */ \"./node_modules/reprocessing/src/Reprocessing_Env.js\");\n/* harmony import */ var reprocessing_src_Reprocessing_Draw_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reprocessing/src/Reprocessing_Draw.js */ \"./node_modules/reprocessing/src/Reprocessing_Draw.js\");\n/* harmony import */ var reprocessing_src_Reprocessing_Constants_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reprocessing/src/Reprocessing_Constants.js */ \"./node_modules/reprocessing/src/Reprocessing_Constants.js\");\n/* harmony import */ var _FlowField_bs_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FlowField.bs.js */ \"./src/FlowField.bs.js\");\n\n\n\n\n\n\n\n\n\n\n\nfunction drawParticle(env, par) {\n  reprocessing_src_Reprocessing_Draw_js__WEBPACK_IMPORTED_MODULE_5__[\"linef\"]([\n        par.pos.x,\n        par.pos.y\n      ], [\n        par.pos_prev.x,\n        par.pos_prev.y\n      ], env);\n  \n}\n\nvar rendered = {\n  contents: false\n};\n\nfunction renderReprocessing(param) {\n  _FlowField_bs_js__WEBPACK_IMPORTED_MODULE_7__[\"init\"](undefined).then(function (flowField) {\n        reprocessing_src_Reprocessing_js__WEBPACK_IMPORTED_MODULE_3__[\"setScreenId\"](\"canvas\");\n        var setup = function (env) {\n          reprocessing_src_Reprocessing_Env_js__WEBPACK_IMPORTED_MODULE_4__[\"size\"](2000, 1000, env);\n          reprocessing_src_Reprocessing_Draw_js__WEBPACK_IMPORTED_MODULE_5__[\"background\"](reprocessing_src_Reprocessing_Constants_js__WEBPACK_IMPORTED_MODULE_6__[\"white\"], env);\n          return bs_platform_lib_es6_curry_js__WEBPACK_IMPORTED_MODULE_1__[\"_2\"](flowField.setup, 2000, 1000);\n        };\n        var draw = function (state, env) {\n          reprocessing_src_Reprocessing_Draw_js__WEBPACK_IMPORTED_MODULE_5__[\"strokeCap\"](/* Square */1, env);\n          reprocessing_src_Reprocessing_Draw_js__WEBPACK_IMPORTED_MODULE_5__[\"stroke\"](reprocessing_src_Reprocessing_Constants_js__WEBPACK_IMPORTED_MODULE_6__[\"white\"], env);\n          reprocessing_src_Reprocessing_Draw_js__WEBPACK_IMPORTED_MODULE_5__[\"strokeWeight\"](1, env);\n          bs_platform_lib_es6_array_js__WEBPACK_IMPORTED_MODULE_0__[\"iter\"]((function (param) {\n                  return drawParticle(env, param);\n                }), state.particles);\n          return bs_platform_lib_es6_curry_js__WEBPACK_IMPORTED_MODULE_1__[\"_1\"](flowField.tick, state);\n        };\n        reprocessing_src_Reprocessing_js__WEBPACK_IMPORTED_MODULE_3__[\"run\"](setup, undefined, draw, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined);\n        rendered.contents = true;\n        return Promise.resolve(undefined);\n      });\n  \n}\n\nfunction ReprocessingDemo(Props) {\n  if (!rendered.contents) {\n    renderReprocessing(undefined);\n  }\n  return react__WEBPACK_IMPORTED_MODULE_2__[\"createElement\"](\"div\", undefined, react__WEBPACK_IMPORTED_MODULE_2__[\"createElement\"](\"canvas\", {\n                  id: \"canvas\"\n                }));\n}\n\nvar make = ReprocessingDemo;\n\n\n/* react Not a pure module */\n\n\n//# sourceURL=webpack:///./src/ReprocessingDemo.bs.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"canvasId\", function() { return canvasId; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"to_float_rgb\", function() { return to_float_rgb; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"bg_color\", function() { return bg_color; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"fg_color\", function() { return fg_color; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"make\", function() { return make; });\n/* harmony import */ var bs_platform_lib_es6_curry_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bs-platform/lib/es6/curry.js */ \"./node_modules/bs-platform/lib/es6/curry.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var reprocessing_src_Reprocessing_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reprocessing/src/Reprocessing.js */ \"./node_modules/reprocessing/src/Reprocessing.js\");\n/* harmony import */ var reprocessing_src_Reprocessing_Env_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reprocessing/src/Reprocessing_Env.js */ \"./node_modules/reprocessing/src/Reprocessing_Env.js\");\n/* harmony import */ var reprocessing_src_Reprocessing_Draw_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reprocessing/src/Reprocessing_Draw.js */ \"./node_modules/reprocessing/src/Reprocessing_Draw.js\");\n/* harmony import */ var _Infix_bs_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Infix.bs.js */ \"./src/Infix.bs.js\");\n/* harmony import */ var _FlowField_bs_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FlowField.bs.js */ \"./src/FlowField.bs.js\");\n\n\n\n\n\n\n\n\n\n\nvar canvasId = \"canvas\";\n\nfunction to_float_rgb(n) {\n  return n / 255;\n}\n\nvar bg_color_r = 67 / 255;\n\nvar bg_color_g = 35 / 255;\n\nvar bg_color_b = 113 / 255;\n\nvar bg_color = {\n  r: bg_color_r,\n  g: bg_color_g,\n  b: bg_color_b,\n  a: 1\n};\n\nvar fg_color_r = 250 / 255;\n\nvar fg_color_g = 174 / 255;\n\nvar fg_color_b = 123 / 255;\n\nvar fg_color = {\n  r: fg_color_r,\n  g: fg_color_g,\n  b: fg_color_b,\n  a: 1\n};\n\nfunction render(param) {\n  _FlowField_bs_js__WEBPACK_IMPORTED_MODULE_6__[\"init\"]().then(function (flowField) {\n        reprocessing_src_Reprocessing_js__WEBPACK_IMPORTED_MODULE_2__[\"setScreenId\"](canvasId);\n        var setup = function (env) {\n          _Infix_bs_js__WEBPACK_IMPORTED_MODULE_5__[\"$neg$less$neg\"](_Infix_bs_js__WEBPACK_IMPORTED_MODULE_5__[\"$neg$less$neg\"](_Infix_bs_js__WEBPACK_IMPORTED_MODULE_5__[\"$neg$less$neg\"](_Infix_bs_js__WEBPACK_IMPORTED_MODULE_5__[\"$neg$less$neg\"](env, (function (param) {\n                              return reprocessing_src_Reprocessing_Env_js__WEBPACK_IMPORTED_MODULE_3__[\"size\"](1500, 1000, param);\n                            })), (function (param) {\n                          return reprocessing_src_Reprocessing_Draw_js__WEBPACK_IMPORTED_MODULE_4__[\"stroke\"](fg_color, param);\n                        })), (function (param) {\n                      return reprocessing_src_Reprocessing_Draw_js__WEBPACK_IMPORTED_MODULE_4__[\"strokeCap\"](/* Round */0, param);\n                    })), (function (param) {\n                  return reprocessing_src_Reprocessing_Draw_js__WEBPACK_IMPORTED_MODULE_4__[\"strokeWeight\"](3, param);\n                }));\n          return flowField.setup(1500, 1000);\n        };\n        var draw = function (param, env) {\n          reprocessing_src_Reprocessing_Draw_js__WEBPACK_IMPORTED_MODULE_4__[\"background\"](bg_color, env);\n          return flowField.tick(function (posX, posY, prevPosX, prevPosY) {\n                      var p1 = [\n                        posX,\n                        posY\n                      ];\n                      var p2 = [\n                        prevPosX,\n                        prevPosY\n                      ];\n                      reprocessing_src_Reprocessing_Draw_js__WEBPACK_IMPORTED_MODULE_4__[\"linef\"](p1, p2, env);\n                      \n                    });\n        };\n        reprocessing_src_Reprocessing_js__WEBPACK_IMPORTED_MODULE_2__[\"run\"](setup, undefined, draw, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined);\n        return Promise.resolve(undefined);\n      });\n  \n}\n\nfunction ReprocessingDemo(Props) {\n  var match = react__WEBPACK_IMPORTED_MODULE_1__[\"useState\"](function () {\n        return false;\n      });\n  if (!match[0]) {\n    render(undefined);\n    bs_platform_lib_es6_curry_js__WEBPACK_IMPORTED_MODULE_0__[\"_1\"](match[1], (function (param) {\n            return true;\n          }));\n  }\n  return react__WEBPACK_IMPORTED_MODULE_1__[\"createElement\"](\"div\", undefined, react__WEBPACK_IMPORTED_MODULE_1__[\"createElement\"](\"canvas\", {\n                  id: \"canvas\"\n                }));\n}\n\nvar make = ReprocessingDemo;\n\n\n/* react Not a pure module */\n\n\n//# sourceURL=webpack:///./src/ReprocessingDemo.bs.js?");
 
 /***/ })
 
