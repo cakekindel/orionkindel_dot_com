@@ -28,4 +28,4 @@ jobs:
     - run: "git add -A"
     - run: "git commit -m 'ci: publish'"
     # https://stackoverflow.com/questions/36782467/set-subdirectory-as-website-root-on-github-pages
-    - run: "git subtree --prefix dist origin hostme"
+    - run: "git subtree push --prefix dist origin hostme"
