@@ -1,4 +1,3 @@
-use serde::{Deserialize, Serialize};
 use wasm_bindgen::prelude::*;
 use js_sys::Math::random as js_random;
 
@@ -11,34 +10,37 @@ use state::State;
 
 #[wasm_bindgen]
 extern "C" {
-    // Use `js_namespace` here to bind `console.log(..)` instead of just
-    // `log(..)`
     #[wasm_bindgen(js_namespace = console)]
     fn log(s: &str);
 }
 
+// TODO: should this be a mutex?
+static mut STATE: Option<State> = None;
+
 #[wasm_bindgen]
-pub fn setup(win_w: i16, win_h: i16) -> JsValue {
+pub fn setup(win_w: i16, win_h: i16) -> () {
     console_error_panic_hook::set_once();
 
     let state = State::new(win_w, win_h);
-    JsValue::from_serde(&state)
-        .expect("failed to serialize State")
+
+    unsafe { STATE = Some(state); }
+
+    log(&format!("flow_field: Initialized WASM rendering module"));
+    log(&format!(
+        "flow_field: canvas size {}x{}",
+        win_w,
+        win_h
+    ));
 }
 
 #[wasm_bindgen]
-pub fn tick(state_js: JsValue) -> JsValue {
-    let mut state: State = state_js.into_serde()
-        .expect("failed to deserialize State");
+pub fn tick(draw_particle: &js_sys::Function) -> () {
 
-    state.tick();
-    log("ticked!");
-
-    JsValue::from_serde(&state)
-        .expect("failed to serialize State")
+    unsafe { STATE.as_mut().unwrap().tick(draw_particle); }
 }
 
-#[derive(Clone, Copy, Deserialize, Serialize)]
+#[wasm_bindgen]
+#[derive(Clone, Copy)]
 pub struct Window {
     pub width: i16,
     pub height: i16,
@@ -48,6 +50,11 @@ pub fn rand_max(n: i16) -> i16 {
     let rand = js_random();
 
     let rand = rand * Into::<f64>::into(n);
+
+    // this cast should be safe, since `js_random`
+    // returns a value between 0 and 1, meaning
+    // the multiplied `rand` will be at most `n`,
+    // which is an i16
     rand.floor() as i16
 }
 

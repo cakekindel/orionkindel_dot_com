@@ -1,6 +1,7 @@
-use serde::{Deserialize, Serialize};
+use wasm_bindgen::prelude::*;
 
-#[derive(Clone, Copy, PartialEq, Deserialize, Serialize)]
+#[wasm_bindgen]
+#[derive(Clone, Copy, PartialEq)]
 pub struct Vector {
     pub x: f64,
     pub y: f64,

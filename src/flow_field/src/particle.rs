@@ -1,8 +1,7 @@
 use serde::{Deserialize, Serialize};
 use super::{ConstrainWrap, vector::Vector, rand_max, Window, constants};
-use wasm_bindgen::prelude::wasm_bindgen;
 
-#[derive(Clone, Deserialize, Serialize)]
+#[derive(Clone)]
 pub struct Particles(pub Vec<Particle>);
 impl Particles {
     pub fn new(window: Window) -> Self {
@@ -24,7 +23,7 @@ impl Particles {
     }
 }
 
-#[derive(Clone, Copy, Deserialize, Serialize)]
+#[derive(Clone, Copy)]
 pub struct Particle {
     pub pos_prev: Vector,
     pub pos: Vector,

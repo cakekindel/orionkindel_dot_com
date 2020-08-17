@@ -1,52 +1,71 @@
 open React;
 open Reprocessing;
+open Infix;
 
-let drawParticle = (env, par: FlowField.particle) => {
-  Draw.linef(
-    ~p1=(par.pos.x, par.pos.y),
-    ~p2=(par.pos_prev.x, par.pos_prev.y),
-    env
-  );
-  ();
+let canvasId = "canvas";
+
+let to_float_rgb = n => n->float_of_int->(n => n /. 255.);
+
+let bg_color: colorT = {
+  r: 67->to_float_rgb,
+  g: 35->to_float_rgb,
+  b: 113->to_float_rgb,
+  a: 1.,
 };
 
-let rendered = ref(false);
+let fg_color: colorT = {
+  r: 250->to_float_rgb,
+  g: 174->to_float_rgb,
+  b: 123->to_float_rgb,
+  a: 1.,
+};
 
-let renderReprocessing = () => {
-  let _ = FlowField.init()
-    |> Js.Promise.then_((flowField: FlowField.flowFieldModule) => {
+let render = () => {
+  let _ =
+    FlowField.init(.)
+    |> Js.Promise.then_((flowField: FlowField.jsModule) => {
+         setScreenId(canvasId);
 
-      setScreenId("canvas");
-      let setup = env => {
-        let width = 2000;
-        let height = 1000;
-        Env.size(~width, ~height, env);
-        Draw.background(Constants.white, env);
-        flowField.setup(width, height);
-      };
+         let setup = env => {
+           let width = 1500;
+           let height = 1000;
 
-      let draw = (state: FlowField.state, env) => {
-        /* Draw each particle in the field */
-        Draw.strokeCap(Square, env);
-        Draw.stroke(Constants.white, env);
-        Draw.strokeWeight(1, env);
-        Array.iter(drawParticle(env), state.particles);
+           let _ =
+             env
+             -<- Env.size(~width, ~height)
+             // -<- Draw.background(Constants.black)
+             -<- Draw.stroke(fg_color)
+             -<- Draw.strokeCap(Round)
+             -<- Draw.strokeWeight(3);
 
-        flowField.tick(state);
-      };
+           flowField.setup(. width, height);
+         };
 
-      run(~setup, ~draw, ());
-      rendered := true;
-      Js.Promise.resolve(());
-    });
+         let draw = (_, env) => {
+           Draw.background(bg_color, env);
+           flowField.tick(. (posX, posY, prevPosX, prevPosY) => {
+             let p1 = (posX, posY);
+             let p2 = (prevPosX, prevPosY);
 
-  None;
+             Draw.linef(~p1, ~p2, env);
+             ();
+           });
+         };
+
+         run(~setup, ~draw, ());
+         Js.Promise.resolve();
+       });
+  ();
 };
 
 [@react.component]
 let make = () => {
-  if (!rendered^) {
-    let _ = renderReprocessing();
+  let (rendered, setRendered) = useState(_ => false);
+
+  if (!rendered) {
+    render();
+    setRendered(_ => true);
   };
-  <div><canvas id="canvas" /></div>;
+
+  <div> <canvas id="canvas" /> </div>;
 };

@@ -1,25 +1,34 @@
-type vector = {
-    x: float,
-    y: float
+/**
+ * Type describing the JS glue code module,
+ * wrapping our wasm code
+ */
+type jsModule = {
+    /**
+     * Accepts the canvas' width, height,
+     * and returns a State object
+     */
+    setup: (. int, int) => unit,
+
+    /**
+     * Updates the flow field's internal state,
+     * and invokes a closure that draws each particle
+     *
+     * drawParticle closure expects 4 arguments:
+     * - particle's current position x-value
+     * - particle's current position y-value
+     * - particle's previous position x-value
+     * - particle's previous position y-value
+     */
+    tick: (. (float, float, float, float) => unit) => unit
 };
 
-type particle = {
-    pos_prev: vector,
-    pos: vector,
-    vel: vector,
-    accel: vector
-};
+/**
+ * Asynchronously import the module with the wasm
+ */
+let init = (.) => {
+    let jsModule: Js.Promise.t(jsModule) = [%raw {|
+        import('./flow_field/pkg')
+    |}];
 
-type state = {
-    particles: Js.Array.t(particle)
-};
-
-type flowFieldModule = {
-    setup: (int, int) => state,
-    tick: (state) => state
-};
-
-let init = () => {
-    let import: Js.Promise.t(flowFieldModule) = [%raw "import('./flow_field/pkg')"];
-    import
+    jsModule
 };
