@@ -26,6 +26,7 @@ jobs:
         git config --global user.name "${{ github.actor }}"
     - run: "git merge --strategy-option=ours"
     - run: "git add -A"
+    - run: "git add bundleOutput"
     - run: "git commit -m 'ci: publish'"
     # https://stackoverflow.com/questions/36782467/set-subdirectory-as-website-root-on-github-pages
-    - run: "git subtree push --prefix buildOutput origin hostme"
+    - run: "git subtree push --prefix bundleOutput origin hostme"
