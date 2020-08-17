@@ -8,7 +8,7 @@ module.exports = {
   // to 'development' as per webpack documentation. Again, you don't have to
   // use webpack or any other bundler during development! Recheck README if
   // you didn't know this
-  mode: 'development',
+  mode: 'production',
   output: {
     path: path.join(__dirname, "bundleOutput"),
     filename: 'index.js',
