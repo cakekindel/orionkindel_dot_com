@@ -1,2 +1,0 @@
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/runner/work/orionkindel_dot_com/orionkindel_dot_com/target/wasm32-unknown-unknown/debug/build/typenum-014e148d02eaf50b/out/consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=/home/runner/work/orionkindel_dot_com/orionkindel_dot_com/target/wasm32-unknown-unknown/debug/build/typenum-014e148d02eaf50b/out/op.rs
