@@ -24,8 +24,7 @@ impl State {
         }
     }
 
-    pub fn tick(&mut self, draw_particle: &js_sys::Function) -> () {
-        let js_this = JsValue::null();
+    pub fn tick(&mut self, draw_particle: &impl Fn(&Particle) -> ()) -> () {
         let window = self.window;
         let noise = &self.noise;
 
@@ -39,15 +38,15 @@ impl State {
                 p.update_pos(window);
                 p.reset_accel();
 
-                let args = js_sys::Array
-                    ::of4(
-                        &JsValue::from(p.pos.x),
-                        &JsValue::from(p.pos.y),
-                        &JsValue::from(p.pos_prev.x),
-                        &JsValue::from(p.pos_prev.y),
-                    );
+                // let args = js_sys::Array
+                //     ::of4(
+                //         &JsValue::from(p.pos.x),
+                //         &JsValue::from(p.pos.y),
+                //         &JsValue::from(p.pos_prev.x),
+                //         &JsValue::from(p.pos_prev.y),
+                //     );
 
-                draw_particle.apply(&js_this, &args);
+                draw_particle(p);
             });
 
         self.z_offset = self.z_offset + constants::TICK_CHANGE_AMOUNT;

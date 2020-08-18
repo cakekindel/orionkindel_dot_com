@@ -11,7 +11,7 @@ use state::State;
 #[wasm_bindgen]
 extern "C" {
     #[wasm_bindgen(js_namespace = console)]
-    fn log(s: &str);
+    fn log(s: &JsValue);
 }
 
 // TODO: should this be a mutex?
@@ -25,18 +25,34 @@ pub fn setup(win_w: i16, win_h: i16) -> () {
 
     unsafe { STATE = Some(state); }
 
-    log(&format!("flow_field: Initialized WASM rendering module"));
+    log(&format!("flow_field: Initialized WASM rendering module").into());
     log(&format!(
         "flow_field: canvas size {}x{}",
         win_w,
         win_h
-    ));
+    ).into());
 }
 
 #[wasm_bindgen]
-pub fn tick(draw_particle: &js_sys::Function) -> () {
+pub fn tick(draw_particle_cb: &js_sys::Function) -> () {
+    let js_this = JsValue::NULL;
+    let draw_particle = |p: &particle::Particle| {
+        let p1 = js_sys::Object::new();
+        js_sys::Reflect::set(&p1, &"x".into(), &p.pos.x.into());
+        js_sys::Reflect::set(&p1, &"y".into(), &p.pos.y.into());
 
-    unsafe { STATE.as_mut().unwrap().tick(draw_particle); }
+        let p2 = js_sys::Object::new();
+        js_sys::Reflect::set(&p2, &"x".into(), &p.pos_prev.x.into());
+        js_sys::Reflect::set(&p2, &"y".into(), &p.pos_prev.y.into());
+
+        draw_particle_cb.call2(
+            &js_this,
+            &p1,
+            &p2,
+        ).unwrap();
+    };
+
+    unsafe { STATE.as_mut().unwrap().tick(&draw_particle); }
 }
 
 #[wasm_bindgen]

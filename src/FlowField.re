@@ -1,25 +1,21 @@
+/** A thin 2D Vector implementation */
+type vector = { x: float, y: float };
+
 /**
  * Type describing the JS glue code module,
  * wrapping our wasm code
  */
 type jsModule = {
     /**
-     * Accepts the canvas' width, height,
-     * and returns a State object
+     * Initialize the state within the WASM module
      */
     setup: (. int, int) => unit,
 
     /**
      * Updates the flow field's internal state,
      * and invokes a closure that draws each particle
-     *
-     * drawParticle closure expects 4 arguments:
-     * - particle's current position x-value
-     * - particle's current position y-value
-     * - particle's previous position x-value
-     * - particle's previous position y-value
      */
-    tick: (. (float, float, float, float) => unit) => unit
+    tick: (. (vector, vector) => unit) => unit
 };
 
 /**

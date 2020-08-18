@@ -43,9 +43,9 @@ let render = () => {
 
          let draw = (_, env) => {
            Draw.background(bg_color, env);
-           flowField.tick(. (posX, posY, prevPosX, prevPosY) => {
-             let p1 = (posX, posY);
-             let p2 = (prevPosX, prevPosY);
+           flowField.tick(. (pos, prev) => {
+             let p1 = (pos.x, pos.y);
+             let p2 = (prev.x, prev.y);
 
              Draw.linef(~p1, ~p2, env);
              ();
