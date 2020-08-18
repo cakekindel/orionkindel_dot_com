@@ -1,10 +1,10 @@
-use wasm_bindgen::prelude::*;
 use js_sys::Math::random as js_random;
+use wasm_bindgen::prelude::*;
 
 mod constants;
-mod vector;
-mod state;
 mod particle;
+mod state;
+mod vector;
 
 use state::State;
 
@@ -23,28 +23,34 @@ pub fn setup(win_w: i16, win_h: i16) -> () {
 
     let state = State::new(win_w, win_h);
 
-    unsafe { STATE = Some(state); }
+    unsafe {
+        if let Some(_) = STATE {
+            panic!("flow_field::setup must only be called once.");
+        }
+
+        STATE = Some(state);
+    }
 
     log(&format!("flow_field: Initialized WASM rendering module").into());
-    log(&format!(
-        "flow_field: canvas size {}x{}",
-        win_w,
-        win_h
-    ).into());
+    log(&format!("flow_field: canvas size {}x{}", win_w, win_h).into());
 }
 
 #[wasm_bindgen]
 pub fn tick(draw_particle_cb: &js_sys::Function) -> () {
     let js_this = JsValue::NULL;
     let draw_particle = |p: &particle::Particle| {
-        draw_particle_cb.call2(
-            &js_this,
-            &p.pos.into(),
-            &p.pos_prev.into(),
-        ).unwrap();
+        draw_particle_cb
+            .call2(&js_this, &p.pos.into(), &p.pos_prev.into())
+            .unwrap();
     };
 
-    unsafe { STATE.as_mut().unwrap().tick(&draw_particle); }
+    unsafe {
+        if let None = STATE {
+            panic!("flow_field::setup must be called before flow_field::tick.");
+        }
+
+        STATE.as_mut().unwrap().tick(&draw_particle);
+    }
 }
 
 #[wasm_bindgen]
@@ -66,20 +72,26 @@ pub fn rand_max(n: i16) -> i16 {
     rand.floor() as i16
 }
 
-trait ConstrainWrap
-    where Self : Sized
+trait WrappingClamp
+where
+    Self: Sized + Default + PartialOrd,
 {
-    fn constrain_wrap(self, max: impl Into<Self>) -> Self;
-}
-impl ConstrainWrap for f64 {
-    fn constrain_wrap(self, max: impl Into<Self>) -> Self {
-        let max = max.into();
-        if self < 0.0 {
+    /// # Wrapping Clamp
+    /// Given a value (self), and a max,
+    /// clamp the value between zero (Default) and max.
+    ///
+    /// If the value exceeds max, the value is wrapped to 0.
+    ///
+    /// If it is below Default::default(), the value is wrapped to max.
+    fn wramp(self, max: Self) -> Self {
+        if self < Default::default() {
             max
         } else if self > max {
-            0.0
+            Default::default()
         } else {
             self
         }
     }
 }
+
+impl WrappingClamp for f64 {}

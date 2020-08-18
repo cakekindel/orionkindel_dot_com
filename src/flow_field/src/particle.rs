@@ -1,6 +1,6 @@
 use wasm_bindgen::prelude::*;
 
-use super::{ConstrainWrap, vector::Vector, rand_max, Window, constants};
+use super::{constants, rand_max, vector::Vector, Window, WrappingClamp};
 
 #[derive(Clone)]
 pub struct Particles(pub Vec<Particle>);
@@ -38,7 +38,7 @@ impl Particle {
 
         #[inline(always)]
         fn scale(n: f64) -> f64 {
-            let div_by_scale = n / Into::<f64>::into(constants::SCALE);
+            let div_by_scale = n / f64::from(constants::SCALE);
             div_by_scale * constants::OFF_SCALE
         };
 
@@ -47,14 +47,11 @@ impl Particle {
 
         let angle = noise.get([x, y, z_offset]);
 
-        self.accel = Vector::from_angle(angle)
-            .set_mag(constants::MAGNITUDE);
+        self.accel = Vector::from_angle(angle).set_mag(constants::MAGNITUDE);
     }
 
     pub fn add_vel(&mut self) {
-        self.vel = self.vel
-            .add(self.accel)
-            .max_mag(constants::MAX_SPEED)
+        self.vel = self.vel.add(self.accel).max_mag(constants::MAX_SPEED)
     }
 
     pub fn update_pos(&mut self, window: Window) {
@@ -62,16 +59,20 @@ impl Particle {
 
         let new_pos = self.pos.add(self.vel);
 
-        let new_pos_clamp = Vector::new(
-            new_pos.x.constrain_wrap(win_w),
-            new_pos.y.constrain_wrap(win_h),
-        );
+        let new_pos_clamp =
+            Vector::new(new_pos.x.wramp(win_w.into()), new_pos.y.wramp(win_h.into()));
 
+        // If previous position was prior to a `wramp`,
+        // set the previous position to the new position.
+        // This is to prevent a particle that was wrapped
+        // to another edge from being rendered as a horizontal
+        // line spanning the canvas.
         self.pos_prev = if new_pos != new_pos_clamp {
-                new_pos_clamp
-            } else {
-                self.pos
-            };
+            new_pos_clamp
+        } else {
+            self.pos
+        };
+
         self.pos = new_pos_clamp;
     }
 

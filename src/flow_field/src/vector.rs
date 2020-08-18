@@ -56,7 +56,6 @@ impl Vector {
     }
 
     pub fn set_mag(self, mag: f64) -> Self {
-        self.normalize()
-            .mult(mag)
+        self.normalize().mult(mag)
     }
 }
