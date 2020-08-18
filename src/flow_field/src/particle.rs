@@ -35,6 +35,7 @@ pub struct Particle {
 impl Particle {
     pub fn apply_force(&mut self, noise: &noise::Perlin, z_offset: f64) {
         use noise::NoiseFn;
+        use nalgebra::RealField;
 
         #[inline(always)]
         fn scale(n: f64) -> f64 {
@@ -45,7 +46,7 @@ impl Particle {
         let x = scale(self.pos.x);
         let y = scale(self.pos.y);
 
-        let angle = noise.get([x, y, z_offset]);
+        let angle = noise.get([x, y, z_offset]) * f64::two_pi() * 4.0;
 
         self.accel = Vector::from_angle(angle).set_mag(constants::MAGNITUDE);
     }

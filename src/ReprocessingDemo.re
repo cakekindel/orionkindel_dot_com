@@ -36,13 +36,13 @@ let render = () => {
              // -<- Draw.background(Constants.black)
              -<- Draw.stroke(fg_color)
              -<- Draw.strokeCap(Round)
-             -<- Draw.strokeWeight(3);
+             -<- Draw.strokeWeight(1);
 
+           Draw.background(bg_color, env);
            flowField.setup(. width, height);
          };
 
          let draw = (_, env) => {
-           Draw.background(bg_color, env);
            flowField.tick(. (pos, prev) => {
              let p1 = (pos.x, pos.y);
              let p2 = (prev.x, prev.y);
