@@ -1,4 +1,5 @@
-use serde::{Deserialize, Serialize};
+use wasm_bindgen::prelude::*;
+
 use super::{ConstrainWrap, vector::Vector, rand_max, Window, constants};
 
 #[derive(Clone)]
@@ -23,6 +24,7 @@ impl Particles {
     }
 }
 
+#[wasm_bindgen]
 #[derive(Clone, Copy)]
 pub struct Particle {
     pub pos_prev: Vector,
