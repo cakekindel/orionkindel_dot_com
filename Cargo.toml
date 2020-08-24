@@ -1,2 +1,2 @@
 [workspace]
-members = ["src/flow_field"]
+members = ["src/wasm_swirl"]
