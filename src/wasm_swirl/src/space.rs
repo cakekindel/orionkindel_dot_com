@@ -1,8 +1,94 @@
 use crate::constant::N;
 use crate::convert;
 
-pub mod vector {
-  use crate::convert;
+pub mod math {
+  pub struct Coord2 {
+    pub x: usize,
+    pub y: usize,
+  }
+  pub struct Rect<T> {
+    height: T,
+    width: T,
+  }
+  impl Rect<usize> {
+    pub fn contains(&self, coords: Coord2) -> Option<()> {
+      if coords.x <= self.height && coords.y <= self.width {
+        Some(())
+      } else {
+        None
+      }
+    }
+  }
+  impl<T> Rect<T>
+  where
+    T: std::ops::Mul,
+  {
+    pub fn area(&self) -> <T as std::ops::Mul>::Output {
+      self.height * self.width
+    }
+  }
+  pub struct Matrix2<T> {
+    dimensions: Rect<usize>,
+    items: Vec<T>,
+  }
+  impl<T> Matrix2<T> {
+    pub fn from_size(dimensions: Rect<usize>) -> Self {
+      Self {
+        items: Vec::with_capacity(dimensions.area()),
+        dimensions,
+      }
+    }
+
+    pub fn get(&self, coords: Coord2) -> Option<&T> {
+      self.get_ix(coords).and_then(|ix| self.items.get(ix))
+    }
+
+    pub fn get_mut(&mut self, coords: Coord2) -> Option<&mut T> {
+      self.get_ix(coords).and_then(|ix| self.items.get_mut(ix))
+    }
+
+    fn get_ix(&mut self, coords: Coord2) -> Option<usize> {
+      self
+        .dimensions
+        .contains(coords)
+        .map(|_| coords.x + (coords.y * self.dimensions.height))
+    }
+
+    fn get_coords(&mut self, ix: usize) -> Option<Coord2> {
+      let x = ix % self.dimensions.height;
+      let y = ix / self.dimensions.height;
+      let coords = Coord2 { x, y };
+
+      self.dimensions.contains(coords).map(|_| coords)
+    }
+
+    pub fn iter<'a>(&'a self) -> Matrix2Iter<'a, T> {
+      Matrix2Iter {
+        matrix: self,
+        ix: 0,
+      }
+    }
+  }
+
+  pub struct Matrix2Iter<'a, T> {
+    matrix: &'a Matrix2<T>,
+    ix: usize,
+  }
+
+  impl<'a, T> Iterator for Matrix2Iter<'a, T> {
+    type Item = (Coord2, &'a T);
+    fn next(&mut self) -> Option<Self::Item> {
+      self
+        .matrix
+        .get_coords(self.ix)
+        .and_then(|coords| self.matrix.get(coords).map(|val| (coords, val)))
+        .map(|ret| {
+          self.ix += 1;
+          ret
+        })
+    }
+  }
+
   #[derive(Clone, Copy, PartialEq)]
   pub struct Vector2 {
     pub x: f64,
@@ -61,42 +147,37 @@ pub mod vector {
       self.normalize().mult(mag)
     }
   }
-
-  pub struct Velocity(Vector2);
-  convert!(impl From<Vector2> for newtype Velocity {});
-}
-
-pub struct Point {
-  x: usize,
-  y: usize,
 }
 
 pub struct Grid<T> {
-  size: usize,
-  points: Vec<T>,
+  points: math::Matrix2<T>,
 }
 
 impl<T> Grid<T> {
-  pub fn from_world_size() -> Self {
-    Self::from_size(N * N)
-  }
-  pub fn from_size(size: usize) -> Self {
-    Self {
-      points: Vec::with_capacity(size),
-      size,
-    }
-  }
-  pub fn try_get_mut(&mut self, pt: Point) -> Option<&mut T> {
-    self.points.get_mut((pt.x + pt.y) * self.size)
-  }
-  pub fn get_mut(&mut self, pt: Point) -> &mut T {
-    self.try_get_mut(pt).unwrap()
+  pub fn of_universe_dimensions() -> Self {
+    let size = math::Rect {
+      width: N,
+      height: N,
+    };
+
+    Self::from_dimensions(size)
   }
 
-  pub fn try_get(&self, pt: Point) -> Option<&T> {
-    self.points.get((pt.x + pt.y) * self.size)
+  pub fn from_dimensions(dimensions: math::Rect<usize>) -> Self {
+    Self {
+      points: math::Matrix2::from_size(dimensions),
+    }
   }
-  pub fn get(&self, pt: Point) -> &T {
-    self.try_get(pt).unwrap()
+
+  pub fn get_mut(&mut self, coords: math::Coord2) -> Option<&mut T> {
+    self.points.get_mut(coords)
+  }
+
+  pub fn get(&self, coords: math::Coord2) -> Option<&T> {
+    self.points.get(coords)
+  }
+
+  pub fn iter(&self) -> math::Matrix2Iter<T> {
+    self.points.iter()
   }
 }

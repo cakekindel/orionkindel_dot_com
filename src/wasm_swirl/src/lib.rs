@@ -42,6 +42,14 @@ macro_rules! convert {
       }
     }
   };
+  (impl Deref<$dest:ty> for newtype $src:tt {}) => {
+    impl std::ops::Deref for $src {
+      type Target = $dest;
+      fn deref(&self) -> &Self::Target {
+        &self.0
+      }
+    }
+  };
   (impl<'_> From<$source:ident> for $dest:ident => $closure:expr) => {
     impl<'a> From<$source<'a>> for $dest<'a> {
       fn from(src: $source<'a>) -> $dest<'a> {
