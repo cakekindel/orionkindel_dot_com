@@ -4,6 +4,7 @@ pub mod constant;
 pub mod fluid;
 pub mod space;
 pub mod time;
+pub mod utils;
 
 static mut UNIVERSE: Option<Universe> = None;
 
