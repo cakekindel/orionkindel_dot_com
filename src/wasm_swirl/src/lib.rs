@@ -94,3 +94,15 @@ macro_rules! convert {
     }
   };
 }
+
+macro_rules! count {
+    () => (0usize);
+    ( $x:tt $($xs:tt)* ) => (1usize + count!($($xs)*));
+}
+
+#[macro_export]
+macro_rules! mean {
+  ($($x:expr),+) => {
+    ($($x)++) / count!($($x),+)
+  }
+}
