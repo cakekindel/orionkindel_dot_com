@@ -3,7 +3,7 @@ use std::ops::Add;
 use crate::constant::{ITER, N};
 use crate::convert;
 use crate::space::coords::{Axis, Coord2, Corner, Edge, Perpendicular, Rect};
-use crate::space::matrix::Matrix2;
+use crate::space::matrix::Grid;
 use crate::space::vector::Vector2;
 use crate::{time::TimeDelta, utils::AsSome};
 
@@ -25,15 +25,20 @@ impl std::ops::Add for Density {
   }
 }
 
+pub struct FluidParticle {
+  density: Density,
+  velocity: Vector2,
+}
+
 pub struct Fluid {
   diff: Diffusion,
   viscosity: Viscosity,
   dt: TimeDelta,
   size: usize,
-  density: Matrix2<Density>,
-  density_prev: Matrix2<Density>,
-  velocity: Matrix2<Vector2>,
-  velocity_prev: Matrix2<Vector2>,
+  density: Grid<Density>,
+  density_prev: Grid<Density>,
+  velocity: Grid<Vector2>,
+  velocity_prev: Grid<Vector2>,
 }
 
 impl Fluid {
@@ -57,10 +62,10 @@ impl Fluid {
       diff: diffusion.into(),
       viscosity: viscosity.into(),
       size: crate::constant::N,
-      density: Matrix2::<Density>::from_dimensions(dims),
-      density_prev: Matrix2::<Density>::from_dimensions(dims),
-      velocity: Matrix2::<Vector2>::from_dimensions(dims),
-      velocity_prev: Matrix2::<Vector2>::from_dimensions(dims),
+      density: Grid::<Density>::from_dimensions(dims),
+      density_prev: Grid::<Density>::from_dimensions(dims),
+      velocity: Grid::<Vector2>::from_dimensions(dims),
+      velocity_prev: Grid::<Vector2>::from_dimensions(dims),
     }
   }
 
@@ -68,130 +73,129 @@ impl Fluid {
     self
       .density
       .get(pt)
-      .map(|(_, density)| self.density.set(pt, *density + Density::from(amount)))
+      .map(|dens| *dens)
+      .map(|density| self.density.set(pt, density + amount.into()))
       .map(|_| ())
   }
 
   pub fn add_velocity(&mut self, pt: Coord2, amount: Vector2) -> Option<()> {
-    self.velocity.get(pt).map(|(pt, velocity)| {
-      self.velocity.set(pt, *velocity + amount);
+    self.velocity.get(pt).map(|vector| *vector).map(|velocity| {
+      self.velocity.set(pt, velocity + amount);
     })
   }
 
   pub fn diffuse(
-    x: &Matrix2<f64>,
-    x_prev: &Matrix2<f64>,
+    grid: &mut Grid<f64>,
+    grid_prev: &Grid<f64>,
     diffusion: f64,
     dt: TimeDelta,
     counteract_axis: Option<Axis>,
   ) -> () {
     let a = &dt as &f64 * diffusion * (N - 2) as f64 * (N - 2) as f64;
-    Self::lin_solve(x, x_prev, a, 0.0, counteract_axis);
+    Self::lin_solve(grid, grid_prev, a, 0.0, counteract_axis);
   }
 
   pub fn lin_solve(
-    floats: &Matrix2<f64>,
-    floats_prev: &Matrix2<f64>,
+    grid: &mut Grid<f64>,
+    grid_prev: &Grid<f64>,
     a: f64,
     c: f64,
     counteract_axis: Option<Axis>,
   ) {
     std::iter::repeat(()).take(ITER).for_each(|_| {
-      floats
-        .iter()
-        .map(|(coords, val)| {
-          let neighbors = floats.get_adjacent_neighbors(coords);
-
-          // TODO: gather influence from wrapped neighbors if at bounds
-          let neighbors_sum = neighbors
-            .into_iter()
-            .filter_map(|opt| opt.map(|(_, val)| val))
+      grid
+        .iter_mut()
+        .map(|(coords, val_mut)| {
+          let neighbor_sum = grid_prev
+            .get_adjacent_neighbors(coords)
+            .map(|(_, val)| val)
             .fold(0.0, Add::add);
 
-          let neighbor_influence = a * neighbors_sum;
+          let neighbor_influence = a * neighbor_sum;
 
-          let prev_val = floats_prev
+          let prev_val = grid_prev
             .get(coords)
-            .expect("floats and floats_prev were different sizes!!")
-            .1;
+            .expect("floats and floats_prev were different sizes!!");
 
           let next_val = (prev_val + neighbor_influence) / c;
-          (coords, next_val)
+          (val_mut, next_val)
         })
-        .for_each(|(coords, next_val)| {
-          floats.set(coords, next_val);
+        .for_each(|(val_mut, next_val)| {
+          *val_mut = next_val;
         })
     });
 
-    Self::set_bnd(floats, counteract_axis)
+    Self::set_bnd(grid, counteract_axis)
   }
 
-  pub fn set_bnd(floats: &Matrix2<f64>, counteract_axis: Option<Axis>) {
-    Self::fix_corners(floats);
-    Self::fix_edges(floats, counteract_axis);
+  pub fn set_bnd(grid: &mut Grid<f64>, counteract_axis: Option<Axis>) {
+    Self::fix_corners(grid);
+    Self::fix_edges(grid, counteract_axis);
   }
 
   // TODO: FixEdges trait?
-  pub fn fix_edges(floats: &Matrix2<f64>, counteract_axis: Option<Axis>) {
-    floats
-      .get_edges()
-      // filter out corners
-      .filter_map(|(edge_info, coords)| edge_info.get_edge().map(|edge| (edge, coords)))
-      // grab the point next to it; in the following crude
-      // drawing, if we're looking at point `a`, we want the
-      // coords of point `b`.
-      /*
-         ______
-        |      |
-        |ab    |
-        |      |
-         ------
-      */
-      .map(|(edge, coords)| {
-        let neighbor_coords = match edge {
-          Edge::Top => (coords.x, coords.y + 1),
-          Edge::Bottom => (coords.x, coords.y - 1),
-          Edge::Left => (coords.x + 1, coords.y),
-          Edge::Right => (coords.x - 1, coords.y),
-        };
+  pub fn fix_edges(grid: &mut Grid<f64>, counteract_axis: Option<Axis>) {
+    // This function calls `Grid::edges_iter_mut`,
+    // and wants to read the values of the edge points'
+    // neighbors.
 
-        (edge, Coord2::from(neighbor_coords), coords)
-      })
-      // read the neighbor's value
-      .map(|(edge, neighbor_coords, coords)| {
-        (edge, floats.get(neighbor_coords).unwrap().1, coords)
-      })
-      // get the next value for the boundary cell
-      .map(|(edge, neighbor, coords)| {
-        let new_val =
-        counteract_axis
-          .and_then(|axis| edge.perpendicular(&axis).as_some(()))
-          .map(|_should_counteract| -neighbor)
-          .unwrap_or(*neighbor);
-        (new_val, coords)
-      })
-      // update the boundary cell
-      .for_each(|(new_val, coords)| {
-        floats.set(coords, new_val);
-      })
+    // We need to bypass the borrow checker because
+    // Rust doesn't _know_ that the neighbor won't be changed
+    // as a result of the mutable borrow
+    let grid: *mut _ = grid;
+
+    unsafe {
+      grid
+        .as_mut()
+        .unwrap()
+        .edges_iter_mut()
+        // filter out corners
+        .filter_map(|(edge_info, coords, val_mut)| {
+          edge_info.get_edge().map(|edge| (edge, coords, val_mut))
+        })
+        .map(|(edge, coords, val_mut)| {
+          // we want to read the value of the point next to the
+          // current point on the edge
+          let neighbor_coords = match edge {
+            Edge::Top => (coords.x, coords.y + 1),
+            Edge::Bottom => (coords.x, coords.y - 1),
+            Edge::Left => (coords.x + 1, coords.y),
+            Edge::Right => (coords.x - 1, coords.y),
+          };
+
+          let neighbor = grid
+            .as_ref()
+            .unwrap()
+            .get(neighbor_coords)
+            .map(|f| *f)
+            .unwrap_or_default();
+
+          let new_val = counteract_axis
+            .and_then(|axis| edge.perpendicular(&axis).as_some(()))
+            .map(|_should_counteract| -neighbor)
+            .unwrap_or(neighbor);
+
+          (new_val, val_mut)
+        })
+        .for_each(|(new_val, val_mut)| {
+          *val_mut = new_val;
+        });
+    }
   }
 
   // TODO: FixCorners trait?
-  pub fn fix_corners(floats: &Matrix2<f64>) {
+  pub fn fix_corners(grid: &mut Grid<f64>) {
     Corner::all().iter().for_each(|corner| {
       let corner = *corner;
-      Some(floats.get_corner(corner))
-        .map(|(coords, _)| floats.get_adjacent_neighbors(coords))
+      grid
+        .get_corner(corner)
+        .map(|(coords, _)| grid.get_adjacent_neighbors(coords))
         .map(|neighbors| {
-          let neighbor_sum = neighbors
-            .iter()
-            .filter_map(|opt| opt.map(|(_, val)| val))
-            .fold(0.0, Add::add);
+          let neighbor_sum = neighbors.map(|(_, val)| val).fold(0.0, Add::add);
 
           neighbor_sum / 2.0
         })
-        .map(|new_val| floats.set_corner(corner, new_val))
-        .unwrap()
+        .map(|new_val| grid.set_corner(corner, new_val));
     });
   }
 }

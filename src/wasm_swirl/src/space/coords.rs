@@ -2,7 +2,7 @@ pub trait Perpendicular<Cmp = Self> {
   fn perpendicular(&self, cmp: &Cmp) -> bool;
 }
 
-#[derive(Copy, Clone, PartialEq)]
+#[derive(Debug, Copy, Clone, Ord, Eq, PartialOrd, PartialEq)]
 pub enum Axis {
   X,
   Y,
@@ -25,10 +25,10 @@ impl Perpendicular for Edge {
   }
 }
 
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone, Ord, Eq, PartialOrd, PartialEq)]
 pub enum EdgeInfo {
-  Edge(Edge),
   Corner(Edge, Edge),
+  Edge(Edge),
   Neither,
 }
 
@@ -60,12 +60,12 @@ impl From<(Option<Edge>, Option<Edge>)> for EdgeInfo {
   }
 }
 
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone, Ord, Eq, PartialOrd, PartialEq)]
 pub enum Edge {
   Top,
-  Right,
   Bottom,
   Left,
+  Right,
 }
 impl Edge {
   pub fn as_axis(&self) -> Axis {
@@ -79,7 +79,7 @@ impl Edge {
   }
 }
 
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct Corner(pub Edge, pub Edge);
 impl Corner {
   pub fn all() -> [Self; 4] {
@@ -93,7 +93,7 @@ impl Corner {
   }
 }
 
-#[derive(Copy, Clone)]
+#[derive(Debug, Hash, Copy, Clone, Ord, Eq, PartialOrd, PartialEq)]
 pub struct Coord2 {
   pub x: usize,
   pub y: usize,
@@ -105,7 +105,7 @@ impl From<(usize, usize)> for Coord2 {
   }
 }
 
-#[derive(Clone, Copy)]
+#[derive(Debug, Clone, Copy)]
 pub struct Rect {
   pub height: usize,
   pub width: usize,
@@ -113,15 +113,10 @@ pub struct Rect {
 }
 
 impl Rect {
-  pub fn new(origin: impl Into<Coord2>, width: usize, height: usize) -> Self {
-    Rect {
-      origin: origin.into(),
-      width,
-      height,
-    }
-  }
-
-  pub fn contains(&self, coords: Coord2) -> bool {
+  /// Test whether a coordinate falls within the bounds
+  /// of the Rect
+  pub fn contains(&self, coords: impl Into<Coord2>) -> bool {
+    let coords = coords.into();
     let x_bound_lower = self.origin.x;
     let x_bound_upper = self.origin.x + self.width;
     let x_good = coords.x >= x_bound_lower && coords.x <= x_bound_upper;
@@ -133,7 +128,60 @@ impl Rect {
     x_good && y_good
   }
 
+  /// Returns the area of the Rect
   pub fn area(&self) -> usize {
     self.height * self.width
+  }
+
+  /// Get an iterator over the coordinates of the edges and corners
+  /// of the Rect
+  pub fn edge_coord_iter<'a>(&'a self) -> impl Iterator<Item = (EdgeInfo, Coord2)> {
+    let max_x = self.width - 1;
+    let max_y = self.height - 1;
+    let rect = *self;
+
+    let top_edge = (0..=max_x).map(move |x| (x, max_y));
+
+    let bot_edge = (0..=max_x).map(|x| (x, 0));
+
+    // exclude corners from left and right edges,
+    // because they're already added by top and bottom edges
+    let left_edge = (1..max_y).map(|y| (0, y));
+
+    let right_edge = (1..max_y).map(move |y| (max_x, y));
+
+    top_edge
+      .chain(bot_edge)
+      .chain(left_edge)
+      .chain(right_edge)
+      .map(Coord2::from)
+      .map(move |coords| (rect.get_edge_info(coords), Coord2::from(coords)))
+  }
+
+  /// Given a coordinate, get the information about whether
+  /// that point resides on:
+  /// - an edge of the grid
+  /// - a corner of the grid
+  /// - neither
+  pub fn get_edge_info(&self, coords: Coord2) -> EdgeInfo {
+    let max_x = self.width - 1;
+    let max_y = self.height - 1;
+
+    let left_edge = if coords.x == 0 {
+      Some(Edge::Left)
+    } else if coords.x == max_x {
+      Some(Edge::Right)
+    } else {
+      None
+    };
+    let right_edge = if coords.y == 0 {
+      Some(Edge::Bottom)
+    } else if coords.y == max_y {
+      Some(Edge::Top)
+    } else {
+      None
+    };
+
+    (left_edge, right_edge).into()
   }
 }
