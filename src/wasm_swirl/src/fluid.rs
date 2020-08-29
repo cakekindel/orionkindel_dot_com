@@ -2,7 +2,9 @@ use std::ops::Add;
 
 use crate::constant::{ITER, N};
 use crate::convert;
-use crate::space::coords::{Axis, Coord2, Corner, Edge, Perpendicular, Rect};
+use crate::space::coords::{
+  Axis, Coord2, Corner, Edge, Perpendicular, Rect,
+};
 use crate::space::matrix::Grid;
 use crate::space::vector::Vector2;
 use crate::{time::TimeDelta, utils::AsSome};
@@ -25,7 +27,7 @@ impl std::ops::Add for Density {
   }
 }
 
-pub struct FluidParticle {
+pub struct FluidPoint {
   density: Density,
   velocity: Vector2,
 }
@@ -78,10 +80,18 @@ impl Fluid {
       .map(|_| ())
   }
 
-  pub fn add_velocity(&mut self, pt: Coord2, amount: Vector2) -> Option<()> {
-    self.velocity.get(pt).map(|vector| *vector).map(|velocity| {
-      self.velocity.set(pt, velocity + amount);
-    })
+  pub fn add_velocity(
+    &mut self,
+    pt: Coord2,
+    amount: Vector2,
+  ) -> Option<()> {
+    self
+      .velocity
+      .get(pt)
+      .map(|vector| *vector)
+      .map(|velocity| {
+        self.velocity.set(pt, velocity + amount);
+      })
   }
 
   pub fn diffuse(
@@ -128,13 +138,19 @@ impl Fluid {
     Self::set_bnd(grid, counteract_axis)
   }
 
-  pub fn set_bnd(grid: &mut Grid<f64>, counteract_axis: Option<Axis>) {
+  pub fn set_bnd(
+    grid: &mut Grid<f64>,
+    counteract_axis: Option<Axis>,
+  ) {
     Self::fix_corners(grid);
     Self::fix_edges(grid, counteract_axis);
   }
 
   // TODO: FixEdges trait?
-  pub fn fix_edges(grid: &mut Grid<f64>, counteract_axis: Option<Axis>) {
+  pub fn fix_edges(
+    grid: &mut Grid<f64>,
+    counteract_axis: Option<Axis>,
+  ) {
     // This function calls `Grid::edges_iter_mut`,
     // and wants to read the values of the edge points'
     // neighbors.
@@ -151,16 +167,18 @@ impl Fluid {
         .edges_iter_mut()
         // filter out corners
         .filter_map(|(edge_info, coords, val_mut)| {
-          edge_info.get_edge().map(|edge| (edge, coords, val_mut))
+          edge_info
+            .get_edge()
+            .map(|edge| (edge, coords, val_mut))
         })
         .map(|(edge, coords, val_mut)| {
           // we want to read the value of the point next to the
           // current point on the edge
           let neighbor_coords = match edge {
-            Edge::Top => (coords.x, coords.y + 1),
-            Edge::Bottom => (coords.x, coords.y - 1),
-            Edge::Left => (coords.x + 1, coords.y),
-            Edge::Right => (coords.x - 1, coords.y),
+            | Edge::Top => (coords.x, coords.y + 1),
+            | Edge::Bottom => (coords.x, coords.y - 1),
+            | Edge::Left => (coords.x + 1, coords.y),
+            | Edge::Right => (coords.x - 1, coords.y),
           };
 
           let neighbor = grid
@@ -191,7 +209,8 @@ impl Fluid {
         .get_corner(corner)
         .map(|(coords, _)| grid.get_adjacent_neighbors(coords))
         .map(|neighbors| {
-          let neighbor_sum = neighbors.map(|(_, val)| val).fold(0.0, Add::add);
+          let neighbor_sum =
+            neighbors.map(|(_, val)| val).fold(0.0, Add::add);
 
           neighbor_sum / 2.0
         })

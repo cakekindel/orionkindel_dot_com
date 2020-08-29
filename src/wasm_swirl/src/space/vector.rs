@@ -14,11 +14,7 @@ impl Vector2 {
 
   pub fn normalize(self) -> Self {
     let mag = self.get_mag();
-    if mag == 0.0 {
-      self
-    } else {
-      self / mag
-    }
+    if mag == 0.0 { self } else { self / mag }
   }
 
   pub fn max_mag(self, max: f64) -> Self {

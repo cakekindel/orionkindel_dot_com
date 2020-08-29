@@ -1,8 +1,6 @@
-use std::cell::{Ref, RefCell};
 use std::collections::HashMap;
 
-use super::coords::{Axis, Coord2, Corner, Edge, EdgeInfo, Rect};
-use crate::utils::AsSome;
+use super::coords::{Coord2, Corner, EdgeInfo, Edged, Rect};
 
 /// # 2-dimensional Grid
 /// This grid structure is used to represent
@@ -36,9 +34,29 @@ use crate::utils::AsSome;
 /// ```
 pub struct Grid<T> {
   pub dimensions: Rect,
-  max_x: usize,
-  max_y: usize,
   items: HashMap<Coord2, T>,
+}
+
+impl<T> Grid<T>
+where
+  T: Default,
+{
+  /// Fill the grid with the default value for `T`
+  pub fn fill_with_default(&mut self) {
+    self.fill(Default::default)
+  }
+}
+
+impl<T> Grid<T>
+where
+  T: Copy,
+{
+  /// Fill the grid with a default value
+  pub fn fill_with(&mut self, val: T) {
+    self.dimensions.coords_iter().for_each(|coords| {
+      self.items.insert(coords, val);
+    })
+  }
 }
 
 impl<T> Grid<T> {
@@ -46,10 +64,30 @@ impl<T> Grid<T> {
   pub fn from_dimensions(dimensions: Rect) -> Self {
     Self {
       items: HashMap::with_capacity(dimensions.area()),
-      max_x: dimensions.width - 1,
-      max_y: dimensions.height - 1,
       dimensions,
     }
+  }
+
+  /// Fill the grid with the result of a function
+  ///
+  /// ## Related Methods
+  /// For `T` that implements `Copy`, you can fill the
+  /// grid with a particular value with `fill_with`
+  ///
+  /// For `T` that implements `Default`, you can fill the
+  /// grid with `Default::default()` with `fill_with_default`
+  ///
+  /// # Example
+  /// ```
+  ///
+  /// ```
+  pub fn fill<F>(&mut self, f: F)
+  where
+    F: Fn() -> T,
+  {
+    self.dimensions.coords_iter().for_each(|coords| {
+      self.items.insert(coords, f());
+    })
   }
 
   /// Returns an iterator over the corner and edge points of the grid.
@@ -63,9 +101,12 @@ impl<T> Grid<T> {
   /// # use wasm_swirl::space::matrix::Grid;
   /// # use wasm_swirl::space::coords::{Rect, EdgeInfo::*, Edge::*};
   /// let dims = Rect { width: 3, height: 3, origin: (0,0).into() };
-  /// let grid = Grid::<i32>::from_dimensions(dims);
-  /// let mut edges: Vec<_> = grid.get_edges()
-  ///   .map(|(edge, coords)| (edge, (coords.x, coords.y)))
+  /// let mut grid = Grid::<i32>::from_dimensions(dims);
+  /// grid.fill_with_default();
+  ///
+  /// let mut edges: Vec<_> = grid
+  ///   .edges_iter()
+  ///   .map(|(edge, coords, val)| (edge, coords.to_pair(), val))
   ///   .collect();
   ///
   /// edges.sort_by(|a, b| {
@@ -74,24 +115,35 @@ impl<T> Grid<T> {
   ///   # else { a.0.cmp(&b.0) }
   /// });
   ///
-  /// assert_eq!(edges, vec![
-  ///   (Corner(Top, Left), (0, 2)),
-  ///   (Corner(Top, Right), (2, 2)),
-  ///   (Corner(Bottom, Left), (0, 0)),
-  ///   (Corner(Bottom, Right), (2, 0)),
-  ///   (Edge(Top), (1, 2)),
-  ///   (Edge(Bottom), (1, 0)),
-  ///   (Edge(Left), (0, 1)),
-  ///   (Edge(Right), (2, 1)),
-  /// ]);
+  /// assert_eq!(
+  ///   edges
+  ///     .iter()
+  ///     .map(|(a, b, c)| (*a, *b, **c))
+  ///     .collect::<Vec<_>>(),
+  ///   vec![
+  ///     (Corner(Top, Left), (0, 2), 0),
+  ///     (Corner(Top, Right), (2, 2), 0),
+  ///     (Corner(Bottom, Left), (0, 0), 0),
+  ///     (Corner(Bottom, Right), (2, 0), 0),
+  ///     (Edge(Top), (1, 2), 0),
+  ///     (Edge(Bottom), (1, 0), 0),
+  ///     (Edge(Left), (0, 1), 0),
+  ///     (Edge(Right), (2, 1), 0),
+  ///   ]
+  /// );
   ///
   /// assert_eq!(edges.len(), 8);
   /// ```
-  pub fn edges_iter<'a>(&'a self) -> impl Iterator<Item = (EdgeInfo, Coord2, &T)> + 'a {
-    self
-      .dimensions
-      .edge_coord_iter()
-      .filter_map(move |(edge_info, coords)| self.get(coords).map(|val| (edge_info, coords, val)))
+  pub fn edges_iter<'a>(
+    &'a self,
+  ) -> impl Iterator<Item = (EdgeInfo, Coord2, &T)> + 'a {
+    self.dimensions.edge_coord_iter().filter_map(
+      move |(edge_info, coords)| {
+        self
+          .get(coords)
+          .map(|val| (edge_info, coords, val))
+      },
+    )
   }
 
   /// Returns an iterator over mutable references to corner and edge points of the grid
@@ -105,9 +157,12 @@ impl<T> Grid<T> {
   /// # use wasm_swirl::space::matrix::Grid;
   /// # use wasm_swirl::space::coords::{Rect, EdgeInfo::*, Edge::*};
   /// let dims = Rect { width: 3, height: 3, origin: (0,0).into() };
-  /// let grid = Grid::<i32>::from_dimensions(dims);
-  /// let mut edges: Vec<_> = grid.get_edges()
-  ///   .map(|(edge, coords)| (edge, (coords.x, coords.y)))
+  /// let mut grid = Grid::<i32>::from_dimensions(dims);
+  /// grid.fill_with_default();
+  ///
+  /// let mut edges: Vec<_> = grid
+  ///   .edges_iter_mut()
+  ///   .map(|(edge, coords, val)| (edge, coords.to_pair(), val))
   ///   .collect();
   ///
   /// edges.sort_by(|a, b| {
@@ -116,16 +171,42 @@ impl<T> Grid<T> {
   ///   # else { a.0.cmp(&b.0) }
   /// });
   ///
-  /// assert_eq!(edges, vec![
-  ///   (Corner(Top, Left), (0, 2)),
-  ///   (Corner(Top, Right), (2, 2)),
-  ///   (Corner(Bottom, Left), (0, 0)),
-  ///   (Corner(Bottom, Right), (2, 0)),
-  ///   (Edge(Top), (1, 2)),
-  ///   (Edge(Bottom), (1, 0)),
-  ///   (Edge(Left), (0, 1)),
-  ///   (Edge(Right), (2, 1)),
-  /// ]);
+  /// assert_eq!(
+  ///   edges
+  ///     .iter()
+  ///     .map(|(a, b, c)| (*a, *b, **c))
+  ///     .collect::<Vec<_>>(),
+  ///   vec![
+  ///     (Corner(Top, Left), (0, 2), 0),
+  ///     (Corner(Top, Right), (2, 2), 0),
+  ///     (Corner(Bottom, Left), (0, 0), 0),
+  ///     (Corner(Bottom, Right), (2, 0), 0),
+  ///     (Edge(Top), (1, 2), 0),
+  ///     (Edge(Bottom), (1, 0), 0),
+  ///     (Edge(Left), (0, 1), 0),
+  ///     (Edge(Right), (2, 1), 0),
+  ///   ]
+  /// );
+  ///
+  /// *edges[0].2 = 12;
+  ///
+  /// assert_eq!(
+  ///   edges
+  ///     .iter()
+  ///     .map(|(a, b, c)| (*a, *b, **c))
+  ///     .collect::<Vec<_>>(),
+  ///   vec![
+  ///     (Corner(Top, Left), (0, 2), 12),
+  ///     // ...
+  ///     # (Corner(Top, Right), (2, 2), 0),
+  ///     # (Corner(Bottom, Left), (0, 0), 0),
+  ///     # (Corner(Bottom, Right), (2, 0), 0),
+  ///     # (Edge(Top), (1, 2), 0),
+  ///     # (Edge(Bottom), (1, 0), 0),
+  ///     # (Edge(Left), (0, 1), 0),
+  ///     # (Edge(Right), (2, 1), 0),
+  ///   ]
+  /// );
   ///
   /// assert_eq!(edges.len(), 8);
   /// ```
@@ -135,18 +216,16 @@ impl<T> Grid<T> {
     // **I** know that i won't be issuing 2 mutable
     // references to the same item in the map, but
     // borrowck does not know this.
-    let map: *mut _ = &mut self.items;
+    let map_ptr: *mut _ = &mut self.items;
 
-    self
-      .dimensions
-      .edge_coord_iter()
-      .filter_map(move |(edge_info, coords)| unsafe {
+    self.dimensions.edge_coord_iter().filter_map(
+      move |(edge_info, coords)| {
+        let map = unsafe { map_ptr.as_mut().unwrap() };
         map
-          .as_mut()
-          .unwrap()
           .get_mut(&coords)
           .map(|val| (edge_info, coords, val))
-      })
+      },
+    )
   }
 
   /// Get the points touching a point at given coordinates
@@ -156,7 +235,7 @@ impl<T> Grid<T> {
   /// # use wasm_swirl::space::matrix::Grid;
   /// # use wasm_swirl::space::coords::{Rect};
   /// let dims = Rect { width: 3, height: 3, origin: (0,0).into() };
-  /// let grid = Grid::<i32>::from_dimensions(dims);
+  /// let mut grid = Grid::<i32>::from_dimensions(dims);
   ///
   /// grid.set((0, 1), 0);
   /// grid.set((2, 1), 1);
@@ -193,7 +272,9 @@ impl<T> Grid<T> {
       .chain(once((coords.x + 1, coords.y)))
       .chain(once((coords.x, coords.y - 1)))
       .chain(once((coords.x, coords.y + 1)))
-      .map(move |coords| self.get(coords).map(|val| (coords.into(), val)))
+      .map(move |coords| {
+        self.get(coords).map(|val| (coords.into(), val))
+      })
       .filter_map(|opt| opt)
   }
 
@@ -204,7 +285,7 @@ impl<T> Grid<T> {
   /// # use wasm_swirl::space::matrix::Grid;
   /// # use wasm_swirl::space::coords::{Rect, Corner, Edge::*};
   /// let dims = Rect { width: 3, height: 3, origin: (0,0).into() };
-  /// let grid = Grid::<i32>::from_dimensions(dims);
+  /// let mut grid = Grid::<i32>::from_dimensions(dims);
   ///
   /// grid.set_corner(Corner(Bottom, Left), 12);
   ///
@@ -224,7 +305,7 @@ impl<T> Grid<T> {
   /// # use wasm_swirl::space::matrix::Grid;
   /// # use wasm_swirl::space::coords::{Rect, Corner, Edge::*};
   /// let dims = Rect { width: 3, height: 3, origin: (0,0).into() };
-  /// let grid = Grid::<i32>::from_dimensions(dims);
+  /// let mut grid = Grid::<i32>::from_dimensions(dims);
   ///
   /// grid.set_corner(Corner(Bottom, Left), 12);
   ///
@@ -243,7 +324,7 @@ impl<T> Grid<T> {
   /// let dims = Rect { width: 3, height: 3, origin: (0,0).into() };
   /// let grid = Grid::<i32>::from_dimensions(dims);
   ///
-  /// assert!(matches!(grid.get((0, 0)), None);
+  /// assert!(matches!(grid.get((0, 0)), None));
   /// ```
   pub fn get(&self, coords: impl Into<Coord2>) -> Option<&T> {
     let coords = coords.into();
@@ -260,9 +341,12 @@ impl<T> Grid<T> {
   /// let dims = Rect { width: 3, height: 3, origin: (0,0).into() };
   /// let grid = Grid::<i32>::from_dimensions(dims);
   ///
-  /// assert!(matches!(grid.get((0, 0)), None);
+  /// assert!(matches!(grid.get((0, 0)), None));
   /// ```
-  pub fn get_mut<'a>(&'a mut self, coords: impl Into<Coord2>) -> Option<&'a mut T> {
+  pub fn get_mut<'a>(
+    &'a mut self,
+    coords: impl Into<Coord2>,
+  ) -> Option<&'a mut T> {
     let coords = coords.into();
 
     self.items.get_mut(&coords)
@@ -277,41 +361,41 @@ impl<T> Grid<T> {
   /// let dims = Rect { width: 3, height: 3, origin: (0,0).into() };
   /// let grid = Grid::<i32>::from_dimensions(dims);
   ///
-  /// assert!(matches!(grid.get((0, 0)), None);
+  /// assert!(matches!(grid.get((0, 0)), None));
   /// ```
-  pub fn set(&mut self, coords: impl Into<Coord2>, new_val: T) -> Option<T> {
+  pub fn set(
+    &mut self,
+    coords: impl Into<Coord2>,
+    new_val: T,
+  ) -> Option<T> {
     self.items.insert(coords.into(), new_val)
   }
 
-  fn coords_of(&self, ix: usize) -> Option<Coord2> {
-    let x = ix % self.dimensions.height;
-    let y = ix / self.dimensions.height;
-    let coords = Coord2 { x, y };
-
-    self.dimensions.contains(coords).as_some(coords)
+  pub fn iter<'a>(
+    &'a self,
+  ) -> impl Iterator<Item = (Coord2, &T)> + 'a {
+    self
+      .items
+      .iter()
+      .map(|(coord_ref, t)| (*coord_ref, t))
   }
 
-  fn coords_of_corner(&self, corner: Corner) -> Coord2 {
-    use Edge::*;
+  pub fn iter_mut<'a>(
+    &'a mut self,
+  ) -> impl Iterator<Item = (Coord2, &mut T)> + 'a {
+    self
+      .items
+      .iter_mut()
+      .map(|(coord_ref, t)| (*coord_ref, t))
+  }
+}
 
-    let x = match corner {
-      Corner(Right, _) | Corner(_, Right) => self.max_x,
-      _ => 0,
-    };
-
-    let y = match corner {
-      Corner(Top, _) | Corner(_, Top) => self.max_y,
-      _ => 0,
-    };
-
-    (x, y).into()
+impl<T> Edged for Grid<T> {
+  fn edge_at_coords(&self, coords: impl Into<Coord2>) -> EdgeInfo {
+    self.dimensions.edge_at_coords(coords)
   }
 
-  pub fn iter<'a>(&'a self) -> impl Iterator<Item = (Coord2, &T)> + 'a {
-    self.items.iter().map(|(coord_ref, t)| (*coord_ref, t))
-  }
-
-  pub fn iter_mut<'a>(&'a mut self) -> impl Iterator<Item = (Coord2, &mut T)> + 'a {
-    self.items.iter_mut().map(|(coord_ref, t)| (*coord_ref, t))
+  fn coords_of_corner(&self, corner: impl Into<Corner>) -> Coord2 {
+    self.dimensions.coords_of_corner(corner)
   }
 }
