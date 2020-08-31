@@ -2,7 +2,9 @@ pub trait Perpendicular<Cmp = Self> {
   fn perpendicular(&self, cmp: &Cmp) -> bool;
 }
 
-#[derive(Debug, Copy, Clone, Ord, Eq, PartialOrd, PartialEq)]
+#[derive(
+  Debug, Copy, Clone, Ord, Eq, PartialOrd, PartialEq,
+)]
 pub enum Axis {
   X,
   Y,
@@ -25,7 +27,9 @@ impl Perpendicular for Edge {
   }
 }
 
-#[derive(Debug, Copy, Clone, Ord, Eq, PartialOrd, PartialEq)]
+#[derive(
+  Debug, Copy, Clone, Ord, Eq, PartialOrd, PartialEq,
+)]
 pub enum EdgeInfo {
   Corner(Edge, Edge),
   Edge(Edge),
@@ -48,27 +52,37 @@ impl From<(Option<Edge>, Option<Edge>)> for EdgeInfo {
     // this is dumb.
     match edges {
       | (None, None) => Self::Neither,
-      | (Some(Top), Some(Left)) | (Some(Left), Some(Top)) => {
-        Self::Corner(Top, Left)
-      }
-      | (Some(Top), Some(Right)) | (Some(Right), Some(Top)) => {
+      | (Some(Top), Some(Left))
+      | (Some(Left), Some(Top)) => Self::Corner(Top, Left),
+      | (Some(Top), Some(Right))
+      | (Some(Right), Some(Top)) => {
         Self::Corner(Top, Right)
       }
-      | (Some(Bottom), Some(Right)) | (Some(Right), Some(Bottom)) => {
+      | (Some(Bottom), Some(Right))
+      | (Some(Right), Some(Bottom)) => {
         Self::Corner(Bottom, Right)
       }
-      | (Some(Bottom), Some(Left)) | (Some(Left), Some(Bottom)) => {
+      | (Some(Bottom), Some(Left))
+      | (Some(Left), Some(Bottom)) => {
         Self::Corner(Bottom, Left)
       }
       | (Some(Top), _) | (_, Some(Top)) => Self::Edge(Top),
-      | (Some(Bottom), _) | (_, Some(Bottom)) => Self::Edge(Bottom),
-      | (Some(Left), _) | (_, Some(Left)) => Self::Edge(Left),
-      | (Some(Right), _) | (_, Some(Right)) => Self::Edge(Right),
+      | (Some(Bottom), _) | (_, Some(Bottom)) => {
+        Self::Edge(Bottom)
+      }
+      | (Some(Left), _) | (_, Some(Left)) => {
+        Self::Edge(Left)
+      }
+      | (Some(Right), _) | (_, Some(Right)) => {
+        Self::Edge(Right)
+      }
     }
   }
 }
 
-#[derive(Debug, Copy, Clone, Ord, Eq, PartialOrd, PartialEq)]
+#[derive(
+  Debug, Copy, Clone, Ord, Eq, PartialOrd, PartialEq,
+)]
 pub enum Edge {
   Top,
   Bottom,
@@ -105,20 +119,20 @@ impl Corner {
 #[derive(
   Debug, Hash, Copy, Clone, Ord, Eq, PartialOrd, PartialEq,
 )]
-pub struct Coord2 {
-  pub x: usize,
-  pub y: usize,
+pub struct Coord2<T = usize> {
+  pub x: T,
+  pub y: T,
 }
 
-impl Coord2 {
+impl<T: Copy> Coord2<T> {
   /// Convert a coordinate pair to an (x, y) tuple
-  pub fn to_pair(&self) -> (usize, usize) {
+  pub fn to_pair(&self) -> (T, T) {
     (self.x, self.y)
   }
 }
 
-impl From<(usize, usize)> for Coord2 {
-  fn from((x, y): (usize, usize)) -> Self {
+impl<T> From<(T, T)> for Coord2<T> {
+  fn from((x, y): (T, T)) -> Self {
     Coord2 { x, y }
   }
 }
@@ -135,17 +149,20 @@ pub struct Rect {
 impl Rect {
   /// Test whether a coordinate falls within the bounds
   /// of the Rect
-  pub fn contains(&self, coords: impl Into<Coord2>) -> bool {
+  pub fn contains(
+    &self,
+    coords: impl Into<Coord2>,
+  ) -> bool {
     let coords = coords.into();
     let x_bound_lower = self.origin.x;
     let x_bound_upper = self.origin.x + self.width;
-    let x_good =
-      coords.x >= x_bound_lower && coords.x <= x_bound_upper;
+    let x_good = coords.x >= x_bound_lower
+      && coords.x <= x_bound_upper;
 
     let y_bound_lower = self.origin.y;
     let y_bound_upper = self.origin.y + self.height;
-    let y_good =
-      coords.y >= y_bound_lower && coords.y <= y_bound_upper;
+    let y_good = coords.y >= y_bound_lower
+      && coords.y <= y_bound_upper;
 
     x_good && y_good
   }
@@ -157,7 +174,9 @@ impl Rect {
 
   /// Iterate over the coordinates that fall within
   /// the Rect
-  pub fn coords_iter(&self) -> impl Iterator<Item = Coord2> {
+  pub fn coords_iter(
+    &self,
+  ) -> impl Iterator<Item = Coord2> {
     let max_x = self.width - 1;
     let max_y = self.height - 1;
 
@@ -215,7 +234,10 @@ pub trait Edged {
   ///
   /// assert!(matches!(edge, EdgeInfo::Edge(Left)))
   /// ```
-  fn edge_at_coords(&self, coords: impl Into<Coord2>) -> EdgeInfo;
+  fn edge_at_coords(
+    &self,
+    coords: impl Into<Coord2>,
+  ) -> EdgeInfo;
 
   /// Get the coordinates of a corner of the Rect
   ///
@@ -228,11 +250,17 @@ pub trait Edged {
   /// let rect = Rect { width: 10, height: 10, origin: (0, 0).into() };
   /// assert_eq!(rect.coords_of_corner(Corner(Top, Left)), Coord2 { x: 0, y: 9 })
   /// ```
-  fn coords_of_corner(&self, corner: impl Into<Corner>) -> Coord2;
+  fn coords_of_corner(
+    &self,
+    corner: impl Into<Corner>,
+  ) -> Coord2;
 }
 
 impl Edged for Rect {
-  fn coords_of_corner(&self, corner: impl Into<Corner>) -> Coord2 {
+  fn coords_of_corner(
+    &self,
+    corner: impl Into<Corner>,
+  ) -> Coord2 {
     let corner = corner.into();
 
     use Edge::*;
@@ -252,7 +280,10 @@ impl Edged for Rect {
     (x, y).into()
   }
 
-  fn edge_at_coords(&self, coords: impl Into<Coord2>) -> EdgeInfo {
+  fn edge_at_coords(
+    &self,
+    coords: impl Into<Coord2>,
+  ) -> EdgeInfo {
     let coords = coords.into();
 
     let max_x = self.width - 1;

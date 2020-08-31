@@ -2,6 +2,7 @@ use wasm_bindgen::*;
 
 pub mod constant;
 pub mod fluid;
+pub mod math;
 pub mod space;
 pub mod time;
 pub mod utils;

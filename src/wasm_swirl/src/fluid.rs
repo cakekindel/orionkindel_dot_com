@@ -33,13 +33,32 @@ pub struct FluidPoint {
 }
 
 pub struct Fluid {
+  /// Scalar that affects how quickly the fluid will diffuse
+  /// and affect the density of neighboring points
   diff: Diffusion,
+
+  /// Not sure yet
   viscosity: Viscosity,
+
+  // TODO: allow this to vary based on frametime
+  /// Scalar that regulates the amount of change we perform
+  /// in a tick
   dt: TimeDelta,
+
+  // TODO: can this be replaced with Grid.dimensions.width, ...height, and ...area()?
+  /// Total size of the grids
   size: usize,
+
+  /// Current density of fluids
   density: Grid<Density>,
+
+  /// Density of fluids from the previous iteration
   density_prev: Grid<Density>,
+
+  /// Current Velocity of fluids
   velocity: Grid<Vector2>,
+
+  /// Velocity of fluids from the previous iteration
   velocity_prev: Grid<Vector2>,
 }
 
@@ -71,12 +90,18 @@ impl Fluid {
     }
   }
 
-  pub fn add_dye(&mut self, pt: Coord2, amount: f64) -> Option<()> {
+  pub fn add_dye(
+    &mut self,
+    pt: Coord2,
+    amount: f64,
+  ) -> Option<()> {
     self
       .density
       .get(pt)
       .map(|dens| *dens)
-      .map(|density| self.density.set(pt, density + amount.into()))
+      .map(|density| {
+        self.density.set(pt, density + amount.into())
+      })
       .map(|_| ())
   }
 
@@ -85,13 +110,11 @@ impl Fluid {
     pt: Coord2,
     amount: Vector2,
   ) -> Option<()> {
-    self
-      .velocity
-      .get(pt)
-      .map(|vector| *vector)
-      .map(|velocity| {
+    self.velocity.get(pt).map(|vector| *vector).map(
+      |velocity| {
         self.velocity.set(pt, velocity + amount);
-      })
+      },
+    )
   }
 
   pub fn diffuse(
@@ -101,8 +124,17 @@ impl Fluid {
     dt: TimeDelta,
     counteract_axis: Option<Axis>,
   ) -> () {
-    let a = &dt as &f64 * diffusion * (N - 2) as f64 * (N - 2) as f64;
-    Self::lin_solve(grid, grid_prev, a, 0.0, counteract_axis);
+    let a = &dt as &f64
+      * diffusion
+      * (N - 2) as f64
+      * (N - 2) as f64;
+    Self::lin_solve(
+      grid,
+      grid_prev,
+      a,
+      1.0 + (4.0 * a),
+      counteract_axis,
+    );
   }
 
   pub fn lin_solve(
@@ -123,11 +155,12 @@ impl Fluid {
 
           let neighbor_influence = a * neighbor_sum;
 
-          let prev_val = grid_prev
-            .get(coords)
-            .expect("floats and floats_prev were different sizes!!");
+          let prev_val = grid_prev.get(coords).expect(
+            "floats and floats_prev were different sizes!!",
+          );
 
-          let next_val = (prev_val + neighbor_influence) / c;
+          let next_val =
+            (prev_val + neighbor_influence) / c;
           (val_mut, next_val)
         })
         .for_each(|(val_mut, next_val)| {
@@ -151,54 +184,54 @@ impl Fluid {
     grid: &mut Grid<f64>,
     counteract_axis: Option<Axis>,
   ) {
-    // This function calls `Grid::edges_iter_mut`,
-    // and wants to read the values of the edge points'
-    // neighbors.
+    let grid_ptr: *mut _ = grid;
 
     // We need to bypass the borrow checker because
-    // Rust doesn't _know_ that the neighbor won't be changed
-    // as a result of the mutable borrow
-    let grid: *mut _ = grid;
+    // we need to mutably borrow it (to iterate) and
+    // immutably borrow it (to read neighbors).
 
-    unsafe {
-      grid
-        .as_mut()
-        .unwrap()
-        .edges_iter_mut()
-        // filter out corners
-        .filter_map(|(edge_info, coords, val_mut)| {
-          edge_info
-            .get_edge()
-            .map(|edge| (edge, coords, val_mut))
-        })
-        .map(|(edge, coords, val_mut)| {
-          // we want to read the value of the point next to the
-          // current point on the edge
-          let neighbor_coords = match edge {
-            | Edge::Top => (coords.x, coords.y + 1),
-            | Edge::Bottom => (coords.x, coords.y - 1),
-            | Edge::Left => (coords.x + 1, coords.y),
-            | Edge::Right => (coords.x - 1, coords.y),
-          };
+    // The chief risk would be a use-after-free or race
+    // condition, but since this loop doesn't free anything
+    // and we are in a single-threaded environment, this
+    // should be safe
+    let grid_mut = unsafe { grid_ptr.as_mut().unwrap() };
+    let grid = unsafe { grid_ptr.as_ref().unwrap() };
 
-          let neighbor = grid
-            .as_ref()
-            .unwrap()
-            .get(neighbor_coords)
-            .map(|f| *f)
-            .unwrap_or_default();
+    grid_mut
+      .edges_iter_mut()
+      // filter out corners
+      .filter_map(|(edge_info, coords, val_mut)| {
+        edge_info
+          .get_edge()
+          .map(|edge| (edge, coords, val_mut))
+      })
+      .map(|(edge, coords, val_mut)| {
+        // we want to read the value of the point next to the
+        // current point on the edge
+        let neighbor_coords = match edge {
+          | Edge::Top => (coords.x, coords.y + 1),
+          | Edge::Bottom => (coords.x, coords.y - 1),
+          | Edge::Left => (coords.x + 1, coords.y),
+          | Edge::Right => (coords.x - 1, coords.y),
+        };
 
-          let new_val = counteract_axis
-            .and_then(|axis| edge.perpendicular(&axis).as_some(()))
-            .map(|_should_counteract| -neighbor)
-            .unwrap_or(neighbor);
+        let neighbor = grid
+          .get(neighbor_coords)
+          .map(|f| *f)
+          .unwrap_or_default();
 
-          (new_val, val_mut)
-        })
-        .for_each(|(new_val, val_mut)| {
-          *val_mut = new_val;
-        });
-    }
+        let new_val = counteract_axis
+          .and_then(|axis| {
+            edge.perpendicular(&axis).as_some(())
+          })
+          .map(|_should_counteract| -neighbor)
+          .unwrap_or(neighbor);
+
+        (new_val, val_mut)
+      })
+      .for_each(|(new_val, val_mut)| {
+        *val_mut = new_val;
+      });
   }
 
   // TODO: FixCorners trait?
@@ -207,14 +240,78 @@ impl Fluid {
       let corner = *corner;
       grid
         .get_corner(corner)
-        .map(|(coords, _)| grid.get_adjacent_neighbors(coords))
+        .map(|(coords, _)| {
+          grid.get_adjacent_neighbors(coords)
+        })
         .map(|neighbors| {
-          let neighbor_sum =
-            neighbors.map(|(_, val)| val).fold(0.0, Add::add);
+          let neighbor_sum = neighbors
+            .map(|(_, val)| val)
+            .fold(0.0, Add::add);
 
           neighbor_sum / 2.0
         })
         .map(|new_val| grid.set_corner(corner, new_val));
     });
+  }
+
+  pub fn advect(
+    n: usize,
+    b: i32,
+    d: &mut Grid<f64>,
+    d0: &mut Grid<f64>,
+    vel_x: &mut Grid<f64>,
+    vel_y: &mut Grid<f64>,
+    dt: f64,
+  ) {
+    use crate::math::Clamp;
+    // Rather than advecting quantities by computing where a particle moves over the current time step,
+    // we trace the trajectory of the particle from each grid cell back in time to its former position,
+    // and we copy the quantities at that position to the starting grid cell. [NVIDIA GPU Gems, Ch. 38 #Advection]
+
+    let max_x = d.dimensions.width as f64 - 1.0;
+    let max_y = d.dimensions.height as f64 - 1.0;
+
+    let mut i0: usize;
+    let mut j0: usize;
+    let mut i1: usize;
+    let mut j1: usize;
+
+    let mut x_time_back: f64;
+    let mut y_time_back: f64;
+    let mut s0: f64;
+    let mut t0: f64;
+    let mut s1: f64;
+    let mut t1: f64;
+
+    let time_step = dt * N as f64;
+    for x in 1..=N {
+      for y in 1..N {
+        let vel = (
+          *vel_x.get((x, y)).unwrap(),
+          *vel_y.get((x, y)).unwrap(),
+        );
+
+        let distance_travelled_in_time_step: Vector2 =
+          (vel.0 * time_step, vel.1 * time_step).into();
+
+        let trace_back: Coord2<f64> = (
+          (x as f64) - distance_travelled_in_time_step.x,
+          (y as f64) - distance_travelled_in_time_step.y,
+        )
+          .into();
+
+        // clamp to 0.5 away from edges because
+        // `interpolate` fails on edges
+        let trace_back: Coord2<f64> = (
+          trace_back.x.clam(0.5, max_x - 0.5),
+          trace_back.y.clam(0.5, max_y - 0.5),
+        )
+          .into();
+
+        let new_val = d0.interpolate(trace_back);
+
+        d.set((x, y), new_val);
+      }
+    }
   }
 }

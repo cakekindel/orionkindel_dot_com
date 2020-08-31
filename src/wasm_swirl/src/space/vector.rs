@@ -47,6 +47,15 @@ impl std::ops::Add for Vector2 {
   }
 }
 
+impl From<(f64, f64)> for Vector2 {
+  fn from((x, y): (f64, f64)) -> Self {
+    Self {
+      x,
+      y,
+    }
+  }
+}
+
 impl std::ops::Mul<f64> for Vector2 {
   type Output = Self;
   fn mul(self, scalar: f64) -> Self::Output {
