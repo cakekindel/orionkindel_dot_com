@@ -455,7 +455,7 @@ impl<T> Grid<T> {
   pub fn set(
     &mut self,
     coords: impl Into<Coord2>,
-    new_val: T,
+    new_val: impl Into<T>,
   ) -> Option<T> {
     //! # Example
     //! ```
@@ -467,7 +467,7 @@ impl<T> Grid<T> {
     //! assert!(matches!(grid.get((0, 0)), None));
     //! ```
 
-    self.items.insert(coords.into(), new_val)
+    self.items.insert(coords.into(), new_val.into())
   }
 
   /// Get an iterator over the points in the grid,
