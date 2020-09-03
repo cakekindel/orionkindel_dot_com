@@ -102,13 +102,15 @@ impl Fluid {
     }
   }
 
-  pub fn tick(&self) {
-    self.diffuse(&mut self.velocity, &self.velocity_prev);
-    // Self::project();
-    self.advect(&mut self.velocity, &self.velocity_prev, &self.velocity_prev);
-    //Self::project(Vx, Vy, Vz, Vx0, Vy0, 4, N);
-    self.diffuse(&mut self.density, &self.density_prev);
-    self.advect(&mut self.density, &self.density_prev, &self.velocity_prev);
+  pub fn tick(&mut self) {
+    self.diffuse_velocity();
+    self.project_velocity();
+
+    self.advect_velocity();
+    self.project_velocity();
+
+    self.diffuse_density();
+    self.advect_density();
   }
 
   pub fn add_dye(
@@ -138,15 +140,24 @@ impl Fluid {
     )
   }
 
+  pub fn diffuse_velocity(&mut self) {
+    Self::diffuse(self.diff, self.dt, &mut self.velocity, &mut self.velocity_prev)
+  }
+
+  pub fn diffuse_density(&mut self) {
+    Self::diffuse(self.diff, self.dt, &mut self.density, &mut self.density_prev)
+  }
+
   pub fn diffuse<T>(
-    &self,
+    diff: Diffusion,
+    dt: TimeDelta,
     grid: &mut Grid<T>,
     grid_prev: &Grid<T>,
   ) -> ()
   where T: Default + Copy + ValueAtEdge + Add<T, Output = T> + Mul<f64, Output = T> + Div<f64, Output = T>
   {
-    let a = &self.dt as &f64
-      * self.diff.0
+    let a = &dt as &f64
+      * diff.0
       * (N - 2) as f64
       * (N - 2) as f64;
 
@@ -203,7 +214,7 @@ impl Fluid {
   }
 
   // TODO: FixEdges trait?
-  pub fn fix_edges<T: Default + ValueAtEdge>(
+  pub fn fix_edges<T: Default + ValueAtEdge + Copy>(
     grid: &mut Grid<T>,
   ) {
     let grid_ptr: *mut _ = grid;
@@ -272,54 +283,79 @@ impl Fluid {
     });
   }
 
-  pub fn project<T>(&self, vel: &Grid<Vector2>, grid_a: &mut Grid<T>, grid_b: &mut Grid<T>)
-  where T: Default + Copy + ValueAtEdge + Add<T, Output = T> + Div<f64, Output = T> {
+  pub fn project_velocity(&mut self) {
+    Self::project(&mut self.velocity, &mut self.velocity_prev)
+  }
+  pub fn project(vel: &mut Grid<Vector2>, other: &mut Grid<Vector2>)
+  {
     use std::iter::repeat;
 
-    grid_a.dimensions.coords_iter()
+    other.dimensions.coords_iter()
       .map(|coord| (coord, coord.neighbors()))
       .map(|(coord, neighbors)| (coord, neighbors.map(|coord| vel.get(coord))))
-      .map(|(coord, neighbor_velocities)| {
-        let new_velocity = -(neighbor_velocities.left - neighbor_velocities.right + neighbor_velocities.top - neighbor_velocities.bottom) / (N * 2);
-        (coord, new_velocity)
+      .map(|(coord, neighbors)| (coord, neighbors.map(|vel| vel.map(|vel| *vel).unwrap_or_default())))
+      .map(|(coord, neighbor_vals)| {
+        let new_val = -(neighbor_vals.left.x - neighbor_vals.right.x + neighbor_vals.top.y - neighbor_vals.bottom.y) / (N as f64 * 2.0);
+        (coord, new_val)
       })
-      .for_each(|(coord, new_velocity)| {
-        grid_b.set(coord, new_velocity);
-        grid_a.set(coord, Default::default());
+      .for_each(|(coord, computed_val)| {
+        let new_val = Vector2 {
+          x: 0.0,
+          y: computed_val
+        };
+
+        other.set(coord, new_val);
       });
 
-    Self::set_bnd(grid_a);
-    Self::set_bnd(grid_b);
+    Self::set_bnd(other);
+
+    let other_ptr: *mut _ = other;
+    let other_ref = unsafe { other_ptr.as_ref().unwrap() };
+    let other_mut = unsafe { other_ptr.as_mut().unwrap() };
 
     repeat(()).take(ITER).for_each(|_| {
-      grid_a.dimensions
+      vel.dimensions
         .coords_iter()
-        .map(|coords| (coords, coords.neighbors().map(|coords| grid_a.get(coords))))
-        .map(|(coords, neighbors)| (coords, neighbors.sum()))
-        .map(|(coords, neighbor_sum)| (coords, grid_b.get(coords).map(|t| *t).unwrap_or_default() + neighbor_sum))
-        .map(|(coords, new_val)| (coords, new_val / 4.0))
-        .for_each(|(coords, new_val)| {grid_a.set(coords, new_val);})
+        .filter_map(|coords| coords.neighbors().map(|coords| other_ref.get(coords).copied()).opt().map(|neighbors| (coords, neighbors)))
+        .map(|(c, ns)| (c, ns.map(|v| v.x)))
+        .map(|(c, neighbors)| (c, neighbors.sum()))
+        .map(|(c, neighbor_sum)| (c, other.get(c).map(|t| t.y).unwrap_or_default() + neighbor_sum))
+        .map(|(c, new_x)| (c, new_x / 4.0))
+        .for_each(|(coords, new_x)| {
+          let y = other_ref.get(coords).map(|v| f64::from(v.y)).unwrap_or_default();
+          other_mut.set(coords, (new_x, y));
+        })
     });
 
-    Self::set_bnd(grid_a);
+    Self::set_bnd(other);
 
-    let (width, height) = (grid_a.dimensions.width, grid_a.dimensions.height);
+    let (width, height) = (other.dimensions.width, other.dimensions.height);
+    let (width, height) = (width as f64, height as f64);
 
-      grid_a.dimensions
+      other.dimensions
         .coords_iter()
         .map(|coord| (coord, coord.neighbors()))
-        .map(|(coord, neighbors)| (coord, neighbors.map(|coord| grid_a.get(coord))))
+        .filter_map(|(coord, neighbors)| neighbors.map(|coord| other.get(coord)).opt().map(|neighbors| (coord, neighbors)))
+        .map(|(coord, neighbors)| (coord, neighbors.map(|v| v.x)))
         .map(|(coord, neighbors)| (coord, neighbors.right - neighbors.left, neighbors.top - neighbors.bottom))
-        .map(|(coord, x_diff, y_diff)| (coord, x_diff * width / 2, y_diff * height / 2))
+        .map(|(coord, x_diff, y_diff)| (coord, x_diff * width / 2.0, y_diff * height / 2.0))
         .for_each(|(coord, x_sub, y_sub)| {
           let velocity = vel.get(coord).map(|v| *v).unwrap_or_default();
           vel.set(coord, (velocity.x - x_sub, velocity.y - y_sub));
         });
-    Self::set_bnd(&mut vel);
+    Self::set_bnd(vel);
+  }
+
+  pub fn advect_velocity(&mut self) {
+    Self::advect(self.dt, &mut self.velocity, &self.velocity_prev, &self.velocity_prev)
+  }
+
+  pub fn advect_density(&mut self) {
+    Self::advect(self.dt, &mut self.density, &self.density_prev, &self.velocity_prev)
   }
 
   pub fn advect<T>(
-    &mut self,
+    dt: TimeDelta,
     grid: &mut Grid<T>,
     grid_prev: &Grid<T>,
     vel_prev: &Grid<Vector2>,
@@ -336,7 +372,7 @@ where
 
     // Get the distance in the grid to travel based on
     // the amount of time since last run
-    let time_step = self.dt.0 * N as f64;
+    let time_step = dt.0 * N as f64;
 
     // iterate over the coords in the center, excluding
     // edges and corners

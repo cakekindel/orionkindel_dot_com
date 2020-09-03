@@ -103,7 +103,7 @@ where
     let bottom_left_weight =
       self.get((x_left, y_bot))
       .map(|val|
-        val
+        *val
         * left_weight
         * bot_weight
       )
@@ -112,7 +112,7 @@ where
     let top_left_weight =
       self.get((x_left, y_top))
       .map(|val|
-        val
+        *val
         * left_weight
         * top_weight
       )
@@ -121,7 +121,7 @@ where
     let bottom_right_weight =
       self.get((x_right, y_bot))
       .map(|val|
-        val
+        *val
         * right_weight
         * bot_weight
       )
@@ -130,7 +130,7 @@ where
     let top_right_weight =
       self.get((x_right, y_top))
       .map(|val|
-        val
+        *val
         * right_weight
         * top_weight
       )

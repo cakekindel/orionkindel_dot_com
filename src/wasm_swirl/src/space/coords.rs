@@ -1,3 +1,5 @@
+use std::ops::{Sub, Add};
+
 pub trait Perpendicular<Cmp = Self> {
   fn perpendicular(&self, cmp: &Cmp) -> bool;
 }
@@ -124,6 +126,19 @@ pub struct Coord2<T = usize> {
   pub y: T,
 }
 
+impl<T> Coord2<T>
+where
+  T: Copy + Add<usize, Output = T> + Sub<usize, Output = T> {
+  pub fn neighbors(&self) -> Neighbors<Self> {
+    Neighbors {
+      top: (self.x, self.y + 1).into(),
+      right: (self.x + 1, self.y).into(),
+      bottom: (self.x, self.y - 1).into(),
+      left: (self.x - 1, self.y).into(),
+    }
+  }
+}
+
 impl<T: Copy> Coord2<T> {
   /// Convert a coordinate pair to an (x, y) tuple
   pub fn to_pair(&self) -> (T, T) {
@@ -134,6 +149,45 @@ impl<T: Copy> Coord2<T> {
 impl<T> From<(T, T)> for Coord2<T> {
   fn from((x, y): (T, T)) -> Self {
     Coord2 { x, y }
+  }
+}
+
+#[derive(Clone, Copy, Debug)]
+pub struct Neighbors<T: Copy> {
+  pub top: T,
+  pub right: T,
+  pub bottom: T,
+  pub left: T,
+}
+
+impl<T: Copy> Neighbors<T> {
+  pub fn map<F, R: Copy>(self, mut f: F) -> Neighbors<R>
+  where F: FnMut(T) -> R {
+    Neighbors {
+      top: f(self.top),
+      right: f(self.right),
+      bottom: f(self.bottom),
+      left: f(self.left),
+    }
+  }
+}
+
+impl<T: Copy> Neighbors<Option<T>> {
+  pub fn opt(self) -> Option<Neighbors<T>> {
+    let (left, right, top, bottom) = (self.left, self.right, self.top, self.bottom);
+    left
+      .and_then(|l| right.map(|r| (l, r)))
+      .and_then(|(l, r)| top.map(|t| (l, r, t)))
+      .and_then(|(l, r, t)| bottom.map(|b| (l, r, t, b)))
+      .map(|(left, right, top, bottom)| Neighbors {
+        left, right, top, bottom
+      })
+  }
+}
+
+impl<T: Copy + Add<T, Output = T>> Neighbors<T> {
+  pub fn sum(self) -> T {
+    self.bottom + self.top + self.left + self.right
   }
 }
 

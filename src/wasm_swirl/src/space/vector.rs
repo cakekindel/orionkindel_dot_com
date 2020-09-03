@@ -47,6 +47,26 @@ impl std::ops::Add for Vector2 {
   }
 }
 
+impl std::ops::Sub for Vector2 {
+  type Output = Self;
+  fn sub(self, other: Self) -> Self::Output {
+    Vector2 {
+      x: self.x - other.x,
+      y: self.y - other.y,
+    }
+  }
+}
+
+impl std::ops::Neg for Vector2 {
+  type Output = Self;
+  fn neg(self) -> Self::Output {
+    Vector2 {
+      x: -self.x,
+      y: -self.y,
+    }
+  }
+}
+
 impl From<(f64, f64)> for Vector2 {
   fn from((x, y): (f64, f64)) -> Self {
     Self {
