@@ -54,7 +54,7 @@ where
   T: std::ops::Add<Output = T>
     + std::ops::Mul<f64, Output = T>
     + Default
-    + Copy
+    + Copy,
 {
   /// Get the combined value of a point that sits
   /// between 4 other points. Uses a crude bilinear
@@ -62,7 +62,10 @@ where
   ///
   /// Note that this will return the default for `T`
   /// if given an edge point.
-  pub fn interpolate(&'a self, pt: impl Into<Coord2<f64>>) -> T {
+  pub fn interpolate(
+    &'a self,
+    pt: impl Into<Coord2<f64>>,
+  ) -> T {
     //! # Example
     //! ```
     //! # use wasm_swirl::space::matrix::{Grid};
@@ -96,44 +99,28 @@ where
     let y_top = floored.y + 1;
 
     let left_weight = pt.x - x_left as f64;
-    let right_weight =  1.0 - left_weight;
+    let right_weight = 1.0 - left_weight;
     let bot_weight = pt.y - y_bot as f64;
     let top_weight = 1.0 - bot_weight;
 
-    let bottom_left_weight =
-      self.get((x_left, y_bot))
-      .map(|val|
-        *val
-        * left_weight
-        * bot_weight
-      )
+    let bottom_left_weight = self
+      .get((x_left, y_bot))
+      .map(|val| *val * left_weight * bot_weight)
       .unwrap_or_default();
 
-    let top_left_weight =
-      self.get((x_left, y_top))
-      .map(|val|
-        *val
-        * left_weight
-        * top_weight
-      )
+    let top_left_weight = self
+      .get((x_left, y_top))
+      .map(|val| *val * left_weight * top_weight)
       .unwrap_or_default();
 
-    let bottom_right_weight =
-      self.get((x_right, y_bot))
-      .map(|val|
-        *val
-        * right_weight
-        * bot_weight
-      )
+    let bottom_right_weight = self
+      .get((x_right, y_bot))
+      .map(|val| *val * right_weight * bot_weight)
       .unwrap_or_default();
 
-    let top_right_weight =
-      self.get((x_right, y_top))
-      .map(|val|
-        *val
-        * right_weight
-        * top_weight
-      )
+    let top_right_weight = self
+      .get((x_right, y_top))
+      .map(|val| *val * right_weight * top_weight)
       .unwrap_or_default();
 
     bottom_left_weight

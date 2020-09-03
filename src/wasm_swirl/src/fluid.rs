@@ -1,4 +1,4 @@
-use std::ops::{Add, Mul, Div};
+use std::ops::{Add, Div, Mul};
 
 use crate::constant::{ITER, N};
 use crate::convert;
@@ -141,11 +141,21 @@ impl Fluid {
   }
 
   pub fn diffuse_velocity(&mut self) {
-    Self::diffuse(self.diff, self.dt, &mut self.velocity, &mut self.velocity_prev)
+    Self::diffuse(
+      self.diff,
+      self.dt,
+      &mut self.velocity,
+      &mut self.velocity_prev,
+    )
   }
 
   pub fn diffuse_density(&mut self) {
-    Self::diffuse(self.diff, self.dt, &mut self.density, &mut self.density_prev)
+    Self::diffuse(
+      self.diff,
+      self.dt,
+      &mut self.density,
+      &mut self.density_prev,
+    )
   }
 
   pub fn diffuse<T>(
@@ -154,19 +164,20 @@ impl Fluid {
     grid: &mut Grid<T>,
     grid_prev: &Grid<T>,
   ) -> ()
-  where T: Default + Copy + ValueAtEdge + Add<T, Output = T> + Mul<f64, Output = T> + Div<f64, Output = T>
+  where
+    T: Default
+      + Copy
+      + ValueAtEdge
+      + Add<T, Output = T>
+      + Mul<f64, Output = T>
+      + Div<f64, Output = T>,
   {
     let a = &dt as &f64
       * diff.0
       * (N - 2) as f64
       * (N - 2) as f64;
 
-    Self::lin_solve(
-      grid,
-      grid_prev,
-      a,
-      1.0 + (4.0 * a),
-    );
+    Self::lin_solve(grid, grid_prev, a, 1.0 + (4.0 * a));
   }
 
   pub fn lin_solve<'a, T>(
@@ -174,9 +185,14 @@ impl Fluid {
     grid_prev: &Grid<T>,
     a: f64,
     c: f64,
-  )
-  where T: Default + Copy + ValueAtEdge + Add<T, Output = T> + Mul<f64, Output = T> + Div<f64, Output = T>
-{
+  ) where
+    T: Default
+      + Copy
+      + ValueAtEdge
+      + Add<T, Output = T>
+      + Mul<f64, Output = T>
+      + Div<f64, Output = T>,
+  {
     std::iter::repeat(()).take(ITER).for_each(|_| {
       grid
         .iter_mut()
@@ -204,10 +220,13 @@ impl Fluid {
     Self::set_bnd(grid)
   }
 
-  pub fn set_bnd<T>(
-    grid: &mut Grid<T>,
-  )
-  where T: Default + Copy + ValueAtEdge + Add<T, Output = T> + Div<f64, Output = T>
+  pub fn set_bnd<T>(grid: &mut Grid<T>)
+  where
+    T: Default
+      + Copy
+      + ValueAtEdge
+      + Add<T, Output = T>
+      + Div<f64, Output = T>,
   {
     Self::fix_corners(grid);
     Self::fix_edges(grid);
@@ -264,7 +283,11 @@ impl Fluid {
 
   pub fn fix_corners<T>(grid: &mut Grid<T>)
   where
-    T: Default + Copy + Add<T, Output = T> + Div<f64, Output = T> {
+    T: Default
+      + Copy
+      + Add<T, Output = T>
+      + Div<f64, Output = T>,
+  {
     Corner::all().iter().for_each(|corner| {
       let corner = *corner;
       grid
@@ -284,24 +307,44 @@ impl Fluid {
   }
 
   pub fn project_velocity(&mut self) {
-    Self::project(&mut self.velocity, &mut self.velocity_prev)
+    Self::project(
+      &mut self.velocity,
+      &mut self.velocity_prev,
+    )
   }
-  pub fn project(vel: &mut Grid<Vector2>, other: &mut Grid<Vector2>)
-  {
+  pub fn project(
+    vel: &mut Grid<Vector2>,
+    other: &mut Grid<Vector2>,
+  ) {
     use std::iter::repeat;
 
-    other.dimensions.coords_iter()
+    other
+      .dimensions
+      .coords_iter()
       .map(|coord| (coord, coord.neighbors()))
-      .map(|(coord, neighbors)| (coord, neighbors.map(|coord| vel.get(coord))))
-      .map(|(coord, neighbors)| (coord, neighbors.map(|vel| vel.map(|vel| *vel).unwrap_or_default())))
+      .map(|(coord, neighbors)| {
+        (coord, neighbors.map(|coord| vel.get(coord)))
+      })
+      .map(|(coord, neighbors)| {
+        (
+          coord,
+          neighbors.map(|vel| {
+            vel.map(|vel| *vel).unwrap_or_default()
+          }),
+        )
+      })
       .map(|(coord, neighbor_vals)| {
-        let new_val = -(neighbor_vals.left.x - neighbor_vals.right.x + neighbor_vals.top.y - neighbor_vals.bottom.y) / (N as f64 * 2.0);
+        let new_val = -(neighbor_vals.left.x
+          - neighbor_vals.right.x
+          + neighbor_vals.top.y
+          - neighbor_vals.bottom.y)
+          / (N as f64 * 2.0);
         (coord, new_val)
       })
       .for_each(|(coord, computed_val)| {
         let new_val = Vector2 {
           x: 0.0,
-          y: computed_val
+          y: computed_val,
         };
 
         other.set(coord, new_val);
@@ -314,44 +357,91 @@ impl Fluid {
     let other_mut = unsafe { other_ptr.as_mut().unwrap() };
 
     repeat(()).take(ITER).for_each(|_| {
-      vel.dimensions
+      vel
+        .dimensions
         .coords_iter()
-        .filter_map(|coords| coords.neighbors().map(|coords| other_ref.get(coords).copied()).opt().map(|neighbors| (coords, neighbors)))
+        .filter_map(|coords| {
+          coords
+            .neighbors()
+            .map(|coords| other_ref.get(coords).copied())
+            .opt()
+            .map(|neighbors| (coords, neighbors))
+        })
         .map(|(c, ns)| (c, ns.map(|v| v.x)))
         .map(|(c, neighbors)| (c, neighbors.sum()))
-        .map(|(c, neighbor_sum)| (c, other.get(c).map(|t| t.y).unwrap_or_default() + neighbor_sum))
+        .map(|(c, neighbor_sum)| {
+          (
+            c,
+            other.get(c).map(|t| t.y).unwrap_or_default()
+              + neighbor_sum,
+          )
+        })
         .map(|(c, new_x)| (c, new_x / 4.0))
         .for_each(|(coords, new_x)| {
-          let y = other_ref.get(coords).map(|v| f64::from(v.y)).unwrap_or_default();
+          let y = other_ref
+            .get(coords)
+            .map(|v| f64::from(v.y))
+            .unwrap_or_default();
           other_mut.set(coords, (new_x, y));
         })
     });
 
     Self::set_bnd(other);
 
-    let (width, height) = (other.dimensions.width, other.dimensions.height);
+    let (width, height) =
+      (other.dimensions.width, other.dimensions.height);
     let (width, height) = (width as f64, height as f64);
 
-      other.dimensions
-        .coords_iter()
-        .map(|coord| (coord, coord.neighbors()))
-        .filter_map(|(coord, neighbors)| neighbors.map(|coord| other.get(coord)).opt().map(|neighbors| (coord, neighbors)))
-        .map(|(coord, neighbors)| (coord, neighbors.map(|v| v.x)))
-        .map(|(coord, neighbors)| (coord, neighbors.right - neighbors.left, neighbors.top - neighbors.bottom))
-        .map(|(coord, x_diff, y_diff)| (coord, x_diff * width / 2.0, y_diff * height / 2.0))
-        .for_each(|(coord, x_sub, y_sub)| {
-          let velocity = vel.get(coord).map(|v| *v).unwrap_or_default();
-          vel.set(coord, (velocity.x - x_sub, velocity.y - y_sub));
-        });
+    other
+      .dimensions
+      .coords_iter()
+      .map(|coord| (coord, coord.neighbors()))
+      .filter_map(|(coord, neighbors)| {
+        neighbors
+          .map(|coord| other.get(coord))
+          .opt()
+          .map(|neighbors| (coord, neighbors))
+      })
+      .map(|(coord, neighbors)| {
+        (coord, neighbors.map(|v| v.x))
+      })
+      .map(|(coord, neighbors)| {
+        (
+          coord,
+          neighbors.right - neighbors.left,
+          neighbors.top - neighbors.bottom,
+        )
+      })
+      .map(|(coord, x_diff, y_diff)| {
+        (coord, x_diff * width / 2.0, y_diff * height / 2.0)
+      })
+      .for_each(|(coord, x_sub, y_sub)| {
+        let velocity =
+          vel.get(coord).map(|v| *v).unwrap_or_default();
+        vel.set(
+          coord,
+          (velocity.x - x_sub, velocity.y - y_sub),
+        );
+      });
     Self::set_bnd(vel);
   }
 
   pub fn advect_velocity(&mut self) {
-    Self::advect(self.dt, &mut self.velocity, &self.velocity_prev, &self.velocity_prev)
+    Self::advect(
+      self.dt,
+      &mut self.velocity,
+      &self.velocity_prev,
+      &self.velocity_prev,
+    )
   }
 
   pub fn advect_density(&mut self) {
-    Self::advect(self.dt, &mut self.density, &self.density_prev, &self.velocity_prev)
+    Self::advect(
+      self.dt,
+      &mut self.density,
+      &self.density_prev,
+      &self.velocity_prev,
+    )
   }
 
   pub fn advect<T>(
@@ -359,13 +449,13 @@ impl Fluid {
     grid: &mut Grid<T>,
     grid_prev: &Grid<T>,
     vel_prev: &Grid<Vector2>,
-  )
-where
-  T: std::ops::Add<Output = T>
-    + std::ops::Mul<f64, Output = T>
-    + Default
-    + Copy
-    {    use crate::math::Clamp;
+  ) where
+    T: std::ops::Add<Output = T>
+      + std::ops::Mul<f64, Output = T>
+      + Default
+      + Copy,
+  {
+    use crate::math::Clamp;
     // Rather than advecting quantities by computing where a particle moves over the current time step,
     // we trace the trajectory of the particle from each grid cell back in time to its former position,
     // and we copy the quantities at that position to the starting grid cell. [NVIDIA GPU Gems, Ch. 38 #Advection]
@@ -415,14 +505,14 @@ impl ValueAtEdge for Vector2 {
   fn value_at_edge(edge: Edge, neighbor: Self) -> Self {
     use Edge::*;
     match edge {
-      Left | Right => Self {
+      | Left | Right => Self {
         x: -neighbor.x,
         y: neighbor.y,
       },
-      Top | Bottom => Self {
+      | Top | Bottom => Self {
         x: neighbor.x,
         y: -neighbor.y,
-      }
+      },
     }
   }
 }

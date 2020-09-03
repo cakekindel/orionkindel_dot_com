@@ -69,10 +69,7 @@ impl std::ops::Neg for Vector2 {
 
 impl From<(f64, f64)> for Vector2 {
   fn from((x, y): (f64, f64)) -> Self {
-    Self {
-      x,
-      y,
-    }
+    Self { x, y }
   }
 }
 

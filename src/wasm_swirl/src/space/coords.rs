@@ -1,4 +1,4 @@
-use std::ops::{Sub, Add};
+use std::ops::{Add, Sub};
 
 pub trait Perpendicular<Cmp = Self> {
   fn perpendicular(&self, cmp: &Cmp) -> bool;
@@ -128,7 +128,8 @@ pub struct Coord2<T = usize> {
 
 impl<T> Coord2<T>
 where
-  T: Copy + Add<usize, Output = T> + Sub<usize, Output = T> {
+  T: Copy + Add<usize, Output = T> + Sub<usize, Output = T>,
+{
   pub fn neighbors(&self) -> Neighbors<Self> {
     Neighbors {
       top: (self.x, self.y + 1).into(),
@@ -162,7 +163,9 @@ pub struct Neighbors<T: Copy> {
 
 impl<T: Copy> Neighbors<T> {
   pub fn map<F, R: Copy>(self, mut f: F) -> Neighbors<R>
-  where F: FnMut(T) -> R {
+  where
+    F: FnMut(T) -> R,
+  {
     Neighbors {
       top: f(self.top),
       right: f(self.right),
@@ -174,13 +177,17 @@ impl<T: Copy> Neighbors<T> {
 
 impl<T: Copy> Neighbors<Option<T>> {
   pub fn opt(self) -> Option<Neighbors<T>> {
-    let (left, right, top, bottom) = (self.left, self.right, self.top, self.bottom);
+    let (left, right, top, bottom) =
+      (self.left, self.right, self.top, self.bottom);
     left
       .and_then(|l| right.map(|r| (l, r)))
       .and_then(|(l, r)| top.map(|t| (l, r, t)))
       .and_then(|(l, r, t)| bottom.map(|b| (l, r, t, b)))
       .map(|(left, right, top, bottom)| Neighbors {
-        left, right, top, bottom
+        left,
+        right,
+        top,
+        bottom,
       })
   }
 }
