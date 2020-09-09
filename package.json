@@ -19,10 +19,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "pixi.js": "^5.3.3",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "reason-react": ">=0.7.1",
-    "reprocessing": "^1.0.0"
+    "reason-react": ">=0.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",

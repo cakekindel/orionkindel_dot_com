@@ -39,11 +39,6 @@ impl Div<f64> for Density {
   }
 }
 
-pub struct FluidPoint {
-  density: Density,
-  velocity: Vector2,
-}
-
 pub struct Fluid {
   /// Scalar that affects how quickly the fluid will diffuse
   /// and affect the density of neighboring points
@@ -56,10 +51,6 @@ pub struct Fluid {
   /// Scalar that regulates the amount of change we perform
   /// in a tick
   dt: TimeDelta,
-
-  // TODO: can this be replaced with Grid.dimensions.width, ...height, and ...area()?
-  /// Total size of the grids
-  size: usize,
 
   /// Current density of fluids
   density: Grid<Density>,
@@ -94,7 +85,6 @@ impl Fluid {
       dt: dt.into(),
       diff: diffusion.into(),
       viscosity: viscosity.into(),
-      size: crate::constant::N,
       density: Grid::<Density>::from_dimensions(dims),
       density_prev: Grid::<Density>::from_dimensions(dims),
       velocity: Grid::<Vector2>::from_dimensions(dims),
@@ -518,7 +508,7 @@ impl ValueAtEdge for Vector2 {
 }
 
 impl ValueAtEdge for Density {
-  fn value_at_edge(edge: Edge, neighbor: Self) -> Self {
+  fn value_at_edge(_: Edge, neighbor: Self) -> Self {
     neighbor
   }
 }

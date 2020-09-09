@@ -1,5 +1,5 @@
+/*
 open React;
-open Reprocessing;
 open Infix;
 
 let canvasId = "canvas";
@@ -69,3 +69,4 @@ let make = () => {
 
   <div> <canvas id="canvas" /> </div>;
 };
+*/

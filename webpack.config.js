@@ -8,14 +8,14 @@ module.exports = {
   // to 'development' as per webpack documentation. Again, you don't have to
   // use webpack or any other bundler during development! Recheck README if
   // you didn't know this
-  mode: 'production',
+  mode: 'development',
   output: {
     path: path.join(__dirname, "bundleOutput"),
     filename: 'index.js',
   },
   plugins: [
     new WasmPackPlugin({
-      crateDirectory: __dirname + '/src/flow_field',
+      crateDirectory: __dirname + '/src/wasm_swirl',
     }),
     new CopyPlugin({
         patterns: [
