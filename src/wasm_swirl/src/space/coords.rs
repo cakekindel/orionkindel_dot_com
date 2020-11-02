@@ -1,4 +1,5 @@
 use std::ops::{Add, Sub};
+use wasm_bindgen::prelude::*;
 
 pub trait Perpendicular<Cmp = Self> {
   fn perpendicular(&self, cmp: &Cmp) -> bool;
@@ -118,37 +119,38 @@ impl Corner {
 }
 
 /// A 2D cartesian coordinate
+#[wasm_bindgen]
 #[derive(
   Debug, Hash, Copy, Clone, Ord, Eq, PartialOrd, PartialEq,
 )]
-pub struct Coord2<T = usize> {
-  pub x: T,
-  pub y: T,
+pub struct Coord2 {
+  pub x: usize,
+  pub y: usize,
 }
 
-impl<T> Coord2<T>
-where
-  T: Copy + Add<usize, Output = T> + Sub<usize, Output = T>,
-{
+impl Coord2 {
   pub fn neighbors(&self) -> Neighbors<Self> {
+    let y_up = self.y.checked_add(1).unwrap_or(self.y);
+    let y_dn = self.y.checked_sub(1).unwrap_or(0);
+
+    let x_up = self.x.checked_add(1).unwrap_or(self.x);
+    let x_dn = self.x.checked_sub(1).unwrap_or(0);
     Neighbors {
-      top: (self.x, self.y + 1).into(),
-      right: (self.x + 1, self.y).into(),
-      bottom: (self.x, self.y - 1).into(),
-      left: (self.x - 1, self.y).into(),
+      top: (self.x, y_up).into(),
+      right: (x_up, self.y).into(),
+      bottom: (self.x, y_dn).into(),
+      left: (x_dn, self.y).into(),
     }
   }
-}
 
-impl<T: Copy> Coord2<T> {
   /// Convert a coordinate pair to an (x, y) tuple
-  pub fn to_pair(&self) -> (T, T) {
+  pub fn to_pair(&self) -> (usize, usize) {
     (self.x, self.y)
   }
 }
 
-impl<T> From<(T, T)> for Coord2<T> {
-  fn from((x, y): (T, T)) -> Self {
+impl From<(usize, usize)> for Coord2 {
+  fn from((x, y): (usize, usize)) -> Self {
     Coord2 { x, y }
   }
 }

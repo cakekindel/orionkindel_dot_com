@@ -1,2 +1,2 @@
-pub const N: usize = 256;
+pub const N: usize = 64;
 pub const ITER: usize = 10;

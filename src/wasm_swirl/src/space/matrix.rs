@@ -44,7 +44,7 @@ where
   T: Default,
 {
   /// Fill the grid with the default value for `T`
-  pub fn fill_with_default(&mut self) {
+  pub fn fill_with_default(mut self) -> Self {
     self.fill(Default::default)
   }
 }
@@ -62,10 +62,7 @@ where
   ///
   /// Note that this will return the default for `T`
   /// if given an edge point.
-  pub fn interpolate(
-    &'a self,
-    pt: impl Into<Coord2<f64>>,
-  ) -> T {
+  pub fn interpolate(&'a self, pt: (f64, f64)) -> T {
     //! # Example
     //! ```
     //! # use wasm_swirl::space::matrix::{Grid};
@@ -89,18 +86,17 @@ where
     //! assert_eq!(somewhere_in_the_middle, 0.8);
     //! ```
 
-    let pt = pt.into();
     let floored: Coord2 =
-      (pt.x.floor() as usize, pt.y.floor() as usize).into();
+      (pt.0.floor() as usize, pt.1.floor() as usize).into();
 
     let x_left = floored.x;
     let y_bot = floored.y;
     let x_right = floored.x + 1;
     let y_top = floored.y + 1;
 
-    let left_weight = pt.x - x_left as f64;
+    let left_weight = pt.0 - x_left as f64;
     let right_weight = 1.0 - left_weight;
-    let bot_weight = pt.y - y_bot as f64;
+    let bot_weight = pt.1 - y_bot as f64;
     let top_weight = 1.0 - bot_weight;
 
     let bottom_left_weight = self
@@ -134,10 +130,11 @@ where
   T: Copy,
 {
   /// Fill the grid with a default value
-  pub fn fill_with(&mut self, val: T) {
+  pub fn fill_with(mut self, val: T) -> Self {
     self.dimensions.coords_iter().for_each(|coords| {
       self.items.insert(coords, val);
-    })
+    });
+    self
   }
 }
 
@@ -158,13 +155,14 @@ impl<T> Grid<T> {
   ///
   /// For `T` that implements `Default`, you can fill the
   /// grid with the default value for `T` with `fill_with_default`
-  pub fn fill<F>(&mut self, f: F)
+  pub fn fill<F>(mut self, f: F) -> Self
   where
     F: Fn() -> T,
   {
     self.dimensions.coords_iter().for_each(|coords| {
       self.items.insert(coords, f());
-    })
+    });
+    self
   }
 
   /// Returns an iterator over the corner and edge points of the grid.
@@ -344,9 +342,9 @@ impl<T> Grid<T> {
 
     let coords = coords.into();
 
-    once((coords.x - 1, coords.y))
+    once((coords.x.checked_sub(1).unwrap_or(0), coords.y))
       .chain(once((coords.x + 1, coords.y)))
-      .chain(once((coords.x, coords.y - 1)))
+      .chain(once((coords.x, coords.y.checked_sub(1).unwrap_or(0))))
       .chain(once((coords.x, coords.y + 1)))
       .map(move |coords| {
         self.get(coords).map(|val| (coords.into(), val))

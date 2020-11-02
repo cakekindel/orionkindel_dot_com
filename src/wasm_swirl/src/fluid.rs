@@ -1,4 +1,5 @@
 use std::ops::{Add, Div, Mul};
+use wasm_bindgen::prelude::*;
 
 use crate::constant::{ITER, N};
 use crate::convert;
@@ -17,8 +18,9 @@ convert!(impl From<f64> for newtype Diffusion {});
 pub struct Viscosity(f64);
 convert!(impl From<f64> for newtype Viscosity {});
 
+#[wasm_bindgen]
 #[derive(Default, Clone, Copy)]
-pub struct Density(f64);
+pub struct Density(pub f64);
 convert!(impl From<f64> for newtype Density {});
 impl Add for Density {
   type Output = Self;
@@ -53,7 +55,7 @@ pub struct Fluid {
   dt: TimeDelta,
 
   /// Current density of fluids
-  density: Grid<Density>,
+  pub density: Grid<Density>,
 
   /// Density of fluids from the previous iteration
   density_prev: Grid<Density>,
@@ -85,37 +87,51 @@ impl Fluid {
       dt: dt.into(),
       diff: diffusion.into(),
       viscosity: viscosity.into(),
-      density: Grid::<Density>::from_dimensions(dims),
-      density_prev: Grid::<Density>::from_dimensions(dims),
-      velocity: Grid::<Vector2>::from_dimensions(dims),
-      velocity_prev: Grid::<Vector2>::from_dimensions(dims),
+      density: Grid::<Density>::from_dimensions(dims).fill_with_default(),
+      density_prev: Grid::<Density>::from_dimensions(dims).fill_with_default(),
+      velocity: Grid::<Vector2>::from_dimensions(dims).fill_with_default(),
+      velocity_prev: Grid::<Vector2>::from_dimensions(dims).fill_with_default(),
     }
   }
 
   pub fn tick(&mut self) {
+    use crate::log;
+
+    log(&"diffuse velocity".into());
     self.diffuse_velocity();
+
+    log(&"project velocity".into());
     self.project_velocity();
 
+    log(&"advect velocity".into());
     self.advect_velocity();
+
+    log(&"project velocity".into());
     self.project_velocity();
 
+    log(&"diffuse density".into());
     self.diffuse_density();
+
+    log(&"advect density".into());
     self.advect_density();
   }
 
   pub fn add_dye(
     &mut self,
-    pt: Coord2,
+    pt: impl Into<Coord2>,
     amount: f64,
   ) -> Option<()> {
+    use crate::math::Clamp;
+    let pt = pt.into();
+
     self
       .density
       .get(pt)
       .map(|dens| *dens)
       .map(|density| {
-        self.density.set(pt, density + amount.into())
+        self.density.set(pt, Density((density.0 + amount).clam(0.0, 1.0)));
+        ()
       })
-      .map(|_| ())
   }
 
   pub fn add_velocity(
@@ -252,9 +268,9 @@ impl Fluid {
         // current point on the edge
         let neighbor_coords = match edge {
           | Edge::Top => (coords.x, coords.y + 1),
-          | Edge::Bottom => (coords.x, coords.y - 1),
+          | Edge::Bottom => (coords.x, coords.y.checked_sub(1).unwrap_or(0)),
           | Edge::Left => (coords.x + 1, coords.y),
-          | Edge::Right => (coords.x - 1, coords.y),
+          | Edge::Right => (coords.x.checked_sub(1).unwrap_or(0), coords.y),
         };
 
         let neighbor = grid
@@ -466,18 +482,16 @@ impl Fluid {
         let distance_travelled_in_time_step: Vector2 =
           (vel.x * time_step, vel.y * time_step).into();
 
-        let trace_back: Coord2<f64> = (
+        let trace_back = (
           (x as f64) - distance_travelled_in_time_step.x,
           (y as f64) - distance_travelled_in_time_step.y,
-        )
-          .into();
+        );
 
         // clamp to 0.5 away from edges
-        let trace_back: Coord2<f64> = (
-          trace_back.x.clam(0.5, (max_x as f64) - 0.5),
-          trace_back.y.clam(0.5, (max_y as f64) - 0.5),
-        )
-          .into();
+        let trace_back = (
+          trace_back.0.clam(0.5, (max_x as f64) - 0.5),
+          trace_back.1.clam(0.5, (max_y as f64) - 0.5),
+        );
 
         let new_val = grid_prev.interpolate(trace_back);
 

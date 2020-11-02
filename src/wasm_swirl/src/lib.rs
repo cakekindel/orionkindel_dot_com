@@ -1,4 +1,5 @@
-use wasm_bindgen::*;
+use space::coords::Rect;
+use wasm_bindgen::prelude::*;
 
 pub mod constant;
 pub mod fluid;
@@ -9,20 +10,83 @@ pub mod utils;
 
 static mut UNIVERSE: Option<Universe> = None;
 
-pub fn setup() -> () {
-  unsafe {
-    UNIVERSE = Some(Universe::new());
+#[wasm_bindgen]
+extern "C" {
+    #[wasm_bindgen(js_namespace = console)]
+    pub fn log(s: &JsValue);
+}
+
+#[wasm_bindgen]
+pub struct FluidPoint {
+  pub x: u32,
+  pub y: u32,
+  pub density: f64,
+}
+
+#[wasm_bindgen]
+pub fn tick() -> js_sys::Array {
+  console_error_panic_hook::set_once();
+
+  let universe = unsafe {
+    UNIVERSE.as_mut().unwrap_or_else(|| {
+      UNIVERSE = Some(Universe::new());
+      log(&"created".into());
+
+      log(&format!("size: {}", UNIVERSE.as_ref().unwrap().fluid.density.dimensions.area()).into());
+
+      UNIVERSE.as_mut().unwrap()
+    })
+  };
+
+  log(&"ticking".into());
+
+  universe.fluid.tick();
+
+  let density_arr = js_sys::Array::new();
+
+  log(&format!("generating array to render...").into());
+  universe.fluid
+    .density
+    .iter()
+    .for_each(|(coord, dens)| {
+      let fluid_point = js_sys::Array::new();
+      fluid_point.push(&(coord.x as u32).into());
+      fluid_point.push(&(coord.y as u32).into());
+      fluid_point.push(&dens.0.into());
+      density_arr.push(&fluid_point.into());
+    });
+  log(&format!("done").into());
+
+    density_arr
+  }
+
+#[wasm_bindgen]
+pub fn mouse_move(viewport_width: usize, viewport_height: usize, mouse_x: usize, mouse_y: usize) {
+  let universe = unsafe { UNIVERSE.as_mut() };
+
+  match universe {
+    Some(universe) => {
+      let Rect {height, width, ..} = universe.fluid.density.dimensions;
+      let fluid_to_viewport_ratio = ( width as f64/viewport_width as f64 ,  height as f64/viewport_height as f64 );
+
+      let x = mouse_x as f64 * fluid_to_viewport_ratio.0;
+      let y = mouse_y as f64 * fluid_to_viewport_ratio.1;
+      log(&format!("{}, {}", x, y).into());
+
+      universe.fluid.add_dye((x as usize, y as usize), 1.0);
+    },
+    None => (),
   }
 }
 
 pub struct Universe {
-  pub fluids: Vec<fluid::Fluid>,
+  pub fluid: fluid::Fluid,
 }
 
 impl Universe {
   pub fn new() -> Self {
     Self {
-      fluids: vec![fluid::Fluid::new(0.1, 0.0, 0.0)],
+      fluid: fluid::Fluid::new(0.1, 0.0, 0.0),
     }
   }
 }
@@ -94,16 +158,4 @@ macro_rules! convert {
       }
     }
   };
-}
-
-macro_rules! count {
-    () => (0usize);
-    ( $x:tt $($xs:tt)* ) => (1usize + count!($($xs)*));
-}
-
-#[macro_export]
-macro_rules! mean {
-  ($($x:expr),+) => {
-    ($($x)++) / count!($($x),+)
-  }
 }

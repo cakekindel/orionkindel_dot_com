@@ -16,6 +16,7 @@ module.exports = {
   plugins: [
     new WasmPackPlugin({
       crateDirectory: __dirname + '/src/wasm_swirl',
+      forceMode: 'production',
     }),
     new CopyPlugin({
         patterns: [
