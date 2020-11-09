@@ -18,7 +18,7 @@ jobs:
         key: ${{runner.os}}-node-${{hashFiles('**/package-lock.json')}}
         restore-keys: ${{runner.os}}-node-
     - run: "npm ci"
-    - run: "npm run build:pub"
+    - run: "npm run build-prod"
     - run: "git fetch --all"
     - run: "git switch hostme"
     - run: |
@@ -26,7 +26,7 @@ jobs:
         git config --global user.name "${{ github.actor }}"
     - run: "git merge --strategy-option=ours"
     - run: "git add -A"
-    - run: "git add bundleOutput"
+    - run: "git add prod"
     - run: "git commit -m 'ci: publish'"
     # https://stackoverflow.com/questions/36782467/set-subdirectory-as-website-root-on-github-pages
-    - run: "git subtree push --prefix bundleOutput origin hostme"
+    - run: "git subtree push --prefix prod origin hostme"

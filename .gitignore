@@ -3,6 +3,7 @@ bundleOutput
 target
 output
 dist
+prod
 .cache
 .spago
 .psc-ide*

@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "spago build",
-    "serve": "parcel dev/index.html --open",
-    "build-prod": "mkdir -p prod && cp dev/index.html prod/ && rm -rf dist && spago bundle-app --to prod/index.js && parcel build prod/index.html"
+    "serve": "parcel static/index.html --open",
+    "build-prod": "mkdir -p prod && cp -r static/** prod/ && rm -rf dist && spago bundle-app --to prod/index.js && parcel build prod/index.html"
   }
 }
