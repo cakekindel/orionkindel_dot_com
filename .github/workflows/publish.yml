@@ -19,6 +19,7 @@ jobs:
         restore-keys: ${{runner.os}}-node-
     - run: "npm ci"
     - run: "npm run build-prod"
+    - run: "git fetch --all"
     - run: "git switch hostme"
     - run: |
         git config --global user.email "${{ github.actor }}@users.noreply.github.com"
