@@ -1,30 +1,9577 @@
-!function(e){function t(t){for(var n,a,i=t[0],o=t[1],u=0,l=[];u<i.length;u++)a=i[u],Object.prototype.hasOwnProperty.call(r,a)&&r[a]&&l.push(r[a][0]),r[a]=0;for(n in o)Object.prototype.hasOwnProperty.call(o,n)&&(e[n]=o[n]);for(f&&f(t);l.length;)l.shift()()}var n={},r={1:0};var a={};var i={24:function(){return{"./index_bg.js":{__wbindgen_string_new:function(e,t){return n[23].exports.m(e,t)},__wbg_log_975a12305b88c99f:function(e){return n[23].exports.f(e)},__wbindgen_object_drop_ref:function(e){return n[23].exports.l(e)},__wbg_vector_new:function(e){return n[23].exports.j(e)},__wbg_new_59cb74e423758ede:function(){return n[23].exports.g()},__wbg_stack_558ba5917b466edd:function(e,t){return n[23].exports.i(e,t)},__wbg_error_4bb6c2a97407129a:function(e,t){return n[23].exports.e(e,t)},__wbg_call_d062df7c96e1be79:function(e,t,r,a){return n[23].exports.d(e,t,r,a)},__wbg_random_5af91a0f7daf1188:function(){return n[23].exports.h()},__wbindgen_debug_string:function(e,t){return n[23].exports.k(e,t)},__wbindgen_throw:function(e,t){return n[23].exports.n(e,t)}}}}};function o(t){if(n[t])return n[t].exports;var r=n[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,o),r.l=!0,r.exports}o.e=function(e){var t=[],n=r[e];if(0!==n)if(n)t.push(n[2]);else{var u=new Promise((function(t,a){n=r[e]=[t,a]}));t.push(n[2]=u);var l,c=document.createElement("script");c.charset="utf-8",c.timeout=120,o.nc&&c.setAttribute("nonce",o.nc),c.src=function(e){return o.p+""+e+".index.js"}(e);var f=new Error;l=function(t){c.onerror=c.onload=null,clearTimeout(s);var n=r[e];if(0!==n){if(n){var a=t&&("load"===t.type?"missing":t.type),i=t&&t.target&&t.target.src;f.message="Loading chunk "+e+" failed.\n("+a+": "+i+")",f.name="ChunkLoadError",f.type=a,f.request=i,n[1](f)}r[e]=void 0}};var s=setTimeout((function(){l({type:"timeout",target:c})}),12e4);c.onerror=c.onload=l,document.head.appendChild(c)}return({0:[24]}[e]||[]).forEach((function(e){var n=a[e];if(n)t.push(n);else{var r,u=i[e](),l=fetch(o.p+""+{24:"a435e6082a8081de4238"}[e]+".module.wasm");if(u instanceof Promise&&"function"==typeof WebAssembly.compileStreaming)r=Promise.all([WebAssembly.compileStreaming(l),u]).then((function(e){return WebAssembly.instantiate(e[0],e[1])}));else if("function"==typeof WebAssembly.instantiateStreaming)r=WebAssembly.instantiateStreaming(l,u);else{r=l.then((function(e){return e.arrayBuffer()})).then((function(e){return WebAssembly.instantiate(e,u)}))}t.push(a[e]=r.then((function(t){return o.w[e]=(t.instance||t).exports})))}})),Promise.all(t)},o.m=e,o.c=n,o.d=function(e,t,n){o.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},o.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},o.t=function(e,t){if(1&t&&(e=o(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(o.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var r in e)o.d(n,r,function(t){return e[t]}.bind(null,r));return n},o.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return o.d(t,"a",t),t},o.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},o.p="",o.oe=function(e){throw console.error(e),e},o.w={};var u=window.webpackJsonp=window.webpackJsonp||[],l=u.push.bind(u);u.push=t,u=u.slice();for(var c=0;c<u.length;c++)t(u[c]);var f=l;o(o.s=22)}([function(e,t,n){"use strict";(function(e){n.d(t,"a",(function(){return a}));var r=function(){if("undefined"!=typeof globalThis)return globalThis;if("undefined"!=typeof self)return self;if("undefined"!=typeof window)return window;if(void 0!==e)return e;if(void 0!==this)return this;throw new Error("Unable to locate global `this`")},a=function(e){var t=r();if(void 0===t[e])throw new Error(e+" not polyfilled by BuckleScript yet\n");return t[e]}}).call(this,n(21))},function(e,t,n){"use strict";(function(e){n.d(t,"f",(function(){})),n.d(t,"g",(function(){return r})),n.d(t,"e",(function(){return a})),n.d(t,"a",(function(){return i})),n.d(t,"c",(function(){return o})),n.d(t,"d",(function(){return u})),n.d(t,"b",(function(){return l}));var r={buffer:"",output:function(t,n){var r=n.length-1|0;return void 0!==e&&e.stdout&&e.stdout.write?e.stdout.write(n):void("\n"===n[r]?console.log(n.slice(0,r)):console.log(n))}},a={buffer:"",output:function(e,t){var n=t.length-1|0;"\n"===t[n]?console.log(t.slice(0,n)):console.log(t)}};function i(e){if(""!==e.buffer)return e.output(e,e.buffer),void(e.buffer="")}function o(t,n,a,o){var u=0===a&&o===n.length?n:n.slice(a,o);if(void 0!==e&&e.stdout&&e.stdout.write&&t===r)return e.stdout.write(u);var l=u.lastIndexOf("\n");l<0?t.buffer=t.buffer+u:(t.buffer=t.buffer+u.slice(0,l+1|0),i(t),t.buffer=t.buffer+u.slice(l+1|0))}function u(e,t){return o(e,String.fromCharCode(t),0,1)}function l(e){return{hd:r,tl:{hd:a,tl:0}}}}).call(this,n(5))},function(e,t,n){"use strict";n.d(t,"b",(function(){return a})),n.d(t,"a",(function(){return i}));var r={contents:0};function a(e){return r.contents=r.contents+1|0,e+"/"+r.contents}function i(e){return null!=e&&"string"==typeof e.RE_EXN_ID}},function(e,t,n){"use strict";e.exports=n(17)},function(e,t,n){"use strict";(function(e){n.d(t,"d",(function(){return r})),n.d(t,"c",(function(){return a})),n.d(t,"b",(function(){return i})),n.d(t,"a",(function(){return o}));var r=function(t){return void 0!==e&&"win32"===e.platform?"Win32":"Unix"};function a(e){return[(4294967295^(0|Date.now()))*Math.random()|0]}function i(t){if(void 0===e)return["",[""]];var n=e.argv;return null==n?["",[""]]:[n[0],n]}function o(t){if(void 0!==e)return e.exit(t)}}).call(this,n(5))},function(e,t){var n,r,a=e.exports={};function i(){throw new Error("setTimeout has not been defined")}function o(){throw new Error("clearTimeout has not been defined")}function u(e){if(n===setTimeout)return setTimeout(e,0);if((n===i||!n)&&setTimeout)return n=setTimeout,setTimeout(e,0);try{return n(e,0)}catch(t){try{return n.call(null,e,0)}catch(t){return n.call(this,e,0)}}}!function(){try{n="function"==typeof setTimeout?setTimeout:i}catch(e){n=i}try{r="function"==typeof clearTimeout?clearTimeout:o}catch(e){r=o}}();var l,c=[],f=!1,s=-1;function d(){f&&l&&(f=!1,l.length?c=l.concat(c):s=-1,c.length&&h())}function h(){if(!f){var e=u(d);f=!0;for(var t=c.length;t;){for(l=c,c=[];++s<t;)l&&l[s].run();s=-1,t=c.length}l=null,f=!1,function(e){if(r===clearTimeout)return clearTimeout(e);if((r===o||!r)&&clearTimeout)return r=clearTimeout,clearTimeout(e);try{r(e)}catch(t){try{return r.call(null,e)}catch(t){return r.call(this,e)}}}(e)}}function p(e,t){this.fun=e,this.array=t}function v(){}a.nextTick=function(e){var t=new Array(arguments.length-1);if(arguments.length>1)for(var n=1;n<arguments.length;n++)t[n-1]=arguments[n];c.push(new p(e,t)),1!==c.length||f||u(h)},p.prototype.run=function(){this.fun.apply(null,this.array)},a.title="browser",a.browser=!0,a.env={},a.argv=[],a.version="",a.versions={},a.on=v,a.addListener=v,a.once=v,a.off=v,a.removeListener=v,a.removeAllListeners=v,a.emit=v,a.prependListener=v,a.prependOnceListener=v,a.listeners=function(e){return[]},a.binding=function(e){throw new Error("process.binding is not supported")},a.cwd=function(){return"/"},a.chdir=function(e){throw new Error("process.chdir is not supported")},a.umask=function(){return 0}},function(e,t,n){"use strict";
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/var r=Object.getOwnPropertySymbols,a=Object.prototype.hasOwnProperty,i=Object.prototype.propertyIsEnumerable;function o(e){if(null==e)throw new TypeError("Object.assign cannot be called with null or undefined");return Object(e)}e.exports=function(){try{if(!Object.assign)return!1;var e=new String("abc");if(e[5]="de","5"===Object.getOwnPropertyNames(e)[0])return!1;for(var t={},n=0;n<10;n++)t["_"+String.fromCharCode(n)]=n;if("0123456789"!==Object.getOwnPropertyNames(t).map((function(e){return t[e]})).join(""))return!1;var r={};return"abcdefghijklmnopqrst".split("").forEach((function(e){r[e]=e})),"abcdefghijklmnopqrst"===Object.keys(Object.assign({},r)).join("")}catch(e){return!1}}()?Object.assign:function(e,t){for(var n,u,l=o(e),c=1;c<arguments.length;c++){for(var f in n=Object(arguments[c]))a.call(n,f)&&(l[f]=n[f]);if(r){u=r(n);for(var s=0;s<u.length;s++)i.call(n,u[s])&&(l[u[s]]=n[u[s]])}}return l}},function(e,t,n){"use strict";!function e(){if("undefined"!=typeof __REACT_DEVTOOLS_GLOBAL_HOOK__&&"function"==typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE){0;try{__REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(e)}catch(e){console.error(e)}}}(),e.exports=n(18)},function(e,t,n){"use strict";(function(e){n.d(t,"a",(function(){return o}));var r=n(4),a=n(2),i=r.b(void 0);r.d(void 0),r.d(void 0),r.d(void 0);a.b("Sys.Break");var o=i[1];i[0]}).call(this,n(5))},,,,,,,,,function(e,t,n){"use strict";
-/** @license React v16.13.1
- * react.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */var r=n(6),a="function"==typeof Symbol&&Symbol.for,i=a?Symbol.for("react.element"):60103,o=a?Symbol.for("react.portal"):60106,u=a?Symbol.for("react.fragment"):60107,l=a?Symbol.for("react.strict_mode"):60108,c=a?Symbol.for("react.profiler"):60114,f=a?Symbol.for("react.provider"):60109,s=a?Symbol.for("react.context"):60110,d=a?Symbol.for("react.forward_ref"):60112,h=a?Symbol.for("react.suspense"):60113,p=a?Symbol.for("react.memo"):60115,v=a?Symbol.for("react.lazy"):60116,m="function"==typeof Symbol&&Symbol.iterator;function g(e){for(var t="https://reactjs.org/docs/error-decoder.html?invariant="+e,n=1;n<arguments.length;n++)t+="&args[]="+encodeURIComponent(arguments[n]);return"Minified React error #"+e+"; visit "+t+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}var y={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},b={};function w(e,t,n){this.props=e,this.context=t,this.refs=b,this.updater=n||y}function x(){}function E(e,t,n){this.props=e,this.context=t,this.refs=b,this.updater=n||y}w.prototype.isReactComponent={},w.prototype.setState=function(e,t){if("object"!=typeof e&&"function"!=typeof e&&null!=e)throw Error(g(85));this.updater.enqueueSetState(this,e,t,"setState")},w.prototype.forceUpdate=function(e){this.updater.enqueueForceUpdate(this,e,"forceUpdate")},x.prototype=w.prototype;var k=E.prototype=new x;k.constructor=E,r(k,w.prototype),k.isPureReactComponent=!0;var _={current:null},T=Object.prototype.hasOwnProperty,S={key:!0,ref:!0,__self:!0,__source:!0};function C(e,t,n){var r,a={},o=null,u=null;if(null!=t)for(r in void 0!==t.ref&&(u=t.ref),void 0!==t.key&&(o=""+t.key),t)T.call(t,r)&&!S.hasOwnProperty(r)&&(a[r]=t[r]);var l=arguments.length-2;if(1===l)a.children=n;else if(1<l){for(var c=Array(l),f=0;f<l;f++)c[f]=arguments[f+2];a.children=c}if(e&&e.defaultProps)for(r in l=e.defaultProps)void 0===a[r]&&(a[r]=l[r]);return{$$typeof:i,type:e,key:o,ref:u,props:a,_owner:_.current}}function P(e){return"object"==typeof e&&null!==e&&e.$$typeof===i}var M=/\/+/g,N=[];function I(e,t,n,r){if(N.length){var a=N.pop();return a.result=e,a.keyPrefix=t,a.func=n,a.context=r,a.count=0,a}return{result:e,keyPrefix:t,func:n,context:r,count:0}}function D(e){e.result=null,e.keyPrefix=null,e.func=null,e.context=null,e.count=0,10>N.length&&N.push(e)}function R(e,t,n){return null==e?0:function e(t,n,r,a){var u=typeof t;"undefined"!==u&&"boolean"!==u||(t=null);var l=!1;if(null===t)l=!0;else switch(u){case"string":case"number":l=!0;break;case"object":switch(t.$$typeof){case i:case o:l=!0}}if(l)return r(a,t,""===n?"."+A(t,0):n),1;if(l=0,n=""===n?".":n+":",Array.isArray(t))for(var c=0;c<t.length;c++){var f=n+A(u=t[c],c);l+=e(u,f,r,a)}else if(null===t||"object"!=typeof t?f=null:f="function"==typeof(f=m&&t[m]||t["@@iterator"])?f:null,"function"==typeof f)for(t=f.call(t),c=0;!(u=t.next()).done;)l+=e(u=u.value,f=n+A(u,c++),r,a);else if("object"===u)throw r=""+t,Error(g(31,"[object Object]"===r?"object with keys {"+Object.keys(t).join(", ")+"}":r,""));return l}(e,"",t,n)}function A(e,t){return"object"==typeof e&&null!==e&&null!=e.key?function(e){var t={"=":"=0",":":"=2"};return"$"+(""+e).replace(/[=:]/g,(function(e){return t[e]}))}(e.key):t.toString(36)}function O(e,t){e.func.call(e.context,t,e.count++)}function z(e,t,n){var r=e.result,a=e.keyPrefix;e=e.func.call(e.context,t,e.count++),Array.isArray(e)?L(e,r,n,(function(e){return e})):null!=e&&(P(e)&&(e=function(e,t){return{$$typeof:i,type:e.type,key:t,ref:e.ref,props:e.props,_owner:e._owner}}(e,a+(!e.key||t&&t.key===e.key?"":(""+e.key).replace(M,"$&/")+"/")+n)),r.push(e))}function L(e,t,n,r,a){var i="";null!=n&&(i=(""+n).replace(M,"$&/")+"/"),R(e,z,t=I(t,i,r,a)),D(t)}var F={current:null};function B(){var e=F.current;if(null===e)throw Error(g(321));return e}var W={ReactCurrentDispatcher:F,ReactCurrentBatchConfig:{suspense:null},ReactCurrentOwner:_,IsSomeRendererActing:{current:!1},assign:r};t.Children={map:function(e,t,n){if(null==e)return e;var r=[];return L(e,r,null,t,n),r},forEach:function(e,t,n){if(null==e)return e;R(e,O,t=I(null,null,t,n)),D(t)},count:function(e){return R(e,(function(){return null}),null)},toArray:function(e){var t=[];return L(e,t,null,(function(e){return e})),t},only:function(e){if(!P(e))throw Error(g(143));return e}},t.Component=w,t.Fragment=u,t.Profiler=c,t.PureComponent=E,t.StrictMode=l,t.Suspense=h,t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED=W,t.cloneElement=function(e,t,n){if(null==e)throw Error(g(267,e));var a=r({},e.props),o=e.key,u=e.ref,l=e._owner;if(null!=t){if(void 0!==t.ref&&(u=t.ref,l=_.current),void 0!==t.key&&(o=""+t.key),e.type&&e.type.defaultProps)var c=e.type.defaultProps;for(f in t)T.call(t,f)&&!S.hasOwnProperty(f)&&(a[f]=void 0===t[f]&&void 0!==c?c[f]:t[f])}var f=arguments.length-2;if(1===f)a.children=n;else if(1<f){c=Array(f);for(var s=0;s<f;s++)c[s]=arguments[s+2];a.children=c}return{$$typeof:i,type:e.type,key:o,ref:u,props:a,_owner:l}},t.createContext=function(e,t){return void 0===t&&(t=null),(e={$$typeof:s,_calculateChangedBits:t,_currentValue:e,_currentValue2:e,_threadCount:0,Provider:null,Consumer:null}).Provider={$$typeof:f,_context:e},e.Consumer=e},t.createElement=C,t.createFactory=function(e){var t=C.bind(null,e);return t.type=e,t},t.createRef=function(){return{current:null}},t.forwardRef=function(e){return{$$typeof:d,render:e}},t.isValidElement=P,t.lazy=function(e){return{$$typeof:v,_ctor:e,_status:-1,_result:null}},t.memo=function(e,t){return{$$typeof:p,type:e,compare:void 0===t?null:t}},t.useCallback=function(e,t){return B().useCallback(e,t)},t.useContext=function(e,t){return B().useContext(e,t)},t.useDebugValue=function(){},t.useEffect=function(e,t){return B().useEffect(e,t)},t.useImperativeHandle=function(e,t,n){return B().useImperativeHandle(e,t,n)},t.useLayoutEffect=function(e,t){return B().useLayoutEffect(e,t)},t.useMemo=function(e,t){return B().useMemo(e,t)},t.useReducer=function(e,t,n){return B().useReducer(e,t,n)},t.useRef=function(e){return B().useRef(e)},t.useState=function(e){return B().useState(e)},t.version="16.13.1"},function(e,t,n){"use strict";
-/** @license React v16.13.1
- * react-dom.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */var r=n(3),a=n(6),i=n(19);function o(e){for(var t="https://reactjs.org/docs/error-decoder.html?invariant="+e,n=1;n<arguments.length;n++)t+="&args[]="+encodeURIComponent(arguments[n]);return"Minified React error #"+e+"; visit "+t+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!r)throw Error(o(227));function u(e,t,n,r,a,i,o,u,l){var c=Array.prototype.slice.call(arguments,3);try{t.apply(n,c)}catch(e){this.onError(e)}}var l=!1,c=null,f=!1,s=null,d={onError:function(e){l=!0,c=e}};function h(e,t,n,r,a,i,o,f,s){l=!1,c=null,u.apply(d,arguments)}var p=null,v=null,m=null;function g(e,t,n){var r=e.type||"unknown-event";e.currentTarget=m(n),function(e,t,n,r,a,i,u,d,p){if(h.apply(this,arguments),l){if(!l)throw Error(o(198));var v=c;l=!1,c=null,f||(f=!0,s=v)}}(r,t,void 0,e),e.currentTarget=null}var y=null,b={};function w(){if(y)for(var e in b){var t=b[e],n=y.indexOf(e);if(!(-1<n))throw Error(o(96,e));if(!E[n]){if(!t.extractEvents)throw Error(o(97,e));for(var r in E[n]=t,n=t.eventTypes){var a=void 0,i=n[r],u=t,l=r;if(k.hasOwnProperty(l))throw Error(o(99,l));k[l]=i;var c=i.phasedRegistrationNames;if(c){for(a in c)c.hasOwnProperty(a)&&x(c[a],u,l);a=!0}else i.registrationName?(x(i.registrationName,u,l),a=!0):a=!1;if(!a)throw Error(o(98,r,e))}}}}function x(e,t,n){if(_[e])throw Error(o(100,e));_[e]=t,T[e]=t.eventTypes[n].dependencies}var E=[],k={},_={},T={};function S(e){var t,n=!1;for(t in e)if(e.hasOwnProperty(t)){var r=e[t];if(!b.hasOwnProperty(t)||b[t]!==r){if(b[t])throw Error(o(102,t));b[t]=r,n=!0}}n&&w()}var C=!("undefined"==typeof window||void 0===window.document||void 0===window.document.createElement),P=null,M=null,N=null;function I(e){if(e=v(e)){if("function"!=typeof P)throw Error(o(280));var t=e.stateNode;t&&(t=p(t),P(e.stateNode,e.type,t))}}function D(e){M?N?N.push(e):N=[e]:M=e}function R(){if(M){var e=M,t=N;if(N=M=null,I(e),t)for(e=0;e<t.length;e++)I(t[e])}}function A(e,t){return e(t)}function O(e,t,n,r,a){return e(t,n,r,a)}function z(){}var L=A,F=!1,B=!1;function W(){null===M&&null===N||(z(),R())}function V(e,t,n){if(B)return e(t,n);B=!0;try{return L(e,t,n)}finally{B=!1,W()}}var j=/^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/,$=Object.prototype.hasOwnProperty,U={},H={};function X(e,t,n,r,a,i){this.acceptsBooleans=2===t||3===t||4===t,this.attributeName=r,this.attributeNamespace=a,this.mustUseProperty=n,this.propertyName=e,this.type=t,this.sanitizeURL=i}var Q={};"children dangerouslySetInnerHTML defaultValue defaultChecked innerHTML suppressContentEditableWarning suppressHydrationWarning style".split(" ").forEach((function(e){Q[e]=new X(e,0,!1,e,null,!1)})),[["acceptCharset","accept-charset"],["className","class"],["htmlFor","for"],["httpEquiv","http-equiv"]].forEach((function(e){var t=e[0];Q[t]=new X(t,1,!1,e[1],null,!1)})),["contentEditable","draggable","spellCheck","value"].forEach((function(e){Q[e]=new X(e,2,!1,e.toLowerCase(),null,!1)})),["autoReverse","externalResourcesRequired","focusable","preserveAlpha"].forEach((function(e){Q[e]=new X(e,2,!1,e,null,!1)})),"allowFullScreen async autoFocus autoPlay controls default defer disabled disablePictureInPicture formNoValidate hidden loop noModule noValidate open playsInline readOnly required reversed scoped seamless itemScope".split(" ").forEach((function(e){Q[e]=new X(e,3,!1,e.toLowerCase(),null,!1)})),["checked","multiple","muted","selected"].forEach((function(e){Q[e]=new X(e,3,!0,e,null,!1)})),["capture","download"].forEach((function(e){Q[e]=new X(e,4,!1,e,null,!1)})),["cols","rows","size","span"].forEach((function(e){Q[e]=new X(e,6,!1,e,null,!1)})),["rowSpan","start"].forEach((function(e){Q[e]=new X(e,5,!1,e.toLowerCase(),null,!1)}));var q=/[\-:]([a-z])/g;function K(e){return e[1].toUpperCase()}"accent-height alignment-baseline arabic-form baseline-shift cap-height clip-path clip-rule color-interpolation color-interpolation-filters color-profile color-rendering dominant-baseline enable-background fill-opacity fill-rule flood-color flood-opacity font-family font-size font-size-adjust font-stretch font-style font-variant font-weight glyph-name glyph-orientation-horizontal glyph-orientation-vertical horiz-adv-x horiz-origin-x image-rendering letter-spacing lighting-color marker-end marker-mid marker-start overline-position overline-thickness paint-order panose-1 pointer-events rendering-intent shape-rendering stop-color stop-opacity strikethrough-position strikethrough-thickness stroke-dasharray stroke-dashoffset stroke-linecap stroke-linejoin stroke-miterlimit stroke-opacity stroke-width text-anchor text-decoration text-rendering underline-position underline-thickness unicode-bidi unicode-range units-per-em v-alphabetic v-hanging v-ideographic v-mathematical vector-effect vert-adv-y vert-origin-x vert-origin-y word-spacing writing-mode xmlns:xlink x-height".split(" ").forEach((function(e){var t=e.replace(q,K);Q[t]=new X(t,1,!1,e,null,!1)})),"xlink:actuate xlink:arcrole xlink:role xlink:show xlink:title xlink:type".split(" ").forEach((function(e){var t=e.replace(q,K);Q[t]=new X(t,1,!1,e,"http://www.w3.org/1999/xlink",!1)})),["xml:base","xml:lang","xml:space"].forEach((function(e){var t=e.replace(q,K);Q[t]=new X(t,1,!1,e,"http://www.w3.org/XML/1998/namespace",!1)})),["tabIndex","crossOrigin"].forEach((function(e){Q[e]=new X(e,1,!1,e.toLowerCase(),null,!1)})),Q.xlinkHref=new X("xlinkHref",1,!1,"xlink:href","http://www.w3.org/1999/xlink",!0),["src","href","action","formAction"].forEach((function(e){Q[e]=new X(e,1,!1,e.toLowerCase(),null,!0)}));var Y=r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;function G(e,t,n,r){var a=Q.hasOwnProperty(t)?Q[t]:null;(null!==a?0===a.type:!r&&(2<t.length&&("o"===t[0]||"O"===t[0])&&("n"===t[1]||"N"===t[1])))||(function(e,t,n,r){if(null==t||function(e,t,n,r){if(null!==n&&0===n.type)return!1;switch(typeof t){case"function":case"symbol":return!0;case"boolean":return!r&&(null!==n?!n.acceptsBooleans:"data-"!==(e=e.toLowerCase().slice(0,5))&&"aria-"!==e);default:return!1}}(e,t,n,r))return!0;if(r)return!1;if(null!==n)switch(n.type){case 3:return!t;case 4:return!1===t;case 5:return isNaN(t);case 6:return isNaN(t)||1>t}return!1}(t,n,a,r)&&(n=null),r||null===a?function(e){return!!$.call(H,e)||!$.call(U,e)&&(j.test(e)?H[e]=!0:(U[e]=!0,!1))}(t)&&(null===n?e.removeAttribute(t):e.setAttribute(t,""+n)):a.mustUseProperty?e[a.propertyName]=null===n?3!==a.type&&"":n:(t=a.attributeName,r=a.attributeNamespace,null===n?e.removeAttribute(t):(n=3===(a=a.type)||4===a&&!0===n?"":""+n,r?e.setAttributeNS(r,t,n):e.setAttribute(t,n))))}Y.hasOwnProperty("ReactCurrentDispatcher")||(Y.ReactCurrentDispatcher={current:null}),Y.hasOwnProperty("ReactCurrentBatchConfig")||(Y.ReactCurrentBatchConfig={suspense:null});var J=/^(.*)[\\\/]/,Z="function"==typeof Symbol&&Symbol.for,ee=Z?Symbol.for("react.element"):60103,te=Z?Symbol.for("react.portal"):60106,ne=Z?Symbol.for("react.fragment"):60107,re=Z?Symbol.for("react.strict_mode"):60108,ae=Z?Symbol.for("react.profiler"):60114,ie=Z?Symbol.for("react.provider"):60109,oe=Z?Symbol.for("react.context"):60110,ue=Z?Symbol.for("react.concurrent_mode"):60111,le=Z?Symbol.for("react.forward_ref"):60112,ce=Z?Symbol.for("react.suspense"):60113,fe=Z?Symbol.for("react.suspense_list"):60120,se=Z?Symbol.for("react.memo"):60115,de=Z?Symbol.for("react.lazy"):60116,he=Z?Symbol.for("react.block"):60121,pe="function"==typeof Symbol&&Symbol.iterator;function ve(e){return null===e||"object"!=typeof e?null:"function"==typeof(e=pe&&e[pe]||e["@@iterator"])?e:null}function me(e){if(null==e)return null;if("function"==typeof e)return e.displayName||e.name||null;if("string"==typeof e)return e;switch(e){case ne:return"Fragment";case te:return"Portal";case ae:return"Profiler";case re:return"StrictMode";case ce:return"Suspense";case fe:return"SuspenseList"}if("object"==typeof e)switch(e.$$typeof){case oe:return"Context.Consumer";case ie:return"Context.Provider";case le:var t=e.render;return t=t.displayName||t.name||"",e.displayName||(""!==t?"ForwardRef("+t+")":"ForwardRef");case se:return me(e.type);case he:return me(e.render);case de:if(e=1===e._status?e._result:null)return me(e)}return null}function ge(e){var t="";do{e:switch(e.tag){case 3:case 4:case 6:case 7:case 10:case 9:var n="";break e;default:var r=e._debugOwner,a=e._debugSource,i=me(e.type);n=null,r&&(n=me(r.type)),r=i,i="",a?i=" (at "+a.fileName.replace(J,"")+":"+a.lineNumber+")":n&&(i=" (created by "+n+")"),n="\n    in "+(r||"Unknown")+i}t+=n,e=e.return}while(e);return t}function ye(e){switch(typeof e){case"boolean":case"number":case"object":case"string":case"undefined":return e;default:return""}}function be(e){var t=e.type;return(e=e.nodeName)&&"input"===e.toLowerCase()&&("checkbox"===t||"radio"===t)}function we(e){e._valueTracker||(e._valueTracker=function(e){var t=be(e)?"checked":"value",n=Object.getOwnPropertyDescriptor(e.constructor.prototype,t),r=""+e[t];if(!e.hasOwnProperty(t)&&void 0!==n&&"function"==typeof n.get&&"function"==typeof n.set){var a=n.get,i=n.set;return Object.defineProperty(e,t,{configurable:!0,get:function(){return a.call(this)},set:function(e){r=""+e,i.call(this,e)}}),Object.defineProperty(e,t,{enumerable:n.enumerable}),{getValue:function(){return r},setValue:function(e){r=""+e},stopTracking:function(){e._valueTracker=null,delete e[t]}}}}(e))}function xe(e){if(!e)return!1;var t=e._valueTracker;if(!t)return!0;var n=t.getValue(),r="";return e&&(r=be(e)?e.checked?"true":"false":e.value),(e=r)!==n&&(t.setValue(e),!0)}function Ee(e,t){var n=t.checked;return a({},t,{defaultChecked:void 0,defaultValue:void 0,value:void 0,checked:null!=n?n:e._wrapperState.initialChecked})}function ke(e,t){var n=null==t.defaultValue?"":t.defaultValue,r=null!=t.checked?t.checked:t.defaultChecked;n=ye(null!=t.value?t.value:n),e._wrapperState={initialChecked:r,initialValue:n,controlled:"checkbox"===t.type||"radio"===t.type?null!=t.checked:null!=t.value}}function _e(e,t){null!=(t=t.checked)&&G(e,"checked",t,!1)}function Te(e,t){_e(e,t);var n=ye(t.value),r=t.type;if(null!=n)"number"===r?(0===n&&""===e.value||e.value!=n)&&(e.value=""+n):e.value!==""+n&&(e.value=""+n);else if("submit"===r||"reset"===r)return void e.removeAttribute("value");t.hasOwnProperty("value")?Ce(e,t.type,n):t.hasOwnProperty("defaultValue")&&Ce(e,t.type,ye(t.defaultValue)),null==t.checked&&null!=t.defaultChecked&&(e.defaultChecked=!!t.defaultChecked)}function Se(e,t,n){if(t.hasOwnProperty("value")||t.hasOwnProperty("defaultValue")){var r=t.type;if(!("submit"!==r&&"reset"!==r||void 0!==t.value&&null!==t.value))return;t=""+e._wrapperState.initialValue,n||t===e.value||(e.value=t),e.defaultValue=t}""!==(n=e.name)&&(e.name=""),e.defaultChecked=!!e._wrapperState.initialChecked,""!==n&&(e.name=n)}function Ce(e,t,n){"number"===t&&e.ownerDocument.activeElement===e||(null==n?e.defaultValue=""+e._wrapperState.initialValue:e.defaultValue!==""+n&&(e.defaultValue=""+n))}function Pe(e,t){return e=a({children:void 0},t),(t=function(e){var t="";return r.Children.forEach(e,(function(e){null!=e&&(t+=e)})),t}(t.children))&&(e.children=t),e}function Me(e,t,n,r){if(e=e.options,t){t={};for(var a=0;a<n.length;a++)t["$"+n[a]]=!0;for(n=0;n<e.length;n++)a=t.hasOwnProperty("$"+e[n].value),e[n].selected!==a&&(e[n].selected=a),a&&r&&(e[n].defaultSelected=!0)}else{for(n=""+ye(n),t=null,a=0;a<e.length;a++){if(e[a].value===n)return e[a].selected=!0,void(r&&(e[a].defaultSelected=!0));null!==t||e[a].disabled||(t=e[a])}null!==t&&(t.selected=!0)}}function Ne(e,t){if(null!=t.dangerouslySetInnerHTML)throw Error(o(91));return a({},t,{value:void 0,defaultValue:void 0,children:""+e._wrapperState.initialValue})}function Ie(e,t){var n=t.value;if(null==n){if(n=t.children,t=t.defaultValue,null!=n){if(null!=t)throw Error(o(92));if(Array.isArray(n)){if(!(1>=n.length))throw Error(o(93));n=n[0]}t=n}null==t&&(t=""),n=t}e._wrapperState={initialValue:ye(n)}}function De(e,t){var n=ye(t.value),r=ye(t.defaultValue);null!=n&&((n=""+n)!==e.value&&(e.value=n),null==t.defaultValue&&e.defaultValue!==n&&(e.defaultValue=n)),null!=r&&(e.defaultValue=""+r)}function Re(e){var t=e.textContent;t===e._wrapperState.initialValue&&""!==t&&null!==t&&(e.value=t)}var Ae="http://www.w3.org/1999/xhtml",Oe="http://www.w3.org/2000/svg";function ze(e){switch(e){case"svg":return"http://www.w3.org/2000/svg";case"math":return"http://www.w3.org/1998/Math/MathML";default:return"http://www.w3.org/1999/xhtml"}}function Le(e,t){return null==e||"http://www.w3.org/1999/xhtml"===e?ze(t):"http://www.w3.org/2000/svg"===e&&"foreignObject"===t?"http://www.w3.org/1999/xhtml":e}var Fe,Be=function(e){return"undefined"!=typeof MSApp&&MSApp.execUnsafeLocalFunction?function(t,n,r,a){MSApp.execUnsafeLocalFunction((function(){return e(t,n)}))}:e}((function(e,t){if(e.namespaceURI!==Oe||"innerHTML"in e)e.innerHTML=t;else{for((Fe=Fe||document.createElement("div")).innerHTML="<svg>"+t.valueOf().toString()+"</svg>",t=Fe.firstChild;e.firstChild;)e.removeChild(e.firstChild);for(;t.firstChild;)e.appendChild(t.firstChild)}}));function We(e,t){if(t){var n=e.firstChild;if(n&&n===e.lastChild&&3===n.nodeType)return void(n.nodeValue=t)}e.textContent=t}function Ve(e,t){var n={};return n[e.toLowerCase()]=t.toLowerCase(),n["Webkit"+e]="webkit"+t,n["Moz"+e]="moz"+t,n}var je={animationend:Ve("Animation","AnimationEnd"),animationiteration:Ve("Animation","AnimationIteration"),animationstart:Ve("Animation","AnimationStart"),transitionend:Ve("Transition","TransitionEnd")},$e={},Ue={};function He(e){if($e[e])return $e[e];if(!je[e])return e;var t,n=je[e];for(t in n)if(n.hasOwnProperty(t)&&t in Ue)return $e[e]=n[t];return e}C&&(Ue=document.createElement("div").style,"AnimationEvent"in window||(delete je.animationend.animation,delete je.animationiteration.animation,delete je.animationstart.animation),"TransitionEvent"in window||delete je.transitionend.transition);var Xe=He("animationend"),Qe=He("animationiteration"),qe=He("animationstart"),Ke=He("transitionend"),Ye="abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange seeked seeking stalled suspend timeupdate volumechange waiting".split(" "),Ge=new("function"==typeof WeakMap?WeakMap:Map);function Je(e){var t=Ge.get(e);return void 0===t&&(t=new Map,Ge.set(e,t)),t}function Ze(e){var t=e,n=e;if(e.alternate)for(;t.return;)t=t.return;else{e=t;do{0!=(1026&(t=e).effectTag)&&(n=t.return),e=t.return}while(e)}return 3===t.tag?n:null}function et(e){if(13===e.tag){var t=e.memoizedState;if(null===t&&(null!==(e=e.alternate)&&(t=e.memoizedState)),null!==t)return t.dehydrated}return null}function tt(e){if(Ze(e)!==e)throw Error(o(188))}function nt(e){if(!(e=function(e){var t=e.alternate;if(!t){if(null===(t=Ze(e)))throw Error(o(188));return t!==e?null:e}for(var n=e,r=t;;){var a=n.return;if(null===a)break;var i=a.alternate;if(null===i){if(null!==(r=a.return)){n=r;continue}break}if(a.child===i.child){for(i=a.child;i;){if(i===n)return tt(a),e;if(i===r)return tt(a),t;i=i.sibling}throw Error(o(188))}if(n.return!==r.return)n=a,r=i;else{for(var u=!1,l=a.child;l;){if(l===n){u=!0,n=a,r=i;break}if(l===r){u=!0,r=a,n=i;break}l=l.sibling}if(!u){for(l=i.child;l;){if(l===n){u=!0,n=i,r=a;break}if(l===r){u=!0,r=i,n=a;break}l=l.sibling}if(!u)throw Error(o(189))}}if(n.alternate!==r)throw Error(o(190))}if(3!==n.tag)throw Error(o(188));return n.stateNode.current===n?e:t}(e)))return null;for(var t=e;;){if(5===t.tag||6===t.tag)return t;if(t.child)t.child.return=t,t=t.child;else{if(t===e)break;for(;!t.sibling;){if(!t.return||t.return===e)return null;t=t.return}t.sibling.return=t.return,t=t.sibling}}return null}function rt(e,t){if(null==t)throw Error(o(30));return null==e?t:Array.isArray(e)?Array.isArray(t)?(e.push.apply(e,t),e):(e.push(t),e):Array.isArray(t)?[e].concat(t):[e,t]}function at(e,t,n){Array.isArray(e)?e.forEach(t,n):e&&t.call(n,e)}var it=null;function ot(e){if(e){var t=e._dispatchListeners,n=e._dispatchInstances;if(Array.isArray(t))for(var r=0;r<t.length&&!e.isPropagationStopped();r++)g(e,t[r],n[r]);else t&&g(e,t,n);e._dispatchListeners=null,e._dispatchInstances=null,e.isPersistent()||e.constructor.release(e)}}function ut(e){if(null!==e&&(it=rt(it,e)),e=it,it=null,e){if(at(e,ot),it)throw Error(o(95));if(f)throw e=s,f=!1,s=null,e}}function lt(e){return(e=e.target||e.srcElement||window).correspondingUseElement&&(e=e.correspondingUseElement),3===e.nodeType?e.parentNode:e}function ct(e){if(!C)return!1;var t=(e="on"+e)in document;return t||((t=document.createElement("div")).setAttribute(e,"return;"),t="function"==typeof t[e]),t}var ft=[];function st(e){e.topLevelType=null,e.nativeEvent=null,e.targetInst=null,e.ancestors.length=0,10>ft.length&&ft.push(e)}function dt(e,t,n,r){if(ft.length){var a=ft.pop();return a.topLevelType=e,a.eventSystemFlags=r,a.nativeEvent=t,a.targetInst=n,a}return{topLevelType:e,eventSystemFlags:r,nativeEvent:t,targetInst:n,ancestors:[]}}function ht(e){var t=e.targetInst,n=t;do{if(!n){e.ancestors.push(n);break}var r=n;if(3===r.tag)r=r.stateNode.containerInfo;else{for(;r.return;)r=r.return;r=3!==r.tag?null:r.stateNode.containerInfo}if(!r)break;5!==(t=n.tag)&&6!==t||e.ancestors.push(n),n=Cn(r)}while(n);for(n=0;n<e.ancestors.length;n++){t=e.ancestors[n];var a=lt(e.nativeEvent);r=e.topLevelType;var i=e.nativeEvent,o=e.eventSystemFlags;0===n&&(o|=64);for(var u=null,l=0;l<E.length;l++){var c=E[l];c&&(c=c.extractEvents(r,t,i,a,o))&&(u=rt(u,c))}ut(u)}}function pt(e,t,n){if(!n.has(e)){switch(e){case"scroll":qt(t,"scroll",!0);break;case"focus":case"blur":qt(t,"focus",!0),qt(t,"blur",!0),n.set("blur",null),n.set("focus",null);break;case"cancel":case"close":ct(e)&&qt(t,e,!0);break;case"invalid":case"submit":case"reset":break;default:-1===Ye.indexOf(e)&&Qt(e,t)}n.set(e,null)}}var vt,mt,gt,yt=!1,bt=[],wt=null,xt=null,Et=null,kt=new Map,_t=new Map,Tt=[],St="mousedown mouseup touchcancel touchend touchstart auxclick dblclick pointercancel pointerdown pointerup dragend dragstart drop compositionend compositionstart keydown keypress keyup input textInput close cancel copy cut paste click change contextmenu reset submit".split(" "),Ct="focus blur dragenter dragleave mouseover mouseout pointerover pointerout gotpointercapture lostpointercapture".split(" ");function Pt(e,t,n,r,a){return{blockedOn:e,topLevelType:t,eventSystemFlags:32|n,nativeEvent:a,container:r}}function Mt(e,t){switch(e){case"focus":case"blur":wt=null;break;case"dragenter":case"dragleave":xt=null;break;case"mouseover":case"mouseout":Et=null;break;case"pointerover":case"pointerout":kt.delete(t.pointerId);break;case"gotpointercapture":case"lostpointercapture":_t.delete(t.pointerId)}}function Nt(e,t,n,r,a,i){return null===e||e.nativeEvent!==i?(e=Pt(t,n,r,a,i),null!==t&&(null!==(t=Pn(t))&&mt(t)),e):(e.eventSystemFlags|=r,e)}function It(e){var t=Cn(e.target);if(null!==t){var n=Ze(t);if(null!==n)if(13===(t=n.tag)){if(null!==(t=et(n)))return e.blockedOn=t,void i.unstable_runWithPriority(e.priority,(function(){gt(n)}))}else if(3===t&&n.stateNode.hydrate)return void(e.blockedOn=3===n.tag?n.stateNode.containerInfo:null)}e.blockedOn=null}function Dt(e){if(null!==e.blockedOn)return!1;var t=Jt(e.topLevelType,e.eventSystemFlags,e.container,e.nativeEvent);if(null!==t){var n=Pn(t);return null!==n&&mt(n),e.blockedOn=t,!1}return!0}function Rt(e,t,n){Dt(e)&&n.delete(t)}function At(){for(yt=!1;0<bt.length;){var e=bt[0];if(null!==e.blockedOn){null!==(e=Pn(e.blockedOn))&&vt(e);break}var t=Jt(e.topLevelType,e.eventSystemFlags,e.container,e.nativeEvent);null!==t?e.blockedOn=t:bt.shift()}null!==wt&&Dt(wt)&&(wt=null),null!==xt&&Dt(xt)&&(xt=null),null!==Et&&Dt(Et)&&(Et=null),kt.forEach(Rt),_t.forEach(Rt)}function Ot(e,t){e.blockedOn===t&&(e.blockedOn=null,yt||(yt=!0,i.unstable_scheduleCallback(i.unstable_NormalPriority,At)))}function zt(e){function t(t){return Ot(t,e)}if(0<bt.length){Ot(bt[0],e);for(var n=1;n<bt.length;n++){var r=bt[n];r.blockedOn===e&&(r.blockedOn=null)}}for(null!==wt&&Ot(wt,e),null!==xt&&Ot(xt,e),null!==Et&&Ot(Et,e),kt.forEach(t),_t.forEach(t),n=0;n<Tt.length;n++)(r=Tt[n]).blockedOn===e&&(r.blockedOn=null);for(;0<Tt.length&&null===(n=Tt[0]).blockedOn;)It(n),null===n.blockedOn&&Tt.shift()}var Lt={},Ft=new Map,Bt=new Map,Wt=["abort","abort",Xe,"animationEnd",Qe,"animationIteration",qe,"animationStart","canplay","canPlay","canplaythrough","canPlayThrough","durationchange","durationChange","emptied","emptied","encrypted","encrypted","ended","ended","error","error","gotpointercapture","gotPointerCapture","load","load","loadeddata","loadedData","loadedmetadata","loadedMetadata","loadstart","loadStart","lostpointercapture","lostPointerCapture","playing","playing","progress","progress","seeking","seeking","stalled","stalled","suspend","suspend","timeupdate","timeUpdate",Ke,"transitionEnd","waiting","waiting"];function Vt(e,t){for(var n=0;n<e.length;n+=2){var r=e[n],a=e[n+1],i="on"+(a[0].toUpperCase()+a.slice(1));i={phasedRegistrationNames:{bubbled:i,captured:i+"Capture"},dependencies:[r],eventPriority:t},Bt.set(r,t),Ft.set(r,i),Lt[a]=i}}Vt("blur blur cancel cancel click click close close contextmenu contextMenu copy copy cut cut auxclick auxClick dblclick doubleClick dragend dragEnd dragstart dragStart drop drop focus focus input input invalid invalid keydown keyDown keypress keyPress keyup keyUp mousedown mouseDown mouseup mouseUp paste paste pause pause play play pointercancel pointerCancel pointerdown pointerDown pointerup pointerUp ratechange rateChange reset reset seeked seeked submit submit touchcancel touchCancel touchend touchEnd touchstart touchStart volumechange volumeChange".split(" "),0),Vt("drag drag dragenter dragEnter dragexit dragExit dragleave dragLeave dragover dragOver mousemove mouseMove mouseout mouseOut mouseover mouseOver pointermove pointerMove pointerout pointerOut pointerover pointerOver scroll scroll toggle toggle touchmove touchMove wheel wheel".split(" "),1),Vt(Wt,2);for(var jt="change selectionchange textInput compositionstart compositionend compositionupdate".split(" "),$t=0;$t<jt.length;$t++)Bt.set(jt[$t],0);var Ut=i.unstable_UserBlockingPriority,Ht=i.unstable_runWithPriority,Xt=!0;function Qt(e,t){qt(t,e,!1)}function qt(e,t,n){var r=Bt.get(t);switch(void 0===r?2:r){case 0:r=Kt.bind(null,t,1,e);break;case 1:r=Yt.bind(null,t,1,e);break;default:r=Gt.bind(null,t,1,e)}n?e.addEventListener(t,r,!0):e.addEventListener(t,r,!1)}function Kt(e,t,n,r){F||z();var a=Gt,i=F;F=!0;try{O(a,e,t,n,r)}finally{(F=i)||W()}}function Yt(e,t,n,r){Ht(Ut,Gt.bind(null,e,t,n,r))}function Gt(e,t,n,r){if(Xt)if(0<bt.length&&-1<St.indexOf(e))e=Pt(null,e,t,n,r),bt.push(e);else{var a=Jt(e,t,n,r);if(null===a)Mt(e,r);else if(-1<St.indexOf(e))e=Pt(a,e,t,n,r),bt.push(e);else if(!function(e,t,n,r,a){switch(t){case"focus":return wt=Nt(wt,e,t,n,r,a),!0;case"dragenter":return xt=Nt(xt,e,t,n,r,a),!0;case"mouseover":return Et=Nt(Et,e,t,n,r,a),!0;case"pointerover":var i=a.pointerId;return kt.set(i,Nt(kt.get(i)||null,e,t,n,r,a)),!0;case"gotpointercapture":return i=a.pointerId,_t.set(i,Nt(_t.get(i)||null,e,t,n,r,a)),!0}return!1}(a,e,t,n,r)){Mt(e,r),e=dt(e,r,null,t);try{V(ht,e)}finally{st(e)}}}}function Jt(e,t,n,r){if(null!==(n=Cn(n=lt(r)))){var a=Ze(n);if(null===a)n=null;else{var i=a.tag;if(13===i){if(null!==(n=et(a)))return n;n=null}else if(3===i){if(a.stateNode.hydrate)return 3===a.tag?a.stateNode.containerInfo:null;n=null}else a!==n&&(n=null)}}e=dt(e,r,n,t);try{V(ht,e)}finally{st(e)}return null}var Zt={animationIterationCount:!0,borderImageOutset:!0,borderImageSlice:!0,borderImageWidth:!0,boxFlex:!0,boxFlexGroup:!0,boxOrdinalGroup:!0,columnCount:!0,columns:!0,flex:!0,flexGrow:!0,flexPositive:!0,flexShrink:!0,flexNegative:!0,flexOrder:!0,gridArea:!0,gridRow:!0,gridRowEnd:!0,gridRowSpan:!0,gridRowStart:!0,gridColumn:!0,gridColumnEnd:!0,gridColumnSpan:!0,gridColumnStart:!0,fontWeight:!0,lineClamp:!0,lineHeight:!0,opacity:!0,order:!0,orphans:!0,tabSize:!0,widows:!0,zIndex:!0,zoom:!0,fillOpacity:!0,floodOpacity:!0,stopOpacity:!0,strokeDasharray:!0,strokeDashoffset:!0,strokeMiterlimit:!0,strokeOpacity:!0,strokeWidth:!0},en=["Webkit","ms","Moz","O"];function tn(e,t,n){return null==t||"boolean"==typeof t||""===t?"":n||"number"!=typeof t||0===t||Zt.hasOwnProperty(e)&&Zt[e]?(""+t).trim():t+"px"}function nn(e,t){for(var n in e=e.style,t)if(t.hasOwnProperty(n)){var r=0===n.indexOf("--"),a=tn(n,t[n],r);"float"===n&&(n="cssFloat"),r?e.setProperty(n,a):e[n]=a}}Object.keys(Zt).forEach((function(e){en.forEach((function(t){t=t+e.charAt(0).toUpperCase()+e.substring(1),Zt[t]=Zt[e]}))}));var rn=a({menuitem:!0},{area:!0,base:!0,br:!0,col:!0,embed:!0,hr:!0,img:!0,input:!0,keygen:!0,link:!0,meta:!0,param:!0,source:!0,track:!0,wbr:!0});function an(e,t){if(t){if(rn[e]&&(null!=t.children||null!=t.dangerouslySetInnerHTML))throw Error(o(137,e,""));if(null!=t.dangerouslySetInnerHTML){if(null!=t.children)throw Error(o(60));if("object"!=typeof t.dangerouslySetInnerHTML||!("__html"in t.dangerouslySetInnerHTML))throw Error(o(61))}if(null!=t.style&&"object"!=typeof t.style)throw Error(o(62,""))}}function on(e,t){if(-1===e.indexOf("-"))return"string"==typeof t.is;switch(e){case"annotation-xml":case"color-profile":case"font-face":case"font-face-src":case"font-face-uri":case"font-face-format":case"font-face-name":case"missing-glyph":return!1;default:return!0}}var un=Ae;function ln(e,t){var n=Je(e=9===e.nodeType||11===e.nodeType?e:e.ownerDocument);t=T[t];for(var r=0;r<t.length;r++)pt(t[r],e,n)}function cn(){}function fn(e){if(void 0===(e=e||("undefined"!=typeof document?document:void 0)))return null;try{return e.activeElement||e.body}catch(t){return e.body}}function sn(e){for(;e&&e.firstChild;)e=e.firstChild;return e}function dn(e,t){var n,r=sn(e);for(e=0;r;){if(3===r.nodeType){if(n=e+r.textContent.length,e<=t&&n>=t)return{node:r,offset:t-e};e=n}e:{for(;r;){if(r.nextSibling){r=r.nextSibling;break e}r=r.parentNode}r=void 0}r=sn(r)}}function hn(){for(var e=window,t=fn();t instanceof e.HTMLIFrameElement;){try{var n="string"==typeof t.contentWindow.location.href}catch(e){n=!1}if(!n)break;t=fn((e=t.contentWindow).document)}return t}function pn(e){var t=e&&e.nodeName&&e.nodeName.toLowerCase();return t&&("input"===t&&("text"===e.type||"search"===e.type||"tel"===e.type||"url"===e.type||"password"===e.type)||"textarea"===t||"true"===e.contentEditable)}var vn=null,mn=null;function gn(e,t){switch(e){case"button":case"input":case"select":case"textarea":return!!t.autoFocus}return!1}function yn(e,t){return"textarea"===e||"option"===e||"noscript"===e||"string"==typeof t.children||"number"==typeof t.children||"object"==typeof t.dangerouslySetInnerHTML&&null!==t.dangerouslySetInnerHTML&&null!=t.dangerouslySetInnerHTML.__html}var bn="function"==typeof setTimeout?setTimeout:void 0,wn="function"==typeof clearTimeout?clearTimeout:void 0;function xn(e){for(;null!=e;e=e.nextSibling){var t=e.nodeType;if(1===t||3===t)break}return e}function En(e){e=e.previousSibling;for(var t=0;e;){if(8===e.nodeType){var n=e.data;if("$"===n||"$!"===n||"$?"===n){if(0===t)return e;t--}else"/$"===n&&t++}e=e.previousSibling}return null}var kn=Math.random().toString(36).slice(2),_n="__reactInternalInstance$"+kn,Tn="__reactEventHandlers$"+kn,Sn="__reactContainere$"+kn;function Cn(e){var t=e[_n];if(t)return t;for(var n=e.parentNode;n;){if(t=n[Sn]||n[_n]){if(n=t.alternate,null!==t.child||null!==n&&null!==n.child)for(e=En(e);null!==e;){if(n=e[_n])return n;e=En(e)}return t}n=(e=n).parentNode}return null}function Pn(e){return!(e=e[_n]||e[Sn])||5!==e.tag&&6!==e.tag&&13!==e.tag&&3!==e.tag?null:e}function Mn(e){if(5===e.tag||6===e.tag)return e.stateNode;throw Error(o(33))}function Nn(e){return e[Tn]||null}function In(e){do{e=e.return}while(e&&5!==e.tag);return e||null}function Dn(e,t){var n=e.stateNode;if(!n)return null;var r=p(n);if(!r)return null;n=r[t];e:switch(t){case"onClick":case"onClickCapture":case"onDoubleClick":case"onDoubleClickCapture":case"onMouseDown":case"onMouseDownCapture":case"onMouseMove":case"onMouseMoveCapture":case"onMouseUp":case"onMouseUpCapture":case"onMouseEnter":(r=!r.disabled)||(r=!("button"===(e=e.type)||"input"===e||"select"===e||"textarea"===e)),e=!r;break e;default:e=!1}if(e)return null;if(n&&"function"!=typeof n)throw Error(o(231,t,typeof n));return n}function Rn(e,t,n){(t=Dn(e,n.dispatchConfig.phasedRegistrationNames[t]))&&(n._dispatchListeners=rt(n._dispatchListeners,t),n._dispatchInstances=rt(n._dispatchInstances,e))}function An(e){if(e&&e.dispatchConfig.phasedRegistrationNames){for(var t=e._targetInst,n=[];t;)n.push(t),t=In(t);for(t=n.length;0<t--;)Rn(n[t],"captured",e);for(t=0;t<n.length;t++)Rn(n[t],"bubbled",e)}}function On(e,t,n){e&&n&&n.dispatchConfig.registrationName&&(t=Dn(e,n.dispatchConfig.registrationName))&&(n._dispatchListeners=rt(n._dispatchListeners,t),n._dispatchInstances=rt(n._dispatchInstances,e))}function zn(e){e&&e.dispatchConfig.registrationName&&On(e._targetInst,null,e)}function Ln(e){at(e,An)}var Fn=null,Bn=null,Wn=null;function Vn(){if(Wn)return Wn;var e,t,n=Bn,r=n.length,a="value"in Fn?Fn.value:Fn.textContent,i=a.length;for(e=0;e<r&&n[e]===a[e];e++);var o=r-e;for(t=1;t<=o&&n[r-t]===a[i-t];t++);return Wn=a.slice(e,1<t?1-t:void 0)}function jn(){return!0}function $n(){return!1}function Un(e,t,n,r){for(var a in this.dispatchConfig=e,this._targetInst=t,this.nativeEvent=n,e=this.constructor.Interface)e.hasOwnProperty(a)&&((t=e[a])?this[a]=t(n):"target"===a?this.target=r:this[a]=n[a]);return this.isDefaultPrevented=(null!=n.defaultPrevented?n.defaultPrevented:!1===n.returnValue)?jn:$n,this.isPropagationStopped=$n,this}function Hn(e,t,n,r){if(this.eventPool.length){var a=this.eventPool.pop();return this.call(a,e,t,n,r),a}return new this(e,t,n,r)}function Xn(e){if(!(e instanceof this))throw Error(o(279));e.destructor(),10>this.eventPool.length&&this.eventPool.push(e)}function Qn(e){e.eventPool=[],e.getPooled=Hn,e.release=Xn}a(Un.prototype,{preventDefault:function(){this.defaultPrevented=!0;var e=this.nativeEvent;e&&(e.preventDefault?e.preventDefault():"unknown"!=typeof e.returnValue&&(e.returnValue=!1),this.isDefaultPrevented=jn)},stopPropagation:function(){var e=this.nativeEvent;e&&(e.stopPropagation?e.stopPropagation():"unknown"!=typeof e.cancelBubble&&(e.cancelBubble=!0),this.isPropagationStopped=jn)},persist:function(){this.isPersistent=jn},isPersistent:$n,destructor:function(){var e,t=this.constructor.Interface;for(e in t)this[e]=null;this.nativeEvent=this._targetInst=this.dispatchConfig=null,this.isPropagationStopped=this.isDefaultPrevented=$n,this._dispatchInstances=this._dispatchListeners=null}}),Un.Interface={type:null,target:null,currentTarget:function(){return null},eventPhase:null,bubbles:null,cancelable:null,timeStamp:function(e){return e.timeStamp||Date.now()},defaultPrevented:null,isTrusted:null},Un.extend=function(e){function t(){}function n(){return r.apply(this,arguments)}var r=this;t.prototype=r.prototype;var i=new t;return a(i,n.prototype),n.prototype=i,n.prototype.constructor=n,n.Interface=a({},r.Interface,e),n.extend=r.extend,Qn(n),n},Qn(Un);var qn=Un.extend({data:null}),Kn=Un.extend({data:null}),Yn=[9,13,27,32],Gn=C&&"CompositionEvent"in window,Jn=null;C&&"documentMode"in document&&(Jn=document.documentMode);var Zn=C&&"TextEvent"in window&&!Jn,er=C&&(!Gn||Jn&&8<Jn&&11>=Jn),tr=String.fromCharCode(32),nr={beforeInput:{phasedRegistrationNames:{bubbled:"onBeforeInput",captured:"onBeforeInputCapture"},dependencies:["compositionend","keypress","textInput","paste"]},compositionEnd:{phasedRegistrationNames:{bubbled:"onCompositionEnd",captured:"onCompositionEndCapture"},dependencies:"blur compositionend keydown keypress keyup mousedown".split(" ")},compositionStart:{phasedRegistrationNames:{bubbled:"onCompositionStart",captured:"onCompositionStartCapture"},dependencies:"blur compositionstart keydown keypress keyup mousedown".split(" ")},compositionUpdate:{phasedRegistrationNames:{bubbled:"onCompositionUpdate",captured:"onCompositionUpdateCapture"},dependencies:"blur compositionupdate keydown keypress keyup mousedown".split(" ")}},rr=!1;function ar(e,t){switch(e){case"keyup":return-1!==Yn.indexOf(t.keyCode);case"keydown":return 229!==t.keyCode;case"keypress":case"mousedown":case"blur":return!0;default:return!1}}function ir(e){return"object"==typeof(e=e.detail)&&"data"in e?e.data:null}var or=!1;var ur={eventTypes:nr,extractEvents:function(e,t,n,r){var a;if(Gn)e:{switch(e){case"compositionstart":var i=nr.compositionStart;break e;case"compositionend":i=nr.compositionEnd;break e;case"compositionupdate":i=nr.compositionUpdate;break e}i=void 0}else or?ar(e,n)&&(i=nr.compositionEnd):"keydown"===e&&229===n.keyCode&&(i=nr.compositionStart);return i?(er&&"ko"!==n.locale&&(or||i!==nr.compositionStart?i===nr.compositionEnd&&or&&(a=Vn()):(Bn="value"in(Fn=r)?Fn.value:Fn.textContent,or=!0)),i=qn.getPooled(i,t,n,r),a?i.data=a:null!==(a=ir(n))&&(i.data=a),Ln(i),a=i):a=null,(e=Zn?function(e,t){switch(e){case"compositionend":return ir(t);case"keypress":return 32!==t.which?null:(rr=!0,tr);case"textInput":return(e=t.data)===tr&&rr?null:e;default:return null}}(e,n):function(e,t){if(or)return"compositionend"===e||!Gn&&ar(e,t)?(e=Vn(),Wn=Bn=Fn=null,or=!1,e):null;switch(e){case"paste":return null;case"keypress":if(!(t.ctrlKey||t.altKey||t.metaKey)||t.ctrlKey&&t.altKey){if(t.char&&1<t.char.length)return t.char;if(t.which)return String.fromCharCode(t.which)}return null;case"compositionend":return er&&"ko"!==t.locale?null:t.data;default:return null}}(e,n))?((t=Kn.getPooled(nr.beforeInput,t,n,r)).data=e,Ln(t)):t=null,null===a?t:null===t?a:[a,t]}},lr={color:!0,date:!0,datetime:!0,"datetime-local":!0,email:!0,month:!0,number:!0,password:!0,range:!0,search:!0,tel:!0,text:!0,time:!0,url:!0,week:!0};function cr(e){var t=e&&e.nodeName&&e.nodeName.toLowerCase();return"input"===t?!!lr[e.type]:"textarea"===t}var fr={change:{phasedRegistrationNames:{bubbled:"onChange",captured:"onChangeCapture"},dependencies:"blur change click focus input keydown keyup selectionchange".split(" ")}};function sr(e,t,n){return(e=Un.getPooled(fr.change,e,t,n)).type="change",D(n),Ln(e),e}var dr=null,hr=null;function pr(e){ut(e)}function vr(e){if(xe(Mn(e)))return e}function mr(e,t){if("change"===e)return t}var gr=!1;function yr(){dr&&(dr.detachEvent("onpropertychange",br),hr=dr=null)}function br(e){if("value"===e.propertyName&&vr(hr))if(e=sr(hr,e,lt(e)),F)ut(e);else{F=!0;try{A(pr,e)}finally{F=!1,W()}}}function wr(e,t,n){"focus"===e?(yr(),hr=n,(dr=t).attachEvent("onpropertychange",br)):"blur"===e&&yr()}function xr(e){if("selectionchange"===e||"keyup"===e||"keydown"===e)return vr(hr)}function Er(e,t){if("click"===e)return vr(t)}function kr(e,t){if("input"===e||"change"===e)return vr(t)}C&&(gr=ct("input")&&(!document.documentMode||9<document.documentMode));var _r={eventTypes:fr,_isInputEventSupported:gr,extractEvents:function(e,t,n,r){var a=t?Mn(t):window,i=a.nodeName&&a.nodeName.toLowerCase();if("select"===i||"input"===i&&"file"===a.type)var o=mr;else if(cr(a))if(gr)o=kr;else{o=xr;var u=wr}else(i=a.nodeName)&&"input"===i.toLowerCase()&&("checkbox"===a.type||"radio"===a.type)&&(o=Er);if(o&&(o=o(e,t)))return sr(o,n,r);u&&u(e,a,t),"blur"===e&&(e=a._wrapperState)&&e.controlled&&"number"===a.type&&Ce(a,"number",a.value)}},Tr=Un.extend({view:null,detail:null}),Sr={Alt:"altKey",Control:"ctrlKey",Meta:"metaKey",Shift:"shiftKey"};function Cr(e){var t=this.nativeEvent;return t.getModifierState?t.getModifierState(e):!!(e=Sr[e])&&!!t[e]}function Pr(){return Cr}var Mr=0,Nr=0,Ir=!1,Dr=!1,Rr=Tr.extend({screenX:null,screenY:null,clientX:null,clientY:null,pageX:null,pageY:null,ctrlKey:null,shiftKey:null,altKey:null,metaKey:null,getModifierState:Pr,button:null,buttons:null,relatedTarget:function(e){return e.relatedTarget||(e.fromElement===e.srcElement?e.toElement:e.fromElement)},movementX:function(e){if("movementX"in e)return e.movementX;var t=Mr;return Mr=e.screenX,Ir?"mousemove"===e.type?e.screenX-t:0:(Ir=!0,0)},movementY:function(e){if("movementY"in e)return e.movementY;var t=Nr;return Nr=e.screenY,Dr?"mousemove"===e.type?e.screenY-t:0:(Dr=!0,0)}}),Ar=Rr.extend({pointerId:null,width:null,height:null,pressure:null,tangentialPressure:null,tiltX:null,tiltY:null,twist:null,pointerType:null,isPrimary:null}),Or={mouseEnter:{registrationName:"onMouseEnter",dependencies:["mouseout","mouseover"]},mouseLeave:{registrationName:"onMouseLeave",dependencies:["mouseout","mouseover"]},pointerEnter:{registrationName:"onPointerEnter",dependencies:["pointerout","pointerover"]},pointerLeave:{registrationName:"onPointerLeave",dependencies:["pointerout","pointerover"]}},zr={eventTypes:Or,extractEvents:function(e,t,n,r,a){var i="mouseover"===e||"pointerover"===e,o="mouseout"===e||"pointerout"===e;if(i&&0==(32&a)&&(n.relatedTarget||n.fromElement)||!o&&!i)return null;(i=r.window===r?r:(i=r.ownerDocument)?i.defaultView||i.parentWindow:window,o)?(o=t,null!==(t=(t=n.relatedTarget||n.toElement)?Cn(t):null)&&(t!==Ze(t)||5!==t.tag&&6!==t.tag)&&(t=null)):o=null;if(o===t)return null;if("mouseout"===e||"mouseover"===e)var u=Rr,l=Or.mouseLeave,c=Or.mouseEnter,f="mouse";else"pointerout"!==e&&"pointerover"!==e||(u=Ar,l=Or.pointerLeave,c=Or.pointerEnter,f="pointer");if(e=null==o?i:Mn(o),i=null==t?i:Mn(t),(l=u.getPooled(l,o,n,r)).type=f+"leave",l.target=e,l.relatedTarget=i,(n=u.getPooled(c,t,n,r)).type=f+"enter",n.target=i,n.relatedTarget=e,f=t,(r=o)&&f)e:{for(c=f,o=0,e=u=r;e;e=In(e))o++;for(e=0,t=c;t;t=In(t))e++;for(;0<o-e;)u=In(u),o--;for(;0<e-o;)c=In(c),e--;for(;o--;){if(u===c||u===c.alternate)break e;u=In(u),c=In(c)}u=null}else u=null;for(c=u,u=[];r&&r!==c&&(null===(o=r.alternate)||o!==c);)u.push(r),r=In(r);for(r=[];f&&f!==c&&(null===(o=f.alternate)||o!==c);)r.push(f),f=In(f);for(f=0;f<u.length;f++)On(u[f],"bubbled",l);for(f=r.length;0<f--;)On(r[f],"captured",n);return 0==(64&a)?[l]:[l,n]}};var Lr="function"==typeof Object.is?Object.is:function(e,t){return e===t&&(0!==e||1/e==1/t)||e!=e&&t!=t},Fr=Object.prototype.hasOwnProperty;function Br(e,t){if(Lr(e,t))return!0;if("object"!=typeof e||null===e||"object"!=typeof t||null===t)return!1;var n=Object.keys(e),r=Object.keys(t);if(n.length!==r.length)return!1;for(r=0;r<n.length;r++)if(!Fr.call(t,n[r])||!Lr(e[n[r]],t[n[r]]))return!1;return!0}var Wr=C&&"documentMode"in document&&11>=document.documentMode,Vr={select:{phasedRegistrationNames:{bubbled:"onSelect",captured:"onSelectCapture"},dependencies:"blur contextmenu dragend focus keydown keyup mousedown mouseup selectionchange".split(" ")}},jr=null,$r=null,Ur=null,Hr=!1;function Xr(e,t){var n=t.window===t?t.document:9===t.nodeType?t:t.ownerDocument;return Hr||null==jr||jr!==fn(n)?null:("selectionStart"in(n=jr)&&pn(n)?n={start:n.selectionStart,end:n.selectionEnd}:n={anchorNode:(n=(n.ownerDocument&&n.ownerDocument.defaultView||window).getSelection()).anchorNode,anchorOffset:n.anchorOffset,focusNode:n.focusNode,focusOffset:n.focusOffset},Ur&&Br(Ur,n)?null:(Ur=n,(e=Un.getPooled(Vr.select,$r,e,t)).type="select",e.target=jr,Ln(e),e))}var Qr={eventTypes:Vr,extractEvents:function(e,t,n,r,a,i){if(!(i=!(a=i||(r.window===r?r.document:9===r.nodeType?r:r.ownerDocument)))){e:{a=Je(a),i=T.onSelect;for(var o=0;o<i.length;o++)if(!a.has(i[o])){a=!1;break e}a=!0}i=!a}if(i)return null;switch(a=t?Mn(t):window,e){case"focus":(cr(a)||"true"===a.contentEditable)&&(jr=a,$r=t,Ur=null);break;case"blur":Ur=$r=jr=null;break;case"mousedown":Hr=!0;break;case"contextmenu":case"mouseup":case"dragend":return Hr=!1,Xr(n,r);case"selectionchange":if(Wr)break;case"keydown":case"keyup":return Xr(n,r)}return null}},qr=Un.extend({animationName:null,elapsedTime:null,pseudoElement:null}),Kr=Un.extend({clipboardData:function(e){return"clipboardData"in e?e.clipboardData:window.clipboardData}}),Yr=Tr.extend({relatedTarget:null});function Gr(e){var t=e.keyCode;return"charCode"in e?0===(e=e.charCode)&&13===t&&(e=13):e=t,10===e&&(e=13),32<=e||13===e?e:0}var Jr={Esc:"Escape",Spacebar:" ",Left:"ArrowLeft",Up:"ArrowUp",Right:"ArrowRight",Down:"ArrowDown",Del:"Delete",Win:"OS",Menu:"ContextMenu",Apps:"ContextMenu",Scroll:"ScrollLock",MozPrintableKey:"Unidentified"},Zr={8:"Backspace",9:"Tab",12:"Clear",13:"Enter",16:"Shift",17:"Control",18:"Alt",19:"Pause",20:"CapsLock",27:"Escape",32:" ",33:"PageUp",34:"PageDown",35:"End",36:"Home",37:"ArrowLeft",38:"ArrowUp",39:"ArrowRight",40:"ArrowDown",45:"Insert",46:"Delete",112:"F1",113:"F2",114:"F3",115:"F4",116:"F5",117:"F6",118:"F7",119:"F8",120:"F9",121:"F10",122:"F11",123:"F12",144:"NumLock",145:"ScrollLock",224:"Meta"},ea=Tr.extend({key:function(e){if(e.key){var t=Jr[e.key]||e.key;if("Unidentified"!==t)return t}return"keypress"===e.type?13===(e=Gr(e))?"Enter":String.fromCharCode(e):"keydown"===e.type||"keyup"===e.type?Zr[e.keyCode]||"Unidentified":""},location:null,ctrlKey:null,shiftKey:null,altKey:null,metaKey:null,repeat:null,locale:null,getModifierState:Pr,charCode:function(e){return"keypress"===e.type?Gr(e):0},keyCode:function(e){return"keydown"===e.type||"keyup"===e.type?e.keyCode:0},which:function(e){return"keypress"===e.type?Gr(e):"keydown"===e.type||"keyup"===e.type?e.keyCode:0}}),ta=Rr.extend({dataTransfer:null}),na=Tr.extend({touches:null,targetTouches:null,changedTouches:null,altKey:null,metaKey:null,ctrlKey:null,shiftKey:null,getModifierState:Pr}),ra=Un.extend({propertyName:null,elapsedTime:null,pseudoElement:null}),aa=Rr.extend({deltaX:function(e){return"deltaX"in e?e.deltaX:"wheelDeltaX"in e?-e.wheelDeltaX:0},deltaY:function(e){return"deltaY"in e?e.deltaY:"wheelDeltaY"in e?-e.wheelDeltaY:"wheelDelta"in e?-e.wheelDelta:0},deltaZ:null,deltaMode:null}),ia={eventTypes:Lt,extractEvents:function(e,t,n,r){var a=Ft.get(e);if(!a)return null;switch(e){case"keypress":if(0===Gr(n))return null;case"keydown":case"keyup":e=ea;break;case"blur":case"focus":e=Yr;break;case"click":if(2===n.button)return null;case"auxclick":case"dblclick":case"mousedown":case"mousemove":case"mouseup":case"mouseout":case"mouseover":case"contextmenu":e=Rr;break;case"drag":case"dragend":case"dragenter":case"dragexit":case"dragleave":case"dragover":case"dragstart":case"drop":e=ta;break;case"touchcancel":case"touchend":case"touchmove":case"touchstart":e=na;break;case Xe:case Qe:case qe:e=qr;break;case Ke:e=ra;break;case"scroll":e=Tr;break;case"wheel":e=aa;break;case"copy":case"cut":case"paste":e=Kr;break;case"gotpointercapture":case"lostpointercapture":case"pointercancel":case"pointerdown":case"pointermove":case"pointerout":case"pointerover":case"pointerup":e=Ar;break;default:e=Un}return Ln(t=e.getPooled(a,t,n,r)),t}};if(y)throw Error(o(101));y=Array.prototype.slice.call("ResponderEventPlugin SimpleEventPlugin EnterLeaveEventPlugin ChangeEventPlugin SelectEventPlugin BeforeInputEventPlugin".split(" ")),w(),p=Nn,v=Pn,m=Mn,S({SimpleEventPlugin:ia,EnterLeaveEventPlugin:zr,ChangeEventPlugin:_r,SelectEventPlugin:Qr,BeforeInputEventPlugin:ur});var oa=[],ua=-1;function la(e){0>ua||(e.current=oa[ua],oa[ua]=null,ua--)}function ca(e,t){ua++,oa[ua]=e.current,e.current=t}var fa={},sa={current:fa},da={current:!1},ha=fa;function pa(e,t){var n=e.type.contextTypes;if(!n)return fa;var r=e.stateNode;if(r&&r.__reactInternalMemoizedUnmaskedChildContext===t)return r.__reactInternalMemoizedMaskedChildContext;var a,i={};for(a in n)i[a]=t[a];return r&&((e=e.stateNode).__reactInternalMemoizedUnmaskedChildContext=t,e.__reactInternalMemoizedMaskedChildContext=i),i}function va(e){return null!=(e=e.childContextTypes)}function ma(){la(da),la(sa)}function ga(e,t,n){if(sa.current!==fa)throw Error(o(168));ca(sa,t),ca(da,n)}function ya(e,t,n){var r=e.stateNode;if(e=t.childContextTypes,"function"!=typeof r.getChildContext)return n;for(var i in r=r.getChildContext())if(!(i in e))throw Error(o(108,me(t)||"Unknown",i));return a({},n,{},r)}function ba(e){return e=(e=e.stateNode)&&e.__reactInternalMemoizedMergedChildContext||fa,ha=sa.current,ca(sa,e),ca(da,da.current),!0}function wa(e,t,n){var r=e.stateNode;if(!r)throw Error(o(169));n?(e=ya(e,t,ha),r.__reactInternalMemoizedMergedChildContext=e,la(da),la(sa),ca(sa,e)):la(da),ca(da,n)}var xa=i.unstable_runWithPriority,Ea=i.unstable_scheduleCallback,ka=i.unstable_cancelCallback,_a=i.unstable_requestPaint,Ta=i.unstable_now,Sa=i.unstable_getCurrentPriorityLevel,Ca=i.unstable_ImmediatePriority,Pa=i.unstable_UserBlockingPriority,Ma=i.unstable_NormalPriority,Na=i.unstable_LowPriority,Ia=i.unstable_IdlePriority,Da={},Ra=i.unstable_shouldYield,Aa=void 0!==_a?_a:function(){},Oa=null,za=null,La=!1,Fa=Ta(),Ba=1e4>Fa?Ta:function(){return Ta()-Fa};function Wa(){switch(Sa()){case Ca:return 99;case Pa:return 98;case Ma:return 97;case Na:return 96;case Ia:return 95;default:throw Error(o(332))}}function Va(e){switch(e){case 99:return Ca;case 98:return Pa;case 97:return Ma;case 96:return Na;case 95:return Ia;default:throw Error(o(332))}}function ja(e,t){return e=Va(e),xa(e,t)}function $a(e,t,n){return e=Va(e),Ea(e,t,n)}function Ua(e){return null===Oa?(Oa=[e],za=Ea(Ca,Xa)):Oa.push(e),Da}function Ha(){if(null!==za){var e=za;za=null,ka(e)}Xa()}function Xa(){if(!La&&null!==Oa){La=!0;var e=0;try{var t=Oa;ja(99,(function(){for(;e<t.length;e++){var n=t[e];do{n=n(!0)}while(null!==n)}})),Oa=null}catch(t){throw null!==Oa&&(Oa=Oa.slice(e+1)),Ea(Ca,Ha),t}finally{La=!1}}}function Qa(e,t,n){return 1073741821-(1+((1073741821-e+t/10)/(n/=10)|0))*n}function qa(e,t){if(e&&e.defaultProps)for(var n in t=a({},t),e=e.defaultProps)void 0===t[n]&&(t[n]=e[n]);return t}var Ka={current:null},Ya=null,Ga=null,Ja=null;function Za(){Ja=Ga=Ya=null}function ei(e){var t=Ka.current;la(Ka),e.type._context._currentValue=t}function ti(e,t){for(;null!==e;){var n=e.alternate;if(e.childExpirationTime<t)e.childExpirationTime=t,null!==n&&n.childExpirationTime<t&&(n.childExpirationTime=t);else{if(!(null!==n&&n.childExpirationTime<t))break;n.childExpirationTime=t}e=e.return}}function ni(e,t){Ya=e,Ja=Ga=null,null!==(e=e.dependencies)&&null!==e.firstContext&&(e.expirationTime>=t&&(No=!0),e.firstContext=null)}function ri(e,t){if(Ja!==e&&!1!==t&&0!==t)if("number"==typeof t&&1073741823!==t||(Ja=e,t=1073741823),t={context:e,observedBits:t,next:null},null===Ga){if(null===Ya)throw Error(o(308));Ga=t,Ya.dependencies={expirationTime:0,firstContext:t,responders:null}}else Ga=Ga.next=t;return e._currentValue}var ai=!1;function ii(e){e.updateQueue={baseState:e.memoizedState,baseQueue:null,shared:{pending:null},effects:null}}function oi(e,t){e=e.updateQueue,t.updateQueue===e&&(t.updateQueue={baseState:e.baseState,baseQueue:e.baseQueue,shared:e.shared,effects:e.effects})}function ui(e,t){return(e={expirationTime:e,suspenseConfig:t,tag:0,payload:null,callback:null,next:null}).next=e}function li(e,t){if(null!==(e=e.updateQueue)){var n=(e=e.shared).pending;null===n?t.next=t:(t.next=n.next,n.next=t),e.pending=t}}function ci(e,t){var n=e.alternate;null!==n&&oi(n,e),null===(n=(e=e.updateQueue).baseQueue)?(e.baseQueue=t.next=t,t.next=t):(t.next=n.next,n.next=t)}function fi(e,t,n,r){var i=e.updateQueue;ai=!1;var o=i.baseQueue,u=i.shared.pending;if(null!==u){if(null!==o){var l=o.next;o.next=u.next,u.next=l}o=u,i.shared.pending=null,null!==(l=e.alternate)&&(null!==(l=l.updateQueue)&&(l.baseQueue=u))}if(null!==o){l=o.next;var c=i.baseState,f=0,s=null,d=null,h=null;if(null!==l)for(var p=l;;){if((u=p.expirationTime)<r){var v={expirationTime:p.expirationTime,suspenseConfig:p.suspenseConfig,tag:p.tag,payload:p.payload,callback:p.callback,next:null};null===h?(d=h=v,s=c):h=h.next=v,u>f&&(f=u)}else{null!==h&&(h=h.next={expirationTime:1073741823,suspenseConfig:p.suspenseConfig,tag:p.tag,payload:p.payload,callback:p.callback,next:null}),il(u,p.suspenseConfig);e:{var m=e,g=p;switch(u=t,v=n,g.tag){case 1:if("function"==typeof(m=g.payload)){c=m.call(v,c,u);break e}c=m;break e;case 3:m.effectTag=-4097&m.effectTag|64;case 0:if(null==(u="function"==typeof(m=g.payload)?m.call(v,c,u):m))break e;c=a({},c,u);break e;case 2:ai=!0}}null!==p.callback&&(e.effectTag|=32,null===(u=i.effects)?i.effects=[p]:u.push(p))}if(null===(p=p.next)||p===l){if(null===(u=i.shared.pending))break;p=o.next=u.next,u.next=l,i.baseQueue=o=u,i.shared.pending=null}}null===h?s=c:h.next=d,i.baseState=s,i.baseQueue=h,ol(f),e.expirationTime=f,e.memoizedState=c}}function si(e,t,n){if(e=t.effects,t.effects=null,null!==e)for(t=0;t<e.length;t++){var r=e[t],a=r.callback;if(null!==a){if(r.callback=null,r=a,a=n,"function"!=typeof r)throw Error(o(191,r));r.call(a)}}}var di=Y.ReactCurrentBatchConfig,hi=(new r.Component).refs;function pi(e,t,n,r){n=null==(n=n(r,t=e.memoizedState))?t:a({},t,n),e.memoizedState=n,0===e.expirationTime&&(e.updateQueue.baseState=n)}var vi={isMounted:function(e){return!!(e=e._reactInternalFiber)&&Ze(e)===e},enqueueSetState:function(e,t,n){e=e._reactInternalFiber;var r=Xu(),a=di.suspense;(a=ui(r=Qu(r,e,a),a)).payload=t,null!=n&&(a.callback=n),li(e,a),qu(e,r)},enqueueReplaceState:function(e,t,n){e=e._reactInternalFiber;var r=Xu(),a=di.suspense;(a=ui(r=Qu(r,e,a),a)).tag=1,a.payload=t,null!=n&&(a.callback=n),li(e,a),qu(e,r)},enqueueForceUpdate:function(e,t){e=e._reactInternalFiber;var n=Xu(),r=di.suspense;(r=ui(n=Qu(n,e,r),r)).tag=2,null!=t&&(r.callback=t),li(e,r),qu(e,n)}};function mi(e,t,n,r,a,i,o){return"function"==typeof(e=e.stateNode).shouldComponentUpdate?e.shouldComponentUpdate(r,i,o):!t.prototype||!t.prototype.isPureReactComponent||(!Br(n,r)||!Br(a,i))}function gi(e,t,n){var r=!1,a=fa,i=t.contextType;return"object"==typeof i&&null!==i?i=ri(i):(a=va(t)?ha:sa.current,i=(r=null!=(r=t.contextTypes))?pa(e,a):fa),t=new t(n,i),e.memoizedState=null!==t.state&&void 0!==t.state?t.state:null,t.updater=vi,e.stateNode=t,t._reactInternalFiber=e,r&&((e=e.stateNode).__reactInternalMemoizedUnmaskedChildContext=a,e.__reactInternalMemoizedMaskedChildContext=i),t}function yi(e,t,n,r){e=t.state,"function"==typeof t.componentWillReceiveProps&&t.componentWillReceiveProps(n,r),"function"==typeof t.UNSAFE_componentWillReceiveProps&&t.UNSAFE_componentWillReceiveProps(n,r),t.state!==e&&vi.enqueueReplaceState(t,t.state,null)}function bi(e,t,n,r){var a=e.stateNode;a.props=n,a.state=e.memoizedState,a.refs=hi,ii(e);var i=t.contextType;"object"==typeof i&&null!==i?a.context=ri(i):(i=va(t)?ha:sa.current,a.context=pa(e,i)),fi(e,n,a,r),a.state=e.memoizedState,"function"==typeof(i=t.getDerivedStateFromProps)&&(pi(e,t,i,n),a.state=e.memoizedState),"function"==typeof t.getDerivedStateFromProps||"function"==typeof a.getSnapshotBeforeUpdate||"function"!=typeof a.UNSAFE_componentWillMount&&"function"!=typeof a.componentWillMount||(t=a.state,"function"==typeof a.componentWillMount&&a.componentWillMount(),"function"==typeof a.UNSAFE_componentWillMount&&a.UNSAFE_componentWillMount(),t!==a.state&&vi.enqueueReplaceState(a,a.state,null),fi(e,n,a,r),a.state=e.memoizedState),"function"==typeof a.componentDidMount&&(e.effectTag|=4)}var wi=Array.isArray;function xi(e,t,n){if(null!==(e=n.ref)&&"function"!=typeof e&&"object"!=typeof e){if(n._owner){if(n=n._owner){if(1!==n.tag)throw Error(o(309));var r=n.stateNode}if(!r)throw Error(o(147,e));var a=""+e;return null!==t&&null!==t.ref&&"function"==typeof t.ref&&t.ref._stringRef===a?t.ref:((t=function(e){var t=r.refs;t===hi&&(t=r.refs={}),null===e?delete t[a]:t[a]=e})._stringRef=a,t)}if("string"!=typeof e)throw Error(o(284));if(!n._owner)throw Error(o(290,e))}return e}function Ei(e,t){if("textarea"!==e.type)throw Error(o(31,"[object Object]"===Object.prototype.toString.call(t)?"object with keys {"+Object.keys(t).join(", ")+"}":t,""))}function ki(e){function t(t,n){if(e){var r=t.lastEffect;null!==r?(r.nextEffect=n,t.lastEffect=n):t.firstEffect=t.lastEffect=n,n.nextEffect=null,n.effectTag=8}}function n(n,r){if(!e)return null;for(;null!==r;)t(n,r),r=r.sibling;return null}function r(e,t){for(e=new Map;null!==t;)null!==t.key?e.set(t.key,t):e.set(t.index,t),t=t.sibling;return e}function a(e,t){return(e=Sl(e,t)).index=0,e.sibling=null,e}function i(t,n,r){return t.index=r,e?null!==(r=t.alternate)?(r=r.index)<n?(t.effectTag=2,n):r:(t.effectTag=2,n):n}function u(t){return e&&null===t.alternate&&(t.effectTag=2),t}function l(e,t,n,r){return null===t||6!==t.tag?((t=Ml(n,e.mode,r)).return=e,t):((t=a(t,n)).return=e,t)}function c(e,t,n,r){return null!==t&&t.elementType===n.type?((r=a(t,n.props)).ref=xi(e,t,n),r.return=e,r):((r=Cl(n.type,n.key,n.props,null,e.mode,r)).ref=xi(e,t,n),r.return=e,r)}function f(e,t,n,r){return null===t||4!==t.tag||t.stateNode.containerInfo!==n.containerInfo||t.stateNode.implementation!==n.implementation?((t=Nl(n,e.mode,r)).return=e,t):((t=a(t,n.children||[])).return=e,t)}function s(e,t,n,r,i){return null===t||7!==t.tag?((t=Pl(n,e.mode,r,i)).return=e,t):((t=a(t,n)).return=e,t)}function d(e,t,n){if("string"==typeof t||"number"==typeof t)return(t=Ml(""+t,e.mode,n)).return=e,t;if("object"==typeof t&&null!==t){switch(t.$$typeof){case ee:return(n=Cl(t.type,t.key,t.props,null,e.mode,n)).ref=xi(e,null,t),n.return=e,n;case te:return(t=Nl(t,e.mode,n)).return=e,t}if(wi(t)||ve(t))return(t=Pl(t,e.mode,n,null)).return=e,t;Ei(e,t)}return null}function h(e,t,n,r){var a=null!==t?t.key:null;if("string"==typeof n||"number"==typeof n)return null!==a?null:l(e,t,""+n,r);if("object"==typeof n&&null!==n){switch(n.$$typeof){case ee:return n.key===a?n.type===ne?s(e,t,n.props.children,r,a):c(e,t,n,r):null;case te:return n.key===a?f(e,t,n,r):null}if(wi(n)||ve(n))return null!==a?null:s(e,t,n,r,null);Ei(e,n)}return null}function p(e,t,n,r,a){if("string"==typeof r||"number"==typeof r)return l(t,e=e.get(n)||null,""+r,a);if("object"==typeof r&&null!==r){switch(r.$$typeof){case ee:return e=e.get(null===r.key?n:r.key)||null,r.type===ne?s(t,e,r.props.children,a,r.key):c(t,e,r,a);case te:return f(t,e=e.get(null===r.key?n:r.key)||null,r,a)}if(wi(r)||ve(r))return s(t,e=e.get(n)||null,r,a,null);Ei(t,r)}return null}function v(a,o,u,l){for(var c=null,f=null,s=o,v=o=0,m=null;null!==s&&v<u.length;v++){s.index>v?(m=s,s=null):m=s.sibling;var g=h(a,s,u[v],l);if(null===g){null===s&&(s=m);break}e&&s&&null===g.alternate&&t(a,s),o=i(g,o,v),null===f?c=g:f.sibling=g,f=g,s=m}if(v===u.length)return n(a,s),c;if(null===s){for(;v<u.length;v++)null!==(s=d(a,u[v],l))&&(o=i(s,o,v),null===f?c=s:f.sibling=s,f=s);return c}for(s=r(a,s);v<u.length;v++)null!==(m=p(s,a,v,u[v],l))&&(e&&null!==m.alternate&&s.delete(null===m.key?v:m.key),o=i(m,o,v),null===f?c=m:f.sibling=m,f=m);return e&&s.forEach((function(e){return t(a,e)})),c}function m(a,u,l,c){var f=ve(l);if("function"!=typeof f)throw Error(o(150));if(null==(l=f.call(l)))throw Error(o(151));for(var s=f=null,v=u,m=u=0,g=null,y=l.next();null!==v&&!y.done;m++,y=l.next()){v.index>m?(g=v,v=null):g=v.sibling;var b=h(a,v,y.value,c);if(null===b){null===v&&(v=g);break}e&&v&&null===b.alternate&&t(a,v),u=i(b,u,m),null===s?f=b:s.sibling=b,s=b,v=g}if(y.done)return n(a,v),f;if(null===v){for(;!y.done;m++,y=l.next())null!==(y=d(a,y.value,c))&&(u=i(y,u,m),null===s?f=y:s.sibling=y,s=y);return f}for(v=r(a,v);!y.done;m++,y=l.next())null!==(y=p(v,a,m,y.value,c))&&(e&&null!==y.alternate&&v.delete(null===y.key?m:y.key),u=i(y,u,m),null===s?f=y:s.sibling=y,s=y);return e&&v.forEach((function(e){return t(a,e)})),f}return function(e,r,i,l){var c="object"==typeof i&&null!==i&&i.type===ne&&null===i.key;c&&(i=i.props.children);var f="object"==typeof i&&null!==i;if(f)switch(i.$$typeof){case ee:e:{for(f=i.key,c=r;null!==c;){if(c.key===f){switch(c.tag){case 7:if(i.type===ne){n(e,c.sibling),(r=a(c,i.props.children)).return=e,e=r;break e}break;default:if(c.elementType===i.type){n(e,c.sibling),(r=a(c,i.props)).ref=xi(e,c,i),r.return=e,e=r;break e}}n(e,c);break}t(e,c),c=c.sibling}i.type===ne?((r=Pl(i.props.children,e.mode,l,i.key)).return=e,e=r):((l=Cl(i.type,i.key,i.props,null,e.mode,l)).ref=xi(e,r,i),l.return=e,e=l)}return u(e);case te:e:{for(c=i.key;null!==r;){if(r.key===c){if(4===r.tag&&r.stateNode.containerInfo===i.containerInfo&&r.stateNode.implementation===i.implementation){n(e,r.sibling),(r=a(r,i.children||[])).return=e,e=r;break e}n(e,r);break}t(e,r),r=r.sibling}(r=Nl(i,e.mode,l)).return=e,e=r}return u(e)}if("string"==typeof i||"number"==typeof i)return i=""+i,null!==r&&6===r.tag?(n(e,r.sibling),(r=a(r,i)).return=e,e=r):(n(e,r),(r=Ml(i,e.mode,l)).return=e,e=r),u(e);if(wi(i))return v(e,r,i,l);if(ve(i))return m(e,r,i,l);if(f&&Ei(e,i),void 0===i&&!c)switch(e.tag){case 1:case 0:throw e=e.type,Error(o(152,e.displayName||e.name||"Component"))}return n(e,r)}}var _i=ki(!0),Ti=ki(!1),Si={},Ci={current:Si},Pi={current:Si},Mi={current:Si};function Ni(e){if(e===Si)throw Error(o(174));return e}function Ii(e,t){switch(ca(Mi,t),ca(Pi,e),ca(Ci,Si),e=t.nodeType){case 9:case 11:t=(t=t.documentElement)?t.namespaceURI:Le(null,"");break;default:t=Le(t=(e=8===e?t.parentNode:t).namespaceURI||null,e=e.tagName)}la(Ci),ca(Ci,t)}function Di(){la(Ci),la(Pi),la(Mi)}function Ri(e){Ni(Mi.current);var t=Ni(Ci.current),n=Le(t,e.type);t!==n&&(ca(Pi,e),ca(Ci,n))}function Ai(e){Pi.current===e&&(la(Ci),la(Pi))}var Oi={current:0};function zi(e){for(var t=e;null!==t;){if(13===t.tag){var n=t.memoizedState;if(null!==n&&(null===(n=n.dehydrated)||"$?"===n.data||"$!"===n.data))return t}else if(19===t.tag&&void 0!==t.memoizedProps.revealOrder){if(0!=(64&t.effectTag))return t}else if(null!==t.child){t.child.return=t,t=t.child;continue}if(t===e)break;for(;null===t.sibling;){if(null===t.return||t.return===e)return null;t=t.return}t.sibling.return=t.return,t=t.sibling}return null}function Li(e,t){return{responder:e,props:t}}var Fi=Y.ReactCurrentDispatcher,Bi=Y.ReactCurrentBatchConfig,Wi=0,Vi=null,ji=null,$i=null,Ui=!1;function Hi(){throw Error(o(321))}function Xi(e,t){if(null===t)return!1;for(var n=0;n<t.length&&n<e.length;n++)if(!Lr(e[n],t[n]))return!1;return!0}function Qi(e,t,n,r,a,i){if(Wi=i,Vi=t,t.memoizedState=null,t.updateQueue=null,t.expirationTime=0,Fi.current=null===e||null===e.memoizedState?go:yo,e=n(r,a),t.expirationTime===Wi){i=0;do{if(t.expirationTime=0,!(25>i))throw Error(o(301));i+=1,$i=ji=null,t.updateQueue=null,Fi.current=bo,e=n(r,a)}while(t.expirationTime===Wi)}if(Fi.current=mo,t=null!==ji&&null!==ji.next,Wi=0,$i=ji=Vi=null,Ui=!1,t)throw Error(o(300));return e}function qi(){var e={memoizedState:null,baseState:null,baseQueue:null,queue:null,next:null};return null===$i?Vi.memoizedState=$i=e:$i=$i.next=e,$i}function Ki(){if(null===ji){var e=Vi.alternate;e=null!==e?e.memoizedState:null}else e=ji.next;var t=null===$i?Vi.memoizedState:$i.next;if(null!==t)$i=t,ji=e;else{if(null===e)throw Error(o(310));e={memoizedState:(ji=e).memoizedState,baseState:ji.baseState,baseQueue:ji.baseQueue,queue:ji.queue,next:null},null===$i?Vi.memoizedState=$i=e:$i=$i.next=e}return $i}function Yi(e,t){return"function"==typeof t?t(e):t}function Gi(e){var t=Ki(),n=t.queue;if(null===n)throw Error(o(311));n.lastRenderedReducer=e;var r=ji,a=r.baseQueue,i=n.pending;if(null!==i){if(null!==a){var u=a.next;a.next=i.next,i.next=u}r.baseQueue=a=i,n.pending=null}if(null!==a){a=a.next,r=r.baseState;var l=u=i=null,c=a;do{var f=c.expirationTime;if(f<Wi){var s={expirationTime:c.expirationTime,suspenseConfig:c.suspenseConfig,action:c.action,eagerReducer:c.eagerReducer,eagerState:c.eagerState,next:null};null===l?(u=l=s,i=r):l=l.next=s,f>Vi.expirationTime&&(Vi.expirationTime=f,ol(f))}else null!==l&&(l=l.next={expirationTime:1073741823,suspenseConfig:c.suspenseConfig,action:c.action,eagerReducer:c.eagerReducer,eagerState:c.eagerState,next:null}),il(f,c.suspenseConfig),r=c.eagerReducer===e?c.eagerState:e(r,c.action);c=c.next}while(null!==c&&c!==a);null===l?i=r:l.next=u,Lr(r,t.memoizedState)||(No=!0),t.memoizedState=r,t.baseState=i,t.baseQueue=l,n.lastRenderedState=r}return[t.memoizedState,n.dispatch]}function Ji(e){var t=Ki(),n=t.queue;if(null===n)throw Error(o(311));n.lastRenderedReducer=e;var r=n.dispatch,a=n.pending,i=t.memoizedState;if(null!==a){n.pending=null;var u=a=a.next;do{i=e(i,u.action),u=u.next}while(u!==a);Lr(i,t.memoizedState)||(No=!0),t.memoizedState=i,null===t.baseQueue&&(t.baseState=i),n.lastRenderedState=i}return[i,r]}function Zi(e){var t=qi();return"function"==typeof e&&(e=e()),t.memoizedState=t.baseState=e,e=(e=t.queue={pending:null,dispatch:null,lastRenderedReducer:Yi,lastRenderedState:e}).dispatch=vo.bind(null,Vi,e),[t.memoizedState,e]}function eo(e,t,n,r){return e={tag:e,create:t,destroy:n,deps:r,next:null},null===(t=Vi.updateQueue)?(t={lastEffect:null},Vi.updateQueue=t,t.lastEffect=e.next=e):null===(n=t.lastEffect)?t.lastEffect=e.next=e:(r=n.next,n.next=e,e.next=r,t.lastEffect=e),e}function to(){return Ki().memoizedState}function no(e,t,n,r){var a=qi();Vi.effectTag|=e,a.memoizedState=eo(1|t,n,void 0,void 0===r?null:r)}function ro(e,t,n,r){var a=Ki();r=void 0===r?null:r;var i=void 0;if(null!==ji){var o=ji.memoizedState;if(i=o.destroy,null!==r&&Xi(r,o.deps))return void eo(t,n,i,r)}Vi.effectTag|=e,a.memoizedState=eo(1|t,n,i,r)}function ao(e,t){return no(516,4,e,t)}function io(e,t){return ro(516,4,e,t)}function oo(e,t){return ro(4,2,e,t)}function uo(e,t){return"function"==typeof t?(e=e(),t(e),function(){t(null)}):null!=t?(e=e(),t.current=e,function(){t.current=null}):void 0}function lo(e,t,n){return n=null!=n?n.concat([e]):null,ro(4,2,uo.bind(null,t,e),n)}function co(){}function fo(e,t){return qi().memoizedState=[e,void 0===t?null:t],e}function so(e,t){var n=Ki();t=void 0===t?null:t;var r=n.memoizedState;return null!==r&&null!==t&&Xi(t,r[1])?r[0]:(n.memoizedState=[e,t],e)}function ho(e,t){var n=Ki();t=void 0===t?null:t;var r=n.memoizedState;return null!==r&&null!==t&&Xi(t,r[1])?r[0]:(e=e(),n.memoizedState=[e,t],e)}function po(e,t,n){var r=Wa();ja(98>r?98:r,(function(){e(!0)})),ja(97<r?97:r,(function(){var r=Bi.suspense;Bi.suspense=void 0===t?null:t;try{e(!1),n()}finally{Bi.suspense=r}}))}function vo(e,t,n){var r=Xu(),a=di.suspense;a={expirationTime:r=Qu(r,e,a),suspenseConfig:a,action:n,eagerReducer:null,eagerState:null,next:null};var i=t.pending;if(null===i?a.next=a:(a.next=i.next,i.next=a),t.pending=a,i=e.alternate,e===Vi||null!==i&&i===Vi)Ui=!0,a.expirationTime=Wi,Vi.expirationTime=Wi;else{if(0===e.expirationTime&&(null===i||0===i.expirationTime)&&null!==(i=t.lastRenderedReducer))try{var o=t.lastRenderedState,u=i(o,n);if(a.eagerReducer=i,a.eagerState=u,Lr(u,o))return}catch(e){}qu(e,r)}}var mo={readContext:ri,useCallback:Hi,useContext:Hi,useEffect:Hi,useImperativeHandle:Hi,useLayoutEffect:Hi,useMemo:Hi,useReducer:Hi,useRef:Hi,useState:Hi,useDebugValue:Hi,useResponder:Hi,useDeferredValue:Hi,useTransition:Hi},go={readContext:ri,useCallback:fo,useContext:ri,useEffect:ao,useImperativeHandle:function(e,t,n){return n=null!=n?n.concat([e]):null,no(4,2,uo.bind(null,t,e),n)},useLayoutEffect:function(e,t){return no(4,2,e,t)},useMemo:function(e,t){var n=qi();return t=void 0===t?null:t,e=e(),n.memoizedState=[e,t],e},useReducer:function(e,t,n){var r=qi();return t=void 0!==n?n(t):t,r.memoizedState=r.baseState=t,e=(e=r.queue={pending:null,dispatch:null,lastRenderedReducer:e,lastRenderedState:t}).dispatch=vo.bind(null,Vi,e),[r.memoizedState,e]},useRef:function(e){return e={current:e},qi().memoizedState=e},useState:Zi,useDebugValue:co,useResponder:Li,useDeferredValue:function(e,t){var n=Zi(e),r=n[0],a=n[1];return ao((function(){var n=Bi.suspense;Bi.suspense=void 0===t?null:t;try{a(e)}finally{Bi.suspense=n}}),[e,t]),r},useTransition:function(e){var t=Zi(!1),n=t[0];return t=t[1],[fo(po.bind(null,t,e),[t,e]),n]}},yo={readContext:ri,useCallback:so,useContext:ri,useEffect:io,useImperativeHandle:lo,useLayoutEffect:oo,useMemo:ho,useReducer:Gi,useRef:to,useState:function(){return Gi(Yi)},useDebugValue:co,useResponder:Li,useDeferredValue:function(e,t){var n=Gi(Yi),r=n[0],a=n[1];return io((function(){var n=Bi.suspense;Bi.suspense=void 0===t?null:t;try{a(e)}finally{Bi.suspense=n}}),[e,t]),r},useTransition:function(e){var t=Gi(Yi),n=t[0];return t=t[1],[so(po.bind(null,t,e),[t,e]),n]}},bo={readContext:ri,useCallback:so,useContext:ri,useEffect:io,useImperativeHandle:lo,useLayoutEffect:oo,useMemo:ho,useReducer:Ji,useRef:to,useState:function(){return Ji(Yi)},useDebugValue:co,useResponder:Li,useDeferredValue:function(e,t){var n=Ji(Yi),r=n[0],a=n[1];return io((function(){var n=Bi.suspense;Bi.suspense=void 0===t?null:t;try{a(e)}finally{Bi.suspense=n}}),[e,t]),r},useTransition:function(e){var t=Ji(Yi),n=t[0];return t=t[1],[so(po.bind(null,t,e),[t,e]),n]}},wo=null,xo=null,Eo=!1;function ko(e,t){var n=_l(5,null,null,0);n.elementType="DELETED",n.type="DELETED",n.stateNode=t,n.return=e,n.effectTag=8,null!==e.lastEffect?(e.lastEffect.nextEffect=n,e.lastEffect=n):e.firstEffect=e.lastEffect=n}function _o(e,t){switch(e.tag){case 5:var n=e.type;return null!==(t=1!==t.nodeType||n.toLowerCase()!==t.nodeName.toLowerCase()?null:t)&&(e.stateNode=t,!0);case 6:return null!==(t=""===e.pendingProps||3!==t.nodeType?null:t)&&(e.stateNode=t,!0);case 13:default:return!1}}function To(e){if(Eo){var t=xo;if(t){var n=t;if(!_o(e,t)){if(!(t=xn(n.nextSibling))||!_o(e,t))return e.effectTag=-1025&e.effectTag|2,Eo=!1,void(wo=e);ko(wo,n)}wo=e,xo=xn(t.firstChild)}else e.effectTag=-1025&e.effectTag|2,Eo=!1,wo=e}}function So(e){for(e=e.return;null!==e&&5!==e.tag&&3!==e.tag&&13!==e.tag;)e=e.return;wo=e}function Co(e){if(e!==wo)return!1;if(!Eo)return So(e),Eo=!0,!1;var t=e.type;if(5!==e.tag||"head"!==t&&"body"!==t&&!yn(t,e.memoizedProps))for(t=xo;t;)ko(e,t),t=xn(t.nextSibling);if(So(e),13===e.tag){if(!(e=null!==(e=e.memoizedState)?e.dehydrated:null))throw Error(o(317));e:{for(e=e.nextSibling,t=0;e;){if(8===e.nodeType){var n=e.data;if("/$"===n){if(0===t){xo=xn(e.nextSibling);break e}t--}else"$"!==n&&"$!"!==n&&"$?"!==n||t++}e=e.nextSibling}xo=null}}else xo=wo?xn(e.stateNode.nextSibling):null;return!0}function Po(){xo=wo=null,Eo=!1}var Mo=Y.ReactCurrentOwner,No=!1;function Io(e,t,n,r){t.child=null===e?Ti(t,null,n,r):_i(t,e.child,n,r)}function Do(e,t,n,r,a){n=n.render;var i=t.ref;return ni(t,a),r=Qi(e,t,n,r,i,a),null===e||No?(t.effectTag|=1,Io(e,t,r,a),t.child):(t.updateQueue=e.updateQueue,t.effectTag&=-517,e.expirationTime<=a&&(e.expirationTime=0),qo(e,t,a))}function Ro(e,t,n,r,a,i){if(null===e){var o=n.type;return"function"!=typeof o||Tl(o)||void 0!==o.defaultProps||null!==n.compare||void 0!==n.defaultProps?((e=Cl(n.type,null,r,null,t.mode,i)).ref=t.ref,e.return=t,t.child=e):(t.tag=15,t.type=o,Ao(e,t,o,r,a,i))}return o=e.child,a<i&&(a=o.memoizedProps,(n=null!==(n=n.compare)?n:Br)(a,r)&&e.ref===t.ref)?qo(e,t,i):(t.effectTag|=1,(e=Sl(o,r)).ref=t.ref,e.return=t,t.child=e)}function Ao(e,t,n,r,a,i){return null!==e&&Br(e.memoizedProps,r)&&e.ref===t.ref&&(No=!1,a<i)?(t.expirationTime=e.expirationTime,qo(e,t,i)):zo(e,t,n,r,i)}function Oo(e,t){var n=t.ref;(null===e&&null!==n||null!==e&&e.ref!==n)&&(t.effectTag|=128)}function zo(e,t,n,r,a){var i=va(n)?ha:sa.current;return i=pa(t,i),ni(t,a),n=Qi(e,t,n,r,i,a),null===e||No?(t.effectTag|=1,Io(e,t,n,a),t.child):(t.updateQueue=e.updateQueue,t.effectTag&=-517,e.expirationTime<=a&&(e.expirationTime=0),qo(e,t,a))}function Lo(e,t,n,r,a){if(va(n)){var i=!0;ba(t)}else i=!1;if(ni(t,a),null===t.stateNode)null!==e&&(e.alternate=null,t.alternate=null,t.effectTag|=2),gi(t,n,r),bi(t,n,r,a),r=!0;else if(null===e){var o=t.stateNode,u=t.memoizedProps;o.props=u;var l=o.context,c=n.contextType;"object"==typeof c&&null!==c?c=ri(c):c=pa(t,c=va(n)?ha:sa.current);var f=n.getDerivedStateFromProps,s="function"==typeof f||"function"==typeof o.getSnapshotBeforeUpdate;s||"function"!=typeof o.UNSAFE_componentWillReceiveProps&&"function"!=typeof o.componentWillReceiveProps||(u!==r||l!==c)&&yi(t,o,r,c),ai=!1;var d=t.memoizedState;o.state=d,fi(t,r,o,a),l=t.memoizedState,u!==r||d!==l||da.current||ai?("function"==typeof f&&(pi(t,n,f,r),l=t.memoizedState),(u=ai||mi(t,n,u,r,d,l,c))?(s||"function"!=typeof o.UNSAFE_componentWillMount&&"function"!=typeof o.componentWillMount||("function"==typeof o.componentWillMount&&o.componentWillMount(),"function"==typeof o.UNSAFE_componentWillMount&&o.UNSAFE_componentWillMount()),"function"==typeof o.componentDidMount&&(t.effectTag|=4)):("function"==typeof o.componentDidMount&&(t.effectTag|=4),t.memoizedProps=r,t.memoizedState=l),o.props=r,o.state=l,o.context=c,r=u):("function"==typeof o.componentDidMount&&(t.effectTag|=4),r=!1)}else o=t.stateNode,oi(e,t),u=t.memoizedProps,o.props=t.type===t.elementType?u:qa(t.type,u),l=o.context,"object"==typeof(c=n.contextType)&&null!==c?c=ri(c):c=pa(t,c=va(n)?ha:sa.current),(s="function"==typeof(f=n.getDerivedStateFromProps)||"function"==typeof o.getSnapshotBeforeUpdate)||"function"!=typeof o.UNSAFE_componentWillReceiveProps&&"function"!=typeof o.componentWillReceiveProps||(u!==r||l!==c)&&yi(t,o,r,c),ai=!1,l=t.memoizedState,o.state=l,fi(t,r,o,a),d=t.memoizedState,u!==r||l!==d||da.current||ai?("function"==typeof f&&(pi(t,n,f,r),d=t.memoizedState),(f=ai||mi(t,n,u,r,l,d,c))?(s||"function"!=typeof o.UNSAFE_componentWillUpdate&&"function"!=typeof o.componentWillUpdate||("function"==typeof o.componentWillUpdate&&o.componentWillUpdate(r,d,c),"function"==typeof o.UNSAFE_componentWillUpdate&&o.UNSAFE_componentWillUpdate(r,d,c)),"function"==typeof o.componentDidUpdate&&(t.effectTag|=4),"function"==typeof o.getSnapshotBeforeUpdate&&(t.effectTag|=256)):("function"!=typeof o.componentDidUpdate||u===e.memoizedProps&&l===e.memoizedState||(t.effectTag|=4),"function"!=typeof o.getSnapshotBeforeUpdate||u===e.memoizedProps&&l===e.memoizedState||(t.effectTag|=256),t.memoizedProps=r,t.memoizedState=d),o.props=r,o.state=d,o.context=c,r=f):("function"!=typeof o.componentDidUpdate||u===e.memoizedProps&&l===e.memoizedState||(t.effectTag|=4),"function"!=typeof o.getSnapshotBeforeUpdate||u===e.memoizedProps&&l===e.memoizedState||(t.effectTag|=256),r=!1);return Fo(e,t,n,r,i,a)}function Fo(e,t,n,r,a,i){Oo(e,t);var o=0!=(64&t.effectTag);if(!r&&!o)return a&&wa(t,n,!1),qo(e,t,i);r=t.stateNode,Mo.current=t;var u=o&&"function"!=typeof n.getDerivedStateFromError?null:r.render();return t.effectTag|=1,null!==e&&o?(t.child=_i(t,e.child,null,i),t.child=_i(t,null,u,i)):Io(e,t,u,i),t.memoizedState=r.state,a&&wa(t,n,!0),t.child}function Bo(e){var t=e.stateNode;t.pendingContext?ga(0,t.pendingContext,t.pendingContext!==t.context):t.context&&ga(0,t.context,!1),Ii(e,t.containerInfo)}var Wo,Vo,jo,$o={dehydrated:null,retryTime:0};function Uo(e,t,n){var r,a=t.mode,i=t.pendingProps,o=Oi.current,u=!1;if((r=0!=(64&t.effectTag))||(r=0!=(2&o)&&(null===e||null!==e.memoizedState)),r?(u=!0,t.effectTag&=-65):null!==e&&null===e.memoizedState||void 0===i.fallback||!0===i.unstable_avoidThisFallback||(o|=1),ca(Oi,1&o),null===e){if(void 0!==i.fallback&&To(t),u){if(u=i.fallback,(i=Pl(null,a,0,null)).return=t,0==(2&t.mode))for(e=null!==t.memoizedState?t.child.child:t.child,i.child=e;null!==e;)e.return=i,e=e.sibling;return(n=Pl(u,a,n,null)).return=t,i.sibling=n,t.memoizedState=$o,t.child=i,n}return a=i.children,t.memoizedState=null,t.child=Ti(t,null,a,n)}if(null!==e.memoizedState){if(a=(e=e.child).sibling,u){if(i=i.fallback,(n=Sl(e,e.pendingProps)).return=t,0==(2&t.mode)&&(u=null!==t.memoizedState?t.child.child:t.child)!==e.child)for(n.child=u;null!==u;)u.return=n,u=u.sibling;return(a=Sl(a,i)).return=t,n.sibling=a,n.childExpirationTime=0,t.memoizedState=$o,t.child=n,a}return n=_i(t,e.child,i.children,n),t.memoizedState=null,t.child=n}if(e=e.child,u){if(u=i.fallback,(i=Pl(null,a,0,null)).return=t,i.child=e,null!==e&&(e.return=i),0==(2&t.mode))for(e=null!==t.memoizedState?t.child.child:t.child,i.child=e;null!==e;)e.return=i,e=e.sibling;return(n=Pl(u,a,n,null)).return=t,i.sibling=n,n.effectTag|=2,i.childExpirationTime=0,t.memoizedState=$o,t.child=i,n}return t.memoizedState=null,t.child=_i(t,e,i.children,n)}function Ho(e,t){e.expirationTime<t&&(e.expirationTime=t);var n=e.alternate;null!==n&&n.expirationTime<t&&(n.expirationTime=t),ti(e.return,t)}function Xo(e,t,n,r,a,i){var o=e.memoizedState;null===o?e.memoizedState={isBackwards:t,rendering:null,renderingStartTime:0,last:r,tail:n,tailExpiration:0,tailMode:a,lastEffect:i}:(o.isBackwards=t,o.rendering=null,o.renderingStartTime=0,o.last=r,o.tail=n,o.tailExpiration=0,o.tailMode=a,o.lastEffect=i)}function Qo(e,t,n){var r=t.pendingProps,a=r.revealOrder,i=r.tail;if(Io(e,t,r.children,n),0!=(2&(r=Oi.current)))r=1&r|2,t.effectTag|=64;else{if(null!==e&&0!=(64&e.effectTag))e:for(e=t.child;null!==e;){if(13===e.tag)null!==e.memoizedState&&Ho(e,n);else if(19===e.tag)Ho(e,n);else if(null!==e.child){e.child.return=e,e=e.child;continue}if(e===t)break e;for(;null===e.sibling;){if(null===e.return||e.return===t)break e;e=e.return}e.sibling.return=e.return,e=e.sibling}r&=1}if(ca(Oi,r),0==(2&t.mode))t.memoizedState=null;else switch(a){case"forwards":for(n=t.child,a=null;null!==n;)null!==(e=n.alternate)&&null===zi(e)&&(a=n),n=n.sibling;null===(n=a)?(a=t.child,t.child=null):(a=n.sibling,n.sibling=null),Xo(t,!1,a,n,i,t.lastEffect);break;case"backwards":for(n=null,a=t.child,t.child=null;null!==a;){if(null!==(e=a.alternate)&&null===zi(e)){t.child=a;break}e=a.sibling,a.sibling=n,n=a,a=e}Xo(t,!0,n,null,i,t.lastEffect);break;case"together":Xo(t,!1,null,null,void 0,t.lastEffect);break;default:t.memoizedState=null}return t.child}function qo(e,t,n){null!==e&&(t.dependencies=e.dependencies);var r=t.expirationTime;if(0!==r&&ol(r),t.childExpirationTime<n)return null;if(null!==e&&t.child!==e.child)throw Error(o(153));if(null!==t.child){for(n=Sl(e=t.child,e.pendingProps),t.child=n,n.return=t;null!==e.sibling;)e=e.sibling,(n=n.sibling=Sl(e,e.pendingProps)).return=t;n.sibling=null}return t.child}function Ko(e,t){switch(e.tailMode){case"hidden":t=e.tail;for(var n=null;null!==t;)null!==t.alternate&&(n=t),t=t.sibling;null===n?e.tail=null:n.sibling=null;break;case"collapsed":n=e.tail;for(var r=null;null!==n;)null!==n.alternate&&(r=n),n=n.sibling;null===r?t||null===e.tail?e.tail=null:e.tail.sibling=null:r.sibling=null}}function Yo(e,t,n){var r=t.pendingProps;switch(t.tag){case 2:case 16:case 15:case 0:case 11:case 7:case 8:case 12:case 9:case 14:return null;case 1:return va(t.type)&&ma(),null;case 3:return Di(),la(da),la(sa),(n=t.stateNode).pendingContext&&(n.context=n.pendingContext,n.pendingContext=null),null!==e&&null!==e.child||!Co(t)||(t.effectTag|=4),null;case 5:Ai(t),n=Ni(Mi.current);var i=t.type;if(null!==e&&null!=t.stateNode)Vo(e,t,i,r,n),e.ref!==t.ref&&(t.effectTag|=128);else{if(!r){if(null===t.stateNode)throw Error(o(166));return null}if(e=Ni(Ci.current),Co(t)){r=t.stateNode,i=t.type;var u=t.memoizedProps;switch(r[_n]=t,r[Tn]=u,i){case"iframe":case"object":case"embed":Qt("load",r);break;case"video":case"audio":for(e=0;e<Ye.length;e++)Qt(Ye[e],r);break;case"source":Qt("error",r);break;case"img":case"image":case"link":Qt("error",r),Qt("load",r);break;case"form":Qt("reset",r),Qt("submit",r);break;case"details":Qt("toggle",r);break;case"input":ke(r,u),Qt("invalid",r),ln(n,"onChange");break;case"select":r._wrapperState={wasMultiple:!!u.multiple},Qt("invalid",r),ln(n,"onChange");break;case"textarea":Ie(r,u),Qt("invalid",r),ln(n,"onChange")}for(var l in an(i,u),e=null,u)if(u.hasOwnProperty(l)){var c=u[l];"children"===l?"string"==typeof c?r.textContent!==c&&(e=["children",c]):"number"==typeof c&&r.textContent!==""+c&&(e=["children",""+c]):_.hasOwnProperty(l)&&null!=c&&ln(n,l)}switch(i){case"input":we(r),Se(r,u,!0);break;case"textarea":we(r),Re(r);break;case"select":case"option":break;default:"function"==typeof u.onClick&&(r.onclick=cn)}n=e,t.updateQueue=n,null!==n&&(t.effectTag|=4)}else{switch(l=9===n.nodeType?n:n.ownerDocument,e===un&&(e=ze(i)),e===un?"script"===i?((e=l.createElement("div")).innerHTML="<script><\/script>",e=e.removeChild(e.firstChild)):"string"==typeof r.is?e=l.createElement(i,{is:r.is}):(e=l.createElement(i),"select"===i&&(l=e,r.multiple?l.multiple=!0:r.size&&(l.size=r.size))):e=l.createElementNS(e,i),e[_n]=t,e[Tn]=r,Wo(e,t),t.stateNode=e,l=on(i,r),i){case"iframe":case"object":case"embed":Qt("load",e),c=r;break;case"video":case"audio":for(c=0;c<Ye.length;c++)Qt(Ye[c],e);c=r;break;case"source":Qt("error",e),c=r;break;case"img":case"image":case"link":Qt("error",e),Qt("load",e),c=r;break;case"form":Qt("reset",e),Qt("submit",e),c=r;break;case"details":Qt("toggle",e),c=r;break;case"input":ke(e,r),c=Ee(e,r),Qt("invalid",e),ln(n,"onChange");break;case"option":c=Pe(e,r);break;case"select":e._wrapperState={wasMultiple:!!r.multiple},c=a({},r,{value:void 0}),Qt("invalid",e),ln(n,"onChange");break;case"textarea":Ie(e,r),c=Ne(e,r),Qt("invalid",e),ln(n,"onChange");break;default:c=r}an(i,c);var f=c;for(u in f)if(f.hasOwnProperty(u)){var s=f[u];"style"===u?nn(e,s):"dangerouslySetInnerHTML"===u?null!=(s=s?s.__html:void 0)&&Be(e,s):"children"===u?"string"==typeof s?("textarea"!==i||""!==s)&&We(e,s):"number"==typeof s&&We(e,""+s):"suppressContentEditableWarning"!==u&&"suppressHydrationWarning"!==u&&"autoFocus"!==u&&(_.hasOwnProperty(u)?null!=s&&ln(n,u):null!=s&&G(e,u,s,l))}switch(i){case"input":we(e),Se(e,r,!1);break;case"textarea":we(e),Re(e);break;case"option":null!=r.value&&e.setAttribute("value",""+ye(r.value));break;case"select":e.multiple=!!r.multiple,null!=(n=r.value)?Me(e,!!r.multiple,n,!1):null!=r.defaultValue&&Me(e,!!r.multiple,r.defaultValue,!0);break;default:"function"==typeof c.onClick&&(e.onclick=cn)}gn(i,r)&&(t.effectTag|=4)}null!==t.ref&&(t.effectTag|=128)}return null;case 6:if(e&&null!=t.stateNode)jo(0,t,e.memoizedProps,r);else{if("string"!=typeof r&&null===t.stateNode)throw Error(o(166));n=Ni(Mi.current),Ni(Ci.current),Co(t)?(n=t.stateNode,r=t.memoizedProps,n[_n]=t,n.nodeValue!==r&&(t.effectTag|=4)):((n=(9===n.nodeType?n:n.ownerDocument).createTextNode(r))[_n]=t,t.stateNode=n)}return null;case 13:return la(Oi),r=t.memoizedState,0!=(64&t.effectTag)?(t.expirationTime=n,t):(n=null!==r,r=!1,null===e?void 0!==t.memoizedProps.fallback&&Co(t):(r=null!==(i=e.memoizedState),n||null===i||null!==(i=e.child.sibling)&&(null!==(u=t.firstEffect)?(t.firstEffect=i,i.nextEffect=u):(t.firstEffect=t.lastEffect=i,i.nextEffect=null),i.effectTag=8)),n&&!r&&0!=(2&t.mode)&&(null===e&&!0!==t.memoizedProps.unstable_avoidThisFallback||0!=(1&Oi.current)?Cu===wu&&(Cu=xu):(Cu!==wu&&Cu!==xu||(Cu=Eu),0!==Du&&null!==_u&&(Rl(_u,Su),Al(_u,Du)))),(n||r)&&(t.effectTag|=4),null);case 4:return Di(),null;case 10:return ei(t),null;case 17:return va(t.type)&&ma(),null;case 19:if(la(Oi),null===(r=t.memoizedState))return null;if(i=0!=(64&t.effectTag),null===(u=r.rendering)){if(i)Ko(r,!1);else if(Cu!==wu||null!==e&&0!=(64&e.effectTag))for(u=t.child;null!==u;){if(null!==(e=zi(u))){for(t.effectTag|=64,Ko(r,!1),null!==(i=e.updateQueue)&&(t.updateQueue=i,t.effectTag|=4),null===r.lastEffect&&(t.firstEffect=null),t.lastEffect=r.lastEffect,r=t.child;null!==r;)u=n,(i=r).effectTag&=2,i.nextEffect=null,i.firstEffect=null,i.lastEffect=null,null===(e=i.alternate)?(i.childExpirationTime=0,i.expirationTime=u,i.child=null,i.memoizedProps=null,i.memoizedState=null,i.updateQueue=null,i.dependencies=null):(i.childExpirationTime=e.childExpirationTime,i.expirationTime=e.expirationTime,i.child=e.child,i.memoizedProps=e.memoizedProps,i.memoizedState=e.memoizedState,i.updateQueue=e.updateQueue,u=e.dependencies,i.dependencies=null===u?null:{expirationTime:u.expirationTime,firstContext:u.firstContext,responders:u.responders}),r=r.sibling;return ca(Oi,1&Oi.current|2),t.child}u=u.sibling}}else{if(!i)if(null!==(e=zi(u))){if(t.effectTag|=64,i=!0,null!==(n=e.updateQueue)&&(t.updateQueue=n,t.effectTag|=4),Ko(r,!0),null===r.tail&&"hidden"===r.tailMode&&!u.alternate)return null!==(t=t.lastEffect=r.lastEffect)&&(t.nextEffect=null),null}else 2*Ba()-r.renderingStartTime>r.tailExpiration&&1<n&&(t.effectTag|=64,i=!0,Ko(r,!1),t.expirationTime=t.childExpirationTime=n-1);r.isBackwards?(u.sibling=t.child,t.child=u):(null!==(n=r.last)?n.sibling=u:t.child=u,r.last=u)}return null!==r.tail?(0===r.tailExpiration&&(r.tailExpiration=Ba()+500),n=r.tail,r.rendering=n,r.tail=n.sibling,r.lastEffect=t.lastEffect,r.renderingStartTime=Ba(),n.sibling=null,t=Oi.current,ca(Oi,i?1&t|2:1&t),n):null}throw Error(o(156,t.tag))}function Go(e){switch(e.tag){case 1:va(e.type)&&ma();var t=e.effectTag;return 4096&t?(e.effectTag=-4097&t|64,e):null;case 3:if(Di(),la(da),la(sa),0!=(64&(t=e.effectTag)))throw Error(o(285));return e.effectTag=-4097&t|64,e;case 5:return Ai(e),null;case 13:return la(Oi),4096&(t=e.effectTag)?(e.effectTag=-4097&t|64,e):null;case 19:return la(Oi),null;case 4:return Di(),null;case 10:return ei(e),null;default:return null}}function Jo(e,t){return{value:e,source:t,stack:ge(t)}}Wo=function(e,t){for(var n=t.child;null!==n;){if(5===n.tag||6===n.tag)e.appendChild(n.stateNode);else if(4!==n.tag&&null!==n.child){n.child.return=n,n=n.child;continue}if(n===t)break;for(;null===n.sibling;){if(null===n.return||n.return===t)return;n=n.return}n.sibling.return=n.return,n=n.sibling}},Vo=function(e,t,n,r,i){var o=e.memoizedProps;if(o!==r){var u,l,c=t.stateNode;switch(Ni(Ci.current),e=null,n){case"input":o=Ee(c,o),r=Ee(c,r),e=[];break;case"option":o=Pe(c,o),r=Pe(c,r),e=[];break;case"select":o=a({},o,{value:void 0}),r=a({},r,{value:void 0}),e=[];break;case"textarea":o=Ne(c,o),r=Ne(c,r),e=[];break;default:"function"!=typeof o.onClick&&"function"==typeof r.onClick&&(c.onclick=cn)}for(u in an(n,r),n=null,o)if(!r.hasOwnProperty(u)&&o.hasOwnProperty(u)&&null!=o[u])if("style"===u)for(l in c=o[u])c.hasOwnProperty(l)&&(n||(n={}),n[l]="");else"dangerouslySetInnerHTML"!==u&&"children"!==u&&"suppressContentEditableWarning"!==u&&"suppressHydrationWarning"!==u&&"autoFocus"!==u&&(_.hasOwnProperty(u)?e||(e=[]):(e=e||[]).push(u,null));for(u in r){var f=r[u];if(c=null!=o?o[u]:void 0,r.hasOwnProperty(u)&&f!==c&&(null!=f||null!=c))if("style"===u)if(c){for(l in c)!c.hasOwnProperty(l)||f&&f.hasOwnProperty(l)||(n||(n={}),n[l]="");for(l in f)f.hasOwnProperty(l)&&c[l]!==f[l]&&(n||(n={}),n[l]=f[l])}else n||(e||(e=[]),e.push(u,n)),n=f;else"dangerouslySetInnerHTML"===u?(f=f?f.__html:void 0,c=c?c.__html:void 0,null!=f&&c!==f&&(e=e||[]).push(u,f)):"children"===u?c===f||"string"!=typeof f&&"number"!=typeof f||(e=e||[]).push(u,""+f):"suppressContentEditableWarning"!==u&&"suppressHydrationWarning"!==u&&(_.hasOwnProperty(u)?(null!=f&&ln(i,u),e||c===f||(e=[])):(e=e||[]).push(u,f))}n&&(e=e||[]).push("style",n),i=e,(t.updateQueue=i)&&(t.effectTag|=4)}},jo=function(e,t,n,r){n!==r&&(t.effectTag|=4)};var Zo="function"==typeof WeakSet?WeakSet:Set;function eu(e,t){var n=t.source,r=t.stack;null===r&&null!==n&&(r=ge(n)),null!==n&&me(n.type),t=t.value,null!==e&&1===e.tag&&me(e.type);try{console.error(t)}catch(e){setTimeout((function(){throw e}))}}function tu(e){var t=e.ref;if(null!==t)if("function"==typeof t)try{t(null)}catch(t){yl(e,t)}else t.current=null}function nu(e,t){switch(t.tag){case 0:case 11:case 15:case 22:return;case 1:if(256&t.effectTag&&null!==e){var n=e.memoizedProps,r=e.memoizedState;t=(e=t.stateNode).getSnapshotBeforeUpdate(t.elementType===t.type?n:qa(t.type,n),r),e.__reactInternalSnapshotBeforeUpdate=t}return;case 3:case 5:case 6:case 4:case 17:return}throw Error(o(163))}function ru(e,t){if(null!==(t=null!==(t=t.updateQueue)?t.lastEffect:null)){var n=t=t.next;do{if((n.tag&e)===e){var r=n.destroy;n.destroy=void 0,void 0!==r&&r()}n=n.next}while(n!==t)}}function au(e,t){if(null!==(t=null!==(t=t.updateQueue)?t.lastEffect:null)){var n=t=t.next;do{if((n.tag&e)===e){var r=n.create;n.destroy=r()}n=n.next}while(n!==t)}}function iu(e,t,n){switch(n.tag){case 0:case 11:case 15:case 22:return void au(3,n);case 1:if(e=n.stateNode,4&n.effectTag)if(null===t)e.componentDidMount();else{var r=n.elementType===n.type?t.memoizedProps:qa(n.type,t.memoizedProps);e.componentDidUpdate(r,t.memoizedState,e.__reactInternalSnapshotBeforeUpdate)}return void(null!==(t=n.updateQueue)&&si(n,t,e));case 3:if(null!==(t=n.updateQueue)){if(e=null,null!==n.child)switch(n.child.tag){case 5:e=n.child.stateNode;break;case 1:e=n.child.stateNode}si(n,t,e)}return;case 5:return e=n.stateNode,void(null===t&&4&n.effectTag&&gn(n.type,n.memoizedProps)&&e.focus());case 6:case 4:case 12:return;case 13:return void(null===n.memoizedState&&(n=n.alternate,null!==n&&(n=n.memoizedState,null!==n&&(n=n.dehydrated,null!==n&&zt(n)))));case 19:case 17:case 20:case 21:return}throw Error(o(163))}function ou(e,t,n){switch("function"==typeof El&&El(t),t.tag){case 0:case 11:case 14:case 15:case 22:if(null!==(e=t.updateQueue)&&null!==(e=e.lastEffect)){var r=e.next;ja(97<n?97:n,(function(){var e=r;do{var n=e.destroy;if(void 0!==n){var a=t;try{n()}catch(e){yl(a,e)}}e=e.next}while(e!==r)}))}break;case 1:tu(t),"function"==typeof(n=t.stateNode).componentWillUnmount&&function(e,t){try{t.props=e.memoizedProps,t.state=e.memoizedState,t.componentWillUnmount()}catch(t){yl(e,t)}}(t,n);break;case 5:tu(t);break;case 4:fu(e,t,n)}}function uu(e){var t=e.alternate;e.return=null,e.child=null,e.memoizedState=null,e.updateQueue=null,e.dependencies=null,e.alternate=null,e.firstEffect=null,e.lastEffect=null,e.pendingProps=null,e.memoizedProps=null,e.stateNode=null,null!==t&&uu(t)}function lu(e){return 5===e.tag||3===e.tag||4===e.tag}function cu(e){e:{for(var t=e.return;null!==t;){if(lu(t)){var n=t;break e}t=t.return}throw Error(o(160))}switch(t=n.stateNode,n.tag){case 5:var r=!1;break;case 3:case 4:t=t.containerInfo,r=!0;break;default:throw Error(o(161))}16&n.effectTag&&(We(t,""),n.effectTag&=-17);e:t:for(n=e;;){for(;null===n.sibling;){if(null===n.return||lu(n.return)){n=null;break e}n=n.return}for(n.sibling.return=n.return,n=n.sibling;5!==n.tag&&6!==n.tag&&18!==n.tag;){if(2&n.effectTag)continue t;if(null===n.child||4===n.tag)continue t;n.child.return=n,n=n.child}if(!(2&n.effectTag)){n=n.stateNode;break e}}r?function e(t,n,r){var a=t.tag,i=5===a||6===a;if(i)t=i?t.stateNode:t.stateNode.instance,n?8===r.nodeType?r.parentNode.insertBefore(t,n):r.insertBefore(t,n):(8===r.nodeType?(n=r.parentNode).insertBefore(t,r):(n=r).appendChild(t),null!==(r=r._reactRootContainer)&&void 0!==r||null!==n.onclick||(n.onclick=cn));else if(4!==a&&null!==(t=t.child))for(e(t,n,r),t=t.sibling;null!==t;)e(t,n,r),t=t.sibling}(e,n,t):function e(t,n,r){var a=t.tag,i=5===a||6===a;if(i)t=i?t.stateNode:t.stateNode.instance,n?r.insertBefore(t,n):r.appendChild(t);else if(4!==a&&null!==(t=t.child))for(e(t,n,r),t=t.sibling;null!==t;)e(t,n,r),t=t.sibling}(e,n,t)}function fu(e,t,n){for(var r,a,i=t,u=!1;;){if(!u){u=i.return;e:for(;;){if(null===u)throw Error(o(160));switch(r=u.stateNode,u.tag){case 5:a=!1;break e;case 3:case 4:r=r.containerInfo,a=!0;break e}u=u.return}u=!0}if(5===i.tag||6===i.tag){e:for(var l=e,c=i,f=n,s=c;;)if(ou(l,s,f),null!==s.child&&4!==s.tag)s.child.return=s,s=s.child;else{if(s===c)break e;for(;null===s.sibling;){if(null===s.return||s.return===c)break e;s=s.return}s.sibling.return=s.return,s=s.sibling}a?(l=r,c=i.stateNode,8===l.nodeType?l.parentNode.removeChild(c):l.removeChild(c)):r.removeChild(i.stateNode)}else if(4===i.tag){if(null!==i.child){r=i.stateNode.containerInfo,a=!0,i.child.return=i,i=i.child;continue}}else if(ou(e,i,n),null!==i.child){i.child.return=i,i=i.child;continue}if(i===t)break;for(;null===i.sibling;){if(null===i.return||i.return===t)return;4===(i=i.return).tag&&(u=!1)}i.sibling.return=i.return,i=i.sibling}}function su(e,t){switch(t.tag){case 0:case 11:case 14:case 15:case 22:return void ru(3,t);case 1:return;case 5:var n=t.stateNode;if(null!=n){var r=t.memoizedProps,a=null!==e?e.memoizedProps:r;e=t.type;var i=t.updateQueue;if(t.updateQueue=null,null!==i){for(n[Tn]=r,"input"===e&&"radio"===r.type&&null!=r.name&&_e(n,r),on(e,a),t=on(e,r),a=0;a<i.length;a+=2){var u=i[a],l=i[a+1];"style"===u?nn(n,l):"dangerouslySetInnerHTML"===u?Be(n,l):"children"===u?We(n,l):G(n,u,l,t)}switch(e){case"input":Te(n,r);break;case"textarea":De(n,r);break;case"select":t=n._wrapperState.wasMultiple,n._wrapperState.wasMultiple=!!r.multiple,null!=(e=r.value)?Me(n,!!r.multiple,e,!1):t!==!!r.multiple&&(null!=r.defaultValue?Me(n,!!r.multiple,r.defaultValue,!0):Me(n,!!r.multiple,r.multiple?[]:"",!1))}}}return;case 6:if(null===t.stateNode)throw Error(o(162));return void(t.stateNode.nodeValue=t.memoizedProps);case 3:return void((t=t.stateNode).hydrate&&(t.hydrate=!1,zt(t.containerInfo)));case 12:return;case 13:if(n=t,null===t.memoizedState?r=!1:(r=!0,n=t.child,Au=Ba()),null!==n)e:for(e=n;;){if(5===e.tag)i=e.stateNode,r?"function"==typeof(i=i.style).setProperty?i.setProperty("display","none","important"):i.display="none":(i=e.stateNode,a=null!=(a=e.memoizedProps.style)&&a.hasOwnProperty("display")?a.display:null,i.style.display=tn("display",a));else if(6===e.tag)e.stateNode.nodeValue=r?"":e.memoizedProps;else{if(13===e.tag&&null!==e.memoizedState&&null===e.memoizedState.dehydrated){(i=e.child.sibling).return=e,e=i;continue}if(null!==e.child){e.child.return=e,e=e.child;continue}}if(e===n)break;for(;null===e.sibling;){if(null===e.return||e.return===n)break e;e=e.return}e.sibling.return=e.return,e=e.sibling}return void du(t);case 19:return void du(t);case 17:return}throw Error(o(163))}function du(e){var t=e.updateQueue;if(null!==t){e.updateQueue=null;var n=e.stateNode;null===n&&(n=e.stateNode=new Zo),t.forEach((function(t){var r=wl.bind(null,e,t);n.has(t)||(n.add(t),t.then(r,r))}))}}var hu="function"==typeof WeakMap?WeakMap:Map;function pu(e,t,n){(n=ui(n,null)).tag=3,n.payload={element:null};var r=t.value;return n.callback=function(){zu||(zu=!0,Lu=r),eu(e,t)},n}function vu(e,t,n){(n=ui(n,null)).tag=3;var r=e.type.getDerivedStateFromError;if("function"==typeof r){var a=t.value;n.payload=function(){return eu(e,t),r(a)}}var i=e.stateNode;return null!==i&&"function"==typeof i.componentDidCatch&&(n.callback=function(){"function"!=typeof r&&(null===Fu?Fu=new Set([this]):Fu.add(this),eu(e,t));var n=t.stack;this.componentDidCatch(t.value,{componentStack:null!==n?n:""})}),n}var mu,gu=Math.ceil,yu=Y.ReactCurrentDispatcher,bu=Y.ReactCurrentOwner,wu=0,xu=3,Eu=4,ku=0,_u=null,Tu=null,Su=0,Cu=wu,Pu=null,Mu=1073741823,Nu=1073741823,Iu=null,Du=0,Ru=!1,Au=0,Ou=null,zu=!1,Lu=null,Fu=null,Bu=!1,Wu=null,Vu=90,ju=null,$u=0,Uu=null,Hu=0;function Xu(){return 0!=(48&ku)?1073741821-(Ba()/10|0):0!==Hu?Hu:Hu=1073741821-(Ba()/10|0)}function Qu(e,t,n){if(0==(2&(t=t.mode)))return 1073741823;var r=Wa();if(0==(4&t))return 99===r?1073741823:1073741822;if(0!=(16&ku))return Su;if(null!==n)e=Qa(e,0|n.timeoutMs||5e3,250);else switch(r){case 99:e=1073741823;break;case 98:e=Qa(e,150,100);break;case 97:case 96:e=Qa(e,5e3,250);break;case 95:e=2;break;default:throw Error(o(326))}return null!==_u&&e===Su&&--e,e}function qu(e,t){if(50<$u)throw $u=0,Uu=null,Error(o(185));if(null!==(e=Ku(e,t))){var n=Wa();1073741823===t?0!=(8&ku)&&0==(48&ku)?Zu(e):(Gu(e),0===ku&&Ha()):Gu(e),0==(4&ku)||98!==n&&99!==n||(null===ju?ju=new Map([[e,t]]):(void 0===(n=ju.get(e))||n>t)&&ju.set(e,t))}}function Ku(e,t){e.expirationTime<t&&(e.expirationTime=t);var n=e.alternate;null!==n&&n.expirationTime<t&&(n.expirationTime=t);var r=e.return,a=null;if(null===r&&3===e.tag)a=e.stateNode;else for(;null!==r;){if(n=r.alternate,r.childExpirationTime<t&&(r.childExpirationTime=t),null!==n&&n.childExpirationTime<t&&(n.childExpirationTime=t),null===r.return&&3===r.tag){a=r.stateNode;break}r=r.return}return null!==a&&(_u===a&&(ol(t),Cu===Eu&&Rl(a,Su)),Al(a,t)),a}function Yu(e){var t=e.lastExpiredTime;if(0!==t)return t;if(!Dl(e,t=e.firstPendingTime))return t;var n=e.lastPingedTime;return 2>=(e=n>(e=e.nextKnownPendingLevel)?n:e)&&t!==e?0:e}function Gu(e){if(0!==e.lastExpiredTime)e.callbackExpirationTime=1073741823,e.callbackPriority=99,e.callbackNode=Ua(Zu.bind(null,e));else{var t=Yu(e),n=e.callbackNode;if(0===t)null!==n&&(e.callbackNode=null,e.callbackExpirationTime=0,e.callbackPriority=90);else{var r=Xu();if(1073741823===t?r=99:1===t||2===t?r=95:r=0>=(r=10*(1073741821-t)-10*(1073741821-r))?99:250>=r?98:5250>=r?97:95,null!==n){var a=e.callbackPriority;if(e.callbackExpirationTime===t&&a>=r)return;n!==Da&&ka(n)}e.callbackExpirationTime=t,e.callbackPriority=r,t=1073741823===t?Ua(Zu.bind(null,e)):$a(r,Ju.bind(null,e),{timeout:10*(1073741821-t)-Ba()}),e.callbackNode=t}}}function Ju(e,t){if(Hu=0,t)return Ol(e,t=Xu()),Gu(e),null;var n=Yu(e);if(0!==n){if(t=e.callbackNode,0!=(48&ku))throw Error(o(327));if(vl(),e===_u&&n===Su||nl(e,n),null!==Tu){var r=ku;ku|=16;for(var a=al();;)try{ll();break}catch(t){rl(e,t)}if(Za(),ku=r,yu.current=a,1===Cu)throw t=Pu,nl(e,n),Rl(e,n),Gu(e),t;if(null===Tu)switch(a=e.finishedWork=e.current.alternate,e.finishedExpirationTime=n,r=Cu,_u=null,r){case wu:case 1:throw Error(o(345));case 2:Ol(e,2<n?2:n);break;case xu:if(Rl(e,n),n===(r=e.lastSuspendedTime)&&(e.nextKnownPendingLevel=sl(a)),1073741823===Mu&&10<(a=Au+500-Ba())){if(Ru){var i=e.lastPingedTime;if(0===i||i>=n){e.lastPingedTime=n,nl(e,n);break}}if(0!==(i=Yu(e))&&i!==n)break;if(0!==r&&r!==n){e.lastPingedTime=r;break}e.timeoutHandle=bn(dl.bind(null,e),a);break}dl(e);break;case Eu:if(Rl(e,n),n===(r=e.lastSuspendedTime)&&(e.nextKnownPendingLevel=sl(a)),Ru&&(0===(a=e.lastPingedTime)||a>=n)){e.lastPingedTime=n,nl(e,n);break}if(0!==(a=Yu(e))&&a!==n)break;if(0!==r&&r!==n){e.lastPingedTime=r;break}if(1073741823!==Nu?r=10*(1073741821-Nu)-Ba():1073741823===Mu?r=0:(r=10*(1073741821-Mu)-5e3,0>(r=(a=Ba())-r)&&(r=0),(n=10*(1073741821-n)-a)<(r=(120>r?120:480>r?480:1080>r?1080:1920>r?1920:3e3>r?3e3:4320>r?4320:1960*gu(r/1960))-r)&&(r=n)),10<r){e.timeoutHandle=bn(dl.bind(null,e),r);break}dl(e);break;case 5:if(1073741823!==Mu&&null!==Iu){i=Mu;var u=Iu;if(0>=(r=0|u.busyMinDurationMs)?r=0:(a=0|u.busyDelayMs,r=(i=Ba()-(10*(1073741821-i)-(0|u.timeoutMs||5e3)))<=a?0:a+r-i),10<r){Rl(e,n),e.timeoutHandle=bn(dl.bind(null,e),r);break}}dl(e);break;default:throw Error(o(329))}if(Gu(e),e.callbackNode===t)return Ju.bind(null,e)}}return null}function Zu(e){var t=e.lastExpiredTime;if(t=0!==t?t:1073741823,0!=(48&ku))throw Error(o(327));if(vl(),e===_u&&t===Su||nl(e,t),null!==Tu){var n=ku;ku|=16;for(var r=al();;)try{ul();break}catch(t){rl(e,t)}if(Za(),ku=n,yu.current=r,1===Cu)throw n=Pu,nl(e,t),Rl(e,t),Gu(e),n;if(null!==Tu)throw Error(o(261));e.finishedWork=e.current.alternate,e.finishedExpirationTime=t,_u=null,dl(e),Gu(e)}return null}function el(e,t){var n=ku;ku|=1;try{return e(t)}finally{0===(ku=n)&&Ha()}}function tl(e,t){var n=ku;ku&=-2,ku|=8;try{return e(t)}finally{0===(ku=n)&&Ha()}}function nl(e,t){e.finishedWork=null,e.finishedExpirationTime=0;var n=e.timeoutHandle;if(-1!==n&&(e.timeoutHandle=-1,wn(n)),null!==Tu)for(n=Tu.return;null!==n;){var r=n;switch(r.tag){case 1:null!=(r=r.type.childContextTypes)&&ma();break;case 3:Di(),la(da),la(sa);break;case 5:Ai(r);break;case 4:Di();break;case 13:case 19:la(Oi);break;case 10:ei(r)}n=n.return}_u=e,Tu=Sl(e.current,null),Su=t,Cu=wu,Pu=null,Nu=Mu=1073741823,Iu=null,Du=0,Ru=!1}function rl(e,t){for(;;){try{if(Za(),Fi.current=mo,Ui)for(var n=Vi.memoizedState;null!==n;){var r=n.queue;null!==r&&(r.pending=null),n=n.next}if(Wi=0,$i=ji=Vi=null,Ui=!1,null===Tu||null===Tu.return)return Cu=1,Pu=t,Tu=null;e:{var a=e,i=Tu.return,o=Tu,u=t;if(t=Su,o.effectTag|=2048,o.firstEffect=o.lastEffect=null,null!==u&&"object"==typeof u&&"function"==typeof u.then){var l=u;if(0==(2&o.mode)){var c=o.alternate;c?(o.updateQueue=c.updateQueue,o.memoizedState=c.memoizedState,o.expirationTime=c.expirationTime):(o.updateQueue=null,o.memoizedState=null)}var f=0!=(1&Oi.current),s=i;do{var d;if(d=13===s.tag){var h=s.memoizedState;if(null!==h)d=null!==h.dehydrated;else{var p=s.memoizedProps;d=void 0!==p.fallback&&(!0!==p.unstable_avoidThisFallback||!f)}}if(d){var v=s.updateQueue;if(null===v){var m=new Set;m.add(l),s.updateQueue=m}else v.add(l);if(0==(2&s.mode)){if(s.effectTag|=64,o.effectTag&=-2981,1===o.tag)if(null===o.alternate)o.tag=17;else{var g=ui(1073741823,null);g.tag=2,li(o,g)}o.expirationTime=1073741823;break e}u=void 0,o=t;var y=a.pingCache;if(null===y?(y=a.pingCache=new hu,u=new Set,y.set(l,u)):void 0===(u=y.get(l))&&(u=new Set,y.set(l,u)),!u.has(o)){u.add(o);var b=bl.bind(null,a,l,o);l.then(b,b)}s.effectTag|=4096,s.expirationTime=t;break e}s=s.return}while(null!==s);u=Error((me(o.type)||"A React component")+" suspended while rendering, but no fallback UI was specified.\n\nAdd a <Suspense fallback=...> component higher in the tree to provide a loading indicator or placeholder to display."+ge(o))}5!==Cu&&(Cu=2),u=Jo(u,o),s=i;do{switch(s.tag){case 3:l=u,s.effectTag|=4096,s.expirationTime=t,ci(s,pu(s,l,t));break e;case 1:l=u;var w=s.type,x=s.stateNode;if(0==(64&s.effectTag)&&("function"==typeof w.getDerivedStateFromError||null!==x&&"function"==typeof x.componentDidCatch&&(null===Fu||!Fu.has(x)))){s.effectTag|=4096,s.expirationTime=t,ci(s,vu(s,l,t));break e}}s=s.return}while(null!==s)}Tu=fl(Tu)}catch(e){t=e;continue}break}}function al(){var e=yu.current;return yu.current=mo,null===e?mo:e}function il(e,t){e<Mu&&2<e&&(Mu=e),null!==t&&e<Nu&&2<e&&(Nu=e,Iu=t)}function ol(e){e>Du&&(Du=e)}function ul(){for(;null!==Tu;)Tu=cl(Tu)}function ll(){for(;null!==Tu&&!Ra();)Tu=cl(Tu)}function cl(e){var t=mu(e.alternate,e,Su);return e.memoizedProps=e.pendingProps,null===t&&(t=fl(e)),bu.current=null,t}function fl(e){Tu=e;do{var t=Tu.alternate;if(e=Tu.return,0==(2048&Tu.effectTag)){if(t=Yo(t,Tu,Su),1===Su||1!==Tu.childExpirationTime){for(var n=0,r=Tu.child;null!==r;){var a=r.expirationTime,i=r.childExpirationTime;a>n&&(n=a),i>n&&(n=i),r=r.sibling}Tu.childExpirationTime=n}if(null!==t)return t;null!==e&&0==(2048&e.effectTag)&&(null===e.firstEffect&&(e.firstEffect=Tu.firstEffect),null!==Tu.lastEffect&&(null!==e.lastEffect&&(e.lastEffect.nextEffect=Tu.firstEffect),e.lastEffect=Tu.lastEffect),1<Tu.effectTag&&(null!==e.lastEffect?e.lastEffect.nextEffect=Tu:e.firstEffect=Tu,e.lastEffect=Tu))}else{if(null!==(t=Go(Tu)))return t.effectTag&=2047,t;null!==e&&(e.firstEffect=e.lastEffect=null,e.effectTag|=2048)}if(null!==(t=Tu.sibling))return t;Tu=e}while(null!==Tu);return Cu===wu&&(Cu=5),null}function sl(e){var t=e.expirationTime;return t>(e=e.childExpirationTime)?t:e}function dl(e){var t=Wa();return ja(99,hl.bind(null,e,t)),null}function hl(e,t){do{vl()}while(null!==Wu);if(0!=(48&ku))throw Error(o(327));var n=e.finishedWork,r=e.finishedExpirationTime;if(null===n)return null;if(e.finishedWork=null,e.finishedExpirationTime=0,n===e.current)throw Error(o(177));e.callbackNode=null,e.callbackExpirationTime=0,e.callbackPriority=90,e.nextKnownPendingLevel=0;var a=sl(n);if(e.firstPendingTime=a,r<=e.lastSuspendedTime?e.firstSuspendedTime=e.lastSuspendedTime=e.nextKnownPendingLevel=0:r<=e.firstSuspendedTime&&(e.firstSuspendedTime=r-1),r<=e.lastPingedTime&&(e.lastPingedTime=0),r<=e.lastExpiredTime&&(e.lastExpiredTime=0),e===_u&&(Tu=_u=null,Su=0),1<n.effectTag?null!==n.lastEffect?(n.lastEffect.nextEffect=n,a=n.firstEffect):a=n:a=n.firstEffect,null!==a){var i=ku;ku|=32,bu.current=null,vn=Xt;var u=hn();if(pn(u)){if("selectionStart"in u)var l={start:u.selectionStart,end:u.selectionEnd};else e:{var c=(l=(l=u.ownerDocument)&&l.defaultView||window).getSelection&&l.getSelection();if(c&&0!==c.rangeCount){l=c.anchorNode;var f=c.anchorOffset,s=c.focusNode;c=c.focusOffset;try{l.nodeType,s.nodeType}catch(e){l=null;break e}var d=0,h=-1,p=-1,v=0,m=0,g=u,y=null;t:for(;;){for(var b;g!==l||0!==f&&3!==g.nodeType||(h=d+f),g!==s||0!==c&&3!==g.nodeType||(p=d+c),3===g.nodeType&&(d+=g.nodeValue.length),null!==(b=g.firstChild);)y=g,g=b;for(;;){if(g===u)break t;if(y===l&&++v===f&&(h=d),y===s&&++m===c&&(p=d),null!==(b=g.nextSibling))break;y=(g=y).parentNode}g=b}l=-1===h||-1===p?null:{start:h,end:p}}else l=null}l=l||{start:0,end:0}}else l=null;mn={activeElementDetached:null,focusedElem:u,selectionRange:l},Xt=!1,Ou=a;do{try{pl()}catch(e){if(null===Ou)throw Error(o(330));yl(Ou,e),Ou=Ou.nextEffect}}while(null!==Ou);Ou=a;do{try{for(u=e,l=t;null!==Ou;){var w=Ou.effectTag;if(16&w&&We(Ou.stateNode,""),128&w){var x=Ou.alternate;if(null!==x){var E=x.ref;null!==E&&("function"==typeof E?E(null):E.current=null)}}switch(1038&w){case 2:cu(Ou),Ou.effectTag&=-3;break;case 6:cu(Ou),Ou.effectTag&=-3,su(Ou.alternate,Ou);break;case 1024:Ou.effectTag&=-1025;break;case 1028:Ou.effectTag&=-1025,su(Ou.alternate,Ou);break;case 4:su(Ou.alternate,Ou);break;case 8:fu(u,f=Ou,l),uu(f)}Ou=Ou.nextEffect}}catch(e){if(null===Ou)throw Error(o(330));yl(Ou,e),Ou=Ou.nextEffect}}while(null!==Ou);if(E=mn,x=hn(),w=E.focusedElem,l=E.selectionRange,x!==w&&w&&w.ownerDocument&&function e(t,n){return!(!t||!n)&&(t===n||(!t||3!==t.nodeType)&&(n&&3===n.nodeType?e(t,n.parentNode):"contains"in t?t.contains(n):!!t.compareDocumentPosition&&!!(16&t.compareDocumentPosition(n))))}(w.ownerDocument.documentElement,w)){null!==l&&pn(w)&&(x=l.start,void 0===(E=l.end)&&(E=x),"selectionStart"in w?(w.selectionStart=x,w.selectionEnd=Math.min(E,w.value.length)):(E=(x=w.ownerDocument||document)&&x.defaultView||window).getSelection&&(E=E.getSelection(),f=w.textContent.length,u=Math.min(l.start,f),l=void 0===l.end?u:Math.min(l.end,f),!E.extend&&u>l&&(f=l,l=u,u=f),f=dn(w,u),s=dn(w,l),f&&s&&(1!==E.rangeCount||E.anchorNode!==f.node||E.anchorOffset!==f.offset||E.focusNode!==s.node||E.focusOffset!==s.offset)&&((x=x.createRange()).setStart(f.node,f.offset),E.removeAllRanges(),u>l?(E.addRange(x),E.extend(s.node,s.offset)):(x.setEnd(s.node,s.offset),E.addRange(x))))),x=[];for(E=w;E=E.parentNode;)1===E.nodeType&&x.push({element:E,left:E.scrollLeft,top:E.scrollTop});for("function"==typeof w.focus&&w.focus(),w=0;w<x.length;w++)(E=x[w]).element.scrollLeft=E.left,E.element.scrollTop=E.top}Xt=!!vn,mn=vn=null,e.current=n,Ou=a;do{try{for(w=e;null!==Ou;){var k=Ou.effectTag;if(36&k&&iu(w,Ou.alternate,Ou),128&k){x=void 0;var _=Ou.ref;if(null!==_){var T=Ou.stateNode;switch(Ou.tag){case 5:x=T;break;default:x=T}"function"==typeof _?_(x):_.current=x}}Ou=Ou.nextEffect}}catch(e){if(null===Ou)throw Error(o(330));yl(Ou,e),Ou=Ou.nextEffect}}while(null!==Ou);Ou=null,Aa(),ku=i}else e.current=n;if(Bu)Bu=!1,Wu=e,Vu=t;else for(Ou=a;null!==Ou;)t=Ou.nextEffect,Ou.nextEffect=null,Ou=t;if(0===(t=e.firstPendingTime)&&(Fu=null),1073741823===t?e===Uu?$u++:($u=0,Uu=e):$u=0,"function"==typeof xl&&xl(n.stateNode,r),Gu(e),zu)throw zu=!1,e=Lu,Lu=null,e;return 0!=(8&ku)||Ha(),null}function pl(){for(;null!==Ou;){var e=Ou.effectTag;0!=(256&e)&&nu(Ou.alternate,Ou),0==(512&e)||Bu||(Bu=!0,$a(97,(function(){return vl(),null}))),Ou=Ou.nextEffect}}function vl(){if(90!==Vu){var e=97<Vu?97:Vu;return Vu=90,ja(e,ml)}}function ml(){if(null===Wu)return!1;var e=Wu;if(Wu=null,0!=(48&ku))throw Error(o(331));var t=ku;for(ku|=32,e=e.current.firstEffect;null!==e;){try{var n=e;if(0!=(512&n.effectTag))switch(n.tag){case 0:case 11:case 15:case 22:ru(5,n),au(5,n)}}catch(t){if(null===e)throw Error(o(330));yl(e,t)}n=e.nextEffect,e.nextEffect=null,e=n}return ku=t,Ha(),!0}function gl(e,t,n){li(e,t=pu(e,t=Jo(n,t),1073741823)),null!==(e=Ku(e,1073741823))&&Gu(e)}function yl(e,t){if(3===e.tag)gl(e,e,t);else for(var n=e.return;null!==n;){if(3===n.tag){gl(n,e,t);break}if(1===n.tag){var r=n.stateNode;if("function"==typeof n.type.getDerivedStateFromError||"function"==typeof r.componentDidCatch&&(null===Fu||!Fu.has(r))){li(n,e=vu(n,e=Jo(t,e),1073741823)),null!==(n=Ku(n,1073741823))&&Gu(n);break}}n=n.return}}function bl(e,t,n){var r=e.pingCache;null!==r&&r.delete(t),_u===e&&Su===n?Cu===Eu||Cu===xu&&1073741823===Mu&&Ba()-Au<500?nl(e,Su):Ru=!0:Dl(e,n)&&(0!==(t=e.lastPingedTime)&&t<n||(e.lastPingedTime=n,Gu(e)))}function wl(e,t){var n=e.stateNode;null!==n&&n.delete(t),0===(t=0)&&(t=Qu(t=Xu(),e,null)),null!==(e=Ku(e,t))&&Gu(e)}mu=function(e,t,n){var r=t.expirationTime;if(null!==e){var a=t.pendingProps;if(e.memoizedProps!==a||da.current)No=!0;else{if(r<n){switch(No=!1,t.tag){case 3:Bo(t),Po();break;case 5:if(Ri(t),4&t.mode&&1!==n&&a.hidden)return t.expirationTime=t.childExpirationTime=1,null;break;case 1:va(t.type)&&ba(t);break;case 4:Ii(t,t.stateNode.containerInfo);break;case 10:r=t.memoizedProps.value,a=t.type._context,ca(Ka,a._currentValue),a._currentValue=r;break;case 13:if(null!==t.memoizedState)return 0!==(r=t.child.childExpirationTime)&&r>=n?Uo(e,t,n):(ca(Oi,1&Oi.current),null!==(t=qo(e,t,n))?t.sibling:null);ca(Oi,1&Oi.current);break;case 19:if(r=t.childExpirationTime>=n,0!=(64&e.effectTag)){if(r)return Qo(e,t,n);t.effectTag|=64}if(null!==(a=t.memoizedState)&&(a.rendering=null,a.tail=null),ca(Oi,Oi.current),!r)return null}return qo(e,t,n)}No=!1}}else No=!1;switch(t.expirationTime=0,t.tag){case 2:if(r=t.type,null!==e&&(e.alternate=null,t.alternate=null,t.effectTag|=2),e=t.pendingProps,a=pa(t,sa.current),ni(t,n),a=Qi(null,t,r,e,a,n),t.effectTag|=1,"object"==typeof a&&null!==a&&"function"==typeof a.render&&void 0===a.$$typeof){if(t.tag=1,t.memoizedState=null,t.updateQueue=null,va(r)){var i=!0;ba(t)}else i=!1;t.memoizedState=null!==a.state&&void 0!==a.state?a.state:null,ii(t);var u=r.getDerivedStateFromProps;"function"==typeof u&&pi(t,r,u,e),a.updater=vi,t.stateNode=a,a._reactInternalFiber=t,bi(t,r,e,n),t=Fo(null,t,r,!0,i,n)}else t.tag=0,Io(null,t,a,n),t=t.child;return t;case 16:e:{if(a=t.elementType,null!==e&&(e.alternate=null,t.alternate=null,t.effectTag|=2),e=t.pendingProps,function(e){if(-1===e._status){e._status=0;var t=e._ctor;t=t(),e._result=t,t.then((function(t){0===e._status&&(t=t.default,e._status=1,e._result=t)}),(function(t){0===e._status&&(e._status=2,e._result=t)}))}}(a),1!==a._status)throw a._result;switch(a=a._result,t.type=a,i=t.tag=function(e){if("function"==typeof e)return Tl(e)?1:0;if(null!=e){if((e=e.$$typeof)===le)return 11;if(e===se)return 14}return 2}(a),e=qa(a,e),i){case 0:t=zo(null,t,a,e,n);break e;case 1:t=Lo(null,t,a,e,n);break e;case 11:t=Do(null,t,a,e,n);break e;case 14:t=Ro(null,t,a,qa(a.type,e),r,n);break e}throw Error(o(306,a,""))}return t;case 0:return r=t.type,a=t.pendingProps,zo(e,t,r,a=t.elementType===r?a:qa(r,a),n);case 1:return r=t.type,a=t.pendingProps,Lo(e,t,r,a=t.elementType===r?a:qa(r,a),n);case 3:if(Bo(t),r=t.updateQueue,null===e||null===r)throw Error(o(282));if(r=t.pendingProps,a=null!==(a=t.memoizedState)?a.element:null,oi(e,t),fi(t,r,null,n),(r=t.memoizedState.element)===a)Po(),t=qo(e,t,n);else{if((a=t.stateNode.hydrate)&&(xo=xn(t.stateNode.containerInfo.firstChild),wo=t,a=Eo=!0),a)for(n=Ti(t,null,r,n),t.child=n;n;)n.effectTag=-3&n.effectTag|1024,n=n.sibling;else Io(e,t,r,n),Po();t=t.child}return t;case 5:return Ri(t),null===e&&To(t),r=t.type,a=t.pendingProps,i=null!==e?e.memoizedProps:null,u=a.children,yn(r,a)?u=null:null!==i&&yn(r,i)&&(t.effectTag|=16),Oo(e,t),4&t.mode&&1!==n&&a.hidden?(t.expirationTime=t.childExpirationTime=1,t=null):(Io(e,t,u,n),t=t.child),t;case 6:return null===e&&To(t),null;case 13:return Uo(e,t,n);case 4:return Ii(t,t.stateNode.containerInfo),r=t.pendingProps,null===e?t.child=_i(t,null,r,n):Io(e,t,r,n),t.child;case 11:return r=t.type,a=t.pendingProps,Do(e,t,r,a=t.elementType===r?a:qa(r,a),n);case 7:return Io(e,t,t.pendingProps,n),t.child;case 8:case 12:return Io(e,t,t.pendingProps.children,n),t.child;case 10:e:{r=t.type._context,a=t.pendingProps,u=t.memoizedProps,i=a.value;var l=t.type._context;if(ca(Ka,l._currentValue),l._currentValue=i,null!==u)if(l=u.value,0===(i=Lr(l,i)?0:0|("function"==typeof r._calculateChangedBits?r._calculateChangedBits(l,i):1073741823))){if(u.children===a.children&&!da.current){t=qo(e,t,n);break e}}else for(null!==(l=t.child)&&(l.return=t);null!==l;){var c=l.dependencies;if(null!==c){u=l.child;for(var f=c.firstContext;null!==f;){if(f.context===r&&0!=(f.observedBits&i)){1===l.tag&&((f=ui(n,null)).tag=2,li(l,f)),l.expirationTime<n&&(l.expirationTime=n),null!==(f=l.alternate)&&f.expirationTime<n&&(f.expirationTime=n),ti(l.return,n),c.expirationTime<n&&(c.expirationTime=n);break}f=f.next}}else u=10===l.tag&&l.type===t.type?null:l.child;if(null!==u)u.return=l;else for(u=l;null!==u;){if(u===t){u=null;break}if(null!==(l=u.sibling)){l.return=u.return,u=l;break}u=u.return}l=u}Io(e,t,a.children,n),t=t.child}return t;case 9:return a=t.type,r=(i=t.pendingProps).children,ni(t,n),r=r(a=ri(a,i.unstable_observedBits)),t.effectTag|=1,Io(e,t,r,n),t.child;case 14:return i=qa(a=t.type,t.pendingProps),Ro(e,t,a,i=qa(a.type,i),r,n);case 15:return Ao(e,t,t.type,t.pendingProps,r,n);case 17:return r=t.type,a=t.pendingProps,a=t.elementType===r?a:qa(r,a),null!==e&&(e.alternate=null,t.alternate=null,t.effectTag|=2),t.tag=1,va(r)?(e=!0,ba(t)):e=!1,ni(t,n),gi(t,r,a),bi(t,r,a,n),Fo(null,t,r,!0,e,n);case 19:return Qo(e,t,n)}throw Error(o(156,t.tag))};var xl=null,El=null;function kl(e,t,n,r){this.tag=e,this.key=n,this.sibling=this.child=this.return=this.stateNode=this.type=this.elementType=null,this.index=0,this.ref=null,this.pendingProps=t,this.dependencies=this.memoizedState=this.updateQueue=this.memoizedProps=null,this.mode=r,this.effectTag=0,this.lastEffect=this.firstEffect=this.nextEffect=null,this.childExpirationTime=this.expirationTime=0,this.alternate=null}function _l(e,t,n,r){return new kl(e,t,n,r)}function Tl(e){return!(!(e=e.prototype)||!e.isReactComponent)}function Sl(e,t){var n=e.alternate;return null===n?((n=_l(e.tag,t,e.key,e.mode)).elementType=e.elementType,n.type=e.type,n.stateNode=e.stateNode,n.alternate=e,e.alternate=n):(n.pendingProps=t,n.effectTag=0,n.nextEffect=null,n.firstEffect=null,n.lastEffect=null),n.childExpirationTime=e.childExpirationTime,n.expirationTime=e.expirationTime,n.child=e.child,n.memoizedProps=e.memoizedProps,n.memoizedState=e.memoizedState,n.updateQueue=e.updateQueue,t=e.dependencies,n.dependencies=null===t?null:{expirationTime:t.expirationTime,firstContext:t.firstContext,responders:t.responders},n.sibling=e.sibling,n.index=e.index,n.ref=e.ref,n}function Cl(e,t,n,r,a,i){var u=2;if(r=e,"function"==typeof e)Tl(e)&&(u=1);else if("string"==typeof e)u=5;else e:switch(e){case ne:return Pl(n.children,a,i,t);case ue:u=8,a|=7;break;case re:u=8,a|=1;break;case ae:return(e=_l(12,n,t,8|a)).elementType=ae,e.type=ae,e.expirationTime=i,e;case ce:return(e=_l(13,n,t,a)).type=ce,e.elementType=ce,e.expirationTime=i,e;case fe:return(e=_l(19,n,t,a)).elementType=fe,e.expirationTime=i,e;default:if("object"==typeof e&&null!==e)switch(e.$$typeof){case ie:u=10;break e;case oe:u=9;break e;case le:u=11;break e;case se:u=14;break e;case de:u=16,r=null;break e;case he:u=22;break e}throw Error(o(130,null==e?e:typeof e,""))}return(t=_l(u,n,t,a)).elementType=e,t.type=r,t.expirationTime=i,t}function Pl(e,t,n,r){return(e=_l(7,e,r,t)).expirationTime=n,e}function Ml(e,t,n){return(e=_l(6,e,null,t)).expirationTime=n,e}function Nl(e,t,n){return(t=_l(4,null!==e.children?e.children:[],e.key,t)).expirationTime=n,t.stateNode={containerInfo:e.containerInfo,pendingChildren:null,implementation:e.implementation},t}function Il(e,t,n){this.tag=t,this.current=null,this.containerInfo=e,this.pingCache=this.pendingChildren=null,this.finishedExpirationTime=0,this.finishedWork=null,this.timeoutHandle=-1,this.pendingContext=this.context=null,this.hydrate=n,this.callbackNode=null,this.callbackPriority=90,this.lastExpiredTime=this.lastPingedTime=this.nextKnownPendingLevel=this.lastSuspendedTime=this.firstSuspendedTime=this.firstPendingTime=0}function Dl(e,t){var n=e.firstSuspendedTime;return e=e.lastSuspendedTime,0!==n&&n>=t&&e<=t}function Rl(e,t){var n=e.firstSuspendedTime,r=e.lastSuspendedTime;n<t&&(e.firstSuspendedTime=t),(r>t||0===n)&&(e.lastSuspendedTime=t),t<=e.lastPingedTime&&(e.lastPingedTime=0),t<=e.lastExpiredTime&&(e.lastExpiredTime=0)}function Al(e,t){t>e.firstPendingTime&&(e.firstPendingTime=t);var n=e.firstSuspendedTime;0!==n&&(t>=n?e.firstSuspendedTime=e.lastSuspendedTime=e.nextKnownPendingLevel=0:t>=e.lastSuspendedTime&&(e.lastSuspendedTime=t+1),t>e.nextKnownPendingLevel&&(e.nextKnownPendingLevel=t))}function Ol(e,t){var n=e.lastExpiredTime;(0===n||n>t)&&(e.lastExpiredTime=t)}function zl(e,t,n,r){var a=t.current,i=Xu(),u=di.suspense;i=Qu(i,a,u);e:if(n){t:{if(Ze(n=n._reactInternalFiber)!==n||1!==n.tag)throw Error(o(170));var l=n;do{switch(l.tag){case 3:l=l.stateNode.context;break t;case 1:if(va(l.type)){l=l.stateNode.__reactInternalMemoizedMergedChildContext;break t}}l=l.return}while(null!==l);throw Error(o(171))}if(1===n.tag){var c=n.type;if(va(c)){n=ya(n,c,l);break e}}n=l}else n=fa;return null===t.context?t.context=n:t.pendingContext=n,(t=ui(i,u)).payload={element:e},null!==(r=void 0===r?null:r)&&(t.callback=r),li(a,t),qu(a,i),i}function Ll(e){if(!(e=e.current).child)return null;switch(e.child.tag){case 5:default:return e.child.stateNode}}function Fl(e,t){null!==(e=e.memoizedState)&&null!==e.dehydrated&&e.retryTime<t&&(e.retryTime=t)}function Bl(e,t){Fl(e,t),(e=e.alternate)&&Fl(e,t)}function Wl(e,t,n){var r=new Il(e,t,n=null!=n&&!0===n.hydrate),a=_l(3,null,null,2===t?7:1===t?3:0);r.current=a,a.stateNode=r,ii(a),e[Sn]=r.current,n&&0!==t&&function(e,t){var n=Je(t);St.forEach((function(e){pt(e,t,n)})),Ct.forEach((function(e){pt(e,t,n)}))}(0,9===e.nodeType?e:e.ownerDocument),this._internalRoot=r}function Vl(e){return!(!e||1!==e.nodeType&&9!==e.nodeType&&11!==e.nodeType&&(8!==e.nodeType||" react-mount-point-unstable "!==e.nodeValue))}function jl(e,t,n,r,a){var i=n._reactRootContainer;if(i){var o=i._internalRoot;if("function"==typeof a){var u=a;a=function(){var e=Ll(o);u.call(e)}}zl(t,o,e,a)}else{if(i=n._reactRootContainer=function(e,t){if(t||(t=!(!(t=e?9===e.nodeType?e.documentElement:e.firstChild:null)||1!==t.nodeType||!t.hasAttribute("data-reactroot"))),!t)for(var n;n=e.lastChild;)e.removeChild(n);return new Wl(e,0,t?{hydrate:!0}:void 0)}(n,r),o=i._internalRoot,"function"==typeof a){var l=a;a=function(){var e=Ll(o);l.call(e)}}tl((function(){zl(t,o,e,a)}))}return Ll(o)}function $l(e,t,n){var r=3<arguments.length&&void 0!==arguments[3]?arguments[3]:null;return{$$typeof:te,key:null==r?null:""+r,children:e,containerInfo:t,implementation:n}}function Ul(e,t){var n=2<arguments.length&&void 0!==arguments[2]?arguments[2]:null;if(!Vl(t))throw Error(o(200));return $l(e,t,null,n)}Wl.prototype.render=function(e){zl(e,this._internalRoot,null,null)},Wl.prototype.unmount=function(){var e=this._internalRoot,t=e.containerInfo;zl(null,e,null,(function(){t[Sn]=null}))},vt=function(e){if(13===e.tag){var t=Qa(Xu(),150,100);qu(e,t),Bl(e,t)}},mt=function(e){13===e.tag&&(qu(e,3),Bl(e,3))},gt=function(e){if(13===e.tag){var t=Xu();qu(e,t=Qu(t,e,null)),Bl(e,t)}},P=function(e,t,n){switch(t){case"input":if(Te(e,n),t=n.name,"radio"===n.type&&null!=t){for(n=e;n.parentNode;)n=n.parentNode;for(n=n.querySelectorAll("input[name="+JSON.stringify(""+t)+'][type="radio"]'),t=0;t<n.length;t++){var r=n[t];if(r!==e&&r.form===e.form){var a=Nn(r);if(!a)throw Error(o(90));xe(r),Te(r,a)}}}break;case"textarea":De(e,n);break;case"select":null!=(t=n.value)&&Me(e,!!n.multiple,t,!1)}},A=el,O=function(e,t,n,r,a){var i=ku;ku|=4;try{return ja(98,e.bind(null,t,n,r,a))}finally{0===(ku=i)&&Ha()}},z=function(){0==(49&ku)&&(function(){if(null!==ju){var e=ju;ju=null,e.forEach((function(e,t){Ol(t,e),Gu(t)})),Ha()}}(),vl())},L=function(e,t){var n=ku;ku|=2;try{return e(t)}finally{0===(ku=n)&&Ha()}};var Hl,Xl,Ql={Events:[Pn,Mn,Nn,S,k,Ln,function(e){at(e,zn)},D,R,Gt,ut,vl,{current:!1}]};Xl=(Hl={findFiberByHostInstance:Cn,bundleType:0,version:"16.13.1",rendererPackageName:"react-dom"}).findFiberByHostInstance,function(e){if("undefined"==typeof __REACT_DEVTOOLS_GLOBAL_HOOK__)return!1;var t=__REACT_DEVTOOLS_GLOBAL_HOOK__;if(t.isDisabled||!t.supportsFiber)return!0;try{var n=t.inject(e);xl=function(e){try{t.onCommitFiberRoot(n,e,void 0,64==(64&e.current.effectTag))}catch(e){}},El=function(e){try{t.onCommitFiberUnmount(n,e)}catch(e){}}}catch(e){}}(a({},Hl,{overrideHookState:null,overrideProps:null,setSuspenseHandler:null,scheduleUpdate:null,currentDispatcherRef:Y.ReactCurrentDispatcher,findHostInstanceByFiber:function(e){return null===(e=nt(e))?null:e.stateNode},findFiberByHostInstance:function(e){return Xl?Xl(e):null},findHostInstancesForRefresh:null,scheduleRefresh:null,scheduleRoot:null,setRefreshHandler:null,getCurrentFiber:null})),t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED=Ql,t.createPortal=Ul,t.findDOMNode=function(e){if(null==e)return null;if(1===e.nodeType)return e;var t=e._reactInternalFiber;if(void 0===t){if("function"==typeof e.render)throw Error(o(188));throw Error(o(268,Object.keys(e)))}return e=null===(e=nt(t))?null:e.stateNode},t.flushSync=function(e,t){if(0!=(48&ku))throw Error(o(187));var n=ku;ku|=1;try{return ja(99,e.bind(null,t))}finally{ku=n,Ha()}},t.hydrate=function(e,t,n){if(!Vl(t))throw Error(o(200));return jl(null,e,t,!0,n)},t.render=function(e,t,n){if(!Vl(t))throw Error(o(200));return jl(null,e,t,!1,n)},t.unmountComponentAtNode=function(e){if(!Vl(e))throw Error(o(40));return!!e._reactRootContainer&&(tl((function(){jl(null,null,e,!1,(function(){e._reactRootContainer=null,e[Sn]=null}))})),!0)},t.unstable_batchedUpdates=el,t.unstable_createPortal=function(e,t){return Ul(e,t,2<arguments.length&&void 0!==arguments[2]?arguments[2]:null)},t.unstable_renderSubtreeIntoContainer=function(e,t,n,r){if(!Vl(n))throw Error(o(200));if(null==e||void 0===e._reactInternalFiber)throw Error(o(38));return jl(e,t,n,!1,r)},t.version="16.13.1"},function(e,t,n){"use strict";e.exports=n(20)},function(e,t,n){"use strict";
-/** @license React v0.19.1
- * scheduler.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */var r,a,i,o,u;if("undefined"==typeof window||"function"!=typeof MessageChannel){var l=null,c=null,f=function(){if(null!==l)try{var e=t.unstable_now();l(!0,e),l=null}catch(e){throw setTimeout(f,0),e}},s=Date.now();t.unstable_now=function(){return Date.now()-s},r=function(e){null!==l?setTimeout(r,0,e):(l=e,setTimeout(f,0))},a=function(e,t){c=setTimeout(e,t)},i=function(){clearTimeout(c)},o=function(){return!1},u=t.unstable_forceFrameRate=function(){}}else{var d=window.performance,h=window.Date,p=window.setTimeout,v=window.clearTimeout;if("undefined"!=typeof console){var m=window.cancelAnimationFrame;"function"!=typeof window.requestAnimationFrame&&console.error("This browser doesn't support requestAnimationFrame. Make sure that you load a polyfill in older browsers. https://fb.me/react-polyfills"),"function"!=typeof m&&console.error("This browser doesn't support cancelAnimationFrame. Make sure that you load a polyfill in older browsers. https://fb.me/react-polyfills")}if("object"==typeof d&&"function"==typeof d.now)t.unstable_now=function(){return d.now()};else{var g=h.now();t.unstable_now=function(){return h.now()-g}}var y=!1,b=null,w=-1,x=5,E=0;o=function(){return t.unstable_now()>=E},u=function(){},t.unstable_forceFrameRate=function(e){0>e||125<e?console.error("forceFrameRate takes a positive int between 0 and 125, forcing framerates higher than 125 fps is not unsupported"):x=0<e?Math.floor(1e3/e):5};var k=new MessageChannel,_=k.port2;k.port1.onmessage=function(){if(null!==b){var e=t.unstable_now();E=e+x;try{b(!0,e)?_.postMessage(null):(y=!1,b=null)}catch(e){throw _.postMessage(null),e}}else y=!1},r=function(e){b=e,y||(y=!0,_.postMessage(null))},a=function(e,n){w=p((function(){e(t.unstable_now())}),n)},i=function(){v(w),w=-1}}function T(e,t){var n=e.length;e.push(t);e:for(;;){var r=n-1>>>1,a=e[r];if(!(void 0!==a&&0<P(a,t)))break e;e[r]=t,e[n]=a,n=r}}function S(e){return void 0===(e=e[0])?null:e}function C(e){var t=e[0];if(void 0!==t){var n=e.pop();if(n!==t){e[0]=n;e:for(var r=0,a=e.length;r<a;){var i=2*(r+1)-1,o=e[i],u=i+1,l=e[u];if(void 0!==o&&0>P(o,n))void 0!==l&&0>P(l,o)?(e[r]=l,e[u]=n,r=u):(e[r]=o,e[i]=n,r=i);else{if(!(void 0!==l&&0>P(l,n)))break e;e[r]=l,e[u]=n,r=u}}}return t}return null}function P(e,t){var n=e.sortIndex-t.sortIndex;return 0!==n?n:e.id-t.id}var M=[],N=[],I=1,D=null,R=3,A=!1,O=!1,z=!1;function L(e){for(var t=S(N);null!==t;){if(null===t.callback)C(N);else{if(!(t.startTime<=e))break;C(N),t.sortIndex=t.expirationTime,T(M,t)}t=S(N)}}function F(e){if(z=!1,L(e),!O)if(null!==S(M))O=!0,r(B);else{var t=S(N);null!==t&&a(F,t.startTime-e)}}function B(e,n){O=!1,z&&(z=!1,i()),A=!0;var r=R;try{for(L(n),D=S(M);null!==D&&(!(D.expirationTime>n)||e&&!o());){var u=D.callback;if(null!==u){D.callback=null,R=D.priorityLevel;var l=u(D.expirationTime<=n);n=t.unstable_now(),"function"==typeof l?D.callback=l:D===S(M)&&C(M),L(n)}else C(M);D=S(M)}if(null!==D)var c=!0;else{var f=S(N);null!==f&&a(F,f.startTime-n),c=!1}return c}finally{D=null,R=r,A=!1}}function W(e){switch(e){case 1:return-1;case 2:return 250;case 5:return 1073741823;case 4:return 1e4;default:return 5e3}}var V=u;t.unstable_IdlePriority=5,t.unstable_ImmediatePriority=1,t.unstable_LowPriority=4,t.unstable_NormalPriority=3,t.unstable_Profiling=null,t.unstable_UserBlockingPriority=2,t.unstable_cancelCallback=function(e){e.callback=null},t.unstable_continueExecution=function(){O||A||(O=!0,r(B))},t.unstable_getCurrentPriorityLevel=function(){return R},t.unstable_getFirstCallbackNode=function(){return S(M)},t.unstable_next=function(e){switch(R){case 1:case 2:case 3:var t=3;break;default:t=R}var n=R;R=t;try{return e()}finally{R=n}},t.unstable_pauseExecution=function(){},t.unstable_requestPaint=V,t.unstable_runWithPriority=function(e,t){switch(e){case 1:case 2:case 3:case 4:case 5:break;default:e=3}var n=R;R=e;try{return t()}finally{R=n}},t.unstable_scheduleCallback=function(e,n,o){var u=t.unstable_now();if("object"==typeof o&&null!==o){var l=o.delay;l="number"==typeof l&&0<l?u+l:u,o="number"==typeof o.timeout?o.timeout:W(e)}else o=W(e),l=u;return e={id:I++,callback:n,priorityLevel:e,startTime:l,expirationTime:o=l+o,sortIndex:-1},l>u?(e.sortIndex=l,T(N,e),null===S(M)&&e===S(N)&&(z?i():z=!0,a(F,l-u))):(e.sortIndex=o,T(M,e),O||A||(O=!0,r(B))),e},t.unstable_shouldYield=function(){var e=t.unstable_now();L(e);var n=S(M);return n!==D&&null!==D&&null!==n&&null!==n.callback&&n.startTime<=e&&n.expirationTime<D.expirationTime||o()},t.unstable_wrapCallback=function(e){var t=R;return function(){var n=R;R=t;try{return e.apply(this,arguments)}finally{R=n}}}},function(e,t){var n;n=function(){return this}();try{n=n||new Function("return this")()}catch(e){"object"==typeof window&&(n=window)}e.exports=n},function(e,t,n){"use strict";n.r(t),n.d(t,"component",(function(){return da}));var r={};n.r(r),n.d(r,"keycodeMap",(function(){return bt}));var a={};n.r(a),n.d(a,"create",(function(){return Et})),n.d(a,"clone",(function(){return kt})),n.d(a,"copy",(function(){return _t})),n.d(a,"fromValues",(function(){return Tt})),n.d(a,"set",(function(){return St})),n.d(a,"identity",(function(){return Ct})),n.d(a,"transpose",(function(){return Pt})),n.d(a,"invert",(function(){return Mt})),n.d(a,"adjoint",(function(){return Nt})),n.d(a,"determinant",(function(){return It})),n.d(a,"multiply",(function(){return Dt})),n.d(a,"translate",(function(){return Rt})),n.d(a,"scale",(function(){return At})),n.d(a,"rotate",(function(){return Ot})),n.d(a,"rotateX",(function(){return zt})),n.d(a,"rotateY",(function(){return Lt})),n.d(a,"rotateZ",(function(){return Ft})),n.d(a,"fromTranslation",(function(){return Bt})),n.d(a,"fromScaling",(function(){return Wt})),n.d(a,"fromRotation",(function(){return Vt})),n.d(a,"fromXRotation",(function(){return jt})),n.d(a,"fromYRotation",(function(){return $t})),n.d(a,"fromZRotation",(function(){return Ut})),n.d(a,"fromRotationTranslation",(function(){return Ht})),n.d(a,"fromQuat2",(function(){return Xt})),n.d(a,"getTranslation",(function(){return Qt})),n.d(a,"getScaling",(function(){return qt})),n.d(a,"getRotation",(function(){return Kt})),n.d(a,"fromRotationTranslationScale",(function(){return Yt})),n.d(a,"fromRotationTranslationScaleOrigin",(function(){return Gt})),n.d(a,"fromQuat",(function(){return Jt})),n.d(a,"frustum",(function(){return Zt})),n.d(a,"perspective",(function(){return en})),n.d(a,"perspectiveFromFieldOfView",(function(){return tn})),n.d(a,"ortho",(function(){return nn})),n.d(a,"lookAt",(function(){return rn})),n.d(a,"targetTo",(function(){return an})),n.d(a,"str",(function(){return on})),n.d(a,"frob",(function(){return un})),n.d(a,"add",(function(){return ln})),n.d(a,"subtract",(function(){return cn})),n.d(a,"multiplyScalar",(function(){return fn})),n.d(a,"multiplyScalarAndAdd",(function(){return sn})),n.d(a,"exactEquals",(function(){return dn})),n.d(a,"equals",(function(){return hn})),n.d(a,"mul",(function(){return pn})),n.d(a,"sub",(function(){return vn}));var i=n(3),o=n(7);function u(e,t,n){for(var r=new Array(n),a=0,i=t;a<n;)r[a]=e[i],a=a+1|0,i=i+1|0;return r}function l(e,t,n){if(t<0||t>=e.length)throw{RE_EXN_ID:"Invalid_argument",_1:"index out of bounds",Error:new Error};e[t]=n}function c(e,t){if(t<0||t>=e.length)throw{RE_EXN_ID:"Invalid_argument",_1:"index out of bounds",Error:new Error};return e[t]}function f(e,t){for(var n=new Array(e),r=0;r<e;++r)n[r]=t;return n}function s(e,t){for(;;){var n=t,r=e,a=r.length,i=0===a?1:a,o=i-n.length|0;if(0===o)return r.apply(null,n);if(o>=0)return function(e,t){return function(n){return s(e,t.concat([n]))}}(r,n);t=u(n,i,0|-o),e=r.apply(null,u(n,0,i))}}function d(e,t){var n=e.length;if(1===n)return e(t);switch(n){case 1:return e(t);case 2:return function(n){return e(t,n)};case 3:return function(n,r){return e(t,n,r)};case 4:return function(n,r,a){return e(t,n,r,a)};case 5:return function(n,r,a,i){return e(t,n,r,a,i)};case 6:return function(n,r,a,i,o){return e(t,n,r,a,i,o)};case 7:return function(n,r,a,i,o,u){return e(t,n,r,a,i,o,u)};default:return s(e,[t])}}function h(e,t,n){var r=e.length;if(2===r)return e(t,n);switch(r){case 1:return s(e(t),[n]);case 2:return e(t,n);case 3:return function(r){return e(t,n,r)};case 4:return function(r,a){return e(t,n,r,a)};case 5:return function(r,a,i){return e(t,n,r,a,i)};case 6:return function(r,a,i,o){return e(t,n,r,a,i,o)};case 7:return function(r,a,i,o,u){return e(t,n,r,a,i,o,u)};default:return s(e,[t,n])}}function p(e,t,n,r){var a=e.length;if(3===a)return e(t,n,r);switch(a){case 1:return s(e(t),[n,r]);case 2:return s(e(t,n),[r]);case 3:return e(t,n,r);case 4:return function(a){return e(t,n,r,a)};case 5:return function(a,i){return e(t,n,r,a,i)};case 6:return function(a,i,o){return e(t,n,r,a,i,o)};case 7:return function(a,i,o,u){return e(t,n,r,a,i,o,u)};default:return s(e,[t,n,r])}}function v(e,t,n,r,a){var i=e.length;if(4===i)return e(t,n,r,a);switch(i){case 1:return s(e(t),[n,r,a]);case 2:return s(e(t,n),[r,a]);case 3:return s(e(t,n,r),[a]);case 4:return e(t,n,r,a);case 5:return function(i){return e(t,n,r,a,i)};case 6:return function(i,o){return e(t,n,r,a,i,o)};case 7:return function(i,o,u){return e(t,n,r,a,i,o,u)};default:return s(e,[t,n,r,a])}}function m(e,t,n,r,a,i){var o=e.length;if(5===o)return e(t,n,r,a,i);switch(o){case 1:return s(e(t),[n,r,a,i]);case 2:return s(e(t,n),[r,a,i]);case 3:return s(e(t,n,r),[a,i]);case 4:return s(e(t,n,r,a),[i]);case 5:return e(t,n,r,a,i);case 6:return function(o){return e(t,n,r,a,i,o)};case 7:return function(o,u){return e(t,n,r,a,i,o,u)};default:return s(e,[t,n,r,a,i])}}function g(e,t,n,r,a,i,o,u){var l=e.length;if(7===l)return e(t,n,r,a,i,o,u);switch(l){case 1:return s(e(t),[n,r,a,i,o,u]);case 2:return s(e(t,n),[r,a,i,o,u]);case 3:return s(e(t,n,r),[a,i,o,u]);case 4:return s(e(t,n,r,a),[i,o,u]);case 5:return s(e(t,n,r,a,i),[o,u]);case 6:return s(e(t,n,r,a,i,o),[u]);case 7:return e(t,n,r,a,i,o,u);default:return s(e,[t,n,r,a,i,o,u])}}var y=n(8);function b(e,t){return e<t?-1:e===t?0:1}function w(e,t){return e===t?0:e<t?-1:1}function x(e,t){return e<t?e:t}function E(e,t){return e>t?e:t}var k=function(e,t){for(var n in e)t(n)};function _(e,t){if(e===t)return 0;var n,r=typeof e,a=typeof t;switch(r){case"boolean":if("boolean"===a)return n=t,e?n?0:1:n?-1:0;break;case"function":if("function"===a)throw{RE_EXN_ID:"Invalid_argument",_1:"compare: functional value",Error:new Error};break;case"number":if("number"===a)return b(e,t);break;case"string":return"string"===a?w(e,t):1;case"undefined":return-1}switch(a){case"string":return-1;case"undefined":return 1;default:if("boolean"===r)return 1;if("boolean"===a)return-1;if("function"===r)return 1;if("function"===a)return-1;if("number"===r)return null===t||void 0!==t.BS_PRIVATE_NESTED_SOME_NONE?1:-1;if("number"===a)return null===e||void 0!==e.BS_PRIVATE_NESTED_SOME_NONE?-1:1;if(null===e)return void 0!==t.BS_PRIVATE_NESTED_SOME_NONE?1:-1;if(null===t)return void 0!==e.BS_PRIVATE_NESTED_SOME_NONE?-1:1;if(void 0!==e.BS_PRIVATE_NESTED_SOME_NONE)return void 0!==t.BS_PRIVATE_NESTED_SOME_NONE?T(e,t):-1;var i=0|e.TAG,o=0|t.TAG;if(248===i)return b(e[1],t[1]);if(251===i)throw{RE_EXN_ID:"Invalid_argument",_1:"equal: abstract value",Error:new Error};if(i!==o)return i<o?-1:1;var u=0|e.length,l=0|t.length;if(u===l){if(!Array.isArray(e))return e instanceof Date&&t instanceof Date?e-t:T(e,t);for(var c=0;;){var f=c;if(f===u)return 0;var s=_(e[f],t[f]);if(0!==s)return s;c=f+1|0}}else if(u<l)for(var d=0;;){var h=d;if(h===u)return-1;var p=_(e[h],t[h]);if(0!==p)return p;d=h+1|0}else for(var v=0;;){var m=v;if(m===l)return 1;var g=_(e[m],t[m]);if(0!==g)return g;v=m+1|0}}}function T(e,t){var n={contents:void 0},r={contents:void 0},a=function(e,t){var n=e[2],r=e[1];if(!r.hasOwnProperty(t)||_(e[0][t],r[t])>0){var a=n.contents;return void 0!==a&&t>=a?void 0:void(n.contents=t)}},i=[e,t,r],o=[t,e,n];k(e,(function(e){return a(i,e)})),k(t,(function(e){return a(o,e)}));var u=n.contents,l=r.contents;return void 0!==u?void 0!==l?w(u,l):-1:void 0!==l?1:0}function S(e,t){if(e===t)return!0;var n=typeof e;if("string"===n||"number"===n||"boolean"===n||"undefined"===n||null===e)return!1;var r=typeof t;if("function"===n||"function"===r)throw{RE_EXN_ID:"Invalid_argument",_1:"equal: functional value",Error:new Error};if("number"===r||"undefined"===r||null===t)return!1;var a=0|e.TAG,i=0|t.TAG;if(248===a)return e[1]===t[1];if(251===a)throw{RE_EXN_ID:"Invalid_argument",_1:"equal: abstract value",Error:new Error};if(a!==i)return!1;var o=0|e.length;if(o!==(0|t.length))return!1;if(!Array.isArray(e)){if(e instanceof Date&&t instanceof Date)return!(e>t||e<t);var u={contents:!0};return k(e,(function(e){t.hasOwnProperty(e)||(u.contents=!1)})),u.contents&&k(t,(function(n){e.hasOwnProperty(n)&&S(t[n],e[n])||(u.contents=!1)})),u.contents}for(var l=0;;){var c=l;if(c===o)return!0;if(!S(e[c],t[c]))return!1;l=c+1|0}}var C=n(2);function P(e){return void 0===e?{BS_PRIVATE_NESTED_SOME_NONE:0}:null!==e&&void 0!==e.BS_PRIVATE_NESTED_SOME_NONE?{BS_PRIVATE_NESTED_SOME_NONE:e.BS_PRIVATE_NESTED_SOME_NONE+1|0}:e}function M(e){if(null===e||void 0===e.BS_PRIVATE_NESTED_SOME_NONE)return e;var t=e.BS_PRIVATE_NESTED_SOME_NONE;return 0===t?void 0:{BS_PRIVATE_NESTED_SOME_NONE:t-1|0}}var N=C.b("Caml_js_exceptions.Error");function I(e){return C.a(e)?e:{RE_EXN_ID:N,_1:e}}function D(e){var t=e.length;return 0===t?[]:u(e,0,t)}function R(e,t,n,r,a){if(a<0||t<0||t>(e.length-a|0)||r<0||r>(n.length-a|0))throw{RE_EXN_ID:"Invalid_argument",_1:"Array.blit",Error:new Error};return function(e,t,n,r,a){if(r<=t)for(var i=0;i<a;++i)n[i+r|0]=e[i+t|0];else for(var o=a-1|0;o>=0;--o)n[o+r|0]=e[o+t|0]}(e,t,n,r,a)}C.b("Array.Bottom");function A(e,t){return[t,e>>>0]}var O=[-2147483648,0],z=[2147483647,4294967295],L=[0,1],F=[0,0],B=[-1,4294967295];function W(e){return 0!=(2147483648&e)}function V(e){return 0==(2147483648&e)}function j(e){var t=1+(-1^e[1])|0;return A(t,(-1^e[0])+(0===t?1:0)|0)}function $(e,t,n){var r=e[1],a=r+t|0,i=W(r)&&(W(t)||V(a))||W(t)&&V(a)?1:0;return A(a,e[0]+n+i|0)}function U(e,t){return $(e,t[1],t[0])}function H(e,t){return e[0]===t[0]&&e[1]===t[1]}function X(e,t,n){var r=1+(-1^t)>>>0;return $(e,r,(-1^n)+(0===r?1:0)|0)}function Q(e,t){return X(e,t[1],t[0])}function q(e,t){if(0===t)return e;var n=e[1];return t>=32?A(0,n<<(t-32|0)):A(n<<t,n>>>(32-t|0)|e[0]<<t)}function K(e,t){if(0===t)return e;var n=e[0];return t<32?A(n<<(32-t|0)|e[1]>>>t,n>>t):A(n>>(t-32|0),n>=0?0:-1)}function Y(e,t){for(;;){var n,r=t,a=e,i=a[0],o=0,u=0,l=0;if(0!==i)l=4;else{if(0===a[1])return F;l=4}if(4===l)if(0!==r[0])u=3;else{if(0===r[1])return F;u=3}if(3===u&&(-2147483648!==i||0!==a[1]?o=2:n=r[1]),2===o){var c=r[0],f=a[1],s=0;if(-2147483648!==c||0!==r[1]?s=3:n=f,3===s){var d=r[1];if(i<0){if(c>=0)return j(Y(j(a),r));t=j(r),e=j(a);continue}if(c<0)return j(Y(a,j(r)));var h=65535&i,p=f>>>16,v=65535&f,m=65535&c,g=d>>>16,y=65535&d,b=0,w=0,x=0,E=v*y;return b=(w=(w=(x=(E>>>16)+p*y)>>>16)+((x=(65535&x)+v*g)>>>16)+h*y)>>>16,b+=(w=(65535&w)+p*g)>>>16,b+=(w=(65535&w)+v*m)>>>16,A(65535&E|(65535&x)<<16,(w&=65535)|(b=b+((i>>>16)*y+h*g+p*m+v*(c>>>16))&65535)<<16)}}return 0==(1&n)?F:O}}function G(e,t){return A(e[1]|t[1],e[0]|t[0])}function J(e,t){var n=t[0],r=e[0];return r>n||!(r<n)&&e[1]>=t[1]}function Z(e,t){return e[0]>t[0]||!(e[0]<t[0])&&e[1]>t[1]}function ee(e){return 4294967296*e[0]+e[1]}function te(e){return isNaN(e)||!isFinite(e)?F:e<=-0x8000000000000000?O:e+1>=0x8000000000000000?z:e<0?j(te(-e)):A(e%4294967296|0,e/4294967296|0)}function ne(e,t){for(;;){var n=t,r=e,a=r[0],i=0;if(0===n[0]&&0===n[1])throw{RE_EXN_ID:"Division_by_zero",Error:new Error};if(2===2)if(-2147483648!==a)if(0!==a)i=1;else{if(0===r[1])return F;i=1}else if(0!==r[1])i=1;else{if(H(n,L)||H(n,B))return r;if(H(n,O))return L;var o=q(ne(K(r,1),n),1),u=0;if(0!==o[0])u=3;else{if(0===o[1])return n[0]<0?L:j(L);u=3}if(3===u)return U(o,ne(Q(r,Y(n,o)),n))}if(1===i){var l=n[0],c=0;if(-2147483648!==l)c=2;else{if(0===n[1])return F;c=2}if(2===c){if(a<0){if(l>=0)return j(ne(j(r),n));t=j(n),e=j(r);continue}if(l<0)return j(ne(r,j(n)));for(var f=F,s=r;J(s,n);){for(var d=E(1,Math.floor(ee(s)/ee(n))),h=Math.ceil(Math.log(d)/Math.LN2),p=h<=48?1:Math.pow(2,h-48),v=te(d),m=Y(v,n);m[0]<0||Z(m,s);)m=Y(v=te(d-=p),n);0===(g=v)[0]&&0===g[1]&&(v=L),f=U(f,v),s=Q(s,m)}return f}}}var g}function re(e,t){return Q(e,Y(ne(e,t),t))}function ae(e){return A(e,e<0?-1:0)}function ie(e){return 0|e[1]}function oe(e){return function(e,t){var n=+e;if(e.length>0&&n==n)return n;if(n=+(e=e.replace(/_/g,"")),e.length>0&&n==n||/^[+-]?nan$/i.test(e))return n;var r=/^ *([+-]?)0x([0-9a-f]+)\.?([0-9a-f]*)p([+-]?[0-9]+)/i.exec(e);if(r){var a=r[3].replace(/0+$/,""),i=parseInt(r[1]+r[2]+a,16),o=(0|r[4])-4*a.length;return n=i*Math.pow(2,o)}if(/^\+?inf(inity)?$/i.test(e))return 1/0;if(/^-inf(inity)?$/i.test(e))return-1/0;throw t}(e,{RE_EXN_ID:"Failure",_1:"float_of_string"})}var ue=z;function le(e){if(e<0)throw{RE_EXN_ID:"Invalid_argument",_1:"String.create",Error:new Error};for(var t=new Array(e),n=0;n<e;++n)t[n]=0;return t}function ce(e,t,n,r,a){if(!(a<=0))if(e!==n){var i=e.length-t|0;if(a<=i)for(var o=0;o<a;++o)n[r+o|0]=e[t+o|0];else{for(var u=0;u<i;++u)n[r+u|0]=e[t+u|0];for(var l=i;l<a;++l)n[r+l|0]=0}}else{if(t<r){for(var c=(e.length-r|0)-1|0,f=a-1|0,s=c>f?f:c;s>=0;--s)e[r+s|0]=e[t+s|0];return}if(t<=r)return;for(var d=(e.length-t|0)-1|0,h=a-1|0,p=d>h?h:d,v=0;v<=p;++v)e[r+v|0]=e[t+v|0]}}function fe(e){var t=e.length,n="",r=t;if(t<=4096&&t===e.length)return String.fromCharCode.apply(null,e);for(var a=0;r>0;){var i=r<1024?r:1024,o=new Array(i);ce(e,a,o,0,i),n+=String.fromCharCode.apply(null,o),r=r-i|0,a=a+i|0}return n}function se(e,t,n,r,a){if(!(a<=0)){var i=e.length-t|0;if(a<=i)for(var o=0;o<a;++o)n[r+o|0]=e.charCodeAt(t+o|0);else{for(var u=0;u<i;++u)n[r+u|0]=e.charCodeAt(t+u|0);for(var l=i;l<a;++l)n[r+l|0]=0}}}function de(e){for(var t=e.length,n=new Array(t),r=0;r<t;++r)n[r]=e.charCodeAt(r);return n}function he(e,t,n){if(t<0||n<0||t>(e.length-n|0))throw{RE_EXN_ID:"Invalid_argument",_1:"String.sub / Bytes.sub",Error:new Error};var r=le(n);return ce(e,t,r,0,n),r}function pe(e,t){if(t>=e.length||t<0)throw{RE_EXN_ID:"Invalid_argument",_1:"index out of bounds",Error:new Error};return e.charCodeAt(t)}function ve(e,t,n){return fe(he(de(e),t,n))}function me(e,t){if(e>=t)return e;throw{RE_EXN_ID:"Invalid_argument",_1:"String.concat",Error:new Error}}function ge(e,t){if(!t)return"";var n=e.length;return fe(function(e,t,n,r,a){for(;;){var i=a,o=t;if(!i)return e;var u=i.tl,l=i.hd;if(!u)return se(l,0,e,o,l.length),e;se(l,0,e,o,l.length),se(n,0,e,o+l.length|0,r),a=u,t=(o+l.length|0)+r|0}}(le(function(e,t,n){for(;;){var r=n,a=e;if(!r)return a;var i=r.tl,o=r.hd;if(!i)return o.length+a|0;n=i,e=me((o.length+t|0)+a|0,a)}}(0,n,t)),0,e,n,t))}function ye(e,t){for(var n=0,r=t.length;n<r;++n)d(e,t.charCodeAt(n))}var be=function(e,t){return String.fromCharCode(t).repeat(e)};function we(e,t,n,r,a,i){var o=((t+e|0)+r|0)+i|0;return(o<<a|o>>>(32-a|0)|0)+n|0}function xe(e,t,n,r,a,i,o){return we(t&n|(-1^t)&r,e,t,a,i,o)}function Ee(e,t,n,r,a,i,o){return we(t&r|n&(-1^r),e,t,a,i,o)}function ke(e,t,n,r,a,i,o){return we(t^n^r,e,t,a,i,o)}function _e(e,t,n,r,a,i,o){return we(n^(t|-1^r),e,t,a,i,o)}function Te(e,t){var n=e[0],r=e[1],a=e[2],i=e[3];n=xe(n,r,a,i,t[0],7,-680876936),i=xe(i,n,r,a,t[1],12,-389564586),a=xe(a,i,n,r,t[2],17,606105819),r=xe(r,a,i,n,t[3],22,-1044525330),n=xe(n,r,a,i,t[4],7,-176418897),i=xe(i,n,r,a,t[5],12,1200080426),a=xe(a,i,n,r,t[6],17,-1473231341),r=xe(r,a,i,n,t[7],22,-45705983),n=xe(n,r,a,i,t[8],7,1770035416),i=xe(i,n,r,a,t[9],12,-1958414417),a=xe(a,i,n,r,t[10],17,-42063),r=xe(r,a,i,n,t[11],22,-1990404162),n=xe(n,r,a,i,t[12],7,1804603682),i=xe(i,n,r,a,t[13],12,-40341101),a=xe(a,i,n,r,t[14],17,-1502002290),n=Ee(n,r=xe(r,a,i,n,t[15],22,1236535329),a,i,t[1],5,-165796510),i=Ee(i,n,r,a,t[6],9,-1069501632),a=Ee(a,i,n,r,t[11],14,643717713),r=Ee(r,a,i,n,t[0],20,-373897302),n=Ee(n,r,a,i,t[5],5,-701558691),i=Ee(i,n,r,a,t[10],9,38016083),a=Ee(a,i,n,r,t[15],14,-660478335),r=Ee(r,a,i,n,t[4],20,-405537848),n=Ee(n,r,a,i,t[9],5,568446438),i=Ee(i,n,r,a,t[14],9,-1019803690),a=Ee(a,i,n,r,t[3],14,-187363961),r=Ee(r,a,i,n,t[8],20,1163531501),n=Ee(n,r,a,i,t[13],5,-1444681467),i=Ee(i,n,r,a,t[2],9,-51403784),a=Ee(a,i,n,r,t[7],14,1735328473),n=ke(n,r=Ee(r,a,i,n,t[12],20,-1926607734),a,i,t[5],4,-378558),i=ke(i,n,r,a,t[8],11,-2022574463),a=ke(a,i,n,r,t[11],16,1839030562),r=ke(r,a,i,n,t[14],23,-35309556),n=ke(n,r,a,i,t[1],4,-1530992060),i=ke(i,n,r,a,t[4],11,1272893353),a=ke(a,i,n,r,t[7],16,-155497632),r=ke(r,a,i,n,t[10],23,-1094730640),n=ke(n,r,a,i,t[13],4,681279174),i=ke(i,n,r,a,t[0],11,-358537222),a=ke(a,i,n,r,t[3],16,-722521979),r=ke(r,a,i,n,t[6],23,76029189),n=ke(n,r,a,i,t[9],4,-640364487),i=ke(i,n,r,a,t[12],11,-421815835),a=ke(a,i,n,r,t[15],16,530742520),n=_e(n,r=ke(r,a,i,n,t[2],23,-995338651),a,i,t[0],6,-198630844),i=_e(i,n,r,a,t[7],10,1126891415),a=_e(a,i,n,r,t[14],15,-1416354905),r=_e(r,a,i,n,t[5],21,-57434055),n=_e(n,r,a,i,t[12],6,1700485571),i=_e(i,n,r,a,t[3],10,-1894986606),a=_e(a,i,n,r,t[10],15,-1051523),r=_e(r,a,i,n,t[1],21,-2054922799),n=_e(n,r,a,i,t[8],6,1873313359),i=_e(i,n,r,a,t[15],10,-30611744),a=_e(a,i,n,r,t[6],15,-1560198380),r=_e(r,a,i,n,t[13],21,1309151649),n=_e(n,r,a,i,t[4],6,-145523070),i=_e(i,n,r,a,t[11],10,-1120210379),a=_e(a,i,n,r,t[2],15,718787259),r=_e(r,a,i,n,t[9],21,-343485551),e[0]=n+e[0]|0,e[1]=r+e[1]|0,e[2]=a+e[2]|0,e[3]=i+e[3]|0}var Se=[1732584193,-271733879,-1732584194,271733878],Ce=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];function Pe(e,t,n){var r=e.slice(t,n),a=r.length;Se[0]=1732584193,Se[1]=-271733879,Se[2]=-1732584194,Se[3]=271733878;for(var i=0;i<=15;++i)Ce[i]=0;for(var o=a/64|0,u=1;u<=o;++u){for(var l=0;l<=15;++l){var c=((u<<6)-64|0)+(l<<2)|0;Ce[l]=((r.charCodeAt(c)+(r.charCodeAt(c+1|0)<<8)|0)+(r.charCodeAt(c+2|0)<<16)|0)+(r.charCodeAt(c+3|0)<<24)|0}Te(Se,Ce)}for(var f=r.slice(o<<6),s=0;s<=15;++s)Ce[s]=0;for(var d=f.length-1|0,h=0;h<=d;++h)Ce[h/4|0]=Ce[h/4|0]|f.charCodeAt(h)<<(h%4<<3);var p=d+1|0;if(Ce[p/4|0]=Ce[p/4|0]|128<<(p%4<<3),p>55){Te(Se,Ce);for(var v=0;v<=15;++v)Ce[v]=0}return Ce[14]=a<<3,Te(Se,Ce),String.fromCharCode(255&Se[0],Se[0]>>8&255,Se[0]>>16&255,Se[0]>>24&255,255&Se[1],Se[1]>>8&255,Se[1]>>16&255,Se[1]>>24&255,255&Se[2],Se[2]>>8&255,Se[2]>>16&255,Se[2]>>24&255,255&Se[3],Se[3]>>8&255,Se[3]>>16&255,Se[3]>>24&255)}var Me=n(1),Ne=n(4);n(0);function Ie(e){throw{RE_EXN_ID:"Failure",_1:e,Error:new Error}}C.b("Pervasives.Exit");Me.f,Me.g;var De=Me.e;function Re(e,t){return Me.c(e,t,0,t.length)}Me.a,Me.d,Me.d;function Ae(e){return Pe(e,0,e.length)}function Oe(e,t){R(t.st,0,e.st,0,55),e.idx=t.idx}function ze(e,t){for(var n=function(e,t){return Ae(e+String(t))},r=0===t.length?[0]:t,a=r.length,i=0;i<=54;++i)l(e.st,i,i);for(var o,u="x",f=0,s=54+(55>a?55:a)|0;f<=s;++f){var d=f%55;u=n(u,c(r,f%a)),l(e.st,d,1073741823&(c(e.st,d)^(((pe(o=u,0)+(pe(o,1)<<8)|0)+(pe(o,2)<<16)|0)+(pe(o,3)<<24)|0)))}e.idx=0}function Le(e){var t={st:f(55,0),idx:0};return ze(t,e),t}function Fe(e){var t={st:f(55,0),idx:0};return Oe(t,e),t}function Be(e){e.idx=(e.idx+1|0)%55;var t=c(e.st,e.idx),n=1073741823&(c(e.st,(e.idx+24|0)%55)+(t^t>>>25&31)|0);return l(e.st,e.idx,n),n}function We(e,t){if(t>1073741823||t<=0)throw{RE_EXN_ID:"Invalid_argument",_1:"Random.int",Error:new Error};for(;;){var n=Be(e),r=n%t;if((n-r|0)<=(1+(1073741823-t|0)|0))return r}}function Ve(e,t){if(t<=0)throw{RE_EXN_ID:"Invalid_argument",_1:"Random.int32",Error:new Error};for(;;){var n=Be(e)|(1&Be(e))<<30,r=n%t;if((n-r|0)<=(1+(2147483647-t|0)|0))return r}}function je(e,t){if(!Z(t,F))throw{RE_EXN_ID:"Invalid_argument",_1:"Random.int64",Error:new Error};for(;;){var n=G(ae(Be(e)),G(q(ae(Be(e)),30),q(ae(7&Be(e)),60))),r=re(n,t);if(!Z(Q(n,r),U(Q(ue,t),L)))return r}}var $e=function(e,t){return ie(je(e,ae(t)))};function Ue(e){return(Be(e)/1073741824+Be(e))/1073741824}function He(e){return 0==(1&Be(e))}var Xe={st:[987910699,495797812,364182224,414272206,318284740,990407751,383018966,270373319,840823159,24560019,536292337,512266505,189156120,730249596,143776328,51606627,140166561,366354223,1003410265,700563762,981890670,913149062,526082594,1021425055,784300257,667753350,630144451,949649812,48546892,415514493,258888527,511570777,89983870,283659902,308386020,242688715,482270760,865188196,1027664170,207196989,193777847,619708188,671350186,149669678,257044018,87658204,558145612,183450813,28133145,901332182,710253903,510646120,652377910,409934019,801085050],idx:0};function Qe(e){return We(Xe,e)}function qe(e){return ze(Xe,[e])}function Ke(e){return t=Ne.c(void 0),ze(Xe,t);var t}var Ye={make:Le,make_self_init:function(e){return Le(Ne.c(void 0))},copy:Fe,bits:Be,$$int:We,int32:Ve,nativeint:$e,int64:je,$$float:function(e,t){return Ue(e)*t},bool:He};function Ge(e,t){return e<<t|e>>>(32-t|0)}function Je(e,t){var n=t;n=Ge(n=Math.imul(n,3432918353),15);var r=e^(n=Math.imul(n,461845907));return 3864292196+((r=Ge(r,13))+(r<<2)|0)|0}function Ze(e){var t=e^e>>>16;return t=Math.imul(t,2246822507),t^=t>>>13,(t=Math.imul(t,3266489909))^t>>>16}function et(e,t){for(var n=t.length,r=(n/4|0)-1|0,a=e,i=0;i<=r;++i){var o=i<<2;a=Je(a,t.charCodeAt(o)|t.charCodeAt(o+1|0)<<8|t.charCodeAt(o+2|0)<<16|t.charCodeAt(o+3|0)<<24)}var u=3&n;0!==u&&(a=Je(a,3===u?t.charCodeAt(n-1|0)<<16|t.charCodeAt(n-2|0)<<8|t.charCodeAt(n-3|0):2===u?t.charCodeAt(n-1|0)<<8|t.charCodeAt(n-2|0):t.charCodeAt(n-1|0)));return a^=n}function tt(e,t){var n={content:t,next:void 0},r=e.last;void 0!==r?(e.length=e.length+1|0,r.next=n,e.last=n):(e.length=1,e.first=n,e.last=n)}function nt(e,t,n,r){var a=n;if("number"==typeof r){var i=0|r;return Ze(a=Je(a,1+(i+i|0)|0))}if("string"==typeof r)return Ze(a=et(a,r));var o,u,l,c={length:0,first:void 0,last:void 0},f=e;for(tt(c,r),f=f-1|0;0!==c.length&&f>0;){var s=(u=void 0,l=void 0,u=(o=c).first,void 0===(l=u.next)?(o.length=0,o.first=void 0,o.last=void 0):(o.length=o.length-1|0,o.first=l),u.content);if("number"==typeof s){var d=0|s;a=Je(a,1+(d+d|0)|0),f=f-1|0}else if("string"==typeof s)a=et(a,s),f=f-1|0;else if("boolean"!=typeof s&&void 0!==s&&"symbol"!=typeof s&&"function"!=typeof s){var h=0|s.length;if(0!==h){var p=0|s.TAG,v=h<<10|p;if(248===p)a=Je(a,s[1]);else{a=Je(a,v);for(var m=h-1|0,g=m<f?m:f,y=0;y<=g;++y)tt(c,s[y])}}else{a=Je(a,function(e,t){var n=0;for(var r in e)t(e[r]),++n;return n}(s,(function(e){return tt(c,e)}))<<10|0)}}}return Ze(a)}var rt=C.b("CamlinternalLazy.Undefined");function at(e,t){var n=t();return e.VAL=n,e.LAZY_DONE=!0,n}function it(){throw{RE_EXN_ID:rt,Error:new Error}}function ot(e){return nt(10,0,0,e)}var ut={contents:!1};var lt={LAZY_DONE:!1,VAL:function(){return Ye.make_self_init(void 0)}};function ct(e,t){var n=void 0!==e?e:ut.contents,r=function(e,t){for(;;){if(e>=t)return e;if(e<<1<e)return e;e=e<<1}}(16,t),a=n?Ye.bits(function(e){if(e.LAZY_DONE)return e.VAL;var t=e.VAL;e.VAL=it;try{return at(e,t)}catch(t){throw e.VAL=function(){throw t},t}}(lt)):0;return{size:0,data:f(r,0),seed:a,initial_size:r}}function ft(e,t){var n=t.data,r=n.length,a=r<<1;if(!(a<r)){var i=f(a,0),o=f(a,0),u=t.initial_size>=0;t.data=i;for(var s=function(n){for(;;){var r=n;if(!r)return;var a=r.key,f=r.data,s=r.next,d=u?r:{key:a,data:f,next:0},p=h(e,t,a),v=c(o,p);v?v.next=d:l(i,p,d),l(o,p,d),n=s}},d=0;d<r;++d)s(c(n,d));if(u)for(var p=0;p<a;++p){var v=c(o,p);v&&(v.next=0)}}}function st(e,t){return nt(10,0,e.seed,t)&(e.data.length-1|0)}function dt(e,t){var n=c(e.data,st(e,t));if(n){var r=n.key,a=n.data,i=n.next;if(S(t,r))return a;if(i){var o=i.key,u=i.data,l=i.next;if(S(t,o))return u;if(l){var f=l.key,s=l.data,d=l.next;if(S(t,f))return s;for(var h=d;;){var p=h;if(!p)throw{RE_EXN_ID:"Not_found",Error:new Error};var v=p.key,m=p.data,g=p.next;if(S(t,v))return m;h=g}}throw{RE_EXN_ID:"Not_found",Error:new Error}}throw{RE_EXN_ID:"Not_found",Error:new Error}}throw{RE_EXN_ID:"Not_found",Error:new Error}}function ht(e,t,n){var r=st(e,t),a=c(e.data,r);if(function(e,t,n){for(;;){var r=n;if(!r)return!0;var a=r.key,i=r.next;if(S(a,e))return r.key=e,r.data=t,!1;n=i}}(t,n,a))return l(e.data,r,{key:t,data:n,next:a}),e.size=e.size+1|0,e.size>e.data.length<<1?ft(st,e):void 0}function pt(e){for(var t=0,n=e;;){var r=t;if(!n)return r;n=n.tl,t=r+1|0}}function vt(e,t){for(;;){var n=t,r=e;if(!r)return n;t={hd:r.hd,tl:n},e=r.tl}}function mt(e){return vt(e,0)}function gt(e,t){for(;;){var n=t,r=e;if(0===r)return n;if(!n)throw{RE_EXN_ID:"Assert_failure",_1:["list.ml",262,11],Error:new Error};t=n.tl,e=r-1|0}}var yt=function(e){return function(t){for(var n=0,r=t;;){var a=r,i=n;if(!a)return vt(i,0);var o=a.tl,u=a.hd;d(e,u)?(r=o,n={hd:u,tl:i}):r=o}}};var bt=function(e){switch(e){case 8:return 0;case 9:return 2;case 13:return 3;case 16:return 57;case 17:return 56;case 18:return 58;case 20:return 64;case 27:return 4;case 32:return 5;case 37:return 53;case 38:return 55;case 39:return 52;case 40:return 54;case 46:return 1;case 48:return 11;case 49:return 12;case 50:return 13;case 51:return 14;case 52:return 15;case 53:return 16;case 54:return 17;case 55:return 18;case 56:return 19;case 57:return 20;case 65:return 26;case 66:return 27;case 67:return 28;case 68:return 29;case 69:return 30;case 70:return 31;case 71:return 32;case 72:return 33;case 73:return 34;case 74:return 35;case 75:return 36;case 76:return 37;case 77:return 38;case 78:return 39;case 79:return 40;case 80:return 41;case 81:return 42;case 82:return 43;case 83:return 44;case 84:return 45;case 85:return 46;case 86:return 47;case 87:return 48;case 88:return 49;case 89:return 50;case 90:return 51;case 91:return 59;case 93:return 63;case 186:return 21;case 187:return 22;case 188:return 7;case 189:return 8;case 190:return 9;case 191:return 10;case 192:return 65;case 10:case 11:case 12:case 14:case 15:case 19:case 21:case 22:case 23:case 24:case 25:case 26:case 28:case 29:case 30:case 31:case 33:case 34:case 35:case 36:case 41:case 42:case 43:case 44:case 45:case 47:case 58:case 59:case 60:case 61:case 62:case 63:case 64:case 92:case 94:case 95:case 96:case 97:case 98:case 99:case 100:case 101:case 102:case 103:case 104:case 105:case 106:case 107:case 108:case 109:case 110:case 111:case 112:case 113:case 114:case 115:case 116:case 117:case 118:case 119:case 120:case 121:case 122:case 123:case 124:case 125:case 126:case 127:case 128:case 129:case 130:case 131:case 132:case 133:case 134:case 135:case 136:case 137:case 138:case 139:case 140:case 141:case 142:case 143:case 144:case 145:case 146:case 147:case 148:case 149:case 150:case 151:case 152:case 153:case 154:case 155:case 156:case 157:case 158:case 159:case 160:case 161:case 162:case 163:case 164:case 165:case 166:case 167:case 168:case 169:case 170:case 171:case 172:case 173:case 174:case 175:case 176:case 177:case 178:case 179:case 180:case 181:case 182:case 183:case 184:case 185:case 193:case 194:case 195:case 196:case 197:case 198:case 199:case 200:case 201:case 202:case 203:case 204:case 205:case 206:case 207:case 208:case 209:case 210:case 211:case 212:case 213:case 214:case 215:case 216:case 217:case 218:return 66;case 219:return 23;case 220:return 24;case 221:return 25;case 222:return 6;default:return 66}},wt=1e-6,xt="undefined"!=typeof Float32Array?Float32Array:Array;Math.random;Math.PI;function Et(){var e=new xt(16);return xt!=Float32Array&&(e[1]=0,e[2]=0,e[3]=0,e[4]=0,e[6]=0,e[7]=0,e[8]=0,e[9]=0,e[11]=0,e[12]=0,e[13]=0,e[14]=0),e[0]=1,e[5]=1,e[10]=1,e[15]=1,e}function kt(e){var t=new xt(16);return t[0]=e[0],t[1]=e[1],t[2]=e[2],t[3]=e[3],t[4]=e[4],t[5]=e[5],t[6]=e[6],t[7]=e[7],t[8]=e[8],t[9]=e[9],t[10]=e[10],t[11]=e[11],t[12]=e[12],t[13]=e[13],t[14]=e[14],t[15]=e[15],t}function _t(e,t){return e[0]=t[0],e[1]=t[1],e[2]=t[2],e[3]=t[3],e[4]=t[4],e[5]=t[5],e[6]=t[6],e[7]=t[7],e[8]=t[8],e[9]=t[9],e[10]=t[10],e[11]=t[11],e[12]=t[12],e[13]=t[13],e[14]=t[14],e[15]=t[15],e}function Tt(e,t,n,r,a,i,o,u,l,c,f,s,d,h,p,v){var m=new xt(16);return m[0]=e,m[1]=t,m[2]=n,m[3]=r,m[4]=a,m[5]=i,m[6]=o,m[7]=u,m[8]=l,m[9]=c,m[10]=f,m[11]=s,m[12]=d,m[13]=h,m[14]=p,m[15]=v,m}function St(e,t,n,r,a,i,o,u,l,c,f,s,d,h,p,v,m){return e[0]=t,e[1]=n,e[2]=r,e[3]=a,e[4]=i,e[5]=o,e[6]=u,e[7]=l,e[8]=c,e[9]=f,e[10]=s,e[11]=d,e[12]=h,e[13]=p,e[14]=v,e[15]=m,e}function Ct(e){return e[0]=1,e[1]=0,e[2]=0,e[3]=0,e[4]=0,e[5]=1,e[6]=0,e[7]=0,e[8]=0,e[9]=0,e[10]=1,e[11]=0,e[12]=0,e[13]=0,e[14]=0,e[15]=1,e}function Pt(e,t){if(e===t){var n=t[1],r=t[2],a=t[3],i=t[6],o=t[7],u=t[11];e[1]=t[4],e[2]=t[8],e[3]=t[12],e[4]=n,e[6]=t[9],e[7]=t[13],e[8]=r,e[9]=i,e[11]=t[14],e[12]=a,e[13]=o,e[14]=u}else e[0]=t[0],e[1]=t[4],e[2]=t[8],e[3]=t[12],e[4]=t[1],e[5]=t[5],e[6]=t[9],e[7]=t[13],e[8]=t[2],e[9]=t[6],e[10]=t[10],e[11]=t[14],e[12]=t[3],e[13]=t[7],e[14]=t[11],e[15]=t[15];return e}function Mt(e,t){var n=t[0],r=t[1],a=t[2],i=t[3],o=t[4],u=t[5],l=t[6],c=t[7],f=t[8],s=t[9],d=t[10],h=t[11],p=t[12],v=t[13],m=t[14],g=t[15],y=n*u-r*o,b=n*l-a*o,w=n*c-i*o,x=r*l-a*u,E=r*c-i*u,k=a*c-i*l,_=f*v-s*p,T=f*m-d*p,S=f*g-h*p,C=s*m-d*v,P=s*g-h*v,M=d*g-h*m,N=y*M-b*P+w*C+x*S-E*T+k*_;return N?(N=1/N,e[0]=(u*M-l*P+c*C)*N,e[1]=(a*P-r*M-i*C)*N,e[2]=(v*k-m*E+g*x)*N,e[3]=(d*E-s*k-h*x)*N,e[4]=(l*S-o*M-c*T)*N,e[5]=(n*M-a*S+i*T)*N,e[6]=(m*w-p*k-g*b)*N,e[7]=(f*k-d*w+h*b)*N,e[8]=(o*P-u*S+c*_)*N,e[9]=(r*S-n*P-i*_)*N,e[10]=(p*E-v*w+g*y)*N,e[11]=(s*w-f*E-h*y)*N,e[12]=(u*T-o*C-l*_)*N,e[13]=(n*C-r*T+a*_)*N,e[14]=(v*b-p*x-m*y)*N,e[15]=(f*x-s*b+d*y)*N,e):null}function Nt(e,t){var n=t[0],r=t[1],a=t[2],i=t[3],o=t[4],u=t[5],l=t[6],c=t[7],f=t[8],s=t[9],d=t[10],h=t[11],p=t[12],v=t[13],m=t[14],g=t[15];return e[0]=u*(d*g-h*m)-s*(l*g-c*m)+v*(l*h-c*d),e[1]=-(r*(d*g-h*m)-s*(a*g-i*m)+v*(a*h-i*d)),e[2]=r*(l*g-c*m)-u*(a*g-i*m)+v*(a*c-i*l),e[3]=-(r*(l*h-c*d)-u*(a*h-i*d)+s*(a*c-i*l)),e[4]=-(o*(d*g-h*m)-f*(l*g-c*m)+p*(l*h-c*d)),e[5]=n*(d*g-h*m)-f*(a*g-i*m)+p*(a*h-i*d),e[6]=-(n*(l*g-c*m)-o*(a*g-i*m)+p*(a*c-i*l)),e[7]=n*(l*h-c*d)-o*(a*h-i*d)+f*(a*c-i*l),e[8]=o*(s*g-h*v)-f*(u*g-c*v)+p*(u*h-c*s),e[9]=-(n*(s*g-h*v)-f*(r*g-i*v)+p*(r*h-i*s)),e[10]=n*(u*g-c*v)-o*(r*g-i*v)+p*(r*c-i*u),e[11]=-(n*(u*h-c*s)-o*(r*h-i*s)+f*(r*c-i*u)),e[12]=-(o*(s*m-d*v)-f*(u*m-l*v)+p*(u*d-l*s)),e[13]=n*(s*m-d*v)-f*(r*m-a*v)+p*(r*d-a*s),e[14]=-(n*(u*m-l*v)-o*(r*m-a*v)+p*(r*l-a*u)),e[15]=n*(u*d-l*s)-o*(r*d-a*s)+f*(r*l-a*u),e}function It(e){var t=e[0],n=e[1],r=e[2],a=e[3],i=e[4],o=e[5],u=e[6],l=e[7],c=e[8],f=e[9],s=e[10],d=e[11],h=e[12],p=e[13],v=e[14],m=e[15];return(t*o-n*i)*(s*m-d*v)-(t*u-r*i)*(f*m-d*p)+(t*l-a*i)*(f*v-s*p)+(n*u-r*o)*(c*m-d*h)-(n*l-a*o)*(c*v-s*h)+(r*l-a*u)*(c*p-f*h)}function Dt(e,t,n){var r=t[0],a=t[1],i=t[2],o=t[3],u=t[4],l=t[5],c=t[6],f=t[7],s=t[8],d=t[9],h=t[10],p=t[11],v=t[12],m=t[13],g=t[14],y=t[15],b=n[0],w=n[1],x=n[2],E=n[3];return e[0]=b*r+w*u+x*s+E*v,e[1]=b*a+w*l+x*d+E*m,e[2]=b*i+w*c+x*h+E*g,e[3]=b*o+w*f+x*p+E*y,b=n[4],w=n[5],x=n[6],E=n[7],e[4]=b*r+w*u+x*s+E*v,e[5]=b*a+w*l+x*d+E*m,e[6]=b*i+w*c+x*h+E*g,e[7]=b*o+w*f+x*p+E*y,b=n[8],w=n[9],x=n[10],E=n[11],e[8]=b*r+w*u+x*s+E*v,e[9]=b*a+w*l+x*d+E*m,e[10]=b*i+w*c+x*h+E*g,e[11]=b*o+w*f+x*p+E*y,b=n[12],w=n[13],x=n[14],E=n[15],e[12]=b*r+w*u+x*s+E*v,e[13]=b*a+w*l+x*d+E*m,e[14]=b*i+w*c+x*h+E*g,e[15]=b*o+w*f+x*p+E*y,e}function Rt(e,t,n){var r,a,i,o,u,l,c,f,s,d,h,p,v=n[0],m=n[1],g=n[2];return t===e?(e[12]=t[0]*v+t[4]*m+t[8]*g+t[12],e[13]=t[1]*v+t[5]*m+t[9]*g+t[13],e[14]=t[2]*v+t[6]*m+t[10]*g+t[14],e[15]=t[3]*v+t[7]*m+t[11]*g+t[15]):(r=t[0],a=t[1],i=t[2],o=t[3],u=t[4],l=t[5],c=t[6],f=t[7],s=t[8],d=t[9],h=t[10],p=t[11],e[0]=r,e[1]=a,e[2]=i,e[3]=o,e[4]=u,e[5]=l,e[6]=c,e[7]=f,e[8]=s,e[9]=d,e[10]=h,e[11]=p,e[12]=r*v+u*m+s*g+t[12],e[13]=a*v+l*m+d*g+t[13],e[14]=i*v+c*m+h*g+t[14],e[15]=o*v+f*m+p*g+t[15]),e}function At(e,t,n){var r=n[0],a=n[1],i=n[2];return e[0]=t[0]*r,e[1]=t[1]*r,e[2]=t[2]*r,e[3]=t[3]*r,e[4]=t[4]*a,e[5]=t[5]*a,e[6]=t[6]*a,e[7]=t[7]*a,e[8]=t[8]*i,e[9]=t[9]*i,e[10]=t[10]*i,e[11]=t[11]*i,e[12]=t[12],e[13]=t[13],e[14]=t[14],e[15]=t[15],e}function Ot(e,t,n,r){var a,i,o,u,l,c,f,s,d,h,p,v,m,g,y,b,w,x,E,k,_,T,S,C,P=r[0],M=r[1],N=r[2],I=Math.hypot(P,M,N);return I<wt?null:(P*=I=1/I,M*=I,N*=I,a=Math.sin(n),o=1-(i=Math.cos(n)),u=t[0],l=t[1],c=t[2],f=t[3],s=t[4],d=t[5],h=t[6],p=t[7],v=t[8],m=t[9],g=t[10],y=t[11],b=P*P*o+i,w=M*P*o+N*a,x=N*P*o-M*a,E=P*M*o-N*a,k=M*M*o+i,_=N*M*o+P*a,T=P*N*o+M*a,S=M*N*o-P*a,C=N*N*o+i,e[0]=u*b+s*w+v*x,e[1]=l*b+d*w+m*x,e[2]=c*b+h*w+g*x,e[3]=f*b+p*w+y*x,e[4]=u*E+s*k+v*_,e[5]=l*E+d*k+m*_,e[6]=c*E+h*k+g*_,e[7]=f*E+p*k+y*_,e[8]=u*T+s*S+v*C,e[9]=l*T+d*S+m*C,e[10]=c*T+h*S+g*C,e[11]=f*T+p*S+y*C,t!==e&&(e[12]=t[12],e[13]=t[13],e[14]=t[14],e[15]=t[15]),e)}function zt(e,t,n){var r=Math.sin(n),a=Math.cos(n),i=t[4],o=t[5],u=t[6],l=t[7],c=t[8],f=t[9],s=t[10],d=t[11];return t!==e&&(e[0]=t[0],e[1]=t[1],e[2]=t[2],e[3]=t[3],e[12]=t[12],e[13]=t[13],e[14]=t[14],e[15]=t[15]),e[4]=i*a+c*r,e[5]=o*a+f*r,e[6]=u*a+s*r,e[7]=l*a+d*r,e[8]=c*a-i*r,e[9]=f*a-o*r,e[10]=s*a-u*r,e[11]=d*a-l*r,e}function Lt(e,t,n){var r=Math.sin(n),a=Math.cos(n),i=t[0],o=t[1],u=t[2],l=t[3],c=t[8],f=t[9],s=t[10],d=t[11];return t!==e&&(e[4]=t[4],e[5]=t[5],e[6]=t[6],e[7]=t[7],e[12]=t[12],e[13]=t[13],e[14]=t[14],e[15]=t[15]),e[0]=i*a-c*r,e[1]=o*a-f*r,e[2]=u*a-s*r,e[3]=l*a-d*r,e[8]=i*r+c*a,e[9]=o*r+f*a,e[10]=u*r+s*a,e[11]=l*r+d*a,e}function Ft(e,t,n){var r=Math.sin(n),a=Math.cos(n),i=t[0],o=t[1],u=t[2],l=t[3],c=t[4],f=t[5],s=t[6],d=t[7];return t!==e&&(e[8]=t[8],e[9]=t[9],e[10]=t[10],e[11]=t[11],e[12]=t[12],e[13]=t[13],e[14]=t[14],e[15]=t[15]),e[0]=i*a+c*r,e[1]=o*a+f*r,e[2]=u*a+s*r,e[3]=l*a+d*r,e[4]=c*a-i*r,e[5]=f*a-o*r,e[6]=s*a-u*r,e[7]=d*a-l*r,e}function Bt(e,t){return e[0]=1,e[1]=0,e[2]=0,e[3]=0,e[4]=0,e[5]=1,e[6]=0,e[7]=0,e[8]=0,e[9]=0,e[10]=1,e[11]=0,e[12]=t[0],e[13]=t[1],e[14]=t[2],e[15]=1,e}function Wt(e,t){return e[0]=t[0],e[1]=0,e[2]=0,e[3]=0,e[4]=0,e[5]=t[1],e[6]=0,e[7]=0,e[8]=0,e[9]=0,e[10]=t[2],e[11]=0,e[12]=0,e[13]=0,e[14]=0,e[15]=1,e}function Vt(e,t,n){var r,a,i,o=n[0],u=n[1],l=n[2],c=Math.hypot(o,u,l);return c<wt?null:(o*=c=1/c,u*=c,l*=c,r=Math.sin(t),i=1-(a=Math.cos(t)),e[0]=o*o*i+a,e[1]=u*o*i+l*r,e[2]=l*o*i-u*r,e[3]=0,e[4]=o*u*i-l*r,e[5]=u*u*i+a,e[6]=l*u*i+o*r,e[7]=0,e[8]=o*l*i+u*r,e[9]=u*l*i-o*r,e[10]=l*l*i+a,e[11]=0,e[12]=0,e[13]=0,e[14]=0,e[15]=1,e)}function jt(e,t){var n=Math.sin(t),r=Math.cos(t);return e[0]=1,e[1]=0,e[2]=0,e[3]=0,e[4]=0,e[5]=r,e[6]=n,e[7]=0,e[8]=0,e[9]=-n,e[10]=r,e[11]=0,e[12]=0,e[13]=0,e[14]=0,e[15]=1,e}function $t(e,t){var n=Math.sin(t),r=Math.cos(t);return e[0]=r,e[1]=0,e[2]=-n,e[3]=0,e[4]=0,e[5]=1,e[6]=0,e[7]=0,e[8]=n,e[9]=0,e[10]=r,e[11]=0,e[12]=0,e[13]=0,e[14]=0,e[15]=1,e}function Ut(e,t){var n=Math.sin(t),r=Math.cos(t);return e[0]=r,e[1]=n,e[2]=0,e[3]=0,e[4]=-n,e[5]=r,e[6]=0,e[7]=0,e[8]=0,e[9]=0,e[10]=1,e[11]=0,e[12]=0,e[13]=0,e[14]=0,e[15]=1,e}function Ht(e,t,n){var r=t[0],a=t[1],i=t[2],o=t[3],u=r+r,l=a+a,c=i+i,f=r*u,s=r*l,d=r*c,h=a*l,p=a*c,v=i*c,m=o*u,g=o*l,y=o*c;return e[0]=1-(h+v),e[1]=s+y,e[2]=d-g,e[3]=0,e[4]=s-y,e[5]=1-(f+v),e[6]=p+m,e[7]=0,e[8]=d+g,e[9]=p-m,e[10]=1-(f+h),e[11]=0,e[12]=n[0],e[13]=n[1],e[14]=n[2],e[15]=1,e}function Xt(e,t){var n=new xt(3),r=-t[0],a=-t[1],i=-t[2],o=t[3],u=t[4],l=t[5],c=t[6],f=t[7],s=r*r+a*a+i*i+o*o;return s>0?(n[0]=2*(u*o+f*r+l*i-c*a)/s,n[1]=2*(l*o+f*a+c*r-u*i)/s,n[2]=2*(c*o+f*i+u*a-l*r)/s):(n[0]=2*(u*o+f*r+l*i-c*a),n[1]=2*(l*o+f*a+c*r-u*i),n[2]=2*(c*o+f*i+u*a-l*r)),Ht(e,t,n),e}function Qt(e,t){return e[0]=t[12],e[1]=t[13],e[2]=t[14],e}function qt(e,t){var n=t[0],r=t[1],a=t[2],i=t[4],o=t[5],u=t[6],l=t[8],c=t[9],f=t[10];return e[0]=Math.hypot(n,r,a),e[1]=Math.hypot(i,o,u),e[2]=Math.hypot(l,c,f),e}function Kt(e,t){var n=new xt(3);qt(n,t);var r=1/n[0],a=1/n[1],i=1/n[2],o=t[0]*r,u=t[1]*a,l=t[2]*i,c=t[4]*r,f=t[5]*a,s=t[6]*i,d=t[8]*r,h=t[9]*a,p=t[10]*i,v=o+f+p,m=0;return v>0?(m=2*Math.sqrt(v+1),e[3]=.25*m,e[0]=(s-h)/m,e[1]=(d-l)/m,e[2]=(u-c)/m):o>f&&o>p?(m=2*Math.sqrt(1+o-f-p),e[3]=(s-h)/m,e[0]=.25*m,e[1]=(u+c)/m,e[2]=(d+l)/m):f>p?(m=2*Math.sqrt(1+f-o-p),e[3]=(d-l)/m,e[0]=(u+c)/m,e[1]=.25*m,e[2]=(s+h)/m):(m=2*Math.sqrt(1+p-o-f),e[3]=(u-c)/m,e[0]=(d+l)/m,e[1]=(s+h)/m,e[2]=.25*m),e}function Yt(e,t,n,r){var a=t[0],i=t[1],o=t[2],u=t[3],l=a+a,c=i+i,f=o+o,s=a*l,d=a*c,h=a*f,p=i*c,v=i*f,m=o*f,g=u*l,y=u*c,b=u*f,w=r[0],x=r[1],E=r[2];return e[0]=(1-(p+m))*w,e[1]=(d+b)*w,e[2]=(h-y)*w,e[3]=0,e[4]=(d-b)*x,e[5]=(1-(s+m))*x,e[6]=(v+g)*x,e[7]=0,e[8]=(h+y)*E,e[9]=(v-g)*E,e[10]=(1-(s+p))*E,e[11]=0,e[12]=n[0],e[13]=n[1],e[14]=n[2],e[15]=1,e}function Gt(e,t,n,r,a){var i=t[0],o=t[1],u=t[2],l=t[3],c=i+i,f=o+o,s=u+u,d=i*c,h=i*f,p=i*s,v=o*f,m=o*s,g=u*s,y=l*c,b=l*f,w=l*s,x=r[0],E=r[1],k=r[2],_=a[0],T=a[1],S=a[2],C=(1-(v+g))*x,P=(h+w)*x,M=(p-b)*x,N=(h-w)*E,I=(1-(d+g))*E,D=(m+y)*E,R=(p+b)*k,A=(m-y)*k,O=(1-(d+v))*k;return e[0]=C,e[1]=P,e[2]=M,e[3]=0,e[4]=N,e[5]=I,e[6]=D,e[7]=0,e[8]=R,e[9]=A,e[10]=O,e[11]=0,e[12]=n[0]+_-(C*_+N*T+R*S),e[13]=n[1]+T-(P*_+I*T+A*S),e[14]=n[2]+S-(M*_+D*T+O*S),e[15]=1,e}function Jt(e,t){var n=t[0],r=t[1],a=t[2],i=t[3],o=n+n,u=r+r,l=a+a,c=n*o,f=r*o,s=r*u,d=a*o,h=a*u,p=a*l,v=i*o,m=i*u,g=i*l;return e[0]=1-s-p,e[1]=f+g,e[2]=d-m,e[3]=0,e[4]=f-g,e[5]=1-c-p,e[6]=h+v,e[7]=0,e[8]=d+m,e[9]=h-v,e[10]=1-c-s,e[11]=0,e[12]=0,e[13]=0,e[14]=0,e[15]=1,e}function Zt(e,t,n,r,a,i,o){var u=1/(n-t),l=1/(a-r),c=1/(i-o);return e[0]=2*i*u,e[1]=0,e[2]=0,e[3]=0,e[4]=0,e[5]=2*i*l,e[6]=0,e[7]=0,e[8]=(n+t)*u,e[9]=(a+r)*l,e[10]=(o+i)*c,e[11]=-1,e[12]=0,e[13]=0,e[14]=o*i*2*c,e[15]=0,e}function en(e,t,n,r,a){var i,o=1/Math.tan(t/2);return e[0]=o/n,e[1]=0,e[2]=0,e[3]=0,e[4]=0,e[5]=o,e[6]=0,e[7]=0,e[8]=0,e[9]=0,e[11]=-1,e[12]=0,e[13]=0,e[15]=0,null!=a&&a!==1/0?(i=1/(r-a),e[10]=(a+r)*i,e[14]=2*a*r*i):(e[10]=-1,e[14]=-2*r),e}function tn(e,t,n,r){var a=Math.tan(t.upDegrees*Math.PI/180),i=Math.tan(t.downDegrees*Math.PI/180),o=Math.tan(t.leftDegrees*Math.PI/180),u=Math.tan(t.rightDegrees*Math.PI/180),l=2/(o+u),c=2/(a+i);return e[0]=l,e[1]=0,e[2]=0,e[3]=0,e[4]=0,e[5]=c,e[6]=0,e[7]=0,e[8]=-(o-u)*l*.5,e[9]=(a-i)*c*.5,e[10]=r/(n-r),e[11]=-1,e[12]=0,e[13]=0,e[14]=r*n/(n-r),e[15]=0,e}function nn(e,t,n,r,a,i,o){var u=1/(t-n),l=1/(r-a),c=1/(i-o);return e[0]=-2*u,e[1]=0,e[2]=0,e[3]=0,e[4]=0,e[5]=-2*l,e[6]=0,e[7]=0,e[8]=0,e[9]=0,e[10]=2*c,e[11]=0,e[12]=(t+n)*u,e[13]=(a+r)*l,e[14]=(o+i)*c,e[15]=1,e}function rn(e,t,n,r){var a,i,o,u,l,c,f,s,d,h,p=t[0],v=t[1],m=t[2],g=r[0],y=r[1],b=r[2],w=n[0],x=n[1],E=n[2];return Math.abs(p-w)<wt&&Math.abs(v-x)<wt&&Math.abs(m-E)<wt?Ct(e):(f=p-w,s=v-x,d=m-E,a=y*(d*=h=1/Math.hypot(f,s,d))-b*(s*=h),i=b*(f*=h)-g*d,o=g*s-y*f,(h=Math.hypot(a,i,o))?(a*=h=1/h,i*=h,o*=h):(a=0,i=0,o=0),u=s*o-d*i,l=d*a-f*o,c=f*i-s*a,(h=Math.hypot(u,l,c))?(u*=h=1/h,l*=h,c*=h):(u=0,l=0,c=0),e[0]=a,e[1]=u,e[2]=f,e[3]=0,e[4]=i,e[5]=l,e[6]=s,e[7]=0,e[8]=o,e[9]=c,e[10]=d,e[11]=0,e[12]=-(a*p+i*v+o*m),e[13]=-(u*p+l*v+c*m),e[14]=-(f*p+s*v+d*m),e[15]=1,e)}function an(e,t,n,r){var a=t[0],i=t[1],o=t[2],u=r[0],l=r[1],c=r[2],f=a-n[0],s=i-n[1],d=o-n[2],h=f*f+s*s+d*d;h>0&&(f*=h=1/Math.sqrt(h),s*=h,d*=h);var p=l*d-c*s,v=c*f-u*d,m=u*s-l*f;return(h=p*p+v*v+m*m)>0&&(p*=h=1/Math.sqrt(h),v*=h,m*=h),e[0]=p,e[1]=v,e[2]=m,e[3]=0,e[4]=s*m-d*v,e[5]=d*p-f*m,e[6]=f*v-s*p,e[7]=0,e[8]=f,e[9]=s,e[10]=d,e[11]=0,e[12]=a,e[13]=i,e[14]=o,e[15]=1,e}function on(e){return"mat4("+e[0]+", "+e[1]+", "+e[2]+", "+e[3]+", "+e[4]+", "+e[5]+", "+e[6]+", "+e[7]+", "+e[8]+", "+e[9]+", "+e[10]+", "+e[11]+", "+e[12]+", "+e[13]+", "+e[14]+", "+e[15]+")"}function un(e){return Math.hypot(e[0],e[1],e[2],e[3],e[4],e[5],e[6],e[7],e[8],e[9],e[10],e[11],e[12],e[13],e[14],e[15])}function ln(e,t,n){return e[0]=t[0]+n[0],e[1]=t[1]+n[1],e[2]=t[2]+n[2],e[3]=t[3]+n[3],e[4]=t[4]+n[4],e[5]=t[5]+n[5],e[6]=t[6]+n[6],e[7]=t[7]+n[7],e[8]=t[8]+n[8],e[9]=t[9]+n[9],e[10]=t[10]+n[10],e[11]=t[11]+n[11],e[12]=t[12]+n[12],e[13]=t[13]+n[13],e[14]=t[14]+n[14],e[15]=t[15]+n[15],e}function cn(e,t,n){return e[0]=t[0]-n[0],e[1]=t[1]-n[1],e[2]=t[2]-n[2],e[3]=t[3]-n[3],e[4]=t[4]-n[4],e[5]=t[5]-n[5],e[6]=t[6]-n[6],e[7]=t[7]-n[7],e[8]=t[8]-n[8],e[9]=t[9]-n[9],e[10]=t[10]-n[10],e[11]=t[11]-n[11],e[12]=t[12]-n[12],e[13]=t[13]-n[13],e[14]=t[14]-n[14],e[15]=t[15]-n[15],e}function fn(e,t,n){return e[0]=t[0]*n,e[1]=t[1]*n,e[2]=t[2]*n,e[3]=t[3]*n,e[4]=t[4]*n,e[5]=t[5]*n,e[6]=t[6]*n,e[7]=t[7]*n,e[8]=t[8]*n,e[9]=t[9]*n,e[10]=t[10]*n,e[11]=t[11]*n,e[12]=t[12]*n,e[13]=t[13]*n,e[14]=t[14]*n,e[15]=t[15]*n,e}function sn(e,t,n,r){return e[0]=t[0]+n[0]*r,e[1]=t[1]+n[1]*r,e[2]=t[2]+n[2]*r,e[3]=t[3]+n[3]*r,e[4]=t[4]+n[4]*r,e[5]=t[5]+n[5]*r,e[6]=t[6]+n[6]*r,e[7]=t[7]+n[7]*r,e[8]=t[8]+n[8]*r,e[9]=t[9]+n[9]*r,e[10]=t[10]+n[10]*r,e[11]=t[11]+n[11]*r,e[12]=t[12]+n[12]*r,e[13]=t[13]+n[13]*r,e[14]=t[14]+n[14]*r,e[15]=t[15]+n[15]*r,e}function dn(e,t){return e[0]===t[0]&&e[1]===t[1]&&e[2]===t[2]&&e[3]===t[3]&&e[4]===t[4]&&e[5]===t[5]&&e[6]===t[6]&&e[7]===t[7]&&e[8]===t[8]&&e[9]===t[9]&&e[10]===t[10]&&e[11]===t[11]&&e[12]===t[12]&&e[13]===t[13]&&e[14]===t[14]&&e[15]===t[15]}function hn(e,t){var n=e[0],r=e[1],a=e[2],i=e[3],o=e[4],u=e[5],l=e[6],c=e[7],f=e[8],s=e[9],d=e[10],h=e[11],p=e[12],v=e[13],m=e[14],g=e[15],y=t[0],b=t[1],w=t[2],x=t[3],E=t[4],k=t[5],_=t[6],T=t[7],S=t[8],C=t[9],P=t[10],M=t[11],N=t[12],I=t[13],D=t[14],R=t[15];return Math.abs(n-y)<=wt*Math.max(1,Math.abs(n),Math.abs(y))&&Math.abs(r-b)<=wt*Math.max(1,Math.abs(r),Math.abs(b))&&Math.abs(a-w)<=wt*Math.max(1,Math.abs(a),Math.abs(w))&&Math.abs(i-x)<=wt*Math.max(1,Math.abs(i),Math.abs(x))&&Math.abs(o-E)<=wt*Math.max(1,Math.abs(o),Math.abs(E))&&Math.abs(u-k)<=wt*Math.max(1,Math.abs(u),Math.abs(k))&&Math.abs(l-_)<=wt*Math.max(1,Math.abs(l),Math.abs(_))&&Math.abs(c-T)<=wt*Math.max(1,Math.abs(c),Math.abs(T))&&Math.abs(f-S)<=wt*Math.max(1,Math.abs(f),Math.abs(S))&&Math.abs(s-C)<=wt*Math.max(1,Math.abs(s),Math.abs(C))&&Math.abs(d-P)<=wt*Math.max(1,Math.abs(d),Math.abs(P))&&Math.abs(h-M)<=wt*Math.max(1,Math.abs(h),Math.abs(M))&&Math.abs(p-N)<=wt*Math.max(1,Math.abs(p),Math.abs(N))&&Math.abs(v-I)<=wt*Math.max(1,Math.abs(v),Math.abs(I))&&Math.abs(m-D)<=wt*Math.max(1,Math.abs(m),Math.abs(D))&&Math.abs(g-R)<=wt*Math.max(1,Math.abs(g),Math.abs(R))}Math.hypot||(Math.hypot=function(){for(var e=0,t=arguments.length;t--;)e+=arguments[t]*arguments[t];return Math.sqrt(e)});var pn=Dt,vn=cn,mn=window,gn=document;function yn(e,t){var n=Array.prototype.slice.call(e.changedTouches);if(1===n.length){var r=n[0],a=t.getBoundingClientRect(),i=r.clientX-a.left|0,o=r.clientY-a.top|0;return[r.identifier,i,o]}}var bn={target:"web",$$File:{readFile:function(e,t){var n=new XMLHttpRequest;n.open("GET",e,!1),n.onreadystatechange=function(e){if(4===n.readyState&&(200===n.status||0===n.status))return d(t,n.responseText)},n.send(null)}},$$Window:{getWidth:function(e){return e[0].width/window.devicePixelRatio|0},getHeight:function(e){return e[0].height/window.devicePixelRatio|0},getPixelWidth:function(e){return 0|e[0].width},getPixelHeight:function(e){return 0|e[0].height},getPixelScale:function(e){return window.devicePixelRatio},init:function(e,t){var n,r,a=void 0!==e?null==(n=document.getElementById(e))?void 0:P(n):void 0;if(void 0!==a)r=M(a);else{var i=document.createElement("canvas");document.body.appendChild(i),r=i}return r.style.backgroundColor="black",[r,new(window.AudioContext||window.webkitAudioContext)]},setWindowSize:function(e,t,n){var r=e[0];r.width=t*window.devicePixelRatio|0,r.height=n*window.devicePixelRatio|0,r.style.width=String(t)+"px",r.style.height=String(n)+"px"},setWindowTitle:function(e,t){gn.title=t},getContext:function(e){return e[0].getContext("webgl",{preserveDrawingBuffer:!0,antialias:!0})}},$$Audio:{loadSound:function(e,t,n){var r=e[1],a=new XMLHttpRequest;a.responseType="arraybuffer",a.open("GET",t,!0),a.onreadystatechange=function(e){4!==a.readyState||200!==a.status&&0!==a.status||r.decodeAudioData(a.response,n)},a.send(null)},playSound:function(e,t,n,r){var a=e[1],i=a.createBufferSource(),o=a.createGain();o.gain.value=n,i.buffer=t,i.connect(o),o.connect(a.destination),i.start(0),i.loop=r}},Events:r,render:function(e,t,n,r,a,i,o,u,l){var c=e[0],f={contents:void 0};void 0!==t&&(c.addEventListener("touchstart",(function(e){var n=yn(e,c);if(void 0!==n)return void 0!==f.contents?void(f.contents=void 0):(f.contents=n[0],e.preventDefault(),v(t,0,0,n[1],n[2]))})),c.addEventListener("mousedown",(function(e){var n=e.button;if(n>2||n<0)throw{RE_EXN_ID:"Assert_failure",_1:["reasongl_web.ml",258,26],Error:new Error};var r=c.getBoundingClientRect(),a=e.clientX-r.left|0,i=e.clientY-r.top|0;return v(t,n,0,a,i)}))),void 0!==n&&(c.addEventListener("touchend",(function(e){var t=yn(e,c);if(void 0!==t){var r=f.contents;return void 0!==r&&r===t[0]?(f.contents=void 0,e.preventDefault(),v(n,0,1,t[1],t[2])):void 0}})),c.addEventListener("touchcancel",(function(e){var t=yn(e,c);if(void 0!==t){var r=f.contents;return void 0!==r&&r===t[0]?(f.contents=void 0,e.preventDefault(),v(n,0,1,t[1],t[2])):void 0}})),c.addEventListener("mouseup",(function(e){var t=e.button;if(t>2||t<0)throw{RE_EXN_ID:"Assert_failure",_1:["reasongl_web.ml",298,26],Error:new Error};var r=c.getBoundingClientRect(),a=e.clientX-r.left|0,i=e.clientY-r.top|0;return v(n,t,1,a,i)}))),void 0!==r&&(c.addEventListener("touchmove",(function(e){var t=yn(e,c);if(void 0!==t){var n=f.contents;return void 0!==n&&n===t[0]?(e.preventDefault(),h(r,t[1],t[2])):void 0}})),c.addEventListener("mousemove",(function(e){var t=c.getBoundingClientRect(),n=e.clientX-t.left|0,a=e.clientY-t.top|0;return h(r,n,a)})));var s={contents:0};void 0!==a&&mn.addEventListener("keydown",(function(e){var t=e.which,n=function(e,t,n){for(;;){var r=n,a=t;if(!r)return a;n=r.tl,t=h(e,a,r.hd)}}((function(e,n){return!!e||n===t}),!1,s.contents);return n||(s.contents={hd:t,tl:s.contents}),h(a,bt(t),n)})),void 0!==i&&mn.addEventListener("keyup",(function(e){var t=e.which;return s.contents=yt((function(e){return e!==t}))(s.contents),d(i,bt(t))})),void 0!==o&&mn.addEventListener("resize",(function(e){return d(o,void 0)}));var p={contents:void 0},m=function(e,t){var n=Date.now();d(u,n-e);var r=window.requestAnimationFrame((function(e){return m(n,e)}));p.contents=r,c.__hiddenrafid=r},g=Date.now(),y=window.requestAnimationFrame((function(e){return m(g,e)}));return p.contents=y,c.__hiddenrafid=y,function(e){var t=p.contents;if(void 0!==t)return!!e||(window.cancelAnimationFrame(t),p.contents=void 0,!1);if(!e)return!1;var n=Date.now(),r=window.requestAnimationFrame((function(e){return m(n,e)}));return p.contents=r,c.__hiddenrafid=r,!0}},clearColor:function(e,t,n,r,a){e.clearColor(t,n,r,a)},createProgram:function(e){return e.createProgram()},createShader:function(e,t){return e.createShader(t)},attachShader:function(e,t,n){e.attachShader(t,n)},deleteShader:function(e,t){e.deleteShader(t)},shaderSource:function(e,t,n){e.shaderSource(t,"#version 100 \n precision highp float; \n"+n)},compileShader:function(e,t){e.compileShader(t)},linkProgram:function(e,t){e.linkProgram(t)},useProgram:function(e,t){e.useProgram(t)},createBuffer:function(e){return e.createBuffer()},bindBuffer:function(e,t,n){e.bindBuffer(t,n)},createTexture:function(e){return e.createTexture()},activeTexture:function(e,t){e.activeTexture(t)},bindTexture:function(e,t,n){e.bindTexture(t,n)},texParameteri:function(e,t,n,r){e.texParameteri(t,n,r)},createFramebuffer:function(e){return e.createFramebuffer()},bindFramebuffer:function(e,t,n){e.bindFramebuffer(t,n)},bindDefaultFramebuffer:function(e,t){e.bindFramebuffer(t,null)},framebufferTexture2D:function(e,t,n,r,a){e.framebufferTexture2D(t,n,r,a,0)},enable:function(e,t){e.enable(t)},disable:function(e,t){e.disable(t)},blendFunc:function(e,t,n){e.blendFunc(t,n)},Bigarray:{create:function(e,t){switch(e){case 0:return new Float64Array(t);case 1:return new Float32Array(t);case 2:return new Int16Array(t);case 3:return new Uint16Array(t);case 4:return new Int8Array(t);case 5:case 6:return new Uint8Array(t);case 8:throw{RE_EXN_ID:"Assert_failure",_1:["reasongl_web.ml",538,22],Error:new Error};case 7:case 9:return new Int32Array(t)}},of_array:function(e,t){switch(e){case 0:return new Float64Array(t);case 1:return new Float32Array(t);case 2:return new Int16Array(t);case 3:return new Uint16Array(t);case 4:return new Int8Array(t);case 5:case 6:return new Uint8Array(t);case 8:throw{RE_EXN_ID:"Assert_failure",_1:["reasongl_web.ml",550,22],Error:new Error};case 7:case 9:return new Int32Array(t)}},dim:function(e){return e.length},blit:function(e,t){e.set(t)},unsafe_blit:function(e,t,n,r){t.set(e,n)},get:function(e,t){return e[t]},unsafe_get:function(e,t){return e[t]},set:function(e,t,n){e[t]=n},unsafe_set:function(e,t,n){e[t]=n},sub:function(e,t,n){return e.subarray(t,t+n|0)}},texSubImage2D:function(e,t,n,r,a,i,o,u,l,c){e.texSubImage2D(t,n,r,a,i,o,u,l,c)},readPixels_RGBA:function(e,t,n,r,a){var i=new Uint8Array(Math.imul(r,a)<<2);return e.readPixels(t,n,r,a,6408,5121,i),i},getImageWidth:function(e){return e.width},getImageHeight:function(e){return e.height},loadImage:function(e,t,n,r){var a=new Image;a.src=e,a.addEventListener("load",(function(e){return d(n,P(a))}))},loadImageFromMemory:function(e,t,n,r){var a=new Image;a.src="data:image/png;base64,"+btoa(e),a.addEventListener("load",(function(e){return d(n,P(a))}))},texImage2DWithImage:function(e,t,n,r){e.texImage2D(t,n,6408,6408,5121,r)},uniform1i:function(e,t,n){e.uniform1i(t,n)},uniform1f:function(e,t,n){e.uniform1f(t,n)},uniform2f:function(e,t,n,r){e.uniform2f(t,n,r)},uniform3f:function(e,t,n,r,a){e.uniform3f(t,n,r,a)},uniform4f:function(e,t,n,r,a,i){e.uniform4f(t,n,r,a,i)},texImage2D_RGBA:function(e,t,n,r,a,i,o){e.texImage2D(t,n,6408,r,a,i,6408,5121,o)},texImage2D_null:function(e,t,n,r,a){e.texImage2D(t,n,e.RGBA,r,a,0,e.RGBA,e.UNSIGNED_BYTE,null)},bufferData:function(e,t,n,r){e.bufferData(t,n,r)},viewport:function(e,t,n,r,a){e.viewport(t,n,r,a)},clear:function(e,t){e.clear(t)},getUniformLocation:function(e,t,n){return e.getUniformLocation(t,n)},getAttribLocation:function(e,t,n){return e.getAttribLocation(t,n)},enableVertexAttribArray:function(e,t){e.enableVertexAttribArray(t)},vertexAttribPointer:function(e,t,n,r,a,i,o){var u=!!a;e.vertexAttribPointer(t,n,r,u,i,o)},vertexAttribDivisor:function(e,t,n){e.vertexAttribDivisor(t,n)},Mat4:{to_array:function(e){return e},create:function(e){return a.create()},identity:function(e){a.identity(e)},translate:function(e,t,n){a.translate(e,t,n)},scale:function(e,t,n){a.scale(e,t,n)},rotate:function(e,t,n,r){a.rotate(e,t,n,r)},ortho:function(e,t,n,r,i,o,u){a.ortho(e,t,n,r,i,o,u)},perspective:function(e,t,n,r,i){a.perspective(e,t,n,r,i)},lookAt:function(e,t,n,r){a.lookAt(e,t,n,r)}},uniformMatrix4fv:function(e,t,n){e.uniformMatrix4fv(t,!1,n)},getProgramParameter:function(e,t,n){switch(n){case 0:return e.getProgramParameter(t,e.DELETE_STATUS)?1:0;case 1:return e.getProgramParameter(t,e.LINK_STATUS)?1:0;case 2:return e.getProgramParameter(t,e.VALIDATE_STATUS)?1:0}},getShaderParameter:function(e,t,n){switch(n){case 0:return e.getShaderParameter(t,e.DELETE_STATUS)?1:0;case 1:return e.getShaderParameter(t,e.COMPILE_STATUS)?1:0;case 2:return e.getShaderParameter(t,e.SHADER_TYPE)}},getShaderInfoLog:function(e,t){return e.getShaderInfoLog(t)},getProgramInfoLog:function(e,t){return e.getProgramInfoLog(t)},getShaderSource:function(e,t){return e.getShaderSource(t)},drawArrays:function(e,t,n,r){e.drawArrays(t,n,r)},drawElements:function(e,t,n,r,a){e.drawElements(t,n,r,a)},drawElementsInstanced:function(e,t,n,r,a,i){e.drawElementsInstanced(t,n,r,a,i)}};var wn,xn,En,kn,_n,Tn,Sn,Cn,Pn,Mn,Nn,In,Dn,Rn,An,On,zn,Ln,Fn,Bn,Wn,Vn,jn,$n,Un,Hn,Xn,Qn,qn,Kn,Yn,Gn=(wn={compare:_},xn=function(e){return e?e.h:0},En=function(e,t,n){var r=e?e.h:0,a=n?n.h:0;return{l:e,v:t,r:n,h:r>=a?r+1|0:a+1|0}},kn=function(e,t,n){var r=e?e.h:0,a=n?n.h:0;if(r>(a+2|0)){if(e){var i=e.r,o=e.v,u=e.l;if(xn(u)>=xn(i))return En(u,o,En(i,t,n));if(i)return En(En(u,o,i.l),i.v,En(i.r,t,n));throw{RE_EXN_ID:"Invalid_argument",_1:"Set.bal",Error:new Error}}throw{RE_EXN_ID:"Invalid_argument",_1:"Set.bal",Error:new Error}}if(a<=(r+2|0))return{l:e,v:t,r:n,h:r>=a?r+1|0:a+1|0};if(n){var l=n.r,c=n.v,f=n.l;if(xn(l)>=xn(f))return En(En(e,t,f),c,l);if(f)return En(En(e,t,f.l),f.v,En(f.r,c,l));throw{RE_EXN_ID:"Invalid_argument",_1:"Set.bal",Error:new Error}}throw{RE_EXN_ID:"Invalid_argument",_1:"Set.bal",Error:new Error}},Sn=function(e,t){return t?kn(Sn(e,t.l),t.v,t.r):Tn(e)},Cn=function(e,t){return t?kn(t.l,t.v,Cn(e,t.r)):Tn(e)},Pn=function(e,t,n){if(!e)return Sn(t,n);if(!n)return Cn(t,e);var r=n.h,a=e.h;return a>(r+2|0)?kn(e.l,e.v,Pn(e.r,t,n)):r>(a+2|0)?kn(Pn(e,t,n.l),n.v,n.r):En(e,t,n)},Dn=function(e){if(e){var t=e.l;return t?kn(Dn(t),e.v,e.r):e.r}throw{RE_EXN_ID:"Invalid_argument",_1:"Set.remove_min_elt",Error:new Error}},Rn=function(e,t){return e?t?Pn(e,Mn(t),Dn(t)):e:t},zn=function(e,t){if(!e)return t;if(!t)return e;var n=t.h,r=t.v,a=e.h,i=e.v;if(a>=n){if(1===n)return _n(r,e);var o=An(i,t);return Pn(zn(e.l,o[0]),i,zn(e.r,o[2]))}if(1===a)return _n(i,t);var u=An(r,e);return Pn(zn(u[0],t.l),r,zn(u[2],t.r))},Bn=function(e,t){for(;;){var n=t,r=e;if(!r)return n;t={_0:r.v,_1:r.r,_2:n},e=r.l}},Kn=function(e,t){for(;;){var n=t,r=e;if(!n)return r;t=n.l,e={hd:n.v,tl:Kn(r,n.r)}}},Yn=function(e,t){if(!t)return 0;var n=t.r,r=t.v,a=t.l,i=Yn(e,a),o=d(e,r),u=Yn(e,n);return a===i&&r===o&&n===u?t:(0===i||h(wn.compare,In(i),o)<0)&&(0===u||h(wn.compare,o,Mn(u))<0)?Pn(i,o,u):zn(i,_n(o,u))},{empty:0,is_empty:function(e){return!e},mem:function(e,t){for(;;){var n=t;if(!n)return!1;var r=h(wn.compare,e,n.v);if(0===r)return!0;t=r<0?n.l:n.r}},add:_n=function(e,t){if(!t)return{l:0,v:e,r:0,h:1};var n=t.r,r=t.v,a=t.l,i=h(wn.compare,e,r);if(0===i)return t;if(i<0){var o=_n(e,a);return a===o?t:kn(o,r,n)}var u=_n(e,n);return n===u?t:kn(a,r,u)},singleton:Tn=function(e){return{l:0,v:e,r:0,h:1}},remove:On=function(e,t){if(!t)return 0;var n=t.r,r=t.v,a=t.l,i=h(wn.compare,e,r);if(0===i)return a?n?kn(a,Mn(n),Dn(n)):a:n;if(i<0){var o=On(e,a);return a===o?t:kn(o,r,n)}var u=On(e,n);return n===u?t:kn(a,r,u)},union:zn,inter:Ln=function(e,t){if(!e)return 0;if(!t)return 0;var n=e.r,r=e.v,a=e.l,i=An(r,t),o=i[0];return i[1]?Pn(Ln(a,o),r,Ln(n,i[2])):Rn(Ln(a,o),Ln(n,i[2]))},diff:Fn=function(e,t){if(!e)return 0;if(!t)return e;var n=e.r,r=e.v,a=e.l,i=An(r,t),o=i[0];return i[1]?Rn(Fn(a,o),Fn(n,i[2])):Pn(Fn(a,o),r,Fn(n,i[2]))},compare:Wn=function(e,t){for(var n=Bn(e,0),r=Bn(t,0);;){var a=r,i=n;if(!i)return a?-1:0;if(!a)return 1;var o=h(wn.compare,i._0,a._0);if(0!==o)return o;r=Bn(a._1,a._2),n=Bn(i._1,i._2)}},equal:function(e,t){return 0===Wn(e,t)},subset:Vn=function(e,t){for(;;){var n=t,r=e;if(!r)return!0;if(!n)return!1;var a=n.r,i=n.l,o=r.r,u=r.v,l=r.l,c=h(wn.compare,u,n.v);if(0!==c)if(c<0){if(!Vn({l:l,v:u,r:0,h:0},i))return!1;e=o}else{if(!Vn({l:0,v:u,r:o,h:0},a))return!1;e=l}else{if(!Vn(l,i))return!1;t=a,e=o}}},iter:jn=function(e,t){for(;;){var n=t;if(!n)return;jn(e,n.l),d(e,n.v),t=n.r}},map:Yn,fold:$n=function(e,t,n){for(;;){var r=n,a=t;if(!a)return r;n=h(e,a.v,$n(e,a.l,r)),t=a.r}},for_all:Un=function(e,t){for(;;){var n=t;if(!n)return!0;if(!d(e,n.v))return!1;if(!Un(e,n.l))return!1;t=n.r}},exists:Hn=function(e,t){for(;;){var n=t;if(!n)return!1;if(d(e,n.v))return!0;if(Hn(e,n.l))return!0;t=n.r}},filter:Xn=function(e,t){if(!t)return 0;var n=t.r,r=t.v,a=t.l,i=Xn(e,a),o=d(e,r),u=Xn(e,n);return o?a===i&&n===u?t:Pn(i,r,u):Rn(i,u)},partition:Qn=function(e,t){if(!t)return[0,0];var n=t.v,r=Qn(e,t.l),a=r[1],i=r[0],o=d(e,n),u=Qn(e,t.r),l=u[1],c=u[0];return o?[Pn(i,n,c),Rn(a,l)]:[Rn(i,c),Pn(a,n,l)]},cardinal:qn=function(e){return e?(qn(e.l)+1|0)+qn(e.r)|0:0},elements:function(e){return Kn(0,e)},min_elt:Mn=function(e){for(;;){var t=e;if(!t)throw{RE_EXN_ID:"Not_found",Error:new Error};var n=t.l;if(!n)return t.v;e=n}},min_elt_opt:Nn=function(e){for(;;){var t=e;if(!t)return;var n=t.l;if(!n)return P(t.v);e=n}},max_elt:In=function(e){for(;;){var t=e;if(!t)throw{RE_EXN_ID:"Not_found",Error:new Error};var n=t.r;if(!n)return t.v;e=n}},max_elt_opt:function(e){for(;;){var t=e;if(!t)return;var n=t.r;if(!n)return P(t.v);e=n}},choose:Mn,choose_opt:Nn,split:An=function(e,t){if(!t)return[0,!1,0];var n=t.r,r=t.v,a=t.l,i=h(wn.compare,e,r);if(0===i)return[a,!0,n];if(i<0){var o=An(e,a);return[o[0],o[1],Pn(o[2],r,n)]}var u=An(e,n);return[Pn(a,r,u[0]),u[1],u[2]]},find:function(e,t){for(;;){var n=t;if(!n)throw{RE_EXN_ID:"Not_found",Error:new Error};var r=n.v,a=h(wn.compare,e,r);if(0===a)return r;t=a<0?n.l:n.r}},find_opt:function(e,t){for(;;){var n=t;if(!n)return;var r=n.v,a=h(wn.compare,e,r);if(0===a)return P(r);t=a<0?n.l:n.r}},find_first:function(e,t){for(;;){var n=t;if(!n)throw{RE_EXN_ID:"Not_found",Error:new Error};var r=n.v;if(d(e,r))for(var a=r,i=n.l;;){var o=i;if(!o)return a;var u=o.v;d(e,u)?(i=o.l,a=u):i=o.r}t=n.r}},find_first_opt:function(e,t){for(;;){var n=t;if(!n)return;var r=n.v;if(d(e,r))for(var a=r,i=n.l;;){var o=i;if(!o)return P(a);var u=o.v;d(e,u)?(i=o.l,a=u):i=o.r}t=n.r}},find_last:function(e,t){for(;;){var n=t;if(!n)throw{RE_EXN_ID:"Not_found",Error:new Error};var r=n.v;if(d(e,r))for(var a=r,i=n.r;;){var o=i;if(!o)return a;var u=o.v;d(e,u)?(i=o.r,a=u):i=o.l}t=n.l}},find_last_opt:function(e,t){for(;;){var n=t;if(!n)return;var r=n.v;if(d(e,r))for(var a=r,i=n.r;;){var o=i;if(!o)return P(a);var u=o.v;d(e,u)?(i=o.r,a=u):i=o.l}t=n.l}},of_list:function(e){if(!e)return 0;var t=e.tl,n=e.hd;if(!t)return Tn(n);var r=t.tl,a=t.hd;if(!r)return _n(a,Tn(n));var i=r.tl,o=r.hd;if(!i)return _n(o,_n(a,Tn(n)));var u=i.tl,l=i.hd;if(u){if(u.tl){var c=function(e,t){var n=function(t,n){if(2!==t){if(3===t&&n){var a=n.tl;if(a){var i=a.tl;if(i){var o=i.hd,u=a.hd,l=n.hd,c=h(e,l,u);if(0===c){var f=h(e,u,o);return 0===f?{hd:u,tl:0}:f<0?{hd:u,tl:{hd:o,tl:0}}:{hd:o,tl:{hd:u,tl:0}}}if(c<0){var s=h(e,u,o);if(0===s)return{hd:l,tl:{hd:u,tl:0}};if(s<0)return{hd:l,tl:{hd:u,tl:{hd:o,tl:0}}};var d=h(e,l,o);return 0===d?{hd:l,tl:{hd:u,tl:0}}:d<0?{hd:l,tl:{hd:o,tl:{hd:u,tl:0}}}:{hd:o,tl:{hd:l,tl:{hd:u,tl:0}}}}var p=h(e,l,o);if(0===p)return{hd:u,tl:{hd:l,tl:0}};if(p<0)return{hd:u,tl:{hd:l,tl:{hd:o,tl:0}}};var v=h(e,u,o);return 0===v?{hd:u,tl:{hd:l,tl:0}}:v<0?{hd:u,tl:{hd:o,tl:{hd:l,tl:0}}}:{hd:o,tl:{hd:u,tl:{hd:l,tl:0}}}}}}}else if(n){var m=n.tl;if(m){var g=m.hd,y=n.hd,b=h(e,y,g);return 0===b?{hd:y,tl:0}:b<0?{hd:y,tl:{hd:g,tl:0}}:{hd:g,tl:{hd:y,tl:0}}}}for(var w=t>>1,x=t-w|0,E=gt(w,n),k=r(w,n),_=r(x,E),T=0;;){var S=T,C=_,P=k;if(!P)return vt(C,S);if(!C)return vt(P,S);var M=C.tl,N=C.hd,I=P.tl,D=P.hd,R=h(e,D,N);0!==R?R>0?(T={hd:D,tl:S},k=I):(T={hd:N,tl:S},_=M):(T={hd:D,tl:S},_=M,k=I)}},r=function(t,r){if(2!==t){if(3===t&&r){var a=r.tl;if(a){var i=a.tl;if(i){var o=i.hd,u=a.hd,l=r.hd,c=h(e,l,u);if(0===c){var f=h(e,u,o);return 0===f?{hd:u,tl:0}:f>0?{hd:u,tl:{hd:o,tl:0}}:{hd:o,tl:{hd:u,tl:0}}}if(c>0){var s=h(e,u,o);if(0===s)return{hd:l,tl:{hd:u,tl:0}};if(s>0)return{hd:l,tl:{hd:u,tl:{hd:o,tl:0}}};var d=h(e,l,o);return 0===d?{hd:l,tl:{hd:u,tl:0}}:d>0?{hd:l,tl:{hd:o,tl:{hd:u,tl:0}}}:{hd:o,tl:{hd:l,tl:{hd:u,tl:0}}}}var p=h(e,l,o);if(0===p)return{hd:u,tl:{hd:l,tl:0}};if(p>0)return{hd:u,tl:{hd:l,tl:{hd:o,tl:0}}};var v=h(e,u,o);return 0===v?{hd:u,tl:{hd:l,tl:0}}:v>0?{hd:u,tl:{hd:o,tl:{hd:l,tl:0}}}:{hd:o,tl:{hd:u,tl:{hd:l,tl:0}}}}}}}else if(r){var m=r.tl;if(m){var g=m.hd,y=r.hd,b=h(e,y,g);return 0===b?{hd:y,tl:0}:b>0?{hd:y,tl:{hd:g,tl:0}}:{hd:g,tl:{hd:y,tl:0}}}}for(var w=t>>1,x=t-w|0,E=gt(w,r),k=n(w,r),_=n(x,E),T=0;;){var S=T,C=_,P=k;if(!P)return vt(C,S);if(!C)return vt(P,S);var M=C.tl,N=C.hd,I=P.tl,D=P.hd,R=h(e,D,N);0!==R?R<0?(T={hd:D,tl:S},k=I):(T={hd:N,tl:S},_=M):(T={hd:D,tl:S},_=M,k=I)}},a=pt(t);return a<2?t:n(a,t)}(wn.compare,e),f=function(e,t){switch(e){case 0:return[0,t];case 1:if(t)return[{l:0,v:t.hd,r:0,h:1},t.tl];break;case 2:if(t){var n=t.tl;if(n)return[{l:{l:0,v:t.hd,r:0,h:1},v:n.hd,r:0,h:2},n.tl]}break;case 3:if(t){var r=t.tl;if(r){var a=r.tl;if(a)return[{l:{l:0,v:t.hd,r:0,h:1},v:r.hd,r:{l:0,v:a.hd,r:0,h:1},h:2},a.tl]}}}var i=e/2|0,o=f(i,t),u=o[1];if(u){var l=f((e-i|0)-1|0,u.tl);return[En(o[0],u.hd,l[0]),l[1]]}throw{RE_EXN_ID:"Assert_failure",_1:["set.ml",510,18],Error:new Error}};return f(pt(c),c)[0]}return _n(u.hd,_n(l,_n(o,_n(a,Tn(n)))))}return _n(l,_n(o,_n(a,Tn(n))))}});function Jn(e){var t=e[1],n=e[0];if(t<n.length)return pe(n,t)}function Zn(e){return[e[0],e[1]+1|0]}function er(e,t){var n=e[1],r=e[0];if((n+t|0)<r.length)return ve(r,n,t)}function tr(e,t){return[e[0],e[1]+t|0]}var nr={empty:0,peekch:Jn,popch:Zn,peekn:er,skipWhite:function(e){for(var t=e[0],n=t.length,r=e[1];;){var a=r;if(a>=n)return[t,a];if(32!==pe(t,a))return[t,a];r=a+1|0}},popn:tr,match_:function(e,t){var n=t.length,r=er(e,n);return void 0!==r?r===t?tr(e,n):Ie("Could not match '"+t+"', got '"+r+"' instead."):Ie("Could not match "+t)},charsRemaining:function(e){return e[0].length-e[1]|0},create:function(e){return[e,0]}};function rr(e,t){return e+be(1,t)}function ar(e,t){for(var n=[e,0],r="",a=0;;){var i=a,o=r,u=n,l=Jn(u);if(void 0===l)return mt({hd:o,tl:i});l!==t?(r=rr(o,l),n=Zn(u)):(a={hd:o,tl:i},r="",n=Zn(u))}}var ir=[1,0,0,0,1,0,0,0,1];function or(e,t){return l(t,0,c(e,0)),l(t,1,c(e,1)),l(t,2,c(e,2)),l(t,3,c(e,3)),l(t,4,c(e,4)),l(t,5,c(e,5)),l(t,6,c(e,6)),l(t,7,c(e,7)),l(t,8,c(e,8))}function ur(e,t){var n=t[1],r=t[0];return[r*c(e,0)+n*c(e,1)+c(e,2),r*c(e,3)+n*c(e,4)+c(e,5)]}function lr(e,t){if(0===t)throw{RE_EXN_ID:"Division_by_zero",Error:new Error};return e/t|0}var cr=4*Math.atan(1),fr=2*cr,sr={r:0,g:0,b:0,a:1},dr=fr;function hr(e,t,n){p(bn.$$Window.setWindowSize,e,n,t);var r=d(bn.$$Window.getContext,e);m(bn.viewport,r,-1,-1,n,t),m(bn.clearColor,r,0,0,0,1),h(bn.clear,r,16640);var a={projectionMatrix:d(bn.Mat4.create,void 0)},i=d(bn.createBuffer,r),o=d(bn.createBuffer,r),u=function(e,t,n){var r=h(bn.createShader,e,35633);if(bn.shaderSource(e,r,t),h(bn.compileShader,e,r),1===bn.getShaderParameter(e,r,1)){var a=h(bn.createShader,e,35632);if(bn.shaderSource(e,a,n),h(bn.compileShader,e,a),1===bn.getShaderParameter(e,a,1)){var i=d(bn.createProgram,e);return p(bn.attachShader,e,i,r),h(bn.deleteShader,e,r),p(bn.attachShader,e,i,a),h(bn.deleteShader,e,a),h(bn.linkProgram,e,i),1===bn.getProgramParameter(e,i,1)?P(i):void console.log("Linking error: "+h(bn.getProgramInfoLog,e,i))}console.log("Fragment shader error: "+h(bn.getShaderInfoLog,e,a))}else console.log("Vertex shader error: "+h(bn.getShaderInfoLog,e,r))}(r,"\n  attribute vec2 aVertexPosition;\n  attribute vec4 aVertexColor;\n  attribute vec2 aTextureCoord;\n\n  uniform mat4 uPMatrix;\n\n  varying vec4 vColor;\n  varying vec2 vTextureCoord;\n\n  void main(void) {\n    gl_Position = uPMatrix * vec4(aVertexPosition, 0.0, 1.0);\n    vColor = aVertexColor;\n    vTextureCoord = aTextureCoord;\n  }\n","\n  varying vec4 vColor;\n  varying vec2 vTextureCoord;\n\n  uniform sampler2D uSampler;\n\n  void main(void) {\n    gl_FragColor = texture2D(uSampler, vTextureCoord) * vColor;\n  }\n"),l=void 0!==u?M(u):Ie("Could not create the program and/or the shaders. Aborting.");h(bn.useProgram,r,l);var c=p(bn.getAttribLocation,r,l,"aVertexPosition");h(bn.enableVertexAttribArray,r,c);var f=p(bn.getAttribLocation,r,l,"aVertexColor");h(bn.enableVertexAttribArray,r,f);var s=p(bn.getUniformLocation,r,l,"uPMatrix");bn.uniformMatrix4fv(r,s,a.projectionMatrix);var y=p(bn.getAttribLocation,r,l,"aTextureCoord");h(bn.enableVertexAttribArray,r,y);var b=d(bn.createTexture,r);h(bn.activeTexture,r,33984),p(bn.bindTexture,r,3553,b);var w=p(bn.getUniformLocation,r,l,"uSampler");return bn.texImage2D_RGBA(r,3553,0,1,1,0,h(bn.Bigarray.of_array,5,[255,255,255,255])),v(bn.texParameteri,r,3553,10240,9729),v(bn.texParameteri,r,3553,10241,9985),h(bn.enable,r,3042),p(bn.blendFunc,r,770,771),g(bn.Mat4.ortho,a.projectionMatrix,0,n,t,0,0,1),{camera:a,window:e,gl:r,vertexBuffer:i,elementBuffer:o,aVertexColor:f,aTextureCoord:y,aVertexPosition:c,pMatrixUniform:s,uSampler:w,batch:{vertexArray:h(bn.Bigarray.create,1,Math.imul(6e4,8)),elementArray:h(bn.Bigarray.create,3,6e4),vertexPtr:0,elementPtr:0,currTex:void 0,nullTex:b},keyboard:{keyCode:66,pressed:Gn.empty,released:Gn.empty,down:Gn.empty},mouse:{pos:[0,0],prevPos:[0,0],pressed:!1},style:{strokeColor:void 0,strokeWeight:3,strokeCap:0,fillColor:{r:0,g:0,b:0,a:1},tintColor:void 0,rectMode:0},styleStack:0,frame:{count:1,rate:10,deltaTime:.001},matrix:[1,0,0,0,1,0,0,0,1],matrixStack:0,size:{height:t,width:n,resizeable:!0}}}function pr(e,t,n,r,a,i){return p(bn.bindBuffer,i.gl,34962,i.vertexBuffer),v(bn.bufferData,i.gl,34962,e,35040),bn.vertexAttribPointer(i.gl,i.aVertexPosition,2,5126,!1,32,0),bn.vertexAttribPointer(i.gl,i.aVertexColor,4,5126,!1,32,8),bn.vertexAttribPointer(i.gl,i.aTextureCoord,2,5126,!1,32,24),p(bn.uniform1i,i.gl,i.uSampler,0),p(bn.bindBuffer,i.gl,34963,i.elementBuffer),v(bn.bufferData,i.gl,34963,t,35040),p(bn.bindTexture,i.gl,3553,a),m(bn.drawElements,i.gl,n,r,5123,0)}function vr(e){if(!(e.batch.elementPtr<=0)){var t=e.batch.currTex,n=void 0!==t?M(t):e.batch.nullTex;pr(p(bn.Bigarray.sub,e.batch.vertexArray,0,e.batch.vertexPtr),p(bn.Bigarray.sub,e.batch.elementArray,0,e.batch.elementPtr),4,e.batch.elementPtr,n,e),e.batch.currTex=void 0,e.batch.vertexPtr=0,e.batch.elementPtr=0}}function mr(e,t,n,r){if((r.batch.elementPtr+t|0)>=6e4||(r.batch.vertexPtr+n|0)>=6e4||r.batch.elementPtr>0&&r.batch.currTex!==e)return vr(r)}function gr(e,t,n,r,a,i){var o=i.a,u=i.b,l=i.g,c=i.r;mr(void 0,6,32,e);var f=bn.Bigarray.set,s=e.batch.vertexPtr,d=e.batch.vertexArray;p(f,d,s+0|0,t[0]),p(f,d,s+1|0,t[1]),p(f,d,s+2|0,c),p(f,d,s+3|0,l),p(f,d,s+4|0,u),p(f,d,s+5|0,o),p(f,d,s+6|0,0),p(f,d,s+7|0,0),p(f,d,s+8|0,n[0]),p(f,d,s+9|0,n[1]),p(f,d,s+10|0,c),p(f,d,s+11|0,l),p(f,d,s+12|0,u),p(f,d,s+13|0,o),p(f,d,s+14|0,0),p(f,d,s+15|0,0),p(f,d,s+16|0,r[0]),p(f,d,s+17|0,r[1]),p(f,d,s+18|0,c),p(f,d,s+19|0,l),p(f,d,s+20|0,u),p(f,d,s+21|0,o),p(f,d,s+22|0,0),p(f,d,s+23|0,0),p(f,d,s+24|0,a[0]),p(f,d,s+25|0,a[1]),p(f,d,s+26|0,c),p(f,d,s+27|0,l),p(f,d,s+28|0,u),p(f,d,s+29|0,o),p(f,d,s+30|0,0),p(f,d,s+31|0,0);var h=lr(s,8),v=e.batch.elementPtr,m=e.batch.elementArray;p(f,m,v+0|0,h),p(f,m,v+1|0,h+1|0),p(f,m,v+2|0,h+2|0),p(f,m,v+3|0,h+1|0),p(f,m,v+4|0,h+2|0),p(f,m,v+5|0,h+3|0),e.batch.vertexPtr=s+32|0,e.batch.elementPtr=v+6|0}function yr(e,t,n,r,a,i,o){var u=t[1],l=t[0],c=e[1],f=e[0],s=l-f,d=u-c,h=Math.sqrt(s*s+d*d),p=a/2,v=d/h*p,m=-s/h*p,g=i?[s/h*p,v]:[0,0],y=g[1],b=g[0],w=f+v-b,x=c+m-y,E=l-v+b,k=u-m+y,_=f-v-b,T=c-m-y;return gr(o,ur(n,[l+v+b,u+m+y]),ur(n,[w,x]),ur(n,[E,k]),ur(n,[_,T]),r)}function br(e,t,n,r,a,i,o,u,l){var c=l.a,f=l.b,s=l.g,d=l.r,v=t[1],m=t[0],g=10+((n+r|0)/2|0)|0;mr(void 0,Math.imul(3,g),Math.imul(8,g+3|0),e);for(var y=i<a?[i,a]:[a,i],b=y[1],w=y[0],k=2*(4*Math.atan(1))/g,_=e.batch.vertexArray,T=e.batch.elementArray,S=bn.Bigarray.set,C=bn.Bigarray.get,P=e.batch.vertexPtr,M=e.batch.elementPtr,N=o?(w/k|0)-3|0:(w/k|0)-2|0,I=1+(b/k|0)|0,D=N;D<=I;++D){var R;if(o&&0==(D-N|0))R=[m,v];else{var A=E(x(k*(D+1|0),b),w);R=[m+Math.cos(A)*n,v+Math.sin(A)*r]}var O=ur(u,R),z=Math.imul(D-N|0,8)+P|0;if(p(S,_,z+0|0,O[0]),p(S,_,z+1|0,O[1]),p(S,_,z+2|0,d),p(S,_,z+3|0,s),p(S,_,z+4|0,f),p(S,_,z+5|0,c),p(S,_,z+6|0,0),p(S,_,z+7|0,0),(D-N|0)<3)p(S,T,(D-N|0)+M|0,lr(z,8));else{var L=3+(Math.imul((D-N|0)-3|0,3)+M|0)|0;p(S,T,L,lr(P,8)),p(S,T,L+1|0,h(C,T,L-1|0)),p(S,T,L+2|0,lr(z,8))}}e.batch.vertexPtr=e.batch.vertexPtr+Math.imul(g+3|0,8)|0,e.batch.elementPtr=3+(e.batch.elementPtr+Math.imul((I-N|0)-3|0,3)|0)|0}function wr(e,t,n,r,a,i){return br(e,t,n,r,0,dr,!1,a,i)}function xr(e,t,n){var r={glData:void 0,drawnTo:!1};return bn.loadImage(t,4,(function(a){if(void 0===a)return Ie("Could not load image '"+t+"'.");var i=M(a),o=e.gl,u=d(bn.createTexture,o),l=d(bn.getImageHeight,i),c=d(bn.getImageWidth,i),f=n?9728:9729;return r.glData={framebuffer:void 0,texture:u,height:l,width:c},p(bn.bindTexture,o,3553,u),bn.texImage2DWithImage(o,3553,0,i),v(bn.texParameteri,o,3553,10240,f),v(bn.texParameteri,o,3553,10241,f),v(bn.texParameteri,o,3553,10242,33071),v(bn.texParameteri,o,3553,10243,33071)}),void 0),r}function Er(e,t,n){var r={glData:void 0,drawnTo:!1};return bn.loadImageFromMemory(t,4,(function(t){if(void 0===t)return Ie("Could not load image");var a=M(t),i=d(bn.createTexture,e.gl),o=d(bn.getImageHeight,a),u=d(bn.getImageWidth,a),l=n?9728:9729;return r.glData={framebuffer:void 0,texture:i,height:o,width:u},p(bn.bindTexture,e.gl,3553,i),bn.texImage2DWithImage(e.gl,3553,0,a),v(bn.texParameteri,e.gl,3553,10240,l),v(bn.texParameteri,e.gl,3553,10241,l),v(bn.texParameteri,e.gl,3553,10242,33071),v(bn.texParameteri,e.gl,3553,10243,33071)}),void 0),r}function kr(e,t,n,r,a,i,o,u,l,c){var f=c.matrix,s=function(e){return ur(f,e)};return function(e,t,n,r,a,i,o,u,l,c){var f=e.width,s=e.height,d=e.texture,h=c.style.tintColor,v=void 0!==h?h:{r:1,g:1,b:1,a:1},m=v.a,g=v.b,y=v.g,b=v.r;mr(P(d),6,32,c);var w=i/f,x=o/s,E=u/f,k=l/s,_=bn.Bigarray.set,T=c.batch.vertexPtr,S=c.batch.vertexArray;p(_,S,T+0|0,t[0]),p(_,S,T+1|0,t[1]),p(_,S,T+2|0,b),p(_,S,T+3|0,y),p(_,S,T+4|0,g),p(_,S,T+5|0,m),p(_,S,T+6|0,w+E),p(_,S,T+7|0,x+k),p(_,S,T+8|0,n[0]),p(_,S,T+9|0,n[1]),p(_,S,T+10|0,b),p(_,S,T+11|0,y),p(_,S,T+12|0,g),p(_,S,T+13|0,m),p(_,S,T+14|0,w),p(_,S,T+15|0,x+k),p(_,S,T+16|0,r[0]),p(_,S,T+17|0,r[1]),p(_,S,T+18|0,b),p(_,S,T+19|0,y),p(_,S,T+20|0,g),p(_,S,T+21|0,m),p(_,S,T+22|0,w+E),p(_,S,T+23|0,x),p(_,S,T+24|0,a[0]),p(_,S,T+25|0,a[1]),p(_,S,T+26|0,b),p(_,S,T+27|0,y),p(_,S,T+28|0,g),p(_,S,T+29|0,m),p(_,S,T+30|0,w),p(_,S,T+31|0,x);var C=c.batch.elementPtr,M=c.batch.elementArray;p(_,M,C,lr(T,8)),p(_,M,C+1|0,lr(T,8)+1|0),p(_,M,C+2|0,lr(T,8)+2|0),p(_,M,C+3|0,lr(T,8)+1|0),p(_,M,C+4|0,lr(T,8)+2|0),p(_,M,C+5|0,lr(T,8)+3|0),c.batch.vertexPtr=T+32|0,c.batch.elementPtr=C+6|0,c.batch.currTex=P(d)}(e,d(s,[t+r,n+a]),d(s,[t,n+a]),d(s,[t+r,n]),d(s,[t,n]),i,o,u,l,c)}function _r(e,t,n){e.size.width=t,e.size.height=n;var r=d(bn.$$Window.getPixelWidth,e.window),a=d(bn.$$Window.getPixelHeight,e.window);return m(bn.viewport,e.gl,0,0,r,a),m(bn.clearColor,e.gl,0,0,0,1),g(bn.Mat4.ortho,e.camera.projectionMatrix,0,t,n,0,0,1),bn.uniformMatrix4fv(e.gl,e.pMatrixUniform,e.camera.projectionMatrix)}function Tr(e){return e.size.width}function Sr(e){return e.size.height}function Cr(e,t,n){return p(bn.$$Window.setWindowSize,n.window,e,t),_r(n,e,t)}function Pr(e){var t=function(e){return e?e.h:0},n=function(e,n,r,a){var i=t(e),o=t(a);return{l:e,v:n,d:r,r:a,h:i>=o?i+1|0:o+1|0}},r=function(e,t){return{l:0,v:e,d:t,r:0,h:1}},a=function(e,r,a,i){var o=e?e.h:0,u=i?i.h:0;if(o>(u+2|0)){if(e){var l=e.r,c=e.d,f=e.v,s=e.l;if(t(s)>=t(l))return n(s,f,c,n(l,r,a,i));if(l)return n(n(s,f,c,l.l),l.v,l.d,n(l.r,r,a,i));throw{RE_EXN_ID:"Invalid_argument",_1:"Map.bal",Error:new Error}}throw{RE_EXN_ID:"Invalid_argument",_1:"Map.bal",Error:new Error}}if(u<=(o+2|0))return{l:e,v:r,d:a,r:i,h:o>=u?o+1|0:u+1|0};if(i){var d=i.r,h=i.d,p=i.v,v=i.l;if(t(d)>=t(v))return n(n(e,r,a,v),p,h,d);if(v)return n(n(e,r,a,v.l),v.v,v.d,n(v.r,p,h,d));throw{RE_EXN_ID:"Invalid_argument",_1:"Map.bal",Error:new Error}}throw{RE_EXN_ID:"Invalid_argument",_1:"Map.bal",Error:new Error}},i=function(t,n,r){if(!r)return{l:0,v:t,d:n,r:0,h:1};var o=r.r,u=r.d,l=r.v,c=r.l,f=h(e.compare,t,l);if(0===f)return u===n?r:{l:c,v:t,d:n,r:o,h:r.h};if(f<0){var s=i(t,n,c);return c===s?r:a(s,l,u,o)}var d=i(t,n,o);return o===d?r:a(c,l,u,d)},o=function(e){for(;;){var t=e;if(!t)throw{RE_EXN_ID:"Not_found",Error:new Error};var n=t.l;if(!n)return[t.v,t.d];e=n}},u=function(e){for(;;){var t=e;if(!t)return;var n=t.l;if(!n)return[t.v,t.d];e=n}},l=function(e){if(e){var t=e.l;return t?a(l(t),e.v,e.d,e.r):e.r}throw{RE_EXN_ID:"Invalid_argument",_1:"Map.remove_min_elt",Error:new Error}},c=function(e,t){if(!e)return t;if(!t)return e;var n=o(t);return a(e,n[0],n[1],l(t))},f=function(t,n){if(!n)return 0;var r=n.r,i=n.d,o=n.v,u=n.l,l=h(e.compare,t,o);if(0===l)return c(u,r);if(l<0){var s=f(t,u);return u===s?n:a(s,o,i,r)}var d=f(t,r);return r===d?n:a(u,o,i,d)},s=function(t,n,r){if(r){var i=r.r,o=r.d,u=r.v,l=r.l,f=h(e.compare,t,u);if(0===f){var p=d(n,P(o));if(void 0===p)return c(l,i);var v=M(p);return o===v?r:{l:l,v:t,d:v,r:i,h:r.h}}if(f<0){var m=s(t,n,l);return l===m?r:a(m,u,o,i)}var g=s(t,n,i);return i===g?r:a(l,u,o,g)}var y=d(n,void 0);return void 0!==y?{l:0,v:t,d:M(y),r:0,h:1}:0},v=function(e,t){for(;;){var n=t;if(!n)return;v(e,n.l),h(e,n.v,n.d),t=n.r}},m=function(e,t){if(!t)return 0;var n=m(e,t.l),r=d(e,t.d),a=m(e,t.r);return{l:n,v:t.v,d:r,r:a,h:t.h}},g=function(e,t){if(!t)return 0;var n=t.v;return{l:g(e,t.l),v:n,d:h(e,n,t.d),r:g(e,t.r),h:t.h}},y=function(e,t,n){for(;;){var r=n,a=t;if(!a)return r;n=p(e,a.v,a.d,y(e,a.l,r)),t=a.r}},b=function(e,t){for(;;){var n=t;if(!n)return!0;if(!h(e,n.v,n.d))return!1;if(!b(e,n.l))return!1;t=n.r}},w=function(e,t){for(;;){var n=t;if(!n)return!1;if(h(e,n.v,n.d))return!0;if(w(e,n.l))return!0;t=n.r}},x=function(e,t,n){return n?a(x(e,t,n.l),n.v,n.d,n.r):r(e,t)},E=function(e,t,n){return n?a(n.l,n.v,n.d,E(e,t,n.r)):r(e,t)},k=function(e,t,r,i){if(!e)return x(t,r,i);if(!i)return E(t,r,e);var o=i.h,u=e.h;return u>(o+2|0)?a(e.l,e.v,e.d,k(e.r,t,r,i)):o>(u+2|0)?a(k(e,t,r,i.l),i.v,i.d,i.r):n(e,t,r,i)},_=function(e,t){if(!e)return t;if(!t)return e;var n=o(t);return k(e,n[0],n[1],l(t))},T=function(e,t,n,r){return void 0!==n?k(e,t,M(n),r):_(e,r)},S=function(t,n){if(!n)return[0,void 0,0];var r=n.r,a=n.d,i=n.v,o=n.l,u=h(e.compare,t,i);if(0===u)return[o,P(a),r];if(u<0){var l=S(t,o);return[l[0],l[1],k(l[2],i,a,r)]}var c=S(t,r);return[k(o,i,a,c[0]),c[1],c[2]]},C=function(e,n,r){if(n){var a=n.v;if(n.h>=t(r)){var i=S(a,r);return T(C(e,n.l,i[0]),a,p(e,a,P(n.d),i[1]),C(e,n.r,i[2]))}}else if(!r)return 0;if(r){var o=r.v,u=S(o,n);return T(C(e,u[0],r.l),o,p(e,o,u[1],P(r.d)),C(e,u[2],r.r))}throw{RE_EXN_ID:"Assert_failure",_1:["map.ml",393,10],Error:new Error}},N=function(e,t,n){if(!t)return n;if(!n)return t;var r=n.d,a=n.v,i=t.d,o=t.v;if(t.h>=n.h){var u=S(o,n),l=u[1],c=N(e,t.l,u[0]),f=N(e,t.r,u[2]);return void 0!==l?T(c,o,p(e,o,i,M(l)),f):k(c,o,i,f)}var s=S(a,t),d=s[1],h=N(e,s[0],n.l),v=N(e,s[2],n.r);return void 0!==d?T(h,a,p(e,a,M(d),r),v):k(h,a,r,v)},I=function(e,t){if(!t)return 0;var n=t.r,r=t.d,a=t.v,i=t.l,o=I(e,i),u=h(e,a,r),l=I(e,n);return u?i===o&&n===l?t:k(o,a,r,l):_(o,l)},D=function(e,t){if(!t)return[0,0];var n=t.d,r=t.v,a=D(e,t.l),i=a[1],o=a[0],u=h(e,r,n),l=D(e,t.r),c=l[1],f=l[0];return u?[k(o,r,n,f),_(i,c)]:[_(o,f),k(i,r,n,c)]},R=function(e,t){for(;;){var n=t,r=e;if(!r)return n;t={_0:r.v,_1:r.d,_2:r.r,_3:n},e=r.l}},A=function(e){return e?(A(e.l)+1|0)+A(e.r)|0:0},O=function(e,t){for(;;){var n=t,r=e;if(!n)return r;t=n.l,e={hd:[n.v,n.d],tl:O(r,n.r)}}};return{empty:0,is_empty:function(e){return!e},mem:function(t,n){for(;;){var r=n;if(!r)return!1;var a=h(e.compare,t,r.v);if(0===a)return!0;n=a<0?r.l:r.r}},add:i,update:s,singleton:r,remove:f,merge:C,union:N,compare:function(t,n,r){for(var a=R(n,0),i=R(r,0);;){var o=i,u=a;if(!u)return o?-1:0;if(!o)return 1;var l=h(e.compare,u._0,o._0);if(0!==l)return l;var c=h(t,u._1,o._1);if(0!==c)return c;i=R(o._2,o._3),a=R(u._2,u._3)}},equal:function(t,n,r){for(var a=R(n,0),i=R(r,0);;){var o=i,u=a;if(!u)return!o;if(!o)return!1;if(0!==h(e.compare,u._0,o._0))return!1;if(!h(t,u._1,o._1))return!1;i=R(o._2,o._3),a=R(u._2,u._3)}},iter:v,fold:y,for_all:b,exists:w,filter:I,partition:D,cardinal:A,bindings:function(e){return O(0,e)},min_binding:o,min_binding_opt:u,max_binding:function(e){for(;;){var t=e;if(!t)throw{RE_EXN_ID:"Not_found",Error:new Error};var n=t.r;if(!n)return[t.v,t.d];e=n}},max_binding_opt:function(e){for(;;){var t=e;if(!t)return;var n=t.r;if(!n)return[t.v,t.d];e=n}},choose:o,choose_opt:u,split:S,find:function(t,n){for(;;){var r=n;if(!r)throw{RE_EXN_ID:"Not_found",Error:new Error};var a=h(e.compare,t,r.v);if(0===a)return r.d;n=a<0?r.l:r.r}},find_opt:function(t,n){for(;;){var r=n;if(!r)return;var a=h(e.compare,t,r.v);if(0===a)return P(r.d);n=a<0?r.l:r.r}},find_first:function(e,t){for(;;){var n=t;if(!n)throw{RE_EXN_ID:"Not_found",Error:new Error};var r=n.v;if(d(e,r))for(var a=r,i=n.d,o=n.l;;){var u=o;if(!u)return[a,i];var l=u.v;d(e,l)?(o=u.l,i=u.d,a=l):o=u.r}t=n.r}},find_first_opt:function(e,t){for(;;){var n=t;if(!n)return;var r=n.v;if(d(e,r))for(var a=r,i=n.d,o=n.l;;){var u=o;if(!u)return[a,i];var l=u.v;d(e,l)?(o=u.l,i=u.d,a=l):o=u.r}t=n.r}},find_last:function(e,t){for(;;){var n=t;if(!n)throw{RE_EXN_ID:"Not_found",Error:new Error};var r=n.v;if(d(e,r))for(var a=r,i=n.d,o=n.r;;){var u=o;if(!u)return[a,i];var l=u.v;d(e,l)?(o=u.r,i=u.d,a=l):o=u.l}t=n.l}},find_last_opt:function(e,t){for(;;){var n=t;if(!n)return;var r=n.v;if(d(e,r))for(var a=r,i=n.d,o=n.r;;){var u=o;if(!u)return[a,i];var l=u.v;d(e,l)?(o=u.r,i=u.d,a=l):o=u.l}t=n.l}},map:m,mapi:g}}var Mr='qlpÎ|M¥`@B·CðN1\0ø«|ä!â!Ê»´±ãçs¡x#%¥î¿ñ<«³0,T<À\v×Vs}\0h+÷úÆcÕRbÕY°®\0qãw*á*çXèÆ£ìÜyF°oOvÅ¶N¼.·ÂxMÈ2+vZv\fU#0Ú\0<\0p<Ûg­À{Z÷²Ì7:*SO\0×%\nS[ôâ*^\t\0>¯?SirÚ(½\v£5ÅCï¢x-t7%w?!\'RÒHi]Ç¹n¸n@,\0ïIàö +Vq?×\0üz¾ÚCÚÕÞ\b\0>ê¸Ò$õ¾\n`r\0°W«Ík\0\0¿<¬\0à6oÁ\0\0ð{ëÍ\0àE\0\0Àó®ãEúÜyåe\0+ò4\t)5CÍk}:yèþo6\0ÀBÄ÷5úÐç:&DHeZ\v>GìÆ.ß³=çû×zhÝ\0\0@Õlã¸>ô97Öå(HÞ!%¾pexDÇ\0@E,äþÝk}ngá\rì="ÀT%aC\rþÉHsÄ\rMYZ@ÎÕØ@ü"×@Äþ¾+Ñ\0  \0¸Öì\b(öH|®Ï¡aXuLÞ(£´¤5vÌßå;jN#%KÂï·Ê@a\0<¬Úó\0}<nè¨É,¸åµcâ~\tàaÀp§ ãXÄëNÂ\\FÂjûÅ|×3Þû\fÎÄOµþ\0\0@íï{µ÷ñ¸-ðY=Øó±D9b\0CÂçkÂá~¯fþ/Ùú¥zùWb¬¿À\0àºû+Rlì\n»Û}\\?C|£ÐÏ84µÙfßµö}DÜß\vßS+\b=¤ ¨Òãd¢¸ÐÐfK&ëo\0À<M±G¡{IÅõ\vüKòp[ºÊº#p³Ë\fÿr*JïmzSê³æaIeçH(øÉú\x000ûä\0°\n)öÀç\n÷¿?á\t¶þäcmÀÒ)ÏÑ.ÓýQÆD«J¾~Â°\0¶È{0\0°ì¾1·à«þj#«ÈV¶ÈÒ¥L4Æe®¥zÌ;æÞfÈhÕn«®é\0À\0±=áº\r\0Ûçv;²ÒE\v*Å®¸Æ­ m¢1VÌR?õ¦%ê@×÷ñg&<#Úl×ê<í\r\0ò\t·¿¼1/r5)Ë9Aü \v¬}±Óv|áSÎd§oÛLBªº:¹ko\0w#¸Æ`´ç:BÇ>q­\0\b\\^l)\'Çê^A+Xô®QVëüLWðÞöD÷»O°Þü2g(:pv¯c\vä@$^Ù¬xÜ¨­Ùs¡s§X/t3ï(@Ó*¬¶V`­f\\÷ós\rã1ùY\vq¼\b=Ðoöc/Íè³RÀ+#×Ô\0=óÞ\0 qõ¾°Ãm£ÅcâSz1Ü0ªõ\x003Î_4\0&¾øýªÈmr3òR~wÙ¬<n[³f<<(tôÎö;½ %ï0\0`âã:ñóÚsIÇ:¥0àÜA""iâ¬u¬ôâ¦´*SOwç]Ä(gýä¡ÇF\n\0L¼Çe¦¹RÓä;óBî\0ÓuåZ¸`(Å%ÑÄº½¡Uøì*\b³×÷²þ{àï`-\0^`áfÈkÎÕ\vÎ%áÇCK«\0!gOKí·Èæ=5\0°®èjtï©øB¯õçZÇ·Àó4\0¸£ÀbÂsµ÷2ÅýÅÖ\0\\\0M¹t(IÉÝÃ¡ôðÐ$Ö8Äóè³æÅî¢¬¨PO£>nçôÏ®Z\\··zmdÜVnôº¦h$®£V\0bK¼£Aq=;ÄmßÕÄ»5\0( «ïª@ò±X¤Õ×KzÚ}¿²åF4îÞÏÄ$ö*áyZæ>F!(µÄï¬BåÑV>Îh÷h!@Ä÷)¸&¶ä\n/êh®v£t¡c\0à\nÁD­Ç*Kê\vpÂÞw-LNbR\b®Ð¢»ÞjÆÈLD¨jIÀH+4VtPk\b7$I!Mø°CzÇáÝ\0­r\nVr®DÄ6öïw\nÛ{3Rº:ÏÖ\t\n )£m!½ëp{ÈB È<w×É7@òHÈEqõ¡´áP-\\îz8àwCG\0M\n/¹#¡âÎ5x^®¶~=VÈÜCíQ9wÌ®Ô³ßµ\tÄ·*ãsUÎÑ$Ô»@Öß`\0 ´²Ø½#vGÙ5EG!«ÛEçs¡×ë¨<\nÖ¬íø|JQæ¨Á¤vxªÈÏ}¤,(\fØh\v\nPb|¤!ÒúõnÀXÎ_RÎÄä6ÁóùR¶Ðð¹¥×J¯\0]á¯ Ï|¯`£ÁL&¾ìnx®]©ÈM!å÷ÅÒ>Zp\tñ\tgÍ9ÐÌA7fb]|\\ç:"@è\0ùôßéæg7\bdbr`ë;d<4»;üs}Àó°þëoòh ~[\bËJÇbÐÍõ7ùV©2%­´Ö#ÑvÁ¹[{¸!Ç\\\\ÓhÞ\0Øó9ÝüÅ\\oSÑö^WI\0ðuù¥29Ai{\'çj³¥\n§=\x008øª²Rw\nQµn»¯9$&3ÿ4\0ÐB«éÉMLTZ0¼¥;OìQ\0Røñ0W ¹þ&·ß4IynÅb}ßq@x<øêñZÆo¦{èÉMLÔñ»ëæJ2¿ør}Â³0\x000yVÿÜâÞO1\x000y¼¸qjç¸ó¸Z/TH\0×(ÄAüýÊäÕÓv\f\0L>V(BPwñ\0\0&\'%¸¸²ïiÛ\0&)f>¯yÅ\0ÀÄdÓ[ÜúÕ\0À\0ÀäsDÚ÷ßA>~\0òò?Þâù×µ Ò\0\0\0-tEXtSoftware\0by.blooddy.crypto.image.PNG24Encoder¨î\0\0\0\0IEND®B`',Nr="ÁNy%âc7ò)å17Ê$¼Eb©Ì;Øvà+D»(ÜÏ×\nå§bõ-´ñá\0ÐxºcÂéLÀ\0 Éæãðp¸ÖÕ\0à³NÅÂ1Sb\0 eÛóvÍö£@p»\0Üç\"IÐÕ`¤\0\0°1¶ßÛ©\x000C¹9#ÄY4\bð\0`PxpnQ%ó¾\0\0FåQ\v¼Äâ5\n\0à®irä¢xZª¿ß\0\0®0\tïÕ¬ÿ\0@nÑì=/B\0%&¹1ô\0\"îuv7\0@ëä\"*æ·rïåwàO»Çd sheÂòicf\x008ãóõ\n)ØM7\0{/#cýs<¿d£áµ§&­4ÐÂÖKÚ:s\0çð1À¿E¼Ã\vrÍó#=\0à&3ëÀÈQñÙ×g\np3üÞ1²²îfz!XHn\t\0Þ«¬¹¶¢rKmä¹Þ6RÜµúÇ Ô\nZ }ëÔD¹°|l­µÇk\f\0>%«\f\0nSþ-Ác\fîÒN,¹¦=e·>¬Ìá}¹Û§©j9in\tä&S¦Å*Þj\0Ì£àç3*Ï3\nîm&Ü{Òåô×v\b.È\vàH ÏÔ¡XÅÛ!/9Åé|w$¯\rè\"©=¼;0õ|o{ ¬0/à%\"-á¦Å\0»gJ:á%ÒE~:\0ôÌ»lºçX<ÉØ^[:¤\0É³é!½Êð®B +\0`#¼ß:¨g2¬`«x=\b(¼$\0@Uäôhb¡¡gqe)°/!SØúýÈ·4çæë\tñãÖfUB±hn~¿ÐÔ¡3ö+Q\t¸pGßj a8\0V5¾µ;ôûjhpr´&Ñ½\f\0\\%ð%sÀñcJÅØRBë\tDDð#¿»znX/c@ÉgÂ3ç?÷aò\"\0(±¸¯ÜÖ{Öô7ÏNp§ºøõ%¬#ÜéÐïoO°ñù\f\x002Ih6\0ï\t,GW^½øq^Z+\b=$9\te&SÝ{<ß¹U¨øý­\v)\0hvM8Ê2=ø¥\0 må>BÛMyR¾JÚêÉO\0É:r=*_85\0Ïc`¢Aûâ&âûO\0ªÔÙ$\r\0ºH\0pGÀúæþ_gé¹7gkÝ*;æFv÷\0Hj0È¥þ±ØËX¡E§D\r\0lÌß¹L®Õ|3ëÿ\0È­ü¥îIxî\t`&âXïe,\b\0K\0@'Ang$<:lµØÿf\0xºòkÀJíl6A|Wåÿ2èhOVUT®çÇaKûAF7Y9éÉGg]7À?\0ðýÅ$?+ð÷6¤pJfú-Bà\nuÙåÈ4ÄÿzàwH¸çfÊ3\0\\¥üx±Ô\0¦GÓVnW®\\\t}kàû\vªLyÊ_!<<¶ÿ}ª\nü¿D9·\x000·[IËhº\0°5Õüv7*ì¸îÂ½çâäòÔYPçÌp\t\\H¹áÏê§97\0\0ßQ*S¿¶¿º\0bÉ:´*§£Yì\\¨0fÊohz¹©9æ2DÀ~|,Ò§\0@qcxÜØÀüSÚQ=-W\0|¹ÔµRy¼ÐÚT÷:\x008çÚ/Pv¿'©b S\0 ¯¯ÅfÀ)ps\tTXac«-{ô,'p1\0l\bB¡@ç±s¤Ûz\0¤Î\fÌqÔçµ-ÕU\"\0Ê{¿]»%.\0R#XÐå\0°z8%BÅk`w\0¶xí\0 õs#ü®´¿Ó£M$½âÊ³ÐÐ\\þ\0\0MsC î\v\x004ûå>sV\t¹\0`\x009)7Î=e'¡ÿÊèÊÆ\rþîÅ \0ÔCHøM gâ½c\0{,¡=ÿY±°s\x001\0xd\0Ü¡\0Õ0\")rÉ©\b©Ôß¾1jÔ\bóêa\0\0È:·\0\0Å\rA¯0¢\bÚéÇÜ¹NwgbÜP¾àT&äÕ\0À\0@\0å6&pÆõJ Òyÿ¹a\n\0B«TDÊu__\0ãmMÆ¥5zB«u(,snÀÒe¦º'®íZ\0'¯1*ê\0Ükn\bSò[gæì<Ï>éãOÚcS,>\r\0Ôà~p<øâGÂÚ@Â1óädÜs½'ãa@ðLaÕèJ'\tzÑcÃ¨äÛA(g­\bI6âÙÌÇP\bgâ·Ï7MZ3VA¨°\"cÀlôÆÊ´<s^C<wç¢Çó,yÖJÊbÎ:¯{æZá³»ºÞrñGØcå\0j»©x<\0¸ç\b$m´Ñá¾ºfþTbÉ´\t+¼ëP\tw$Þµ;yÂ·pý´£T¡\\üyÏ\rø9p×¬\b\0xëïô\fpv5q©ï¥§nÓåü$¹\0­Ë=Ç\td%¹%×û÷\b\0ðÿgµ{\vùv4¹¯WÂ\tP\vÝáØr[\0Þ]àyÞWx¸ÙEvòn\nËÖ¿Péì,ª2¡çÝ2\0P;á«õdx3³P¹ÏÍÏøSª)gRK{H= \nþeÔá=¬8% c\0À$ó\väêc¯c²*»²GÆ]ßAøV&êæ+\bCc\0 =ðÃ6$I.ª¥ô¬ìá¥\0À]¾³@åQÈv>¸µæ£7\0(ÏÃÑ`IJ©þZnÑ7)nO<*âýUbÊu°;ÆÁ\0à¡\0ðÄæ­ºØW?áí´ÐND­XGwà\vB×µq\n\0|(\0¤Ò|kxpÅÝÆóÌ öø9ïòLvSï<\0 ÉÚK:ü>\0¸ÚtIrÂã¶$Ò(o¾$+!æöøÏcr¬7þ4u~ô2o\0¤0«Rrg¹køw,¹{dÛy\n\0\ft­¥V1vÁûÄÅPñ¼slrÑè<¯RD¶_\t\0k¦i`Ñ& 4ÍCÝ\0(iSÒª¼\r\0Ì[,\0éç$<Wëâyø:\0ñ]êüRq¢gC\n´yâ¾þ&\0Hyî¡­Ó%·\b\0p÷Îû\0\\°IX+¾g²Ãû¾Skdù·ñ&Ú\\7[É^\0\0­ð(±wëüæZÏEm¢µF±·F±7÷W¬BÚãïJzæ\vf!\0hØ\f\0\b\0ØßÊ5=W\rJlpÆ:´5U\"9§dCBÏgÚ\vß¥x®rÆ$%åÝÔõP{ü£ÂM1D\0\\¬ÁOÄpÈµï:A\\ãé\0qã%hÞ8l#\\{Ú£¾|Û0?DU\0ÎÊëé\0ð\tu\0ìri¶ib8¦é÷ÉS\x000\n+¤55I !P\vlÜ^;D¯©@ÆÕbj\0JIQÐ)äw\r6ß/Ú{Þ=\t«åâ7J{y;üfÂ^ä8$\f\0.^jÂ»\0 û°\0Ü{\t\0XÑÏ¹j¤hqÍkÀÂwðwG'¦§@BÒ¿\0vHoz\0à\n¼¹Ð»ÂîöÀ<iáÑÎ(ç×Ñª»à3Ö¦\0<\0R»ý\0Ø®ßû[îDéô§^ wÝÖ?`çXåß\0\0|\0\0l\nKú®ð(µP]k!Cµ\"|wñZT%a>\x000ÝvSø]åìCÐ>§Õ\0à3àj9@ßúD\0ÀÍ;ýïª\0Hën #ÿéA\0Pºrë\n\0ÀYê)ã¹%C\\¸pùj4\fNwæ\0L2ÈÏ)ÌFÃO\f\\Ý\0\0A'wJo­ä.p¼DNâJ\\?ÃâµÂì[¤âþôúB\0Àý\b¹z#î\0\0l¶wã>Ïl×kÅ×F¤4 +=<\tM)Y üPÊ+\x007-½y\bç9Ï´üÚíBÖAed¬c't?5J­ñó,]Ãp5\0ï|¢©â»k­§Ò½\báçz\b`Ñ¹îç,üíãFë­áy<\r\0\\p<ãévx;Ó2ÅÓ4Q¸à-èa|Üï>O¥öX(ÎMÉ¾û®£¿2óJûL¦â¡c¤ÕX>B$±¨À÷\b ´gùÕK:EäBÉ£Ï°§éµ\0\0gÊa\0@KéýÞ> /«NaÖÝIéY¼\0ºpÇG®aCÎU!HU\"jbêeÄîÎLG¬ý¯\f°¥ÞQgö@Lò%W#Ln·ð-\0 ÏÅèº\0ö\0@x>qú+n¬>oÝ*°`'¨ð\fÛLðo6{xZ\bWQ\n\0¯t#o¼Ù×å¥±~Vì\vJ¤³üÜgÜgZ3sÿf¤æ\0@4}-[¶~{¾Tß4Ò0S3ëãK@CÚdÈ·4M\v\0k\x008;ýbh;øMjZ¢LûU²+Qz &U\0à,\0â«)JiÉ­1±ä¹be\0`\fXï]àMrcå¾.,vöÛq¥À±¡\0¶(Ú£g±æ¸\0zG94C@b®mÍ2ö¨Qáõ®{{#Ìä \vq]§§Q\0è`¸¡ìÕV÷SvvÛÒª#µ#\0\0s/J\0¨á7õ·o-®sº[Ø¾Á,pf\x009\0àVø²W¬®ØÅ+ïß_K\0\0^3×ç\0.ä\b/-bi¾Ýø\0 qyzâáô ¢S¾\v±$\0<9 5rñÖ «ÕX\0Á%t~\0¬ÌúlÃ&0F½'üªª@-õÖ\f÷M\0ÈßÍð]\tpJ\0Ìkä\0@ëJßQ¨Íyþ\0Ð¶çºÛQ`\0ð\0!¾ÇþÚda%\0\0µm\x008QøUcÄðËo2Å\0÷)¿6ná_û§âîÂu÷>e¤BRMå*ÎSðEÌÂ8îªãqà[á¤Ú(8«<\n~O\tË\b«×F\0®\0è®# \0BZ=ò\0¾ª1h*'U9u%\0¤6³¼\0|ûÛ1ÊÛ\t\v\0x­¹Ö\0îvÝ,9§à¾",Ir=" width=19 height=24 xoffset=1 yoffset=2 xadvance=21 page=0 chnl=15\nchar id=84 x=103 y=101 width=19 height=23 xoffset=1 yoffset=2 xadvance=20 page=0 chnl=15\nchar id=85 x=104 y=57 width=18 height=24 xoffset=3 yoffset=2 xadvance=23 page=0 chnl=15\nchar id=86 x=123 y=29 width=21 height=23 xoffset=0 yoffset=2 xadvance=21 page=0 chnl=15\nchar id=87 x=126 y=3 width=30 height=23 xoffset=0 yoffset=2 xadvance=30 page=0 chnl=15\nchar id=88 x=84 y=203 width=21 height=23 xoffset=0 yoffset=2 xadvance=21 page=0 chnl=15\nchar id=89 x=84 y=229 width=21 height=23 xoffset=0 yoffset=2 xadvance=21 page=0 chnl=15\nchar id=90 x=87 y=156 width=18 height=23 xoffset=1 yoffset=2 xadvance=20 page=0 chnl=15\nchar id=48 x=106 y=127 width=15 height=24 xoffset=1 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=49 x=108 y=154 width=9 height=23 xoffset=3 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=50 x=108 y=180 width=16 height=23 xoffset=1 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=51 x=108 y=206 width=15 height=24 xoffset=1 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=52 x=120 y=154 width=16 height=23 xoffset=0 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=53 x=124 y=127 width=16 height=23 xoffset=1 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=54 x=126 y=206 width=15 height=24 xoffset=1 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=55 x=127 y=180 width=15 height=23 xoffset=2 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=56 x=139 y=153 width=15 height=24 xoffset=1 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=57 x=144 y=206 width=15 height=24 xoffset=1 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=33 x=145 y=180 width=4 height=23 xoffset=3 yoffset=2 xadvance=9 page=0 chnl=15\nchar id=8470 x=152 y=180 width=31 height=23 xoffset=3 yoffset=2 xadvance=34 page=0 chnl=15\nchar id=59 x=45 y=75 width=4 height=21 xoffset=3 yoffset=8 xadvance=9 page=0 chnl=15\nchar id=37 x=162 y=206 width=25 height=24 xoffset=2 yoffset=2 xadvance=28 page=0 chnl=15\nchar id=58 x=68 y=3 width=4 height=17 xoffset=3 yoffset=8 xadvance=9 page=0 chnl=15\nchar id=63 x=125 y=55 width=15 height=24 xoffset=1 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=42 x=82 y=29 width=11 height=10 xoffset=1 yoffset=2 xadvance=12 page=0 chnl=15\nchar id=40 x=125 y=82 width=8 height=30 xoffset=2 yoffset=2 xadvance=11 page=0 chnl=15\nchar id=41 x=136 y=82 width=8 height=30 xoffset=2 yoffset=2 xadvance=11 page=0 chnl=15\nchar id=95 x=22 y=193 width=19 height=2 xoffset=0 yoffset=29 xadvance=18 page=0 chnl=15\nchar id=43 x=59 y=237 width=15 height=15 xoffset=2 yoffset=6 xadvance=19 page=0 chnl=15\nchar id=45 x=44 y=125 width=9 height=3 xoffset=1 yoffset=15 xadvance=11 page=0 chnl=15\nchar id=61 x=41 y=240 width=15 height=10 xoffset=2 yoffset=9 xadvance=19 page=0 chnl=15\nchar id=46 x=82 y=42 width=4 height=4 xoffset=3 yoffset=22 xadvance=9 page=0 chnl=15\nchar id=44 x=97 y=57 width=4 height=8 xoffset=3 yoffset=22 xadvance=9 page=0 chnl=15\nchar id=47 x=143 y=55 width=9 height=24 xoffset=0 yoffset=2 xadvance=9 page=0 chnl=15\nchar id=124 x=143 y=115 width=3 height=30 xoffset=3 yoffset=2 xadvance=8 page=0 chnl=15\nchar id=92 x=147 y=82 width=9 height=24 xoffset=0 yoffset=2 xadvance=9 page=0 chnl=15\nchar id=34 x=125 y=115 width=9 height=8 xoffset=1 yoffset=2 xadvance=11 page=0 chnl=15\nchar id=39 x=77 y=237 width=4 height=8 xoffset=1 yoffset=2 xadvance=6 page=0 chnl=15\nchar id=64 x=149 y=109 width=30 height=30 xoffset=2 yoffset=2 xadvance=32 page=0 chnl=15\nchar id=35 x=157 y=142 width=17 height=24 xoffset=0 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=36 x=177 y=142 width=16 height=29 xoffset=1 yoffset=0 xadvance=18 page=0 chnl=15\nchar id=94 x=3 y=240 width=14 height=13 xoffset=1 yoffset=2 xadvance=15 page=0 chnl=15\nchar id=38 x=186 y=174 width=20 height=24 xoffset=1 yoffset=2 xadvance=21 page=0 chnl=15\nchar id=123 x=155 y=29 width=9 height=30 xoffset=1 yoffset=2 xadvance=11 page=0 chnl=15\nchar id=125 x=159 y=62 width=9 height=30 xoffset=1 yoffset=2 xadvance=11 page=0 chnl=15\nchar id=91 x=190 y=201 width=7 height=30 xoffset=2 yoffset=2 xadvance=9 page=0 chnl=15\nchar id=93 x=200 y=201 width=7 height=30 xoffset=1 yoffset=2 xadvance=9 page=0 c",Dr="hnl=15\nchar id=32 x=0 y=0 width=0 height=0 xoffset=1 yoffset=2 xadvance=9 page=0 chnl=15\nkernings count=97\nkerning first=32 second=65 amount=-2\nkerning first=32 second=84 amount=-1\nkerning first=32 second=89 amount=-1\nkerning first=49 second=49 amount=-2\nkerning first=65 second=32 amount=-2\nkerning first=65 second=84 amount=-2\nkerning first=65 second=86 amount=-2\nkerning first=65 second=87 amount=-1\nkerning first=65 second=89 amount=-2\nkerning first=65 second=118 amount=-1\nkerning first=65 second=119 amount=-1\nkerning first=65 second=121 amount=-1\nkerning first=70 second=44 amount=-4\nkerning first=70 second=46 amount=-4\nkerning first=70 second=65 amount=-2\nkerning first=76 second=32 amount=-1\nkerning first=76 second=84 amount=-2\nkerning first=76 second=86 amount=-2\nkerning first=76 second=87 amount=-2\nkerning first=76 second=89 amount=-2\nkerning first=76 second=121 amount=-1\nkerning first=80 second=32 amount=-1\nkerning first=80 second=44 amount=-4\nkerning first=80 second=46 amount=-4\nkerning first=80 second=65 amount=-2\nkerning first=82 second=84 amount=-1\nkerning first=82 second=86 amount=-1\nkerning first=82 second=87 amount=-1\nkerning first=82 second=89 amount=-1\nkerning first=84 second=32 amount=-1\nkerning first=84 second=44 amount=-4\nkerning first=84 second=45 amount=-2\nkerning first=84 second=46 amount=-4\nkerning first=84 second=58 amount=-4\nkerning first=84 second=59 amount=-4\nkerning first=84 second=65 amount=-2\nkerning first=84 second=79 amount=-1\nkerning first=84 second=97 amount=-4\nkerning first=84 second=99 amount=-4\nkerning first=84 second=101 amount=-4\nkerning first=84 second=105 amount=-1\nkerning first=84 second=111 amount=-4\nkerning first=84 second=114 amount=-1\nkerning first=84 second=115 amount=-4\nkerning first=84 second=117 amount=-1\nkerning first=84 second=119 amount=-2\nkerning first=84 second=121 amount=-2\nkerning first=86 second=44 amount=-3\nkerning first=86 second=45 amount=-2\nkerning first=86 second=46 amount=-3\nkerning first=86 second=58 amount=-1\nkerning first=86 second=59 amount=-1\nkerning first=86 second=65 amount=-2\nkerning first=86 second=97 amount=-2\nkerning first=86 second=101 amount=-2\nkerning first=86 second=105 amount=-1\nkerning first=86 second=111 amount=-2\nkerning first=86 second=114 amount=-1\nkerning first=86 second=117 amount=-1\nkerning first=86 second=121 amount=-1\nkerning first=87 second=44 amount=-2\nkerning first=87 second=45 amount=-1\nkerning first=87 second=46 amount=-2\nkerning first=87 second=58 amount=-1\nkerning first=87 second=59 amount=-1\nkerning first=87 second=65 amount=-1\nkerning first=87 second=97 amount=-1\nkerning first=87 second=101 amount=-1\nkerning first=87 second=105 amount=0\nkerning first=87 second=111 amount=-1\nkerning first=87 second=114 amount=-1\nkerning first=87 second=117 amount=-1\nkerning first=87 second=121 amount=0\nkerning first=89 second=32 amount=-1\nkerning first=89 second=44 amount=-4\nkerning first=89 second=45 amount=-3\nkerning first=89 second=46 amount=-4\nkerning first=89 second=58 amount=-2\nkerning first=89 second=59 amount=-2\nkerning first=89 second=65 amount=-2\nkerning first=89 second=97 amount=-2\nkerning first=89 second=101 amount=-3\nkerning first=89 second=105 amount=-1\nkerning first=89 second=111 amount=-3\nkerning first=89 second=112 amount=-2\nkerning first=89 second=113 amount=-3\nkerning first=89 second=117 amount=-2\nkerning first=89 second=118 amount=-2\nkerning first=102 second=102 amount=-1\nkerning first=114 second=44 amount=-2\nkerning first=114 second=46 amount=-2\nkerning first=118 second=44 amount=-2\nkerning first=118 second=46 amount=-2\nkerning first=119 second=44 amount=-2\nkerning first=119 second=46 amount=-2\nkerning first=121 second=44 amount=-2\nkerning first=121 second=46 amount=-2",Rr='info face=font size=32 bold=0 italic=0 charset= unicode= stretchH=100 smooth=1 aa=1 padding=3,3,3,3 spacing=0,0 outline=0\ncommon lineHeight=36 base=25 scaleW=256 scaleH=256 pages=1 packed=0\npage id=0 file="font.png"\nchars count=91\nchar id=97 x=3 y=3 width=16 height=18 xoffset=1 yoffset=8 xadvance=18 page=0 chnl=15\nchar id=98 x=3 y=24 width=15 height=24 xoffset=2 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=99 x=3 y=51 width=15 height=18 xoffset=1 yoffset=8 xadvance=16 page=0 chnl=15\nchar id=100 x=3 y=72 width=15 height=24 xoffset=1 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=101 x=3 y=99 width=16 height=18 xoffset=1 yoffset=8 xadvance=18 page=0 chnl=15\nchar id=102 x=21 y=24 width=10 height=24 xoffset=0 yoffset=2 xadvance=9 page=0 chnl=15\nchar id=103 x=21 y=51 width=15 height=24 xoffset=1 yoffset=8 xadvance=18 page=0 chnl=15\nchar id=104 x=34 y=3 width=14 height=23 xoffset=2 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=105 x=3 y=120 width=3 height=23 xoffset=2 yoffset=2 xadvance=7 page=0 chnl=15\nchar id=106 x=3 y=146 width=7 height=30 xoffset=-1 yoffset=2 xadvance=7 page=0 chnl=15\nchar id=107 x=9 y=120 width=14 height=23 xoffset=2 yoffset=2 xadvance=16 page=0 chnl=15\nchar id=108 x=22 y=78 width=3 height=23 xoffset=2 yoffset=2 xadvance=7 page=0 chnl=15\nchar id=109 x=34 y=29 width=23 height=17 xoffset=2 yoffset=8 xadvance=27 page=0 chnl=15\nchar id=110 x=51 y=3 width=14 height=17 xoffset=2 yoffset=8 xadvance=18 page=0 chnl=15\nchar id=111 x=3 y=179 width=16 height=18 xoffset=1 yoffset=8 xadvance=18 page=0 chnl=15\nchar id=112 x=13 y=146 width=15 height=24 xoffset=2 yoffset=8 xadvance=18 page=0 chnl=15\nchar id=113 x=26 y=104 width=15 height=24 xoffset=1 yoffset=8 xadvance=18 page=0 chnl=15\nchar id=114 x=22 y=3 width=9 height=17 xoffset=2 yoffset=8 xadvance=11 page=0 chnl=15\nchar id=115 x=28 y=78 width=14 height=18 xoffset=1 yoffset=8 xadvance=16 page=0 chnl=15\nchar id=116 x=39 y=49 width=8 height=23 xoffset=1 yoffset=3 xadvance=9 page=0 chnl=15\nchar id=117 x=3 y=200 width=14 height=17 xoffset=2 yoffset=8 xadvance=18 page=0 chnl=15\nchar id=118 x=3 y=220 width=16 height=17 xoffset=0 yoffset=8 xadvance=16 page=0 chnl=15\nchar id=119 x=20 y=200 width=23 height=17 xoffset=0 yoffset=8 xadvance=23 page=0 chnl=15\nchar id=120 x=22 y=173 width=16 height=17 xoffset=0 yoffset=8 xadvance=16 page=0 chnl=15\nchar id=121 x=22 y=220 width=16 height=24 xoffset=1 yoffset=8 xadvance=16 page=0 chnl=15\nchar id=122 x=41 y=220 width=15 height=17 xoffset=1 yoffset=8 xadvance=16 page=0 chnl=15\nchar id=65 x=31 y=131 width=22 height=23 xoffset=0 yoffset=2 xadvance=21 page=0 chnl=15\nchar id=66 x=44 y=99 width=18 height=23 xoffset=2 yoffset=2 xadvance=21 page=0 chnl=15\nchar id=67 x=41 y=157 width=21 height=24 xoffset=2 yoffset=2 xadvance=23 page=0 chnl=15\nchar id=68 x=56 y=125 width=19 height=23 xoffset=2 yoffset=2 xadvance=23 page=0 chnl=15\nchar id=69 x=46 y=184 width=17 height=23 xoffset=3 yoffset=2 xadvance=21 page=0 chnl=15\nchar id=70 x=65 y=151 width=16 height=23 xoffset=3 yoffset=2 xadvance=20 page=0 chnl=15\nchar id=71 x=59 y=210 width=22 height=24 xoffset=2 yoffset=2 xadvance=25 page=0 chnl=15\nchar id=72 x=66 y=177 width=18 height=23 xoffset=3 yoffset=2 xadvance=23 page=0 chnl=15\nchar id=73 x=50 y=49 width=3 height=23 xoffset=3 yoffset=2 xadvance=9 page=0 chnl=15\nchar id=74 x=56 y=49 width=13 height=24 xoffset=1 yoffset=2 xadvance=16 page=0 chnl=15\nchar id=75 x=60 y=23 width=19 height=23 xoffset=2 yoffset=2 xadvance=21 page=0 chnl=15\nchar id=76 x=65 y=76 width=15 height=23 xoffset=2 yoffset=2 xadvance=18 page=0 chnl=15\nchar id=77 x=72 y=49 width=22 height=23 xoffset=2 yoffset=2 xadvance=27 page=0 chnl=15\nchar id=78 x=82 y=3 width=18 height=23 xoffset=2 yoffset=2 xadvance=23 page=0 chnl=15\nchar id=79 x=78 y=102 width=22 height=24 xoffset=2 yoffset=2 xadvance=25 page=0 chnl=15\nchar id=80 x=83 y=75 width=18 height=23 xoffset=2 yoffset=2 xadvance=21 page=0 chnl=15\nchar id=81 x=97 y=29 width=23 height=25 xoffset=1 yoffset=2 xadvance=25 page=0 chnl=15\nchar id=82 x=103 y=3 width=20 height=23 xoffset=3 yoffset=2 xadvance=23 page=0 chnl=15\nchar id=83 x=84 y=129',Ar='PNG\r\n\n\0\0\0\rIHDR\0\0\0\0\0\0\b\0\0\0\\r¨f\0\0)IDATxÚí]iµ¬L¬$ \tH@$ \tH@pß÷Þ:¼[7§*C\r\fÝÉZü9§f¨ì\fì\0üÔÿËÇ8FæûãÏÑþwTÿú~>ÿççX®ÙýÍófåµÿqVñÛ±ßÃß\rý:6tËÏ3§dw¾_\t×û³ðÞfç;½©Õ;d.¼õgaPzDà<ö\0àþæÀ\\û¸ö\0°\v*\0î¯*f\'¸ÆÞs~¸@Sj=_:dY&Ç²ÇN(²O¡}\vt(\b\0{À:\0+\0~[N\0ÃõÔðut\\ëâ9w£ðvS­wÈê |èWH¡B´?Çè±9à¼~Æ¶J­sT\t\0 \t\0H¥B\0¸\ns÷|ß8úH@4¹IZÅ\v\tkµç<\0Ð\v­Y®¸ôO Ì©.\0øä?¿CÅ.maòÄßi¡¹xmDîiª+\0¤i,\0\0«Òòå\0øQNîùÏÂw4!0q½6Ñhò©Ðâ1\0)|DÚÂ\0P£©½\0VÁïwÂç°£çÚ\n¼»:¨Ü´?óL6íW=\0¸]É;Ü\r\x008×À%\0`>YW)s£âYð²L.> ènmÀ¡@Øöeñ·\0(BÜ\x000|»nc>7daÜûä»&PÄÉIæ`X,j÷ái\0 \rr@¿w9FÅûö)ê\0\b÷wzÂ9L¥Þ#¸ \'<%`.Øáá\0 \rJI}²Ýý½!ÞWM|ÏäÁ²|ën.\b\0U¤ò>\0$¡@n\x008~~Gy¯\bEî"­|º-`T\t±+\0R÷©\0À\0ðõcÏ©ýÛ\nþ­\vòµ"Îç¾gòP9/nù.ÀÛ\0À-±­3\0\nÄæ\0*ø]¢hcà½ï@ïä,=÷=\0Gjð\'\t?\t\0rôp©I@øÓºÝ­ÇÕoßÁð5è;M"Ç­¤:Í¨m\0 rì`Ðn½áwé*ãÝµ~ÏäÁ °\bK3°@\näÚ\\!¾%ç¸}þSp°ô{&/\0ØÎ¸$Ú\t¼×ÿG©¨SF\0Àf\vn@y\0iÃO<é÷LL¾\0j"ÔJÓ\tcCÐ<cYù¯"fÏY\n¼Eêi\0düÉå\0K²±¡\\Há¼k!\0À|\0R2âh¿Èï¼T\tµ\tAWÏ¢|*\0H?VY}¡@\0\0On¡Pä%p¬ü×\0àÿ¥\v¸ºã\v\0@ªü)Ê:\0L\r¶E(²¦à\0+ÿ5\0 ,Ü<öæ{üQùML\f\0<2ÂóH!%\07å71\0Hö%\0+h11\0(\0¾©>ÿ[nìò.ð»¼´ßÜsd¬Sùs\0_ýóL¨éLjE7\'Ð\'\\SN®ÿþÎ5°Ýûr4ñ{ë(¦:ÿNMäçì=\0#åå@nË\0ªøEx­C§\bYR\fDl²Ó¤\0,B%ä¬¬d\0âùúàqBÎ¥ªrÁZä[l9¿+mãXNµn<Ïà\0\v`ä)pßAL¯~.ªoSbs<7ÄÇ®u9­òÀT\0\0¨¹v\vðW¸£±c\0 ò(\\LÂo©ÔVø]¿\vRDçynÜµkX¨ßKÝë·®Á\0@¥59\0\t©E²â³mà§×Ê²)¾ÔóÚ¸I,lºýþ.!Ï9ég5·ÿÙ\x000\vÑ\\\0\0$ú;\0À,ZìpOül0±J/p·¯9ÀgÙ%3¨ð!GòÏ\0àÁ\0pn¾|\x006áçÖ\f\0@`Ä&ðNe<¥dÜ÷Dë:*4¦>#÷ $¾\tÁ\0X/X ÄVrw~·*uéÙùJ^5èw6ÈKôi\0ð`\0 ü(øüÓ`(Ç©ünÁ]Íy¦/ çã[G\t\0Û@bµÙò)Ô9ä´*CJÉñ \b¥zXä(\0W\0\0¶¥çÛå*iç¢8}ËY©·M~,\0H\n2>! çcH6ß\0\0ËîzCÓMkÍäb\0ìKBo\0BÍ\0µày.ÊO_ ¤0É¼¥Yä]&¼\0°¤lÊöá]\0cñÚãålkÑ0æà\0µ¶\bü\0\0{;ÐÍL1\0°BîÁ1Ba©AäµÔ¸ÐÊÚ¬\f\0¾ÒÕ~«Â\0@|©p\n\0äê°["âu·)g\0ßIY]¯Ñ\\ÿÀþym\vê§\0\0¶>K¢ÒdpñÄf\r\bù¦ü6r#ú­ÉTî\x000Ý>*^¸ñÄËd>«³× \'õ\0@Ç+É½:¤\b«áºÑbod[\vú\\ë\tQbÜk<ä³ô/óLLàáMÀ]Çd G¢GHém:!h¢q\'EÙJ£²ç\\óV¹4¤ç4æÆãÍàÞ\\\'<_|JOøµR`±\f»\0bÊasßaÍ]áÂ\'\bÅH«Ùªj~¬ï£.#pr_\0Ú~ý\nø! ¾ïB Ø~>;c®¸¨5\0øNX!ÉÞ0wd£¾\0ËØG\0\0þþìÐ)h\r¿wma7\0x¨`+°:zß5aÅäºçñ¢~:\0,aËpýuë\0he(ä*°\\U¯Î`ô,f[ÚBñÜZ\02ü¸VÙ­ð3þ{ÿú0yë/)&ÁÖ½&>µ§Ý0\0¬7\0@¥\fÀw´èkðo?ó41aÄ\fºF1«yh_\b§Òg|\02\fØà_­§À²Ým±Î.\0Éü³\'Lâþ§j(®å\0\0ä½ìµçs¡k\\!ï÷Ý^ëÑÕÂ0)4ÁäFÉõ"´çy\0T #È<.îS\0 YòÕ}.Ò"£AáÚWð»öÀÄ\0àÑ\0XÐý\0 gùA×¶qý\0|8\0pa@È\r]cãXÎ+\0`ùnèô,S§w@JfVK¨_\b\0\\0?Q(É\v\0À¢¬9\0-\\Ã¢lRH4ÔTnÁIO¸\\ò¨{!\0pa@(\vN]ãy¾ú\0Ðt¤ûwÅõÅw[hR|¶!,Á®\07@(\fh@>fù¾r\0Àª\0ó\rt¥ÒÜÖ®ÉÅgÆÜ8·g,}X¿»äÞ\0¡0 äþSç@Æ6|5\0Ì\nå¬@ß,uö8l`4áè±X=ü»Ô`BõøJ\0ÀÉC7eP°TBÞ\0xÄ9·Ø%ä$µ &7@èè/ö\0ºp(\f\0ïÆ\0ß\0\0¸@gYBoNtãmRÐÃ¤#Wº(Îåc¯Yà/g`I\0p=Z`í4Ûp8\f¼Ç\0\0[~©5ß-øjyg\n&Í½½ÓÏ/\t9¸[hËj¶J%r{ ¨O&RùHßþ3\0ø 9G@IØ%Ôá>J-©«ÞAgü9ïÁ$º8%ò~4/Ø1à¤O6\0ø ÑPúr\t"YÏü&\fàXn\0k¤"/âw\v¸íDL\bÂ-þÝEÐÌv¦\'[\tð(Ñ²Ñ^O#R\tslá\0¼L¨>~ßí¤³£¸²è¹fÏqR¡|Æ\0PGz\0+èúÿ[ÈS>>Í\tø(\0 Faëkã¡xË¨eémá\n»)â`-Á\0®%ò±Ú`\r#ÓvØMpÍÞúy\nx°jÀÒVñIcÁ9Þ½düØû:\nÕF\fn´)ð^m ¬À%\0PAsÌbÇy5£È[hÄ\0@éÛP0 \05pP Ð\bÓÇá7¿^BÚ\0sæÃ7Éä&i!<¦\0$ÕÒ0ñâÅ¯\n\0ÅË­µÕx½RùÜÝ)\0¬ &ö¬1è6¡ú\0N7tJ\0dÅ9+\\³Mwñ¹q^\rü®^ô)þïÛYq=ÉTð^åîßÇÀî,Ö¹±r§\0lùÂø·ÙÌí¿_pö¸\r|fM\0øí©ÒÆq¿\r\0îÌ§<EÜ&7I²½ã&\0¶ÌpÍj°þ\bÏ®Oø}+¾QÜ,r§ø¬\0ÆÆzwÀv!ØQ\0Ê×­Î\\x²+`\0ð\0tæI­V\b\0ðvÓòã4_\n\0ÓÅá!YÃ\\#7D$¥.À\0àe°ø$`hàlDé¾\0\0j¿WÂõÜÄCI©\f4\0ø"\x008­·5Â{·µÇ\\xN>ÉÈo7\r\0\f\0¸Zý\0ÁtÍÁ\'¶`§õ_6ëÄv\0<, ¡\0ß"®qëÚÀ(8ºßuL÷Ý*ðbø*0VàGf ¥¸Äq7ô<]¦\bEnáJåB\fòÑÌÛ#à\0y¦Ø\0 \n÷ßç5ÌC2+Ø¤H&û_\bäî\0\fBWrò\0³@÷]à)ç5ò?Cð>ý@¸9ê\0&ôâ}]r-q\0z!e\b{_\0`õé"\r6@|`\0y¼gbØÎ\0@-±<xm´ÑZz_ØÀOkÕBú6`ôößN(÷9\' ×á·@Jéq²]ê¬@ÅZ¢\b\t\0Î/?¶dN}\0Hù¸qd\fHºpÊÔ%bUÍ\0\0\0wo¿3u0\0xBhÖ\0@jXqÀW\0ÀÛÞMi\x008»©Ã;å¬Ó÷\rõ¨o\0\r÷þÙjlò¯hÚ¾}kBZµçm¾Hðï\0HöÿïPC-À¿rÅ6à)g=ñK¤BbXp/ÿÕ/JØí ÿý¡\tªL_{?+½l;ðUÂQ}Á"í7)&~Å#Á¯HFcÌC;£ây\0××Ò²mÊ¸~\0Û|´ ïÃáNm\vÉ.µ\bMCv©Ð¸k¡¶ w\bÏä¶+kã[iÛuË¶.³Â5¬ Ë®ù±<x¡?ç­!Üï';function Or(e){var t=0;switch(e){case"/font.fnt":case"font.fnt":t=2;break;case"/font.png":case"font.png":t=1;break;default:return}switch(t){case 1:return{hd:Ar,tl:{hd:Nr,tl:{hd:Mr,tl:0}}};case 2:return{hd:Rr,tl:{hd:Ir,tl:{hd:Dr,tl:0}}}}}function zr(e){var t=Or(e);if(void 0!==t)return ge("",t)}function Lr(e,t){return e===t?0:e<t?-1:1}var Fr=Pr({compare:Lr});var Br=Pr({compare:function(e,t){var n=Lr(e[0],t[0]);return 0!==n?n:Lr(e[1],t[1])}}),Wr={contents:void 0};function Vr(e,t){for(;;){var n,r=t,a=e,i=nr.peekch(a),o=0;switch(void 0!==i?i>=47?i>57||i<48?o=1:(n=i,o=2):i>=45?(n=i,o=2):o=1:o=1,o){case 1:try{return[a,oe(r)]}catch(e){return Ie("Could not parse number ["+r+"].")}case 2:t=rr(r,n),e=nr.popch(a);continue}}}function jr(e,t){for(;;){var n=t,r=e,a=nr.peekch(r);if(void 0===a)return Ie("Unterminated string.");if(34===a)return[nr.popch(r),n];t=rr(n,a),e=nr.popch(r)}}function $r(e){for(;;){var t=e,n=nr.peekch(t);if(void 0===n)return Ie("could not pop line");if(10===n)return nr.popch(t);e=nr.popch(t)}}function Ur(e,t,n){for(;;){var r=n,a=t,i=e;if(a<0)return[i,r];if(!S(nr.peekn(i,4),"char"))return Re(De,"Warning: encountered end of char sequence early when loading font.\n"),[i,r];var o=Vr(nr.match_(i,"char id="),""),u=Vr(nr.match_(nr.skipWhite(o[0]),"x="),""),l=Vr(nr.match_(nr.skipWhite(u[0]),"y="),""),c=Vr(nr.match_(nr.skipWhite(l[0]),"width="),""),f=Vr(nr.match_(nr.skipWhite(c[0]),"height="),""),s=Vr(nr.match_(nr.skipWhite(f[0]),"xoffset="),""),d=Vr(nr.match_(nr.skipWhite(s[0]),"yoffset="),""),h=Vr(nr.match_(nr.skipWhite(d[0]),"xadvance="),""),v=$r(h[0]);n=p(Fr.add,0|o[1],{x:u[1],y:l[1],width:c[1],height:f[1],xoffset:s[1],yoffset:d[1],xadvance:h[1]},r),t=a-1|0,e=v}}function Hr(e,t,n){for(;;){var r=n,a=t,i=e;if(0===a)return[i,r];var o=Vr(nr.match_(i,"kerning first="),""),u=Vr(nr.match_(nr.skipWhite(o[0]),"second="),""),l=Vr(nr.match_(nr.skipWhite(u[0]),"amount="),""),c=$r(l[0]);n=p(Br.add,[0|o[1],0|u[1]],l[1],r),t=a-1|0,e=c}}function Xr(e,t){var n=mt(ar(e,47));return ge("/",mt(n?{hd:t,tl:n.tl}:0))}function Qr(e){var t=nr.create(e+"\n"),n=nr.peekn(t,9),r=void 0!==n&&"info res="===n?Vr(nr.match_(t,"info res="),""):[t,1],a=$r(r[0]),i=Vr(nr.match_(a,"common lineHeight="),""),o=$r(i[0]),u=jr(nr.match_(o,'page id=0 file="'),""),l=$r(u[0]),c=Vr(nr.match_(l,"chars count="),""),f=Ur($r(c[0]),0|c[1],Fr.empty),s=Vr(nr.match_(f[0],"kernings count="),""),d=Hr($r(s[0]),0|s[1],Br.empty);return[f[1],d[1],u[1],r[1],i[1]]}function qr(e,t){try{return h(Fr.find,t,e.chars)}catch(e){return Ie("Could not find character "+String(t)+" in font.")}}function Kr(e,t,n,r,a,i,o){var u,l=qr(t,r);if(void 0!==a)try{u=h(Br.find,[a,r],t.kerning)}catch(e){u=0}else u=0;return void 0!==n?(kr(n,i+(l.xoffset+u)/t.res,o+l.yoffset/t.res,l.width/t.res,l.height/t.res,0|l.x,0|l.y,0|l.width,0|l.height,e),(l.xadvance+u)/t.res):(l.xadvance+u)/t.res}var Yr={IntMap:Fr,IntPairMap:Br,defaultFont:Wr,parse_num:function(e){return Vr(e,"")},parse_string:function(e){return jr(e,"")},pop_line:$r,parse_char_fmt:Ur,parse_kern_fmt:Hr,replaceFilename:Xr,getCharMapAndKernMap:Qr,parseFontFormat:function(e,t,n){var r={contents:void 0};return h(bn.$$File.readFile,t,(function(a){var i=Qr(a),o=Xr(t,i[2]);r.contents={chars:i[0],kerning:i[1],res:i[3],lineHeight:i[4],image:xr(e,o,n)}})),r},getChar:qr,drawChar:Kr,drawString:function(e,t,n,r,a){var i=(void 0!==t?t:Wr).contents;if(void 0!==i){var o=i.image.glData;if(void 0!==o){var u={contents:r},l={contents:a},c={contents:void 0};return ye((function(t){if(10!==t){if(13!==t){var n=Kr(e,i,o,t,c.contents,u.contents,l.contents);return u.contents=u.contents+n,void(c.contents=t)}return u.contents=r,void(c.contents=void 0)}u.contents=r,l.contents=l.contents+i.lineHeight,c.contents=void 0}),n)}console.log("loading font.")}},calcStringWidth:function(e,t,n){var r=(void 0!==t?t:Wr).contents;if(void 0===r)return 0;var a={contents:0},i={contents:0},o={contents:void 0};return ye((function(t){if(10!==t&&13!==t)return a.contents=a.contents+Kr(e,r,void 0,t,o.contents,a.contents,0),void(o.contents=t);i.contents=i.contents>a.contents?i.contents:a.contents,a.contents=0,o.contents=void 0}),n),i.contents>a.contents?i.contents:a.contents},loadDefaultFont:function(e){var t=zr("font.fnt"),n=void 0!==t?t:Ie("Failed to load default font. This shouldn't happen."),r=zr("font.png"),a=void 0!==r?r:Ie("Failed to load default font image. This shouldn't happen"),i=Qr(n);Wr.contents={chars:i[0],kerning:i[1],res:i[3],lineHeight:i[4],image:Er(e,a,!1)}}};function Gr(e,t,n){var r=n.style.strokeColor,a=void 0!==r?r:sr,i=n.style.strokeWeight,o=i/2,u=2===n.style.strokeCap;if(yr(e,t,n.matrix,a,i,u,n),0===n.style.strokeCap)return wr(n,e,o,o,n.matrix,a),wr(n,t,o,o,n.matrix,a)}function Jr(e,t){!function(e){h(bn.clear,e.gl,16640)}(t);var n=Tr(t),r=Sr(t);return gr(t,[n,r],[0,r],[n,0],[0,0],e)}var Zr={contents:[]};function ea(e){var t=Fe(Xe);qe(e);var n,r,a,i=function(e){for(var t=D(e),n=t.length,r=0;r<=255;++r){var a=Qe(n-r|0),i=c(t,r);l(t,r,c(t,r+a|0)),l(t,r+a|0,i)}return t}(function(e,t){var n=t.length;if(0===n)return[];for(var r=f(n,h(e,0,t[0])),a=1;a<n;++a)r[a]=h(e,a,t[a]);return r}((function(e,t){return e}),f(256,0))),o=(r=i,0===(a=(n=i).length)?D(r):0===r.length?u(n,0,a):n.concat(r));return Zr.contents=o,Oe(Xe,t)}var ta=ct(void 0,10);function na(e,t){return void 0!==t?M(t):e}function ra(e,t){return e}var aa={contents:"reprocessing-default"};var ia=ct(void 0,10);function oa(e,t,n,r,a,i,o,u,l,c,f){var s,m,g=void 0!==t?t:aa.contents,b=0;try{m=dt(ta,g),b=1}catch(t){var w=I(t);if("Not_found"!==w.RE_EXN_ID)throw w;s={started:!1,justHotReloaded:!1,filename:"",previousInitialStateHash:0,draw:na(ra,n),setup:e,mouseMove:na(ra,r),mouseDragged:na(ra,a),mouseDown:na(ra,i),mouseUp:na(ra,o),keyPressed:na(ra,u),keyReleased:na(ra,l),keyTyped:na(ra,c)}}if(1===b&&(m.justHotReloaded=!0,m.draw=na(ra,n),m.setup=e,m.keyPressed=na(ra,u),m.keyReleased=na(ra,l),m.keyTyped=na(ra,c),m.mouseMove=na(ra,r),m.mouseDragged=na(ra,a),m.mouseDown=na(ra,i),m.mouseUp=na(ra,o),console.log("Successfully changed functions"),s=m),!s.started){s.started=!0,Ke(),ea(Qe(function e(t,n){if(0===n)return 1;if(1===n)return t;var r=e(t,n/2|0);return Math.imul(Math.imul(r,r),n%2==0?1:t)}(2,29)));var x=hr(h(bn.$$Window.init,g,y.a),200,200);Yr.loadDefaultFont(x);var E={contents:d(e,x)};s.previousInitialStateHash=ot(E.contents);var k=d(bn.$$Window.getWidth,x.window),_=d(bn.$$Window.getHeight,x.window),T=bn.readPixels_RGBA(x.gl,0,0,k,_),S=d(bn.createTexture,x.gl);p(bn.bindTexture,x.gl,3553,S),bn.texImage2D_RGBA(x.gl,3553,0,k,_,0,T),v(bn.texParameteri,x.gl,3553,10240,9729),v(bn.texParameteri,x.gl,3553,10241,9729),v(bn.texParameteri,x.gl,3553,10242,33071),v(bn.texParameteri,x.gl,3553,10243,33071);var C=function(e){var t=[0+k|0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,1,0,1,0+k|0,0+_|0,0,0,0,0,1,1,0,0,0+_|0,0,0,0,0,1,0,0];return pr(h(bn.Bigarray.of_array,1,t),h(bn.Bigarray.of_array,3,[0,1,2,1,2,3]),4,6,S,x)},P=bn.render(x.window,(function(e,t,n,r){x.mouse.pos=[n,r],x.mouse.pressed=!0,E.contents=h(s.mouseDown,E.contents,x)}),(function(e,t,n,r){x.mouse.pos=[n,r],x.mouse.pressed=!1,E.contents=h(s.mouseUp,E.contents,x)}),(function(e,t){x.mouse.pos=[e,t],x.mouse.pressed?E.contents=h(s.mouseDragged,E.contents,x):E.contents=h(s.mouseMove,E.contents,x)}),(function(e,t){x.keyboard.keyCode=e,t||(E.contents=h(s.keyPressed,E.contents,x),x.keyboard.pressed=h(Gn.add,e,x.keyboard.pressed),x.keyboard.down=h(Gn.add,e,x.keyboard.down)),E.contents=h(s.keyTyped,E.contents,x)}),(function(e){x.keyboard.keyCode=e,x.keyboard.released=h(Gn.add,e,x.keyboard.released),x.keyboard.down=h(Gn.remove,e,x.keyboard.down),E.contents=h(s.keyReleased,E.contents,x)}),(function(e){if(!x.size.resizeable)return Cr(Tr(x),Sr(x),x);var t=d(bn.$$Window.getHeight,x.window),n=d(bn.$$Window.getWidth,x.window);return _r(x,n,t)}),(function(e){if(2===x.frame.count){C();var t=d(bn.$$Window.getHeight,x.window),n=d(bn.$$Window.getWidth,x.window);p(bn.$$Window.setWindowSize,x.window,n,t)}if(""!==s.filename&&s.filename,s.justHotReloaded){var r=d(s.setup,x),a=ot(r);a!==s.previousInitialStateHash&&(E.contents=r,s.previousInitialStateHash=a),s.justHotReloaded=!1}E.contents=h(s.draw,E.contents,x);var i=1e3/e|0;if(x.mouse.prevPos=x.mouse.pos,x.frame={count:x.frame.count+1|0,rate:i,deltaTime:e/1e3},x.keyboard.released=Gn.empty,x.keyboard.pressed=Gn.empty,or(ir,x.matrix),x.batch.elementPtr>0)return vr(x)}),void 0);return ht(ia,g,P)}}function ua(e,t){return d(t,e),e}var la={r:67/255,g:35/255,b:113/255,a:1},ca={r:250/255,g:174/255,b:123/255,a:1};function fa(e){n.e(0).then(n.bind(null,26)).then((function(e){var t;t="canvas",aa.contents=t;return oa((function(t){return ua(ua(ua(ua(t,(function(e){return Cr(1500,1e3,e)})),(function(e){return function(e,t){var n=t.style;t.style={strokeColor:e,strokeWeight:n.strokeWeight,strokeCap:n.strokeCap,fillColor:n.fillColor,tintColor:n.tintColor,rectMode:n.rectMode}}(ca,e)})),(function(e){return function(e,t){var n=t.style;t.style={strokeColor:n.strokeColor,strokeWeight:n.strokeWeight,strokeCap:e,fillColor:n.fillColor,tintColor:n.tintColor,rectMode:n.rectMode}}(0,e)})),(function(e){return function(e,t){var n=t.style;t.style={strokeColor:n.strokeColor,strokeWeight:e,strokeCap:n.strokeCap,fillColor:n.fillColor,tintColor:n.tintColor,rectMode:n.rectMode}}(1,e)})),Jr(la,t),e.setup(1500,1e3)}),void 0,(function(t,n){return e.tick((function(e,t){Gr([e.x,e.y],[t.x,t.y],n)}))}),void 0,void 0,void 0,void 0,void 0,void 0,void 0),Promise.resolve(void 0)}))}var sa=function(e){var t=i.useState((function(){return!1}));return t[0]||(fa(),d(t[1],(function(e){return!0}))),i.createElement("div",void 0,i.createElement("canvas",{id:"canvas"}))};function da(e){return i.createElement("div",{className:"container"},i.createElement("div",{className:"containerTitle"},i.createElement("h1",void 0,e),i.createElement("div",{className:"containerContent"},i.createElement(sa,{}))))}n.e(0).then(n.bind(null,26));var ha=document.querySelector("#app-root");null!=ha&&o.render(da("Hello, world!"),ha)}]);
+// Generated by purs bundle 0.13.8
+var PS = {};
+(function(exports) {
+  "use strict";
+
+  exports.arrayApply = function (fs) {
+    return function (xs) {
+      var l = fs.length;
+      var k = xs.length;
+      var result = new Array(l*k);
+      var n = 0;
+      for (var i = 0; i < l; i++) {
+        var f = fs[i];
+        for (var j = 0; j < k; j++) {
+          result[n++] = f(xs[j]);
+        }
+      }
+      return result;
+    };
+  };
+})(PS["Control.Apply"] = PS["Control.Apply"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Semigroupoid"] = $PS["Control.Semigroupoid"] || {};
+  var exports = $PS["Control.Semigroupoid"];
+  var Semigroupoid = function (compose) {
+      this.compose = compose;
+  };
+  var semigroupoidFn = new Semigroupoid(function (f) {
+      return function (g) {
+          return function (x) {
+              return f(g(x));
+          };
+      };
+  });
+  var compose = function (dict) {
+      return dict.compose;
+  };
+  exports["compose"] = compose;
+  exports["semigroupoidFn"] = semigroupoidFn;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Category"] = $PS["Control.Category"] || {};
+  var exports = $PS["Control.Category"];
+  var Control_Semigroupoid = $PS["Control.Semigroupoid"];                
+  var Category = function (Semigroupoid0, identity) {
+      this.Semigroupoid0 = Semigroupoid0;
+      this.identity = identity;
+  };
+  var identity = function (dict) {
+      return dict.identity;
+  };
+  var categoryFn = new Category(function () {
+      return Control_Semigroupoid.semigroupoidFn;
+  }, function (x) {
+      return x;
+  });
+  exports["identity"] = identity;
+  exports["categoryFn"] = categoryFn;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Function"] = $PS["Data.Function"] || {};
+  var exports = $PS["Data.Function"];
+  var flip = function (f) {
+      return function (b) {
+          return function (a) {
+              return f(a)(b);
+          };
+      };
+  };
+  var $$const = function (a) {
+      return function (v) {
+          return a;
+      };
+  };
+  exports["flip"] = flip;
+  exports["const"] = $$const;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.arrayMap = function (f) {
+    return function (arr) {
+      var l = arr.length;
+      var result = new Array(l);
+      for (var i = 0; i < l; i++) {
+        result[i] = f(arr[i]);
+      }
+      return result;
+    };
+  };
+})(PS["Data.Functor"] = PS["Data.Functor"] || {});
+(function(exports) {
+  "use strict";
+
+  exports.unit = {};
+})(PS["Data.Unit"] = PS["Data.Unit"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Unit"] = $PS["Data.Unit"] || {};
+  var exports = $PS["Data.Unit"];
+  var $foreign = $PS["Data.Unit"];
+  exports["unit"] = $foreign.unit;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Functor"] = $PS["Data.Functor"] || {};
+  var exports = $PS["Data.Functor"];
+  var $foreign = $PS["Data.Functor"];
+  var Control_Semigroupoid = $PS["Control.Semigroupoid"];
+  var Data_Function = $PS["Data.Function"];
+  var Data_Unit = $PS["Data.Unit"];                
+  var Functor = function (map) {
+      this.map = map;
+  };
+  var map = function (dict) {
+      return dict.map;
+  };
+  var mapFlipped = function (dictFunctor) {
+      return function (fa) {
+          return function (f) {
+              return map(dictFunctor)(f)(fa);
+          };
+      };
+  };
+  var $$void = function (dictFunctor) {
+      return map(dictFunctor)(Data_Function["const"](Data_Unit.unit));
+  };
+  var voidLeft = function (dictFunctor) {
+      return function (f) {
+          return function (x) {
+              return map(dictFunctor)(Data_Function["const"](x))(f);
+          };
+      };
+  };
+  var functorFn = new Functor(Control_Semigroupoid.compose(Control_Semigroupoid.semigroupoidFn));
+  var functorArray = new Functor($foreign.arrayMap);
+  exports["Functor"] = Functor;
+  exports["map"] = map;
+  exports["mapFlipped"] = mapFlipped;
+  exports["void"] = $$void;
+  exports["voidLeft"] = voidLeft;
+  exports["functorFn"] = functorFn;
+  exports["functorArray"] = functorArray;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Apply"] = $PS["Control.Apply"] || {};
+  var exports = $PS["Control.Apply"];
+  var $foreign = $PS["Control.Apply"];
+  var Control_Category = $PS["Control.Category"];
+  var Data_Function = $PS["Data.Function"];
+  var Data_Functor = $PS["Data.Functor"];                
+  var Apply = function (Functor0, apply) {
+      this.Functor0 = Functor0;
+      this.apply = apply;
+  }; 
+  var applyArray = new Apply(function () {
+      return Data_Functor.functorArray;
+  }, $foreign.arrayApply);
+  var apply = function (dict) {
+      return dict.apply;
+  };
+  var applySecond = function (dictApply) {
+      return function (a) {
+          return function (b) {
+              return apply(dictApply)(Data_Functor.map(dictApply.Functor0())(Data_Function["const"](Control_Category.identity(Control_Category.categoryFn)))(a))(b);
+          };
+      };
+  };
+  var lift2 = function (dictApply) {
+      return function (f) {
+          return function (a) {
+              return function (b) {
+                  return apply(dictApply)(Data_Functor.map(dictApply.Functor0())(f)(a))(b);
+              };
+          };
+      };
+  };
+  exports["Apply"] = Apply;
+  exports["apply"] = apply;
+  exports["applySecond"] = applySecond;
+  exports["lift2"] = lift2;
+  exports["applyArray"] = applyArray;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Applicative"] = $PS["Control.Applicative"] || {};
+  var exports = $PS["Control.Applicative"];
+  var Control_Apply = $PS["Control.Apply"];
+  var Data_Unit = $PS["Data.Unit"];                
+  var Applicative = function (Apply0, pure) {
+      this.Apply0 = Apply0;
+      this.pure = pure;
+  };
+  var pure = function (dict) {
+      return dict.pure;
+  };
+  var unless = function (dictApplicative) {
+      return function (v) {
+          return function (v1) {
+              if (!v) {
+                  return v1;
+              };
+              if (v) {
+                  return pure(dictApplicative)(Data_Unit.unit);
+              };
+              throw new Error("Failed pattern match at Control.Applicative (line 62, column 1 - line 62, column 65): " + [ v.constructor.name, v1.constructor.name ]);
+          };
+      };
+  };
+  var when = function (dictApplicative) {
+      return function (v) {
+          return function (v1) {
+              if (v) {
+                  return v1;
+              };
+              if (!v) {
+                  return pure(dictApplicative)(Data_Unit.unit);
+              };
+              throw new Error("Failed pattern match at Control.Applicative (line 57, column 1 - line 57, column 63): " + [ v.constructor.name, v1.constructor.name ]);
+          };
+      };
+  };
+  var liftA1 = function (dictApplicative) {
+      return function (f) {
+          return function (a) {
+              return Control_Apply.apply(dictApplicative.Apply0())(pure(dictApplicative)(f))(a);
+          };
+      };
+  }; 
+  var applicativeArray = new Applicative(function () {
+      return Control_Apply.applyArray;
+  }, function (x) {
+      return [ x ];
+  });
+  exports["Applicative"] = Applicative;
+  exports["pure"] = pure;
+  exports["liftA1"] = liftA1;
+  exports["unless"] = unless;
+  exports["when"] = when;
+  exports["applicativeArray"] = applicativeArray;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.boolConj = function (b1) {
+    return function (b2) {
+      return b1 && b2;
+    };
+  };
+
+  exports.boolDisj = function (b1) {
+    return function (b2) {
+      return b1 || b2;
+    };
+  };
+
+  exports.boolNot = function (b) {
+    return !b;
+  };
+})(PS["Data.HeytingAlgebra"] = PS["Data.HeytingAlgebra"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.HeytingAlgebra"] = $PS["Data.HeytingAlgebra"] || {};
+  var exports = $PS["Data.HeytingAlgebra"];
+  var $foreign = $PS["Data.HeytingAlgebra"];
+  var HeytingAlgebra = function (conj, disj, ff, implies, not, tt) {
+      this.conj = conj;
+      this.disj = disj;
+      this.ff = ff;
+      this.implies = implies;
+      this.not = not;
+      this.tt = tt;
+  };
+  var tt = function (dict) {
+      return dict.tt;
+  };
+  var not = function (dict) {
+      return dict.not;
+  };
+  var implies = function (dict) {
+      return dict.implies;
+  };
+  var ff = function (dict) {
+      return dict.ff;
+  };
+  var disj = function (dict) {
+      return dict.disj;
+  };
+  var heytingAlgebraBoolean = new HeytingAlgebra($foreign.boolConj, $foreign.boolDisj, false, function (a) {
+      return function (b) {
+          return disj(heytingAlgebraBoolean)(not(heytingAlgebraBoolean)(a))(b);
+      };
+  }, $foreign.boolNot, true);
+  var conj = function (dict) {
+      return dict.conj;
+  };
+  var heytingAlgebraFunction = function (dictHeytingAlgebra) {
+      return new HeytingAlgebra(function (f) {
+          return function (g) {
+              return function (a) {
+                  return conj(dictHeytingAlgebra)(f(a))(g(a));
+              };
+          };
+      }, function (f) {
+          return function (g) {
+              return function (a) {
+                  return disj(dictHeytingAlgebra)(f(a))(g(a));
+              };
+          };
+      }, function (v) {
+          return ff(dictHeytingAlgebra);
+      }, function (f) {
+          return function (g) {
+              return function (a) {
+                  return implies(dictHeytingAlgebra)(f(a))(g(a));
+              };
+          };
+      }, function (f) {
+          return function (a) {
+              return not(dictHeytingAlgebra)(f(a));
+          };
+      }, function (v) {
+          return tt(dictHeytingAlgebra);
+      });
+  };
+  exports["ff"] = ff;
+  exports["disj"] = disj;
+  exports["not"] = not;
+  exports["heytingAlgebraBoolean"] = heytingAlgebraBoolean;
+  exports["heytingAlgebraFunction"] = heytingAlgebraFunction;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.concatArray = function (xs) {
+    return function (ys) {
+      if (xs.length === 0) return ys;
+      if (ys.length === 0) return xs;
+      return xs.concat(ys);
+    };
+  };
+})(PS["Data.Semigroup"] = PS["Data.Semigroup"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Semigroup"] = $PS["Data.Semigroup"] || {};
+  var exports = $PS["Data.Semigroup"];
+  var $foreign = $PS["Data.Semigroup"];
+  var Data_Unit = $PS["Data.Unit"];
+  var Semigroup = function (append) {
+      this.append = append;
+  }; 
+  var semigroupUnit = new Semigroup(function (v) {
+      return function (v1) {
+          return Data_Unit.unit;
+      };
+  });
+  var semigroupArray = new Semigroup($foreign.concatArray);
+  var append = function (dict) {
+      return dict.append;
+  };
+  exports["Semigroup"] = Semigroup;
+  exports["append"] = append;
+  exports["semigroupUnit"] = semigroupUnit;
+  exports["semigroupArray"] = semigroupArray;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Monoid"] = $PS["Data.Monoid"] || {};
+  var exports = $PS["Data.Monoid"];
+  var Data_Semigroup = $PS["Data.Semigroup"];
+  var Data_Unit = $PS["Data.Unit"];
+  var Monoid = function (Semigroup0, mempty) {
+      this.Semigroup0 = Semigroup0;
+      this.mempty = mempty;
+  };
+  var monoidUnit = new Monoid(function () {
+      return Data_Semigroup.semigroupUnit;
+  }, Data_Unit.unit);
+  var mempty = function (dict) {
+      return dict.mempty;
+  };
+  exports["Monoid"] = Monoid;
+  exports["mempty"] = mempty;
+  exports["monoidUnit"] = monoidUnit;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Monoid.Disj"] = $PS["Data.Monoid.Disj"] || {};
+  var exports = $PS["Data.Monoid.Disj"];
+  var Data_HeytingAlgebra = $PS["Data.HeytingAlgebra"];
+  var Data_Monoid = $PS["Data.Monoid"];
+  var Data_Semigroup = $PS["Data.Semigroup"];      
+  var Disj = function (x) {
+      return x;
+  };
+  var semigroupDisj = function (dictHeytingAlgebra) {
+      return new Data_Semigroup.Semigroup(function (v) {
+          return function (v1) {
+              return Data_HeytingAlgebra.disj(dictHeytingAlgebra)(v)(v1);
+          };
+      });
+  };
+  var monoidDisj = function (dictHeytingAlgebra) {
+      return new Data_Monoid.Monoid(function () {
+          return semigroupDisj(dictHeytingAlgebra);
+      }, Data_HeytingAlgebra.ff(dictHeytingAlgebra));
+  };
+  exports["Disj"] = Disj;
+  exports["monoidDisj"] = monoidDisj;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Newtype"] = $PS["Data.Newtype"] || {};
+  var exports = $PS["Data.Newtype"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Monoid_Disj = $PS["Data.Monoid.Disj"];                      
+  var Newtype = function (unwrap, wrap) {
+      this.unwrap = unwrap;
+      this.wrap = wrap;
+  };
+  var wrap = function (dict) {
+      return dict.wrap;
+  };
+  var unwrap = function (dict) {
+      return dict.unwrap;
+  };                        
+  var newtypeDisj = new Newtype(function (v) {
+      return v;
+  }, Data_Monoid_Disj.Disj);
+  var alaF = function (dictFunctor) {
+      return function (dictFunctor1) {
+          return function (dictNewtype) {
+              return function (dictNewtype1) {
+                  return function (v) {
+                      return function (f) {
+                          var $96 = Data_Functor.map(dictFunctor1)(unwrap(dictNewtype1));
+                          var $97 = Data_Functor.map(dictFunctor)(wrap(dictNewtype));
+                          return function ($98) {
+                              return $96(f($97($98)));
+                          };
+                      };
+                  };
+              };
+          };
+      };
+  };
+  exports["unwrap"] = unwrap;
+  exports["Newtype"] = Newtype;
+  exports["alaF"] = alaF;
+  exports["newtypeDisj"] = newtypeDisj;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.arrayBind = function (arr) {
+    return function (f) {
+      var result = [];
+      for (var i = 0, l = arr.length; i < l; i++) {
+        Array.prototype.push.apply(result, f(arr[i]));
+      }
+      return result;
+    };
+  };
+})(PS["Control.Bind"] = PS["Control.Bind"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Bind"] = $PS["Control.Bind"] || {};
+  var exports = $PS["Control.Bind"];
+  var $foreign = $PS["Control.Bind"];
+  var Control_Apply = $PS["Control.Apply"];
+  var Data_Function = $PS["Data.Function"];                
+  var Discard = function (discard) {
+      this.discard = discard;
+  };
+  var Bind = function (Apply0, bind) {
+      this.Apply0 = Apply0;
+      this.bind = bind;
+  };
+  var discard = function (dict) {
+      return dict.discard;
+  }; 
+  var bindArray = new Bind(function () {
+      return Control_Apply.applyArray;
+  }, $foreign.arrayBind);
+  var bind = function (dict) {
+      return dict.bind;
+  };
+  var bindFlipped = function (dictBind) {
+      return Data_Function.flip(bind(dictBind));
+  };
+  var composeKleisliFlipped = function (dictBind) {
+      return function (f) {
+          return function (g) {
+              return function (a) {
+                  return bindFlipped(dictBind)(f)(g(a));
+              };
+          };
+      };
+  };
+  var discardUnit = new Discard(function (dictBind) {
+      return bind(dictBind);
+  });
+  exports["Bind"] = Bind;
+  exports["bind"] = bind;
+  exports["bindFlipped"] = bindFlipped;
+  exports["discard"] = discard;
+  exports["composeKleisliFlipped"] = composeKleisliFlipped;
+  exports["bindArray"] = bindArray;
+  exports["discardUnit"] = discardUnit;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  var refEq = function (r1) {
+    return function (r2) {
+      return r1 === r2;
+    };
+  };
+
+  exports.eqBooleanImpl = refEq;
+  exports.eqIntImpl = refEq; 
+  exports.eqStringImpl = refEq;
+})(PS["Data.Eq"] = PS["Data.Eq"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Eq"] = $PS["Data.Eq"] || {};
+  var exports = $PS["Data.Eq"];
+  var $foreign = $PS["Data.Eq"];
+  var Eq = function (eq) {
+      this.eq = eq;
+  }; 
+  var eqString = new Eq($foreign.eqStringImpl);
+  var eqInt = new Eq($foreign.eqIntImpl);  
+  var eqBoolean = new Eq($foreign.eqBooleanImpl);
+  var eq = function (dict) {
+      return dict.eq;
+  };
+  exports["Eq"] = Eq;
+  exports["eq"] = eq;
+  exports["eqBoolean"] = eqBoolean;
+  exports["eqInt"] = eqInt;
+  exports["eqString"] = eqString;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Maybe"] = $PS["Data.Maybe"] || {};
+  var exports = $PS["Data.Maybe"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Apply = $PS["Control.Apply"];
+  var Control_Bind = $PS["Control.Bind"];
+  var Control_Category = $PS["Control.Category"];
+  var Data_Eq = $PS["Data.Eq"];
+  var Data_Function = $PS["Data.Function"];
+  var Data_Functor = $PS["Data.Functor"];          
+  var Nothing = (function () {
+      function Nothing() {
+
+      };
+      Nothing.value = new Nothing();
+      return Nothing;
+  })();
+  var Just = (function () {
+      function Just(value0) {
+          this.value0 = value0;
+      };
+      Just.create = function (value0) {
+          return new Just(value0);
+      };
+      return Just;
+  })();
+  var maybe = function (v) {
+      return function (v1) {
+          return function (v2) {
+              if (v2 instanceof Nothing) {
+                  return v;
+              };
+              if (v2 instanceof Just) {
+                  return v1(v2.value0);
+              };
+              throw new Error("Failed pattern match at Data.Maybe (line 217, column 1 - line 217, column 51): " + [ v.constructor.name, v1.constructor.name, v2.constructor.name ]);
+          };
+      };
+  };
+  var isNothing = maybe(true)(Data_Function["const"](false));
+  var isJust = maybe(false)(Data_Function["const"](true));
+  var functorMaybe = new Data_Functor.Functor(function (v) {
+      return function (v1) {
+          if (v1 instanceof Just) {
+              return new Just(v(v1.value0));
+          };
+          return Nothing.value;
+      };
+  });
+  var fromMaybe = function (a) {
+      return maybe(a)(Control_Category.identity(Control_Category.categoryFn));
+  }; 
+  var eqMaybe = function (dictEq) {
+      return new Data_Eq.Eq(function (x) {
+          return function (y) {
+              if (x instanceof Nothing && y instanceof Nothing) {
+                  return true;
+              };
+              if (x instanceof Just && y instanceof Just) {
+                  return Data_Eq.eq(dictEq)(x.value0)(y.value0);
+              };
+              return false;
+          };
+      });
+  };
+  var applyMaybe = new Control_Apply.Apply(function () {
+      return functorMaybe;
+  }, function (v) {
+      return function (v1) {
+          if (v instanceof Just) {
+              return Data_Functor.map(functorMaybe)(v.value0)(v1);
+          };
+          if (v instanceof Nothing) {
+              return Nothing.value;
+          };
+          throw new Error("Failed pattern match at Data.Maybe (line 67, column 1 - line 69, column 30): " + [ v.constructor.name, v1.constructor.name ]);
+      };
+  });
+  var bindMaybe = new Control_Bind.Bind(function () {
+      return applyMaybe;
+  }, function (v) {
+      return function (v1) {
+          if (v instanceof Just) {
+              return v1(v.value0);
+          };
+          if (v instanceof Nothing) {
+              return Nothing.value;
+          };
+          throw new Error("Failed pattern match at Data.Maybe (line 125, column 1 - line 127, column 28): " + [ v.constructor.name, v1.constructor.name ]);
+      };
+  });
+  var applicativeMaybe = new Control_Applicative.Applicative(function () {
+      return applyMaybe;
+  }, Just.create);
+  exports["Nothing"] = Nothing;
+  exports["Just"] = Just;
+  exports["maybe"] = maybe;
+  exports["fromMaybe"] = fromMaybe;
+  exports["isJust"] = isJust;
+  exports["isNothing"] = isNothing;
+  exports["functorMaybe"] = functorMaybe;
+  exports["applicativeMaybe"] = applicativeMaybe;
+  exports["bindMaybe"] = bindMaybe;
+  exports["eqMaybe"] = eqMaybe;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports["null"] = null;
+
+  exports.nullable = function (a, r, f) {
+    return a == null ? r : f(a);
+  };
+
+  exports.notNull = function (x) {
+    return x;
+  };
+})(PS["Data.Nullable"] = PS["Data.Nullable"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Nullable"] = $PS["Data.Nullable"] || {};
+  var exports = $PS["Data.Nullable"];
+  var $foreign = $PS["Data.Nullable"];
+  var Data_Maybe = $PS["Data.Maybe"];              
+  var toNullable = Data_Maybe.maybe($foreign["null"])($foreign.notNull);
+  var toMaybe = function (n) {
+      return $foreign.nullable(n, Data_Maybe.Nothing.value, Data_Maybe.Just.create);
+  };
+  exports["toMaybe"] = toMaybe;
+  exports["toNullable"] = toNullable;
+  exports["null"] = $foreign["null"];
+})(PS);
+(function(exports) {
+  "use strict";
+
+  var unsafeCompareImpl = function (lt) {
+    return function (eq) {
+      return function (gt) {
+        return function (x) {
+          return function (y) {
+            return x < y ? lt : x === y ? eq : gt;
+          };
+        };
+      };
+    };
+  };                                         
+  exports.ordIntImpl = unsafeCompareImpl;   
+  exports.ordStringImpl = unsafeCompareImpl;
+})(PS["Data.Ord"] = PS["Data.Ord"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Ordering"] = $PS["Data.Ordering"] || {};
+  var exports = $PS["Data.Ordering"];              
+  var LT = (function () {
+      function LT() {
+
+      };
+      LT.value = new LT();
+      return LT;
+  })();
+  var GT = (function () {
+      function GT() {
+
+      };
+      GT.value = new GT();
+      return GT;
+  })();
+  var EQ = (function () {
+      function EQ() {
+
+      };
+      EQ.value = new EQ();
+      return EQ;
+  })();
+  exports["LT"] = LT;
+  exports["GT"] = GT;
+  exports["EQ"] = EQ;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Ord"] = $PS["Data.Ord"] || {};
+  var exports = $PS["Data.Ord"];
+  var $foreign = $PS["Data.Ord"];
+  var Data_Eq = $PS["Data.Eq"];
+  var Data_Ordering = $PS["Data.Ordering"];
+  var Ord = function (Eq0, compare) {
+      this.Eq0 = Eq0;
+      this.compare = compare;
+  }; 
+  var ordString = new Ord(function () {
+      return Data_Eq.eqString;
+  }, $foreign.ordStringImpl(Data_Ordering.LT.value)(Data_Ordering.EQ.value)(Data_Ordering.GT.value));
+  var ordInt = new Ord(function () {
+      return Data_Eq.eqInt;
+  }, $foreign.ordIntImpl(Data_Ordering.LT.value)(Data_Ordering.EQ.value)(Data_Ordering.GT.value));
+  var compare = function (dict) {
+      return dict.compare;
+  };
+  exports["Ord"] = Ord;
+  exports["compare"] = compare;
+  exports["ordInt"] = ordInt;
+  exports["ordString"] = ordString;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Tuple"] = $PS["Data.Tuple"] || {};
+  var exports = $PS["Data.Tuple"];
+  var Data_Eq = $PS["Data.Eq"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Ord = $PS["Data.Ord"];
+  var Data_Ordering = $PS["Data.Ordering"];                
+  var Tuple = (function () {
+      function Tuple(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Tuple.create = function (value0) {
+          return function (value1) {
+              return new Tuple(value0, value1);
+          };
+      };
+      return Tuple;
+  })();
+  var snd = function (v) {
+      return v.value1;
+  };
+  var functorTuple = new Data_Functor.Functor(function (f) {
+      return function (m) {
+          return new Tuple(m.value0, f(m.value1));
+      };
+  });                                                                                                   
+  var fst = function (v) {
+      return v.value0;
+  }; 
+  var eqTuple = function (dictEq) {
+      return function (dictEq1) {
+          return new Data_Eq.Eq(function (x) {
+              return function (y) {
+                  return Data_Eq.eq(dictEq)(x.value0)(y.value0) && Data_Eq.eq(dictEq1)(x.value1)(y.value1);
+              };
+          });
+      };
+  };
+  var ordTuple = function (dictOrd) {
+      return function (dictOrd1) {
+          return new Data_Ord.Ord(function () {
+              return eqTuple(dictOrd.Eq0())(dictOrd1.Eq0());
+          }, function (x) {
+              return function (y) {
+                  var v = Data_Ord.compare(dictOrd)(x.value0)(y.value0);
+                  if (v instanceof Data_Ordering.LT) {
+                      return Data_Ordering.LT.value;
+                  };
+                  if (v instanceof Data_Ordering.GT) {
+                      return Data_Ordering.GT.value;
+                  };
+                  return Data_Ord.compare(dictOrd1)(x.value1)(y.value1);
+              };
+          });
+      };
+  };
+  exports["Tuple"] = Tuple;
+  exports["fst"] = fst;
+  exports["snd"] = snd;
+  exports["ordTuple"] = ordTuple;
+  exports["functorTuple"] = functorTuple;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.new = function (val) {
+    return function () {
+      return { value: val };
+    };
+  };
+
+  exports.read = function (ref) {
+    return function () {
+      return ref.value;
+    };
+  };
+
+  exports["modify'"] = function (f) {
+    return function (ref) {
+      return function () {
+        var t = f(ref.value);
+        ref.value = t.state;
+        return t.value;
+      };
+    };
+  };
+
+  exports.write = function (val) {
+    return function (ref) {
+      return function () {
+        ref.value = val;
+        return {};
+      };
+    };
+  };
+})(PS["Effect.Ref"] = PS["Effect.Ref"] || {});
+(function(exports) {
+  "use strict";
+
+  exports.pureE = function (a) {
+    return function () {
+      return a;
+    };
+  };
+
+  exports.bindE = function (a) {
+    return function (f) {
+      return function () {
+        return f(a())();
+      };
+    };
+  };
+})(PS["Effect"] = PS["Effect"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Monad"] = $PS["Control.Monad"] || {};
+  var exports = $PS["Control.Monad"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Bind = $PS["Control.Bind"];                
+  var Monad = function (Applicative0, Bind1) {
+      this.Applicative0 = Applicative0;
+      this.Bind1 = Bind1;
+  };
+  var unlessM = function (dictMonad) {
+      return function (mb) {
+          return function (m) {
+              return Control_Bind.bind(dictMonad.Bind1())(mb)(function (b) {
+                  return Control_Applicative.unless(dictMonad.Applicative0())(b)(m);
+              });
+          };
+      };
+  };
+  var ap = function (dictMonad) {
+      return function (f) {
+          return function (a) {
+              return Control_Bind.bind(dictMonad.Bind1())(f)(function (f$prime) {
+                  return Control_Bind.bind(dictMonad.Bind1())(a)(function (a$prime) {
+                      return Control_Applicative.pure(dictMonad.Applicative0())(f$prime(a$prime));
+                  });
+              });
+          };
+      };
+  };
+  exports["Monad"] = Monad;
+  exports["ap"] = ap;
+  exports["unlessM"] = unlessM;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Effect"] = $PS["Effect"] || {};
+  var exports = $PS["Effect"];
+  var $foreign = $PS["Effect"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Apply = $PS["Control.Apply"];
+  var Control_Bind = $PS["Control.Bind"];
+  var Control_Monad = $PS["Control.Monad"];
+  var Data_Functor = $PS["Data.Functor"];                    
+  var monadEffect = new Control_Monad.Monad(function () {
+      return applicativeEffect;
+  }, function () {
+      return bindEffect;
+  });
+  var bindEffect = new Control_Bind.Bind(function () {
+      return applyEffect;
+  }, $foreign.bindE);
+  var applyEffect = new Control_Apply.Apply(function () {
+      return functorEffect;
+  }, Control_Monad.ap(monadEffect));
+  var applicativeEffect = new Control_Applicative.Applicative(function () {
+      return applyEffect;
+  }, $foreign.pureE);
+  var functorEffect = new Data_Functor.Functor(Control_Applicative.liftA1(applicativeEffect));
+  exports["functorEffect"] = functorEffect;
+  exports["applicativeEffect"] = applicativeEffect;
+  exports["bindEffect"] = bindEffect;
+  exports["monadEffect"] = monadEffect;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Effect.Ref"] = $PS["Effect.Ref"] || {};
+  var exports = $PS["Effect.Ref"];
+  var $foreign = $PS["Effect.Ref"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Effect = $PS["Effect"];                
+  var modify = function (f) {
+      return $foreign["modify'"](function (s) {
+          var s$prime = f(s);
+          return {
+              state: s$prime,
+              value: s$prime
+          };
+      });
+  };
+  var modify_ = function (f) {
+      return function (s) {
+          return Data_Functor["void"](Effect.functorEffect)(modify(f)(s));
+      };
+  };
+  exports["modify_"] = modify_;
+  exports["new"] = $foreign["new"];
+  exports["read"] = $foreign.read;
+  exports["modify'"] = $foreign["modify'"];
+  exports["write"] = $foreign.write;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.typeOf = function (value) {
+    return typeof value;
+  };
+})(PS["Foreign"] = PS["Foreign"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Foreign"] = $PS["Foreign"] || {};
+  var exports = $PS["Foreign"];
+  var $foreign = $PS["Foreign"];
+  exports["typeOf"] = $foreign.typeOf;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports._lookup = function (no, yes, k, m) {
+    return k in m ? yes(m[k]) : no;
+  };
+
+  function toArrayWithKey(f) {
+    return function (m) {
+      var r = [];
+      for (var k in m) {
+        if (hasOwnProperty.call(m, k)) {
+          r.push(f(k)(m[k]));
+        }
+      }
+      return r;
+    };
+  }
+})(PS["Foreign.Object"] = PS["Foreign.Object"] || {});
+(function(exports) {
+  "use strict";
+
+  exports.runFn4 = function (fn) {
+    return function (a) {
+      return function (b) {
+        return function (c) {
+          return function (d) {
+            return fn(a, b, c, d);
+          };
+        };
+      };
+    };
+  };
+})(PS["Data.Function.Uncurried"] = PS["Data.Function.Uncurried"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Function.Uncurried"] = $PS["Data.Function.Uncurried"] || {};
+  var exports = $PS["Data.Function.Uncurried"];
+  var $foreign = $PS["Data.Function.Uncurried"];
+  exports["runFn4"] = $foreign.runFn4;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Foreign.Object"] = $PS["Foreign.Object"] || {};
+  var exports = $PS["Foreign.Object"];
+  var $foreign = $PS["Foreign.Object"];
+  var Data_Function_Uncurried = $PS["Data.Function.Uncurried"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var lookup = Data_Function_Uncurried.runFn4($foreign["_lookup"])(Data_Maybe.Nothing.value)(Data_Maybe.Just.create);
+  exports["lookup"] = lookup;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  // module Unsafe.Coerce
+
+  exports.unsafeCoerce = function (x) {
+    return x;
+  };
+})(PS["Unsafe.Coerce"] = PS["Unsafe.Coerce"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Unsafe.Coerce"] = $PS["Unsafe.Coerce"] || {};
+  var exports = $PS["Unsafe.Coerce"];
+  var $foreign = $PS["Unsafe.Coerce"];
+  exports["unsafeCoerce"] = $foreign.unsafeCoerce;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.VDom.Machine"] = $PS["Halogen.VDom.Machine"] || {};
+  var exports = $PS["Halogen.VDom.Machine"];
+  var Unsafe_Coerce = $PS["Unsafe.Coerce"];                
+  var Step = (function () {
+      function Step(value0, value1, value2, value3) {
+          this.value0 = value0;
+          this.value1 = value1;
+          this.value2 = value2;
+          this.value3 = value3;
+      };
+      Step.create = function (value0) {
+          return function (value1) {
+              return function (value2) {
+                  return function (value3) {
+                      return new Step(value0, value1, value2, value3);
+                  };
+              };
+          };
+      };
+      return Step;
+  })();
+  var unStep = Unsafe_Coerce.unsafeCoerce;
+  var step = function (v, a) {
+      return v.value2(v.value1, a);
+  };
+  var mkStep = Unsafe_Coerce.unsafeCoerce;
+  var halt = function (v) {
+      return v.value3(v.value1);
+  };
+  var extract = unStep(function (v) {
+      return v.value0;
+  });
+  exports["Step"] = Step;
+  exports["mkStep"] = mkStep;
+  exports["unStep"] = unStep;
+  exports["extract"] = extract;
+  exports["step"] = step;
+  exports["halt"] = halt;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.unsafeGetAny = function (key, obj) {
+    return obj[key];
+  };
+
+  exports.unsafeHasAny = function (key, obj) {
+    return obj.hasOwnProperty(key);
+  };
+
+  exports.unsafeSetAny = function (key, val, obj) {
+      obj[key] = val;
+  };
+
+  exports.forE = function (a, f) {
+    var b = [];
+    for (var i = 0; i < a.length; i++) {
+      b.push(f(i, a[i]));
+    }
+    return b;
+  };
+
+  exports.forEachE = function (a, f) {
+    for (var i = 0; i < a.length; i++) {
+      f(a[i]);
+    }
+  };
+
+  exports.forInE = function (o, f) {
+    var ks = Object.keys(o);
+    for (var i = 0; i < ks.length; i++) {
+      var k = ks[i];
+      f(k, o[k]);
+    }
+  };
+
+  exports.diffWithIxE = function (a1, a2, f1, f2, f3) {
+    var a3 = [];
+    var l1 = a1.length;
+    var l2 = a2.length;
+    var i  = 0;
+    while (1) {
+      if (i < l1) {
+        if (i < l2) {
+          a3.push(f1(i, a1[i], a2[i]));
+        } else {
+          f2(i, a1[i]);
+        }
+      } else if (i < l2) {
+        a3.push(f3(i, a2[i]));
+      } else {
+        break;
+      }
+      i++;
+    }
+    return a3;
+  };
+
+  exports.strMapWithIxE = function (as, fk, f) {
+    var o = {};
+    for (var i = 0; i < as.length; i++) {
+      var a = as[i];
+      var k = fk(a);
+      o[k] = f(k, i, a);
+    }
+    return o;
+  };
+
+  exports.diffWithKeyAndIxE = function (o1, as, fk, f1, f2, f3) {
+    var o2 = {};
+    for (var i = 0; i < as.length; i++) {
+      var a = as[i];
+      var k = fk(a);
+      if (o1.hasOwnProperty(k)) {
+        o2[k] = f1(k, i, o1[k], a);
+      } else {
+        o2[k] = f3(k, i, a);
+      }
+    }
+    for (var k in o1) {
+      if (k in o2) {
+        continue;
+      }
+      f2(k, o1[k]);
+    }
+    return o2;
+  };
+
+  exports.refEq = function (a, b) {
+    return a === b;
+  };
+
+  exports.createTextNode = function (s, doc) {
+    return doc.createTextNode(s);
+  };
+
+  exports.setTextContent = function (s, n) {
+    n.textContent = s;
+  };
+
+  exports.createElement = function (ns, name, doc) {
+    if (ns != null) {
+      return doc.createElementNS(ns, name);
+    } else {
+      return doc.createElement(name)
+    }
+  };
+
+  exports.insertChildIx = function (i, a, b) {
+    var n = b.childNodes.item(i) || null;
+    if (n !== a) {
+      b.insertBefore(a, n);
+    }
+  };
+
+  exports.removeChild = function (a, b) {
+    if (b && a.parentNode === b) {
+      b.removeChild(a);
+    }
+  };
+
+  exports.parentNode = function (a) {
+    return a.parentNode;
+  };
+
+  exports.setAttribute = function (ns, attr, val, el) {
+    if (ns != null) {
+      el.setAttributeNS(ns, attr, val);
+    } else {
+      el.setAttribute(attr, val);
+    }
+  };
+
+  exports.removeAttribute = function (ns, attr, el) {
+    if (ns != null) {
+      el.removeAttributeNS(ns, attr);
+    } else {
+      el.removeAttribute(attr);
+    }
+  };
+
+  exports.hasAttribute = function (ns, attr, el) {
+    if (ns != null) {
+      return el.hasAttributeNS(ns, attr);
+    } else {
+      return el.hasAttribute(attr);
+    }
+  };
+
+  exports.addEventListener = function (ev, listener, el) {
+    el.addEventListener(ev, listener, false);
+  };
+
+  exports.removeEventListener = function (ev, listener, el) {
+    el.removeEventListener(ev, listener, false);
+  };
+
+  exports.jsUndefined = void 0;
+})(PS["Halogen.VDom.Util"] = PS["Halogen.VDom.Util"] || {});
+(function(exports) {
+  "use strict";
+
+  exports["new"] = function () {
+    return {};
+  };
+})(PS["Foreign.Object.ST"] = PS["Foreign.Object.ST"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Foreign.Object.ST"] = $PS["Foreign.Object.ST"] || {};
+  var exports = $PS["Foreign.Object.ST"];
+  var $foreign = $PS["Foreign.Object.ST"];
+  exports["new"] = $foreign["new"];
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.VDom.Util"] = $PS["Halogen.VDom.Util"] || {};
+  var exports = $PS["Halogen.VDom.Util"];
+  var $foreign = $PS["Halogen.VDom.Util"];
+  var Foreign_Object_ST = $PS["Foreign.Object.ST"];
+  var Unsafe_Coerce = $PS["Unsafe.Coerce"];                
+  var unsafeLookup = $foreign.unsafeGetAny;
+  var unsafeFreeze = Unsafe_Coerce.unsafeCoerce;
+  var pokeMutMap = $foreign.unsafeSetAny;
+  var newMutMap = Foreign_Object_ST["new"];
+  exports["newMutMap"] = newMutMap;
+  exports["pokeMutMap"] = pokeMutMap;
+  exports["unsafeFreeze"] = unsafeFreeze;
+  exports["unsafeLookup"] = unsafeLookup;
+  exports["unsafeGetAny"] = $foreign.unsafeGetAny;
+  exports["unsafeHasAny"] = $foreign.unsafeHasAny;
+  exports["unsafeSetAny"] = $foreign.unsafeSetAny;
+  exports["forE"] = $foreign.forE;
+  exports["forEachE"] = $foreign.forEachE;
+  exports["forInE"] = $foreign.forInE;
+  exports["diffWithIxE"] = $foreign.diffWithIxE;
+  exports["diffWithKeyAndIxE"] = $foreign.diffWithKeyAndIxE;
+  exports["strMapWithIxE"] = $foreign.strMapWithIxE;
+  exports["refEq"] = $foreign.refEq;
+  exports["createTextNode"] = $foreign.createTextNode;
+  exports["setTextContent"] = $foreign.setTextContent;
+  exports["createElement"] = $foreign.createElement;
+  exports["insertChildIx"] = $foreign.insertChildIx;
+  exports["removeChild"] = $foreign.removeChild;
+  exports["parentNode"] = $foreign.parentNode;
+  exports["setAttribute"] = $foreign.setAttribute;
+  exports["removeAttribute"] = $foreign.removeAttribute;
+  exports["hasAttribute"] = $foreign.hasAttribute;
+  exports["addEventListener"] = $foreign.addEventListener;
+  exports["removeEventListener"] = $foreign.removeEventListener;
+  exports["jsUndefined"] = $foreign.jsUndefined;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.eventListener = function (fn) {
+    return function () {
+      return function (event) {
+        return fn(event)();
+      };
+    };
+  };
+
+  exports.addEventListener = function (type) {
+    return function (listener) {
+      return function (useCapture) {
+        return function (target) {
+          return function () {
+            return target.addEventListener(type, listener, useCapture);
+          };
+        };
+      };
+    };
+  };
+
+  exports.removeEventListener = function (type) {
+    return function (listener) {
+      return function (useCapture) {
+        return function (target) {
+          return function () {
+            return target.removeEventListener(type, listener, useCapture);
+          };
+        };
+      };
+    };
+  };
+})(PS["Web.Event.EventTarget"] = PS["Web.Event.EventTarget"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Web.Event.EventTarget"] = $PS["Web.Event.EventTarget"] || {};
+  var exports = $PS["Web.Event.EventTarget"];
+  var $foreign = $PS["Web.Event.EventTarget"];
+  exports["eventListener"] = $foreign.eventListener;
+  exports["addEventListener"] = $foreign.addEventListener;
+  exports["removeEventListener"] = $foreign.removeEventListener;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.VDom.DOM.Prop"] = $PS["Halogen.VDom.DOM.Prop"] || {};
+  var exports = $PS["Halogen.VDom.DOM.Prop"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Data_Nullable = $PS["Data.Nullable"];
+  var Data_Tuple = $PS["Data.Tuple"];
+  var Data_Unit = $PS["Data.Unit"];
+  var Effect_Ref = $PS["Effect.Ref"];
+  var Foreign = $PS["Foreign"];
+  var Foreign_Object = $PS["Foreign.Object"];
+  var Halogen_VDom_Machine = $PS["Halogen.VDom.Machine"];
+  var Halogen_VDom_Util = $PS["Halogen.VDom.Util"];
+  var Unsafe_Coerce = $PS["Unsafe.Coerce"];
+  var Web_Event_EventTarget = $PS["Web.Event.EventTarget"];                
+  var Created = (function () {
+      function Created(value0) {
+          this.value0 = value0;
+      };
+      Created.create = function (value0) {
+          return new Created(value0);
+      };
+      return Created;
+  })();
+  var Removed = (function () {
+      function Removed(value0) {
+          this.value0 = value0;
+      };
+      Removed.create = function (value0) {
+          return new Removed(value0);
+      };
+      return Removed;
+  })();
+  var Attribute = (function () {
+      function Attribute(value0, value1, value2) {
+          this.value0 = value0;
+          this.value1 = value1;
+          this.value2 = value2;
+      };
+      Attribute.create = function (value0) {
+          return function (value1) {
+              return function (value2) {
+                  return new Attribute(value0, value1, value2);
+              };
+          };
+      };
+      return Attribute;
+  })();
+  var Property = (function () {
+      function Property(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Property.create = function (value0) {
+          return function (value1) {
+              return new Property(value0, value1);
+          };
+      };
+      return Property;
+  })();
+  var Handler = (function () {
+      function Handler(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Handler.create = function (value0) {
+          return function (value1) {
+              return new Handler(value0, value1);
+          };
+      };
+      return Handler;
+  })();
+  var Ref = (function () {
+      function Ref(value0) {
+          this.value0 = value0;
+      };
+      Ref.create = function (value0) {
+          return new Ref(value0);
+      };
+      return Ref;
+  })();
+  var unsafeGetProperty = Halogen_VDom_Util.unsafeGetAny;
+  var setProperty = Halogen_VDom_Util.unsafeSetAny;
+  var removeProperty = function (key, el) {
+      var v = Halogen_VDom_Util.hasAttribute(Data_Nullable["null"], key, el);
+      if (v) {
+          return Halogen_VDom_Util.removeAttribute(Data_Nullable["null"], key, el);
+      };
+      var v1 = Foreign.typeOf(Halogen_VDom_Util.unsafeGetAny(key, el));
+      if (v1 === "string") {
+          return Halogen_VDom_Util.unsafeSetAny(key, "", el);
+      };
+      if (key === "rowSpan") {
+          return Halogen_VDom_Util.unsafeSetAny(key, 1, el);
+      };
+      if (key === "colSpan") {
+          return Halogen_VDom_Util.unsafeSetAny(key, 1, el);
+      };
+      return Halogen_VDom_Util.unsafeSetAny(key, Halogen_VDom_Util.jsUndefined, el);
+  };
+  var propToStrKey = function (v) {
+      if (v instanceof Attribute && v.value0 instanceof Data_Maybe.Just) {
+          return "attr/" + (v.value0.value0 + (":" + v.value1));
+      };
+      if (v instanceof Attribute) {
+          return "attr/:" + v.value1;
+      };
+      if (v instanceof Property) {
+          return "prop/" + v.value0;
+      };
+      if (v instanceof Handler) {
+          return "handler/" + v.value0;
+      };
+      if (v instanceof Ref) {
+          return "ref";
+      };
+      throw new Error("Failed pattern match at Halogen.VDom.DOM.Prop (line 182, column 16 - line 187, column 16): " + [ v.constructor.name ]);
+  };
+  var propFromString = Unsafe_Coerce.unsafeCoerce;
+  var buildProp = function (emit) {
+      return function (el) {
+          var removeProp = function (prevEvents) {
+              return function (v, v1) {
+                  if (v1 instanceof Attribute) {
+                      return Halogen_VDom_Util.removeAttribute(Data_Nullable.toNullable(v1.value0), v1.value1, el);
+                  };
+                  if (v1 instanceof Property) {
+                      return removeProperty(v1.value0, el);
+                  };
+                  if (v1 instanceof Handler) {
+                      var handler = Halogen_VDom_Util.unsafeLookup(v1.value0, prevEvents);
+                      return Halogen_VDom_Util.removeEventListener(v1.value0, Data_Tuple.fst(handler), el);
+                  };
+                  if (v1 instanceof Ref) {
+                      return Data_Unit.unit;
+                  };
+                  throw new Error("Failed pattern match at Halogen.VDom.DOM.Prop (line 169, column 5 - line 179, column 18): " + [ v1.constructor.name ]);
+              };
+          };
+          var mbEmit = function (v) {
+              if (v instanceof Data_Maybe.Just) {
+                  return emit(v.value0)();
+              };
+              return Data_Unit.unit;
+          };
+          var haltProp = function (state) {
+              var v = Foreign_Object.lookup("ref")(state.props);
+              if (v instanceof Data_Maybe.Just && v.value0 instanceof Ref) {
+                  return mbEmit(v.value0.value0(new Removed(el)));
+              };
+              return Data_Unit.unit;
+          };
+          var diffProp = function (prevEvents, events) {
+              return function (v, v1, v11, v2) {
+                  if (v11 instanceof Attribute && v2 instanceof Attribute) {
+                      var $56 = v11.value2 === v2.value2;
+                      if ($56) {
+                          return v2;
+                      };
+                      Halogen_VDom_Util.setAttribute(Data_Nullable.toNullable(v2.value0), v2.value1, v2.value2, el);
+                      return v2;
+                  };
+                  if (v11 instanceof Property && v2 instanceof Property) {
+                      var v4 = Halogen_VDom_Util.refEq(v11.value1, v2.value1);
+                      if (v4) {
+                          return v2;
+                      };
+                      if (v2.value0 === "value") {
+                          var elVal = unsafeGetProperty("value", el);
+                          var $65 = Halogen_VDom_Util.refEq(elVal, v2.value1);
+                          if ($65) {
+                              return v2;
+                          };
+                          setProperty(v2.value0, v2.value1, el);
+                          return v2;
+                      };
+                      setProperty(v2.value0, v2.value1, el);
+                      return v2;
+                  };
+                  if (v11 instanceof Handler && v2 instanceof Handler) {
+                      var handler = Halogen_VDom_Util.unsafeLookup(v2.value0, prevEvents);
+                      Effect_Ref.write(v2.value1)(Data_Tuple.snd(handler))();
+                      Halogen_VDom_Util.pokeMutMap(v2.value0, handler, events);
+                      return v2;
+                  };
+                  return v2;
+              };
+          };
+          var applyProp = function (events) {
+              return function (v, v1, v2) {
+                  if (v2 instanceof Attribute) {
+                      Halogen_VDom_Util.setAttribute(Data_Nullable.toNullable(v2.value0), v2.value1, v2.value2, el);
+                      return v2;
+                  };
+                  if (v2 instanceof Property) {
+                      setProperty(v2.value0, v2.value1, el);
+                      return v2;
+                  };
+                  if (v2 instanceof Handler) {
+                      var v3 = Halogen_VDom_Util.unsafeGetAny(v2.value0, events);
+                      if (Halogen_VDom_Util.unsafeHasAny(v2.value0, events)) {
+                          Effect_Ref.write(v2.value1)(Data_Tuple.snd(v3))();
+                          return v2;
+                      };
+                      var ref = Effect_Ref["new"](v2.value1)();
+                      var listener = Web_Event_EventTarget.eventListener(function (ev) {
+                          return function __do() {
+                              var f$prime = Effect_Ref.read(ref)();
+                              return mbEmit(f$prime(ev));
+                          };
+                      })();
+                      Halogen_VDom_Util.pokeMutMap(v2.value0, new Data_Tuple.Tuple(listener, ref), events);
+                      Halogen_VDom_Util.addEventListener(v2.value0, listener, el);
+                      return v2;
+                  };
+                  if (v2 instanceof Ref) {
+                      mbEmit(v2.value0(new Created(el)));
+                      return v2;
+                  };
+                  throw new Error("Failed pattern match at Halogen.VDom.DOM.Prop (line 113, column 5 - line 135, column 15): " + [ v2.constructor.name ]);
+              };
+          };
+          var patchProp = function (state, ps2) {
+              var events = Halogen_VDom_Util.newMutMap();
+              var onThis = removeProp(state.events);
+              var onThese = diffProp(state.events, events);
+              var onThat = applyProp(events);
+              var props = Halogen_VDom_Util.diffWithKeyAndIxE(state.props, ps2, propToStrKey, onThese, onThis, onThat);
+              var nextState = {
+                  events: Halogen_VDom_Util.unsafeFreeze(events),
+                  props: props
+              };
+              return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(Data_Unit.unit, nextState, patchProp, haltProp));
+          };
+          var renderProp = function (ps1) {
+              var events = Halogen_VDom_Util.newMutMap();
+              var ps1$prime = Halogen_VDom_Util.strMapWithIxE(ps1, propToStrKey, applyProp(events));
+              var state = {
+                  events: Halogen_VDom_Util.unsafeFreeze(events),
+                  props: ps1$prime
+              };
+              return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(Data_Unit.unit, state, patchProp, haltProp));
+          };
+          return renderProp;
+      };
+  };
+  exports["Property"] = Property;
+  exports["Handler"] = Handler;
+  exports["propFromString"] = propFromString;
+  exports["buildProp"] = buildProp;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Bifunctor"] = $PS["Data.Bifunctor"] || {};
+  var exports = $PS["Data.Bifunctor"];
+  var Control_Category = $PS["Control.Category"];                
+  var Bifunctor = function (bimap) {
+      this.bimap = bimap;
+  };
+  var bimap = function (dict) {
+      return dict.bimap;
+  };
+  var rmap = function (dictBifunctor) {
+      return bimap(dictBifunctor)(Control_Category.identity(Control_Category.categoryFn));
+  };
+  exports["bimap"] = bimap;
+  exports["Bifunctor"] = Bifunctor;
+  exports["rmap"] = rmap;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.VDom.Types"] = $PS["Halogen.VDom.Types"] || {};
+  var exports = $PS["Halogen.VDom.Types"];
+  var Data_Bifunctor = $PS["Data.Bifunctor"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Tuple = $PS["Data.Tuple"];
+  var Unsafe_Coerce = $PS["Unsafe.Coerce"];
+  var Text = (function () {
+      function Text(value0) {
+          this.value0 = value0;
+      };
+      Text.create = function (value0) {
+          return new Text(value0);
+      };
+      return Text;
+  })();
+  var Elem = (function () {
+      function Elem(value0, value1, value2, value3) {
+          this.value0 = value0;
+          this.value1 = value1;
+          this.value2 = value2;
+          this.value3 = value3;
+      };
+      Elem.create = function (value0) {
+          return function (value1) {
+              return function (value2) {
+                  return function (value3) {
+                      return new Elem(value0, value1, value2, value3);
+                  };
+              };
+          };
+      };
+      return Elem;
+  })();
+  var Keyed = (function () {
+      function Keyed(value0, value1, value2, value3) {
+          this.value0 = value0;
+          this.value1 = value1;
+          this.value2 = value2;
+          this.value3 = value3;
+      };
+      Keyed.create = function (value0) {
+          return function (value1) {
+              return function (value2) {
+                  return function (value3) {
+                      return new Keyed(value0, value1, value2, value3);
+                  };
+              };
+          };
+      };
+      return Keyed;
+  })();
+  var Widget = (function () {
+      function Widget(value0) {
+          this.value0 = value0;
+      };
+      Widget.create = function (value0) {
+          return new Widget(value0);
+      };
+      return Widget;
+  })();
+  var Grafted = (function () {
+      function Grafted(value0) {
+          this.value0 = value0;
+      };
+      Grafted.create = function (value0) {
+          return new Grafted(value0);
+      };
+      return Grafted;
+  })();
+  var Graft = (function () {
+      function Graft(value0, value1, value2) {
+          this.value0 = value0;
+          this.value1 = value1;
+          this.value2 = value2;
+      };
+      Graft.create = function (value0) {
+          return function (value1) {
+              return function (value2) {
+                  return new Graft(value0, value1, value2);
+              };
+          };
+      };
+      return Graft;
+  })();
+  var unGraft = function (f) {
+      return function ($58) {
+          return f($58);
+      };
+  };           
+  var graft = Unsafe_Coerce.unsafeCoerce;
+  var bifunctorGraft = new Data_Bifunctor.Bifunctor(function (f) {
+      return function (g) {
+          return unGraft(function (v) {
+              return graft(new Graft(function ($60) {
+                  return f(v.value0($60));
+              }, function ($61) {
+                  return g(v.value1($61));
+              }, v.value2));
+          });
+      };
+  });
+  var runGraft = unGraft(function (v) {
+      var go = function (v2) {
+          if (v2 instanceof Text) {
+              return new Text(v2.value0);
+          };
+          if (v2 instanceof Elem) {
+              return new Elem(v2.value0, v2.value1, v.value0(v2.value2), Data_Functor.map(Data_Functor.functorArray)(go)(v2.value3));
+          };
+          if (v2 instanceof Keyed) {
+              return new Keyed(v2.value0, v2.value1, v.value0(v2.value2), Data_Functor.map(Data_Functor.functorArray)(Data_Functor.map(Data_Tuple.functorTuple)(go))(v2.value3));
+          };
+          if (v2 instanceof Widget) {
+              return new Widget(v.value1(v2.value0));
+          };
+          if (v2 instanceof Grafted) {
+              return new Grafted(Data_Bifunctor.bimap(bifunctorGraft)(v.value0)(v.value1)(v2.value0));
+          };
+          throw new Error("Failed pattern match at Halogen.VDom.Types (line 86, column 7 - line 86, column 27): " + [ v2.constructor.name ]);
+      };
+      return go(v.value2);
+  });
+  exports["Text"] = Text;
+  exports["Elem"] = Elem;
+  exports["Keyed"] = Keyed;
+  exports["Widget"] = Widget;
+  exports["Grafted"] = Grafted;
+  exports["runGraft"] = runGraft;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.HTML.Core"] = $PS["Halogen.HTML.Core"] || {};
+  var exports = $PS["Halogen.HTML.Core"];
+  var Data_Newtype = $PS["Data.Newtype"];
+  var Halogen_VDom_DOM_Prop = $PS["Halogen.VDom.DOM.Prop"];
+  var Halogen_VDom_Types = $PS["Halogen.VDom.Types"];
+  var HTML = function (x) {
+      return x;
+  };
+  var ClassName = function (x) {
+      return x;
+  };
+  var IsProp = function (toPropValue) {
+      this.toPropValue = toPropValue;
+  };
+  var widget = function ($30) {
+      return HTML(Halogen_VDom_Types.Widget.create($30));
+  };
+  var toPropValue = function (dict) {
+      return dict.toPropValue;
+  };
+  var text = function ($31) {
+      return HTML(Halogen_VDom_Types.Text.create($31));
+  };
+  var prop = function (dictIsProp) {
+      return function (v) {
+          var $33 = Halogen_VDom_DOM_Prop.Property.create(v);
+          var $34 = toPropValue(dictIsProp);
+          return function ($35) {
+              return $33($34($35));
+          };
+      };
+  };           
+  var newtypeHTML = new Data_Newtype.Newtype(function (n) {
+      return n;
+  }, HTML);
+  var newtypeClassName = new Data_Newtype.Newtype(function (n) {
+      return n;
+  }, ClassName);
+  var isPropString = new IsProp(Halogen_VDom_DOM_Prop.propFromString);  
+  var handler = Halogen_VDom_DOM_Prop.Handler.create;
+  var element = function (ns) {
+      return function (name) {
+          return function (props) {
+              return function (children) {
+                  return new Halogen_VDom_Types.Elem(ns, name, props, children);
+              };
+          };
+      };
+  };
+  exports["widget"] = widget;
+  exports["text"] = text;
+  exports["element"] = element;
+  exports["prop"] = prop;
+  exports["handler"] = handler;
+  exports["ClassName"] = ClassName;
+  exports["newtypeHTML"] = newtypeHTML;
+  exports["isPropString"] = isPropString;
+  exports["newtypeClassName"] = newtypeClassName;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.HTML.Elements"] = $PS["Halogen.HTML.Elements"] || {};
+  var exports = $PS["Halogen.HTML.Elements"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Halogen_HTML_Core = $PS["Halogen.HTML.Core"];
+  var element = Halogen_HTML_Core.element(Data_Maybe.Nothing.value);
+  var h1 = element("h1");
+  var h1_ = h1([  ]);
+  var h2 = element("h2");
+  var h2_ = h2([  ]);
+  var h3 = element("h3");
+  var h3_ = h3([  ]);    
+  var i = element("i");
+  var i_ = i([  ]);          
+  var p = element("p");
+  var p_ = p([  ]);
+  var span = element("span");
+  var div = element("div");
+  var div_ = div([  ]);
+  var code = element("code");
+  var code_ = code([  ]);
+  var button = element("button");
+  var a = element("a");
+  exports["a"] = a;
+  exports["button"] = button;
+  exports["code_"] = code_;
+  exports["div"] = div;
+  exports["div_"] = div_;
+  exports["h1"] = h1;
+  exports["h1_"] = h1_;
+  exports["h2_"] = h2_;
+  exports["h3_"] = h3_;
+  exports["i_"] = i_;
+  exports["p_"] = p_;
+  exports["span"] = span;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.joinWith = function (s) {
+    return function (xs) {
+      return xs.join(s);
+    };
+  };
+})(PS["Data.String.Common"] = PS["Data.String.Common"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.String.Common"] = $PS["Data.String.Common"] || {};
+  var exports = $PS["Data.String.Common"];
+  var $foreign = $PS["Data.String.Common"];
+  exports["joinWith"] = $foreign.joinWith;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.HTML.Properties"] = $PS["Halogen.HTML.Properties"] || {};
+  var exports = $PS["Halogen.HTML.Properties"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Newtype = $PS["Data.Newtype"];
+  var Data_String_Common = $PS["Data.String.Common"];
+  var Halogen_HTML_Core = $PS["Halogen.HTML.Core"];
+  var prop = function (dictIsProp) {
+      return Halogen_HTML_Core.prop(dictIsProp);
+  };                                                   
+  var href = prop(Halogen_HTML_Core.isPropString)("href");   
+  var classes = (function () {
+      var $14 = prop(Halogen_HTML_Core.isPropString)("className");
+      var $15 = Data_String_Common.joinWith(" ");
+      var $16 = Data_Functor.map(Data_Functor.functorArray)(Data_Newtype.unwrap(Halogen_HTML_Core.newtypeClassName));
+      return function ($17) {
+          return $14($15($16($17)));
+      };
+  })();
+  exports["classes"] = classes;
+  exports["href"] = href;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  var replicateFill = function (count) {
+    return function (value) {
+      if (count < 1) {
+        return [];
+      }
+      var result = new Array(count);
+      return result.fill(value);
+    };
+  };
+
+  var replicatePolyfill = function (count) {
+    return function (value) {
+      var result = [];
+      var n = 0;
+      for (var i = 0; i < count; i++) {
+        result[n++] = value;
+      }
+      return result;
+    };
+  };
+
+  // In browsers that have Array.prototype.fill we use it, as it's faster.
+  exports.replicate = typeof Array.prototype.fill === "function" ? replicateFill : replicatePolyfill;
+
+  //------------------------------------------------------------------------------
+  // Array size ------------------------------------------------------------------
+  //------------------------------------------------------------------------------
+
+  exports.length = function (xs) {
+    return xs.length;
+  };
+
+  //------------------------------------------------------------------------------
+  // Extending arrays ------------------------------------------------------------
+  //------------------------------------------------------------------------------
+
+  exports.cons = function (e) {
+    return function (l) {
+      return [e].concat(l);
+    };
+  };
+
+  exports.snoc = function (l) {
+    return function (e) {
+      var l1 = l.slice();
+      l1.push(e);
+      return l1;
+    };
+  };
+
+  //------------------------------------------------------------------------------
+  // Non-indexed reads -----------------------------------------------------------
+  //------------------------------------------------------------------------------
+
+  exports["uncons'"] = function (empty) {
+    return function (next) {
+      return function (xs) {
+        return xs.length === 0 ? empty({}) : next(xs[0])(xs.slice(1));
+      };
+    };
+  };
+
+  //------------------------------------------------------------------------------
+  // Indexed operations ----------------------------------------------------------
+  //------------------------------------------------------------------------------
+
+  exports.indexImpl = function (just) {
+    return function (nothing) {
+      return function (xs) {
+        return function (i) {
+          return i < 0 || i >= xs.length ? nothing :  just(xs[i]);
+        };
+      };
+    };
+  };
+})(PS["Data.Array"] = PS["Data.Array"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Array"] = $PS["Data.Array"] || {};
+  var exports = $PS["Data.Array"];
+  var $foreign = $PS["Data.Array"];
+  var Data_Function = $PS["Data.Function"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var tail = $foreign["uncons'"](Data_Function["const"](Data_Maybe.Nothing.value))(function (v) {
+      return function (xs) {
+          return new Data_Maybe.Just(xs);
+      };
+  });
+  var index = $foreign.indexImpl(Data_Maybe.Just.create)(Data_Maybe.Nothing.value);
+  exports["tail"] = tail;
+  exports["index"] = index;
+  exports["replicate"] = $foreign.replicate;
+  exports["length"] = $foreign.length;
+  exports["cons"] = $foreign.cons;
+  exports["snoc"] = $foreign.snoc;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Utils"] = $PS["Utils"] || {};
+  var exports = $PS["Utils"];
+  var Data_Array = $PS["Data.Array"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Halogen_HTML_Core = $PS["Halogen.HTML.Core"];
+  var Halogen_HTML_Properties = $PS["Halogen.HTML.Properties"];                
+  var snocMaybe = function (arr) {
+      return function (v) {
+          if (v instanceof Data_Maybe.Just) {
+              return Data_Array.snoc(arr)(v.value0);
+          };
+          if (v instanceof Data_Maybe.Nothing) {
+              return arr;
+          };
+          throw new Error("Failed pattern match at Utils (line 16, column 1 - line 16, column 53): " + [ arr.constructor.name, v.constructor.name ]);
+      };
+  };
+  var classes = function (strs) {
+      return Halogen_HTML_Properties.classes(Data_Functor.mapFlipped(Data_Functor.functorArray)(strs)(Halogen_HTML_Core.ClassName));
+  };
+  exports["classes"] = classes;
+  exports["snocMaybe"] = snocMaybe;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Card"] = $PS["Card"] || {};
+  var exports = $PS["Card"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Halogen_HTML_Core = $PS["Halogen.HTML.Core"];
+  var Halogen_HTML_Elements = $PS["Halogen.HTML.Elements"];
+  var Halogen_HTML_Properties = $PS["Halogen.HTML.Properties"];
+  var Utils = $PS["Utils"];                
+  var Large = (function () {
+      function Large() {
+
+      };
+      Large.value = new Large();
+      return Large;
+  })();
+  var Small = (function () {
+      function Small() {
+
+      };
+      Small.value = new Small();
+      return Small;
+  })();
+  var work = {
+      size: Large.value,
+      title: "Work",
+      items: [ {
+          title: "StrongMind",
+          contents: Halogen_HTML_Elements.div_([ Halogen_HTML_Elements.div_([ Halogen_HTML_Elements.h3_([ Halogen_HTML_Core.text("Software Engineer I") ]), Halogen_HTML_Elements.p_([ Halogen_HTML_Elements.i_([ Halogen_HTML_Core.text("May 2017 - Jan 2019 (1yr 9mos)") ]) ]), Halogen_HTML_Elements.p_([ Halogen_HTML_Core.text("As a Junior Engineer at StrongMind, I was empowered by the company and my team to grow in every way. Part of my responsibilities were bringing patterns and trends back to the team for discussion & adoption, I encouraged us to switch from the legacy TFS build system to Git, which allowed us to deliver value more quickly. I also was able to step into a more UI-focused role, embracing the strengths I brought to the table despite my technical inexpertise.") ]) ]), Halogen_HTML_Elements.div_([ Halogen_HTML_Elements.h3_([ Halogen_HTML_Core.text("Software Engineer II") ]), Halogen_HTML_Elements.p_([ Halogen_HTML_Elements.i_([ Halogen_HTML_Core.text("Jan 2019 - Present (2yr)") ]) ]), Halogen_HTML_Elements.p_([ Halogen_HTML_Core.text("As a more seasoned Product Engineer at Strongmind, I have continued to grow beyond the responsibilities within my role and successfully unified the previously fragmented UI/UX team and spearheaded the creation of a Strongmind design system. I also found my voice within the org as an advocate for the more recent developments in the industry, like functional programming, automated testing, and thorough CI/CD processes. On the hit-squad team for the mobile app, I pioneered with the first use of the Rust programming language in production, establishing a new standard for reliability, performance, and code approachability within the company. ") ]) ]) ])
+      }, {
+          title: "High-School Math Tutor",
+          contents: Halogen_HTML_Elements.div_([ Halogen_HTML_Elements.p_([ Halogen_HTML_Elements.i_([ Halogen_HTML_Core.text("Freelance, May 2016 - April 2017") ]) ]), Halogen_HTML_Elements.p_([ Halogen_HTML_Core.text("As a Math Tutor, I was able to start learning how to manage my relationship with clients, and figure out mentoring styles that worked for me and each student.") ]), Halogen_HTML_Elements.p_([ Halogen_HTML_Core.text("This experience helped my eventual transition to a mentor role at StrongMind immensely.") ]) ])
+      } ]
+  };
+  var qualities = (function () {
+      var p = (function () {
+          var $0 = Control_Applicative.pure(Control_Applicative.applicativeArray);
+          return function ($1) {
+              return Halogen_HTML_Elements.p_($0(Halogen_HTML_Core.text($1)));
+          };
+      })();
+      return {
+          size: Large.value,
+          title: "Qualities",
+          items: [ {
+              title: "Beginner's Mind",
+              contents: Halogen_HTML_Elements.div([ Utils.classes([ "flex", "vert", "mt-0" ]) ])([ p("I approach problems with an open mind and make sure I have a full understanding before moving forward with a solution."), p("I believe there's no such thing as fully knowing anything, especially in software, and try to refine my understanding at every opportunity.") ])
+          }, {
+              title: "Swiss Army Knife",
+              contents: Halogen_HTML_Elements.div([ Utils.classes([ "flex", "vert", "mt-0" ]) ])([ p("My thirst for knowledge drives me to learn as much as I can, about as much as I can."), p("This includes technical skills, tooling, and areas in my career that I have yet to explore."), p("I'm passionate about functional programming, but the values that FP fully embraces can be found within idiomatic Java, C#, or Javascript."), Halogen_HTML_Elements.h3_([ Halogen_HTML_Core.text("I care much less about How, than What and Why.") ]) ])
+          }, {
+              title: "Ready to teach & be taught",
+              contents: Halogen_HTML_Elements.div([ Utils.classes([ "flex", "vert", "mt-0" ]) ])(Data_Functor.mapFlipped(Data_Functor.functorArray)([ "I love to mentor, and be mentored.", "In the course of helping someone work through an issue I know the solution to, I ask if they want the answer, or want me to lead them to the answer.", "I do my best to ask the questions that I ask myself in pursuit of a solution. This way, the other person leaves not only having solved the problem, but with the skill to solve similar problems in the future." ])((function () {
+                  var $2 = Control_Applicative.pure(Control_Applicative.applicativeArray);
+                  return function ($3) {
+                      return Halogen_HTML_Elements.p_($2(Halogen_HTML_Core.text($3)));
+                  };
+              })()))
+          }, {
+              title: "Open-Source Lover",
+              contents: Halogen_HTML_Elements.div([ Utils.classes([ "flex", "vert", "mt-0" ]) ])(Data_Functor.mapFlipped(Data_Functor.functorArray)([ "I am very passionate writing code for others. By this I mean that the process of writing code that is meant to be read often by eyes other than yours is paramount to a well-structured, discoverable solution.", "The saying \"You are what you measure\" extends beyond metrics; The values you embody when creating or maintaining a product will drive the quality & kind of product you make." ])((function () {
+                  var $4 = Control_Applicative.pure(Control_Applicative.applicativeArray);
+                  return function ($5) {
+                      return Halogen_HTML_Elements.p_($4(Halogen_HTML_Core.text($5)));
+                  };
+              })()))
+          } ]
+      };
+  })();
+  var projects = (function () {
+      var codelink = function (text) {
+          return Halogen_HTML_Elements.a([ Halogen_HTML_Properties.href("https://www.github.com/" + text) ])([ Halogen_HTML_Elements.code_([ Halogen_HTML_Core.text(text) ]) ]);
+      };
+      return {
+          size: Small.value,
+          title: "Projects",
+          items: [ {
+              title: "GitHub",
+              contents: Halogen_HTML_Elements.div([ Utils.classes([ "flex", "vert" ]) ])([ codelink("cakekindel/slack-blocks-rs"), codelink("cakekindel/matchbook-ts"), codelink("denoland/deno"), codelink("rust/rust-lang"), codelink("awslabs/aws-lambda-rust-runtime") ])
+          } ]
+      };
+  })();
+  var education = {
+      size: Small.value,
+      title: "Education",
+      items: [ {
+          title: "Associate's Of Science",
+          contents: Halogen_HTML_Elements.div_([ Halogen_HTML_Elements.h3_([ Halogen_HTML_Core.text("Scottsdale Community College") ]), Halogen_HTML_Elements.p_([ Halogen_HTML_Elements.i_([ Halogen_HTML_Core.text("awarded May 2016") ]) ]) ])
+      }, {
+          title: "Web Development",
+          contents: Halogen_HTML_Elements.div_([ Halogen_HTML_Elements.h3_([ Halogen_HTML_Core.text("Self-Taught") ]), Halogen_HTML_Elements.p_([ Halogen_HTML_Elements.i_([ Halogen_HTML_Core.text("2015 - 2017") ]) ]) ])
+      }, {
+          title: "High School",
+          contents: Halogen_HTML_Elements.div_([ Halogen_HTML_Elements.h3_([ Halogen_HTML_Core.text("Sequoia Choice") ]), Halogen_HTML_Elements.p_([ Halogen_HTML_Elements.i_([ Halogen_HTML_Core.text("grad. May 2016") ]) ]) ])
+      } ]
+  };
+  var contact = {
+      size: Small.value,
+      title: "Contact",
+      items: [ {
+          title: "Phone",
+          contents: Halogen_HTML_Elements.a([ Halogen_HTML_Properties.href("tel:1-989-443-0197") ])([ Halogen_HTML_Core.text("989 443 0197") ])
+      }, {
+          title: "Email",
+          contents: Halogen_HTML_Elements.a([ Halogen_HTML_Properties.href("mailto:orionkindel@gmail.com") ])([ Halogen_HTML_Core.text("orionkindel@gmail.com") ])
+      }, {
+          title: "Github",
+          contents: Halogen_HTML_Elements.a([ Halogen_HTML_Properties.href("https://github.com/cakekindel") ])([ Halogen_HTML_Core.text("cakekindel") ])
+      } ]
+  };
+  exports["Large"] = Large;
+  exports["qualities"] = qualities;
+  exports["contact"] = contact;
+  exports["projects"] = projects;
+  exports["work"] = work;
+  exports["education"] = education;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Show"] = $PS["Data.Show"] || {};
+  var exports = $PS["Data.Show"];
+  var Show = function (show) {
+      this.show = show;
+  }; 
+  var show = function (dict) {
+      return dict.show;
+  };
+  exports["Show"] = Show;
+  exports["show"] = show;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Color"] = $PS["Color"] || {};
+  var exports = $PS["Color"];
+  var Data_Show = $PS["Data.Show"];
+  var Halogen_HTML_Core = $PS["Halogen.HTML.Core"];                
+  var Blue = (function () {
+      function Blue() {
+
+      };
+      Blue.value = new Blue();
+      return Blue;
+  })();
+  var Yellow = (function () {
+      function Yellow() {
+
+      };
+      Yellow.value = new Yellow();
+      return Yellow;
+  })();
+  var Green = (function () {
+      function Green() {
+
+      };
+      Green.value = new Green();
+      return Green;
+  })();
+  var showAccent = new Data_Show.Show(function (v) {
+      if (v instanceof Blue) {
+          return "blue";
+      };
+      if (v instanceof Yellow) {
+          return "yellow";
+      };
+      if (v instanceof Green) {
+          return "green";
+      };
+      throw new Error("Failed pattern match at Color (line 10, column 1 - line 13, column 24): " + [ v.constructor.name ]);
+  });
+  var ribbonClass = function (color) {
+      return Halogen_HTML_Core.ClassName("ribbon-" + Data_Show.show(showAccent)(color));
+  };
+  var bgClass = function (color) {
+      return Halogen_HTML_Core.ClassName("bg-" + Data_Show.show(showAccent)(color));
+  };
+  exports["Blue"] = Blue;
+  exports["Yellow"] = Yellow;
+  exports["Green"] = Green;
+  exports["bgClass"] = bgClass;
+  exports["ribbonClass"] = ribbonClass;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Alt"] = $PS["Control.Alt"] || {};
+  var exports = $PS["Control.Alt"];                          
+  var Alt = function (Functor0, alt) {
+      this.Functor0 = Functor0;
+      this.alt = alt;
+  };
+  exports["Alt"] = Alt;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Either"] = $PS["Data.Either"] || {};
+  var exports = $PS["Data.Either"];
+  var Control_Apply = $PS["Control.Apply"];
+  var Data_Bifunctor = $PS["Data.Bifunctor"];
+  var Data_Functor = $PS["Data.Functor"];          
+  var Left = (function () {
+      function Left(value0) {
+          this.value0 = value0;
+      };
+      Left.create = function (value0) {
+          return new Left(value0);
+      };
+      return Left;
+  })();
+  var Right = (function () {
+      function Right(value0) {
+          this.value0 = value0;
+      };
+      Right.create = function (value0) {
+          return new Right(value0);
+      };
+      return Right;
+  })();
+  var functorEither = new Data_Functor.Functor(function (f) {
+      return function (m) {
+          if (m instanceof Left) {
+              return new Left(m.value0);
+          };
+          if (m instanceof Right) {
+              return new Right(f(m.value0));
+          };
+          throw new Error("Failed pattern match at Data.Either (line 38, column 1 - line 38, column 52): " + [ m.constructor.name ]);
+      };
+  });
+  var either = function (v) {
+      return function (v1) {
+          return function (v2) {
+              if (v2 instanceof Left) {
+                  return v(v2.value0);
+              };
+              if (v2 instanceof Right) {
+                  return v1(v2.value0);
+              };
+              throw new Error("Failed pattern match at Data.Either (line 238, column 1 - line 238, column 64): " + [ v.constructor.name, v1.constructor.name, v2.constructor.name ]);
+          };
+      };
+  };
+  var bifunctorEither = new Data_Bifunctor.Bifunctor(function (v) {
+      return function (v1) {
+          return function (v2) {
+              if (v2 instanceof Left) {
+                  return new Left(v(v2.value0));
+              };
+              if (v2 instanceof Right) {
+                  return new Right(v1(v2.value0));
+              };
+              throw new Error("Failed pattern match at Data.Either (line 46, column 1 - line 48, column 36): " + [ v.constructor.name, v1.constructor.name, v2.constructor.name ]);
+          };
+      };
+  });
+  var applyEither = new Control_Apply.Apply(function () {
+      return functorEither;
+  }, function (v) {
+      return function (v1) {
+          if (v instanceof Left) {
+              return new Left(v.value0);
+          };
+          if (v instanceof Right) {
+              return Data_Functor.map(functorEither)(v.value0)(v1);
+          };
+          throw new Error("Failed pattern match at Data.Either (line 82, column 1 - line 84, column 30): " + [ v.constructor.name, v1.constructor.name ]);
+      };
+  });
+  exports["Left"] = Left;
+  exports["Right"] = Right;
+  exports["either"] = either;
+  exports["functorEither"] = functorEither;
+  exports["bifunctorEither"] = bifunctorEither;
+  exports["applyEither"] = applyEither;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Plus"] = $PS["Control.Plus"] || {};
+  var exports = $PS["Control.Plus"];                   
+  var Plus = function (Alt0, empty) {
+      this.Alt0 = Alt0;
+      this.empty = empty;
+  };       
+  var empty = function (dict) {
+      return dict.empty;
+  };
+  exports["Plus"] = Plus;
+  exports["empty"] = empty;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.foldrArray = function (f) {
+    return function (init) {
+      return function (xs) {
+        var acc = init;
+        var len = xs.length;
+        for (var i = len - 1; i >= 0; i--) {
+          acc = f(xs[i])(acc);
+        }
+        return acc;
+      };
+    };
+  };
+
+  exports.foldlArray = function (f) {
+    return function (init) {
+      return function (xs) {
+        var acc = init;
+        var len = xs.length;
+        for (var i = 0; i < len; i++) {
+          acc = f(acc)(xs[i]);
+        }
+        return acc;
+      };
+    };
+  };
+})(PS["Data.Foldable"] = PS["Data.Foldable"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Foldable"] = $PS["Data.Foldable"] || {};
+  var exports = $PS["Data.Foldable"];
+  var $foreign = $PS["Data.Foldable"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Apply = $PS["Control.Apply"];
+  var Data_Eq = $PS["Data.Eq"];
+  var Data_Function = $PS["Data.Function"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_HeytingAlgebra = $PS["Data.HeytingAlgebra"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Data_Monoid = $PS["Data.Monoid"];
+  var Data_Monoid_Disj = $PS["Data.Monoid.Disj"];
+  var Data_Newtype = $PS["Data.Newtype"];
+  var Data_Semigroup = $PS["Data.Semigroup"];
+  var Data_Unit = $PS["Data.Unit"];                
+  var Foldable = function (foldMap, foldl, foldr) {
+      this.foldMap = foldMap;
+      this.foldl = foldl;
+      this.foldr = foldr;
+  };
+  var foldr = function (dict) {
+      return dict.foldr;
+  };
+  var traverse_ = function (dictApplicative) {
+      return function (dictFoldable) {
+          return function (f) {
+              return foldr(dictFoldable)((function () {
+                  var $197 = Control_Apply.applySecond(dictApplicative.Apply0());
+                  return function ($198) {
+                      return $197(f($198));
+                  };
+              })())(Control_Applicative.pure(dictApplicative)(Data_Unit.unit));
+          };
+      };
+  };
+  var for_ = function (dictApplicative) {
+      return function (dictFoldable) {
+          return Data_Function.flip(traverse_(dictApplicative)(dictFoldable));
+      };
+  };
+  var foldl = function (dict) {
+      return dict.foldl;
+  }; 
+  var foldableMaybe = new Foldable(function (dictMonoid) {
+      return function (f) {
+          return function (v) {
+              if (v instanceof Data_Maybe.Nothing) {
+                  return Data_Monoid.mempty(dictMonoid);
+              };
+              if (v instanceof Data_Maybe.Just) {
+                  return f(v.value0);
+              };
+              throw new Error("Failed pattern match at Data.Foldable (line 129, column 1 - line 135, column 27): " + [ f.constructor.name, v.constructor.name ]);
+          };
+      };
+  }, function (v) {
+      return function (z) {
+          return function (v1) {
+              if (v1 instanceof Data_Maybe.Nothing) {
+                  return z;
+              };
+              if (v1 instanceof Data_Maybe.Just) {
+                  return v(z)(v1.value0);
+              };
+              throw new Error("Failed pattern match at Data.Foldable (line 129, column 1 - line 135, column 27): " + [ v.constructor.name, z.constructor.name, v1.constructor.name ]);
+          };
+      };
+  }, function (v) {
+      return function (z) {
+          return function (v1) {
+              if (v1 instanceof Data_Maybe.Nothing) {
+                  return z;
+              };
+              if (v1 instanceof Data_Maybe.Just) {
+                  return v(v1.value0)(z);
+              };
+              throw new Error("Failed pattern match at Data.Foldable (line 129, column 1 - line 135, column 27): " + [ v.constructor.name, z.constructor.name, v1.constructor.name ]);
+          };
+      };
+  });
+  var foldMapDefaultR = function (dictFoldable) {
+      return function (dictMonoid) {
+          return function (f) {
+              return foldr(dictFoldable)(function (x) {
+                  return function (acc) {
+                      return Data_Semigroup.append(dictMonoid.Semigroup0())(f(x))(acc);
+                  };
+              })(Data_Monoid.mempty(dictMonoid));
+          };
+      };
+  };
+  var foldableArray = new Foldable(function (dictMonoid) {
+      return foldMapDefaultR(foldableArray)(dictMonoid);
+  }, $foreign.foldlArray, $foreign.foldrArray);
+  var foldMap = function (dict) {
+      return dict.foldMap;
+  };
+  var any = function (dictFoldable) {
+      return function (dictHeytingAlgebra) {
+          return Data_Newtype.alaF(Data_Functor.functorFn)(Data_Functor.functorFn)(Data_Newtype.newtypeDisj)(Data_Newtype.newtypeDisj)(Data_Monoid_Disj.Disj)(foldMap(dictFoldable)(Data_Monoid_Disj.monoidDisj(dictHeytingAlgebra)));
+      };
+  };
+  var elem = function (dictFoldable) {
+      return function (dictEq) {
+          var $204 = any(dictFoldable)(Data_HeytingAlgebra.heytingAlgebraBoolean);
+          var $205 = Data_Eq.eq(dictEq);
+          return function ($206) {
+              return $204($205($206));
+          };
+      };
+  };
+  exports["Foldable"] = Foldable;
+  exports["foldr"] = foldr;
+  exports["foldl"] = foldl;
+  exports["foldMap"] = foldMap;
+  exports["traverse_"] = traverse_;
+  exports["for_"] = for_;
+  exports["elem"] = elem;
+  exports["foldableArray"] = foldableArray;
+  exports["foldableMaybe"] = foldableMaybe;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.List.Types"] = $PS["Data.List.Types"] || {};
+  var exports = $PS["Data.List.Types"];
+  var Control_Alt = $PS["Control.Alt"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Apply = $PS["Control.Apply"];
+  var Control_Plus = $PS["Control.Plus"];
+  var Data_Foldable = $PS["Data.Foldable"];
+  var Data_Function = $PS["Data.Function"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Monoid = $PS["Data.Monoid"];
+  var Data_Semigroup = $PS["Data.Semigroup"];                    
+  var Nil = (function () {
+      function Nil() {
+
+      };
+      Nil.value = new Nil();
+      return Nil;
+  })();
+  var Cons = (function () {
+      function Cons(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Cons.create = function (value0) {
+          return function (value1) {
+              return new Cons(value0, value1);
+          };
+      };
+      return Cons;
+  })();
+  var NonEmptyList = function (x) {
+      return x;
+  };
+  var listMap = function (f) {
+      var chunkedRevMap = function ($copy_chunksAcc) {
+          return function ($copy_v) {
+              var $tco_var_chunksAcc = $copy_chunksAcc;
+              var $tco_done = false;
+              var $tco_result;
+              function $tco_loop(chunksAcc, v) {
+                  if (v instanceof Cons && (v.value1 instanceof Cons && v.value1.value1 instanceof Cons)) {
+                      $tco_var_chunksAcc = new Cons(v, chunksAcc);
+                      $copy_v = v.value1.value1.value1;
+                      return;
+                  };
+                  var unrolledMap = function (v1) {
+                      if (v1 instanceof Cons && (v1.value1 instanceof Cons && v1.value1.value1 instanceof Nil)) {
+                          return new Cons(f(v1.value0), new Cons(f(v1.value1.value0), Nil.value));
+                      };
+                      if (v1 instanceof Cons && v1.value1 instanceof Nil) {
+                          return new Cons(f(v1.value0), Nil.value);
+                      };
+                      return Nil.value;
+                  };
+                  var reverseUnrolledMap = function ($copy_v1) {
+                      return function ($copy_acc) {
+                          var $tco_var_v1 = $copy_v1;
+                          var $tco_done = false;
+                          var $tco_result;
+                          function $tco_loop(v1, acc) {
+                              if (v1 instanceof Cons && (v1.value0 instanceof Cons && (v1.value0.value1 instanceof Cons && v1.value0.value1.value1 instanceof Cons))) {
+                                  $tco_var_v1 = v1.value1;
+                                  $copy_acc = new Cons(f(v1.value0.value0), new Cons(f(v1.value0.value1.value0), new Cons(f(v1.value0.value1.value1.value0), acc)));
+                                  return;
+                              };
+                              $tco_done = true;
+                              return acc;
+                          };
+                          while (!$tco_done) {
+                              $tco_result = $tco_loop($tco_var_v1, $copy_acc);
+                          };
+                          return $tco_result;
+                      };
+                  };
+                  $tco_done = true;
+                  return reverseUnrolledMap(chunksAcc)(unrolledMap(v));
+              };
+              while (!$tco_done) {
+                  $tco_result = $tco_loop($tco_var_chunksAcc, $copy_v);
+              };
+              return $tco_result;
+          };
+      };
+      return chunkedRevMap(Nil.value);
+  };
+  var functorList = new Data_Functor.Functor(listMap);                 
+  var foldableList = new Data_Foldable.Foldable(function (dictMonoid) {
+      return function (f) {
+          return Data_Foldable.foldl(foldableList)(function (acc) {
+              var $202 = Data_Semigroup.append(dictMonoid.Semigroup0())(acc);
+              return function ($203) {
+                  return $202(f($203));
+              };
+          })(Data_Monoid.mempty(dictMonoid));
+      };
+  }, function (f) {
+      var go = function ($copy_b) {
+          return function ($copy_v) {
+              var $tco_var_b = $copy_b;
+              var $tco_done = false;
+              var $tco_result;
+              function $tco_loop(b, v) {
+                  if (v instanceof Nil) {
+                      $tco_done = true;
+                      return b;
+                  };
+                  if (v instanceof Cons) {
+                      $tco_var_b = f(b)(v.value0);
+                      $copy_v = v.value1;
+                      return;
+                  };
+                  throw new Error("Failed pattern match at Data.List.Types (line 109, column 12 - line 111, column 30): " + [ v.constructor.name ]);
+              };
+              while (!$tco_done) {
+                  $tco_result = $tco_loop($tco_var_b, $copy_v);
+              };
+              return $tco_result;
+          };
+      };
+      return go;
+  }, function (f) {
+      return function (b) {
+          var rev = Data_Foldable.foldl(foldableList)(Data_Function.flip(Cons.create))(Nil.value);
+          var $204 = Data_Foldable.foldl(foldableList)(Data_Function.flip(f))(b);
+          return function ($205) {
+              return $204(rev($205));
+          };
+      };
+  });
+  var semigroupList = new Data_Semigroup.Semigroup(function (xs) {
+      return function (ys) {
+          return Data_Foldable.foldr(foldableList)(Cons.create)(ys)(xs);
+      };
+  });
+  var applyList = new Control_Apply.Apply(function () {
+      return functorList;
+  }, function (v) {
+      return function (v1) {
+          if (v instanceof Nil) {
+              return Nil.value;
+          };
+          if (v instanceof Cons) {
+              return Data_Semigroup.append(semigroupList)(Data_Functor.map(functorList)(v.value0)(v1))(Control_Apply.apply(applyList)(v.value1)(v1));
+          };
+          throw new Error("Failed pattern match at Data.List.Types (line 155, column 1 - line 157, column 48): " + [ v.constructor.name, v1.constructor.name ]);
+      };
+  });
+  var applicativeList = new Control_Applicative.Applicative(function () {
+      return applyList;
+  }, function (a) {
+      return new Cons(a, Nil.value);
+  });                                              
+  var altList = new Control_Alt.Alt(function () {
+      return functorList;
+  }, Data_Semigroup.append(semigroupList));
+  var plusList = new Control_Plus.Plus(function () {
+      return altList;
+  }, Nil.value);
+  exports["Nil"] = Nil;
+  exports["Cons"] = Cons;
+  exports["NonEmptyList"] = NonEmptyList;
+  exports["semigroupList"] = semigroupList;
+  exports["foldableList"] = foldableList;
+  exports["applicativeList"] = applicativeList;
+  exports["plusList"] = plusList;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.NonEmpty"] = $PS["Data.NonEmpty"] || {};
+  var exports = $PS["Data.NonEmpty"];
+  var Control_Plus = $PS["Control.Plus"];                        
+  var NonEmpty = (function () {
+      function NonEmpty(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      NonEmpty.create = function (value0) {
+          return function (value1) {
+              return new NonEmpty(value0, value1);
+          };
+      };
+      return NonEmpty;
+  })();
+  var singleton = function (dictPlus) {
+      return function (a) {
+          return new NonEmpty(a, Control_Plus.empty(dictPlus));
+      };
+  };
+  exports["NonEmpty"] = NonEmpty;
+  exports["singleton"] = singleton;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.List.NonEmpty"] = $PS["Data.List.NonEmpty"] || {};
+  var exports = $PS["Data.List.NonEmpty"];
+  var Data_List_Types = $PS["Data.List.Types"];
+  var Data_NonEmpty = $PS["Data.NonEmpty"];
+  var singleton = (function () {
+      var $168 = Data_NonEmpty.singleton(Data_List_Types.plusList);
+      return function ($169) {
+          return Data_List_Types.NonEmptyList($168($169));
+      };
+  })();
+  var cons = function (y) {
+      return function (v) {
+          return new Data_NonEmpty.NonEmpty(y, new Data_List_Types.Cons(v.value0, v.value1));
+      };
+  };
+  exports["singleton"] = singleton;
+  exports["cons"] = cons;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Applicative.Free"] = $PS["Control.Applicative.Free"] || {};
+  var exports = $PS["Control.Applicative.Free"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Apply = $PS["Control.Apply"];
+  var Control_Category = $PS["Control.Category"];
+  var Data_Either = $PS["Data.Either"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_List_NonEmpty = $PS["Data.List.NonEmpty"];
+  var Data_List_Types = $PS["Data.List.Types"];
+  var Data_NonEmpty = $PS["Data.NonEmpty"];
+  var Data_Tuple = $PS["Data.Tuple"];                
+  var Pure = (function () {
+      function Pure(value0) {
+          this.value0 = value0;
+      };
+      Pure.create = function (value0) {
+          return new Pure(value0);
+      };
+      return Pure;
+  })();
+  var Lift = (function () {
+      function Lift(value0) {
+          this.value0 = value0;
+      };
+      Lift.create = function (value0) {
+          return new Lift(value0);
+      };
+      return Lift;
+  })();
+  var Ap = (function () {
+      function Ap(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Ap.create = function (value0) {
+          return function (value1) {
+              return new Ap(value0, value1);
+          };
+      };
+      return Ap;
+  })();
+  var mkAp = function (fba) {
+      return function (fb) {
+          return new Ap(fba, fb);
+      };
+  };
+  var liftFreeAp = Lift.create;
+  var goLeft = function ($copy_dictApplicative) {
+      return function ($copy_fStack) {
+          return function ($copy_valStack) {
+              return function ($copy_nat) {
+                  return function ($copy_func) {
+                      return function ($copy_count) {
+                          var $tco_var_dictApplicative = $copy_dictApplicative;
+                          var $tco_var_fStack = $copy_fStack;
+                          var $tco_var_valStack = $copy_valStack;
+                          var $tco_var_nat = $copy_nat;
+                          var $tco_var_func = $copy_func;
+                          var $tco_done = false;
+                          var $tco_result;
+                          function $tco_loop(dictApplicative, fStack, valStack, nat, func, count) {
+                              if (func instanceof Pure) {
+                                  $tco_done = true;
+                                  return new Data_Tuple.Tuple(new Data_List_Types.Cons({
+                                      func: Control_Applicative.pure(dictApplicative)(func.value0),
+                                      count: count
+                                  }, fStack), valStack);
+                              };
+                              if (func instanceof Lift) {
+                                  $tco_done = true;
+                                  return new Data_Tuple.Tuple(new Data_List_Types.Cons({
+                                      func: nat(func.value0),
+                                      count: count
+                                  }, fStack), valStack);
+                              };
+                              if (func instanceof Ap) {
+                                  $tco_var_dictApplicative = dictApplicative;
+                                  $tco_var_fStack = fStack;
+                                  $tco_var_valStack = Data_List_NonEmpty.cons(func.value1)(valStack);
+                                  $tco_var_nat = nat;
+                                  $tco_var_func = func.value0;
+                                  $copy_count = count + 1 | 0;
+                                  return;
+                              };
+                              throw new Error("Failed pattern match at Control.Applicative.Free (line 102, column 41 - line 105, column 81): " + [ func.constructor.name ]);
+                          };
+                          while (!$tco_done) {
+                              $tco_result = $tco_loop($tco_var_dictApplicative, $tco_var_fStack, $tco_var_valStack, $tco_var_nat, $tco_var_func, $copy_count);
+                          };
+                          return $tco_result;
+                      };
+                  };
+              };
+          };
+      };
+  };
+  var goApply = function ($copy_dictApplicative) {
+      return function ($copy_fStack) {
+          return function ($copy_vals) {
+              return function ($copy_gVal) {
+                  var $tco_var_dictApplicative = $copy_dictApplicative;
+                  var $tco_var_fStack = $copy_fStack;
+                  var $tco_var_vals = $copy_vals;
+                  var $tco_done = false;
+                  var $tco_result;
+                  function $tco_loop(dictApplicative, fStack, vals, gVal) {
+                      if (fStack instanceof Data_List_Types.Nil) {
+                          $tco_done = true;
+                          return new Data_Either.Left(gVal);
+                      };
+                      if (fStack instanceof Data_List_Types.Cons) {
+                          var gRes = Control_Apply.apply(dictApplicative.Apply0())(fStack.value0.func)(gVal);
+                          var $14 = fStack.value0.count === 1;
+                          if ($14) {
+                              if (fStack.value1 instanceof Data_List_Types.Nil) {
+                                  $tco_done = true;
+                                  return new Data_Either.Left(gRes);
+                              };
+                              $tco_var_dictApplicative = dictApplicative;
+                              $tco_var_fStack = fStack.value1;
+                              $tco_var_vals = vals;
+                              $copy_gVal = gRes;
+                              return;
+                          };
+                          if (vals instanceof Data_List_Types.Nil) {
+                              $tco_done = true;
+                              return new Data_Either.Left(gRes);
+                          };
+                          if (vals instanceof Data_List_Types.Cons) {
+                              $tco_done = true;
+                              return Data_Either.Right.create(new Data_Tuple.Tuple(new Data_List_Types.Cons({
+                                  func: gRes,
+                                  count: fStack.value0.count - 1 | 0
+                              }, fStack.value1), new Data_NonEmpty.NonEmpty(vals.value0, vals.value1)));
+                          };
+                          throw new Error("Failed pattern match at Control.Applicative.Free (line 83, column 11 - line 88, column 50): " + [ vals.constructor.name ]);
+                      };
+                      throw new Error("Failed pattern match at Control.Applicative.Free (line 72, column 3 - line 88, column 50): " + [ fStack.constructor.name ]);
+                  };
+                  while (!$tco_done) {
+                      $tco_result = $tco_loop($tco_var_dictApplicative, $tco_var_fStack, $tco_var_vals, $copy_gVal);
+                  };
+                  return $tco_result;
+              };
+          };
+      };
+  };
+  var functorFreeAp = new Data_Functor.Functor(function (f) {
+      return function (x) {
+          return mkAp(new Pure(f))(x);
+      };
+  });
+  var foldFreeAp = function (dictApplicative) {
+      return function (nat) {
+          return function (z) {
+              var go = function ($copy_v) {
+                  var $tco_done = false;
+                  var $tco_result;
+                  function $tco_loop(v) {
+                      if (v.value1.value0 instanceof Pure) {
+                          var v1 = goApply(dictApplicative)(v.value0)(v.value1.value1)(Control_Applicative.pure(dictApplicative)(v.value1.value0.value0));
+                          if (v1 instanceof Data_Either.Left) {
+                              $tco_done = true;
+                              return v1.value0;
+                          };
+                          if (v1 instanceof Data_Either.Right) {
+                              $copy_v = v1.value0;
+                              return;
+                          };
+                          throw new Error("Failed pattern match at Control.Applicative.Free (line 54, column 17 - line 56, column 24): " + [ v1.constructor.name ]);
+                      };
+                      if (v.value1.value0 instanceof Lift) {
+                          var v1 = goApply(dictApplicative)(v.value0)(v.value1.value1)(nat(v.value1.value0.value0));
+                          if (v1 instanceof Data_Either.Left) {
+                              $tco_done = true;
+                              return v1.value0;
+                          };
+                          if (v1 instanceof Data_Either.Right) {
+                              $copy_v = v1.value0;
+                              return;
+                          };
+                          throw new Error("Failed pattern match at Control.Applicative.Free (line 57, column 17 - line 59, column 24): " + [ v1.constructor.name ]);
+                      };
+                      if (v.value1.value0 instanceof Ap) {
+                          var nextVals = new Data_NonEmpty.NonEmpty(v.value1.value0.value1, v.value1.value1);
+                          $copy_v = goLeft(dictApplicative)(v.value0)(nextVals)(nat)(v.value1.value0.value0)(1);
+                          return;
+                      };
+                      throw new Error("Failed pattern match at Control.Applicative.Free (line 53, column 5 - line 62, column 47): " + [ v.value1.value0.constructor.name ]);
+                  };
+                  while (!$tco_done) {
+                      $tco_result = $tco_loop($copy_v);
+                  };
+                  return $tco_result;
+              };
+              return go(new Data_Tuple.Tuple(Data_List_Types.Nil.value, Data_List_NonEmpty.singleton(z)));
+          };
+      };
+  };
+  var retractFreeAp = function (dictApplicative) {
+      return foldFreeAp(dictApplicative)(Control_Category.identity(Control_Category.categoryFn));
+  };
+  var applyFreeAp = new Control_Apply.Apply(function () {
+      return functorFreeAp;
+  }, function (fba) {
+      return function (fb) {
+          return mkAp(fba)(fb);
+      };
+  });
+  var applicativeFreeAp = new Control_Applicative.Applicative(function () {
+      return applyFreeAp;
+  }, Pure.create);
+  var hoistFreeAp = function (f) {
+      return foldFreeAp(applicativeFreeAp)(function ($37) {
+          return liftFreeAp(f($37));
+      });
+  };
+  exports["retractFreeAp"] = retractFreeAp;
+  exports["hoistFreeAp"] = hoistFreeAp;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Monad.Except.Trans"] = $PS["Control.Monad.Except.Trans"] || {};
+  var exports = $PS["Control.Monad.Except.Trans"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Apply = $PS["Control.Apply"];
+  var Control_Bind = $PS["Control.Bind"];
+  var Control_Monad = $PS["Control.Monad"];
+  var Data_Either = $PS["Data.Either"];
+  var Data_Functor = $PS["Data.Functor"];                
+  var ExceptT = function (x) {
+      return x;
+  };
+  var runExceptT = function (v) {
+      return v;
+  }; 
+  var mapExceptT = function (f) {
+      return function (v) {
+          return f(v);
+      };
+  };
+  var functorExceptT = function (dictFunctor) {
+      return new Data_Functor.Functor(function (f) {
+          return mapExceptT(Data_Functor.map(dictFunctor)(Data_Functor.map(Data_Either.functorEither)(f)));
+      });
+  };
+  var monadExceptT = function (dictMonad) {
+      return new Control_Monad.Monad(function () {
+          return applicativeExceptT(dictMonad);
+      }, function () {
+          return bindExceptT(dictMonad);
+      });
+  };
+  var bindExceptT = function (dictMonad) {
+      return new Control_Bind.Bind(function () {
+          return applyExceptT(dictMonad);
+      }, function (v) {
+          return function (k) {
+              return Control_Bind.bind(dictMonad.Bind1())(v)(Data_Either.either((function () {
+                  var $90 = Control_Applicative.pure(dictMonad.Applicative0());
+                  return function ($91) {
+                      return $90(Data_Either.Left.create($91));
+                  };
+              })())(function (a) {
+                  var v1 = k(a);
+                  return v1;
+              }));
+          };
+      });
+  };
+  var applyExceptT = function (dictMonad) {
+      return new Control_Apply.Apply(function () {
+          return functorExceptT(((dictMonad.Bind1()).Apply0()).Functor0());
+      }, Control_Monad.ap(monadExceptT(dictMonad)));
+  };
+  var applicativeExceptT = function (dictMonad) {
+      return new Control_Applicative.Applicative(function () {
+          return applyExceptT(dictMonad);
+      }, (function () {
+          var $92 = Control_Applicative.pure(dictMonad.Applicative0());
+          return function ($93) {
+              return ExceptT($92(Data_Either.Right.create($93)));
+          };
+      })());
+  };
+  exports["ExceptT"] = ExceptT;
+  exports["runExceptT"] = runExceptT;
+  exports["applicativeExceptT"] = applicativeExceptT;
+  exports["bindExceptT"] = bindExceptT;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Monad.Rec.Class"] = $PS["Control.Monad.Rec.Class"] || {};
+  var exports = $PS["Control.Monad.Rec.Class"];
+  var Control_Bind = $PS["Control.Bind"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Effect = $PS["Effect"];
+  var Effect_Ref = $PS["Effect.Ref"];                
+  var Loop = (function () {
+      function Loop(value0) {
+          this.value0 = value0;
+      };
+      Loop.create = function (value0) {
+          return new Loop(value0);
+      };
+      return Loop;
+  })();
+  var Done = (function () {
+      function Done(value0) {
+          this.value0 = value0;
+      };
+      Done.create = function (value0) {
+          return new Done(value0);
+      };
+      return Done;
+  })();
+  var MonadRec = function (Monad0, tailRecM) {
+      this.Monad0 = Monad0;
+      this.tailRecM = tailRecM;
+  };
+  var tailRecM = function (dict) {
+      return dict.tailRecM;
+  }; 
+  var monadRecEffect = new MonadRec(function () {
+      return Effect.monadEffect;
+  }, function (f) {
+      return function (a) {
+          var fromDone = function (v) {
+              if (v instanceof Done) {
+                  return v.value0;
+              };
+              throw new Error("Failed pattern match at Control.Monad.Rec.Class (line 113, column 30 - line 113, column 44): " + [ v.constructor.name ]);
+          };
+          return function __do() {
+              var r = Control_Bind.bindFlipped(Effect.bindEffect)(Effect_Ref["new"])(f(a))();
+              (function () {
+                  while (!(function __do() {
+                      var v = Effect_Ref.read(r)();
+                      if (v instanceof Loop) {
+                          var e = f(v.value0)();
+                          Effect_Ref.write(e)(r)();
+                          return false;
+                      };
+                      if (v instanceof Done) {
+                          return true;
+                      };
+                      throw new Error("Failed pattern match at Control.Monad.Rec.Class (line 104, column 22 - line 109, column 28): " + [ v.constructor.name ]);
+                  })()) {
+
+                  };
+                  return {};
+              })();
+              return Data_Functor.map(Effect.functorEffect)(fromDone)(Effect_Ref.read(r))();
+          };
+      };
+  });
+  exports["Loop"] = Loop;
+  exports["Done"] = Done;
+  exports["MonadRec"] = MonadRec;
+  exports["tailRecM"] = tailRecM;
+  exports["monadRecEffect"] = monadRecEffect;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Monad.Trans.Class"] = $PS["Control.Monad.Trans.Class"] || {};
+  var exports = $PS["Control.Monad.Trans.Class"];
+  var MonadTrans = function (lift) {
+      this.lift = lift;
+  };
+  var lift = function (dict) {
+      return dict.lift;
+  };
+  exports["lift"] = lift;
+  exports["MonadTrans"] = MonadTrans;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Exists"] = $PS["Data.Exists"] || {};
+  var exports = $PS["Data.Exists"];
+  var Unsafe_Coerce = $PS["Unsafe.Coerce"];                
+  var runExists = Unsafe_Coerce.unsafeCoerce;
+  var mkExists = Unsafe_Coerce.unsafeCoerce;
+  exports["mkExists"] = mkExists;
+  exports["runExists"] = runExists;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Monad.Free.Trans"] = $PS["Control.Monad.Free.Trans"] || {};
+  var exports = $PS["Control.Monad.Free.Trans"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Apply = $PS["Control.Apply"];
+  var Control_Bind = $PS["Control.Bind"];
+  var Control_Monad = $PS["Control.Monad"];
+  var Control_Monad_Rec_Class = $PS["Control.Monad.Rec.Class"];
+  var Control_Monad_Trans_Class = $PS["Control.Monad.Trans.Class"];
+  var Data_Bifunctor = $PS["Data.Bifunctor"];
+  var Data_Either = $PS["Data.Either"];
+  var Data_Exists = $PS["Data.Exists"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Unit = $PS["Data.Unit"];                      
+  var Bound = (function () {
+      function Bound(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Bound.create = function (value0) {
+          return function (value1) {
+              return new Bound(value0, value1);
+          };
+      };
+      return Bound;
+  })();
+  var FreeT = (function () {
+      function FreeT(value0) {
+          this.value0 = value0;
+      };
+      FreeT.create = function (value0) {
+          return new FreeT(value0);
+      };
+      return FreeT;
+  })();
+  var Bind = (function () {
+      function Bind(value0) {
+          this.value0 = value0;
+      };
+      Bind.create = function (value0) {
+          return new Bind(value0);
+      };
+      return Bind;
+  })();
+  var monadTransFreeT = function (dictFunctor) {
+      return new Control_Monad_Trans_Class.MonadTrans(function (dictMonad) {
+          return function (ma) {
+              return new FreeT(function (v) {
+                  return Data_Functor.map(((dictMonad.Bind1()).Apply0()).Functor0())(Data_Either.Left.create)(ma);
+              });
+          };
+      });
+  };
+  var freeT = FreeT.create;
+  var bound = function (m) {
+      return function (f) {
+          return new Bind(Data_Exists.mkExists(new Bound(m, f)));
+      };
+  };
+  var functorFreeT = function (dictFunctor) {
+      return function (dictFunctor1) {
+          return new Data_Functor.Functor(function (f) {
+              return function (v) {
+                  if (v instanceof FreeT) {
+                      return new FreeT(function (v1) {
+                          return Data_Functor.map(dictFunctor1)(Data_Bifunctor.bimap(Data_Either.bifunctorEither)(f)(Data_Functor.map(dictFunctor)(Data_Functor.map(functorFreeT(dictFunctor)(dictFunctor1))(f))))(v.value0(Data_Unit.unit));
+                      });
+                  };
+                  if (v instanceof Bind) {
+                      return Data_Exists.runExists(function (v1) {
+                          return bound(v1.value0)((function () {
+                              var $123 = Data_Functor.map(functorFreeT(dictFunctor)(dictFunctor1))(f);
+                              return function ($124) {
+                                  return $123(v1.value1($124));
+                              };
+                          })());
+                      })(v.value0);
+                  };
+                  throw new Error("Failed pattern match at Control.Monad.Free.Trans (line 59, column 1 - line 61, column 71): " + [ f.constructor.name, v.constructor.name ]);
+              };
+          });
+      };
+  };
+  var monadFreeT = function (dictFunctor) {
+      return function (dictMonad) {
+          return new Control_Monad.Monad(function () {
+              return applicativeFreeT(dictFunctor)(dictMonad);
+          }, function () {
+              return bindFreeT(dictFunctor)(dictMonad);
+          });
+      };
+  };
+  var bindFreeT = function (dictFunctor) {
+      return function (dictMonad) {
+          return new Control_Bind.Bind(function () {
+              return applyFreeT(dictFunctor)(dictMonad);
+          }, function (v) {
+              return function (f) {
+                  if (v instanceof Bind) {
+                      return Data_Exists.runExists(function (v1) {
+                          return bound(v1.value0)(function (x) {
+                              return bound(function (v2) {
+                                  return v1.value1(x);
+                              })(f);
+                          });
+                      })(v.value0);
+                  };
+                  return bound(function (v1) {
+                      return v;
+                  })(f);
+              };
+          });
+      };
+  };
+  var applyFreeT = function (dictFunctor) {
+      return function (dictMonad) {
+          return new Control_Apply.Apply(function () {
+              return functorFreeT(dictFunctor)(((dictMonad.Bind1()).Apply0()).Functor0());
+          }, Control_Monad.ap(monadFreeT(dictFunctor)(dictMonad)));
+      };
+  };
+  var applicativeFreeT = function (dictFunctor) {
+      return function (dictMonad) {
+          return new Control_Applicative.Applicative(function () {
+              return applyFreeT(dictFunctor)(dictMonad);
+          }, function (a) {
+              return new FreeT(function (v) {
+                  return Control_Applicative.pure(dictMonad.Applicative0())(new Data_Either.Left(a));
+              });
+          });
+      };
+  };
+  var liftFreeT = function (dictFunctor) {
+      return function (dictMonad) {
+          return function (fa) {
+              return new FreeT(function (v) {
+                  return Control_Applicative.pure(dictMonad.Applicative0())(new Data_Either.Right(Data_Functor.map(dictFunctor)(Control_Applicative.pure(applicativeFreeT(dictFunctor)(dictMonad)))(fa)));
+              });
+          };
+      };
+  };
+  var resume = function (dictFunctor) {
+      return function (dictMonadRec) {
+          var go = function (v) {
+              if (v instanceof FreeT) {
+                  return Data_Functor.map((((dictMonadRec.Monad0()).Bind1()).Apply0()).Functor0())(Control_Monad_Rec_Class.Done.create)(v.value0(Data_Unit.unit));
+              };
+              if (v instanceof Bind) {
+                  return Data_Exists.runExists(function (v1) {
+                      var v2 = v1.value0(Data_Unit.unit);
+                      if (v2 instanceof FreeT) {
+                          return Control_Bind.bind((dictMonadRec.Monad0()).Bind1())(v2.value0(Data_Unit.unit))(function (v3) {
+                              if (v3 instanceof Data_Either.Left) {
+                                  return Control_Applicative.pure((dictMonadRec.Monad0()).Applicative0())(new Control_Monad_Rec_Class.Loop(v1.value1(v3.value0)));
+                              };
+                              if (v3 instanceof Data_Either.Right) {
+                                  return Control_Applicative.pure((dictMonadRec.Monad0()).Applicative0())(new Control_Monad_Rec_Class.Done(new Data_Either.Right(Data_Functor.map(dictFunctor)(function (h) {
+                                      return Control_Bind.bind(bindFreeT(dictFunctor)(dictMonadRec.Monad0()))(h)(v1.value1);
+                                  })(v3.value0))));
+                              };
+                              throw new Error("Failed pattern match at Control.Monad.Free.Trans (line 54, column 20 - line 56, column 67): " + [ v3.constructor.name ]);
+                          });
+                      };
+                      if (v2 instanceof Bind) {
+                          return Data_Exists.runExists(function (v3) {
+                              return Control_Applicative.pure((dictMonadRec.Monad0()).Applicative0())(new Control_Monad_Rec_Class.Loop(Control_Bind.bind(bindFreeT(dictFunctor)(dictMonadRec.Monad0()))(v3.value0(Data_Unit.unit))(function (z) {
+                                  return Control_Bind.bind(bindFreeT(dictFunctor)(dictMonadRec.Monad0()))(v3.value1(z))(v1.value1);
+                              })));
+                          })(v2.value0);
+                      };
+                      throw new Error("Failed pattern match at Control.Monad.Free.Trans (line 52, column 5 - line 57, column 98): " + [ v2.constructor.name ]);
+                  })(v.value0);
+              };
+              throw new Error("Failed pattern match at Control.Monad.Free.Trans (line 49, column 3 - line 49, column 75): " + [ v.constructor.name ]);
+          };
+          return Control_Monad_Rec_Class.tailRecM(dictMonadRec)(go);
+      };
+  };
+  var runFreeT = function (dictFunctor) {
+      return function (dictMonadRec) {
+          return function (interp) {
+              var go = function (v) {
+                  if (v instanceof Data_Either.Left) {
+                      return Control_Applicative.pure((dictMonadRec.Monad0()).Applicative0())(new Control_Monad_Rec_Class.Done(v.value0));
+                  };
+                  if (v instanceof Data_Either.Right) {
+                      return Data_Functor.map((((dictMonadRec.Monad0()).Bind1()).Apply0()).Functor0())(Control_Monad_Rec_Class.Loop.create)(interp(v.value0));
+                  };
+                  throw new Error("Failed pattern match at Control.Monad.Free.Trans (line 141, column 3 - line 141, column 63): " + [ v.constructor.name ]);
+              };
+              return Control_Monad_Rec_Class.tailRecM(dictMonadRec)(Control_Bind.composeKleisliFlipped((dictMonadRec.Monad0()).Bind1())(go)(resume(dictFunctor)(dictMonadRec)));
+          };
+      };
+  };
+  var monadRecFreeT = function (dictFunctor) {
+      return function (dictMonad) {
+          return new Control_Monad_Rec_Class.MonadRec(function () {
+              return monadFreeT(dictFunctor)(dictMonad);
+          }, function (f) {
+              var go = function (s) {
+                  return Control_Bind.bind(bindFreeT(dictFunctor)(dictMonad))(f(s))(function (v) {
+                      if (v instanceof Control_Monad_Rec_Class.Loop) {
+                          return go(v.value0);
+                      };
+                      if (v instanceof Control_Monad_Rec_Class.Done) {
+                          return Control_Applicative.pure(applicativeFreeT(dictFunctor)(dictMonad))(v.value0);
+                      };
+                      throw new Error("Failed pattern match at Control.Monad.Free.Trans (line 82, column 15 - line 84, column 25): " + [ v.constructor.name ]);
+                  });
+              };
+              return go;
+          });
+      };
+  };
+  exports["freeT"] = freeT;
+  exports["liftFreeT"] = liftFreeT;
+  exports["resume"] = resume;
+  exports["runFreeT"] = runFreeT;
+  exports["functorFreeT"] = functorFreeT;
+  exports["applicativeFreeT"] = applicativeFreeT;
+  exports["bindFreeT"] = bindFreeT;
+  exports["monadTransFreeT"] = monadTransFreeT;
+  exports["monadRecFreeT"] = monadRecFreeT;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Parallel.Class"] = $PS["Control.Parallel.Class"] || {};
+  var exports = $PS["Control.Parallel.Class"];
+  var Parallel = function (Applicative1, Monad0, parallel, sequential) {
+      this.Applicative1 = Applicative1;
+      this.Monad0 = Monad0;
+      this.parallel = parallel;
+      this.sequential = sequential;
+  };
+  var sequential = function (dict) {
+      return dict.sequential;
+  };
+  var parallel = function (dict) {
+      return dict.parallel;
+  };
+  exports["parallel"] = parallel;
+  exports["sequential"] = sequential;
+  exports["Parallel"] = Parallel;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Identity"] = $PS["Data.Identity"] || {};
+  var exports = $PS["Data.Identity"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Apply = $PS["Control.Apply"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Newtype = $PS["Data.Newtype"];          
+  var Identity = function (x) {
+      return x;
+  };
+  var newtypeIdentity = new Data_Newtype.Newtype(function (n) {
+      return n;
+  }, Identity);
+  var functorIdentity = new Data_Functor.Functor(function (f) {
+      return function (m) {
+          return f(m);
+      };
+  });
+  var applyIdentity = new Control_Apply.Apply(function () {
+      return functorIdentity;
+  }, function (v) {
+      return function (v1) {
+          return v(v1);
+      };
+  });
+  var applicativeIdentity = new Control_Applicative.Applicative(function () {
+      return applyIdentity;
+  }, Identity);
+  exports["newtypeIdentity"] = newtypeIdentity;
+  exports["functorIdentity"] = functorIdentity;
+  exports["applicativeIdentity"] = applicativeIdentity;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Profunctor"] = $PS["Data.Profunctor"] || {};
+  var exports = $PS["Data.Profunctor"];
+  var Control_Category = $PS["Control.Category"];        
+  var Profunctor = function (dimap) {
+      this.dimap = dimap;
+  };
+  var profunctorFn = new Profunctor(function (a2b) {
+      return function (c2d) {
+          return function (b2c) {
+              return function ($9) {
+                  return c2d(b2c(a2b($9)));
+              };
+          };
+      };
+  });
+  var dimap = function (dict) {
+      return dict.dimap;
+  };
+  var rmap = function (dictProfunctor) {
+      return function (b2c) {
+          return dimap(dictProfunctor)(Control_Category.identity(Control_Category.categoryFn))(b2c);
+      };
+  };
+  exports["dimap"] = dimap;
+  exports["Profunctor"] = Profunctor;
+  exports["rmap"] = rmap;
+  exports["profunctorFn"] = profunctorFn;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Coroutine"] = $PS["Control.Coroutine"] || {};
+  var exports = $PS["Control.Coroutine"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Apply = $PS["Control.Apply"];
+  var Control_Bind = $PS["Control.Bind"];
+  var Control_Category = $PS["Control.Category"];
+  var Control_Monad_Except_Trans = $PS["Control.Monad.Except.Trans"];
+  var Control_Monad_Free_Trans = $PS["Control.Monad.Free.Trans"];
+  var Control_Monad_Rec_Class = $PS["Control.Monad.Rec.Class"];
+  var Control_Monad_Trans_Class = $PS["Control.Monad.Trans.Class"];
+  var Control_Parallel_Class = $PS["Control.Parallel.Class"];
+  var Data_Bifunctor = $PS["Data.Bifunctor"];
+  var Data_Either = $PS["Data.Either"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Identity = $PS["Data.Identity"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Data_Newtype = $PS["Data.Newtype"];
+  var Data_Profunctor = $PS["Data.Profunctor"];
+  var Data_Tuple = $PS["Data.Tuple"];
+  var Data_Unit = $PS["Data.Unit"];
+  var Emit = (function () {
+      function Emit(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Emit.create = function (value0) {
+          return function (value1) {
+              return new Emit(value0, value1);
+          };
+      };
+      return Emit;
+  })();
+  var runProcess = function (dictMonadRec) {
+      return Control_Monad_Free_Trans.runFreeT(Data_Identity.functorIdentity)(dictMonadRec)((function () {
+          var $176 = Control_Applicative.pure((dictMonadRec.Monad0()).Applicative0());
+          var $177 = Data_Newtype.unwrap(Data_Identity.newtypeIdentity);
+          return function ($178) {
+              return $176($177($178));
+          };
+      })());
+  };
+  var profunctorAwait = new Data_Profunctor.Profunctor(function (f) {
+      return function (g) {
+          return function (v) {
+              return Data_Profunctor.dimap(Data_Profunctor.profunctorFn)(f)(g)(v);
+          };
+      };
+  });
+  var loop = function (dictFunctor) {
+      return function (dictMonad) {
+          return function (me) {
+              return Control_Monad_Rec_Class.tailRecM(Control_Monad_Free_Trans.monadRecFreeT(dictFunctor)(dictMonad))(function (v) {
+                  return Data_Functor.map(Control_Monad_Free_Trans.functorFreeT(dictFunctor)(((dictMonad.Bind1()).Apply0()).Functor0()))(Data_Maybe.maybe(new Control_Monad_Rec_Class.Loop(Data_Unit.unit))(Control_Monad_Rec_Class.Done.create))(me);
+              })(Data_Unit.unit);
+          };
+      };
+  };
+  var fuseWithL = function (dictFunctor) {
+      return function (dictFunctor1) {
+          return function (dictFunctor2) {
+              return function (dictMonadRec) {
+                  return function (zap) {
+                      return function (fs) {
+                          return function (gs) {
+                              var go = function (v) {
+                                  return Control_Monad_Except_Trans.runExceptT(Control_Bind.bind(Control_Monad_Except_Trans.bindExceptT(dictMonadRec.Monad0()))(Control_Monad_Except_Trans.ExceptT(Control_Monad_Free_Trans.resume(dictFunctor)(dictMonadRec)(v.value0)))(function (l) {
+                                      return Control_Bind.bind(Control_Monad_Except_Trans.bindExceptT(dictMonadRec.Monad0()))(Control_Monad_Except_Trans.ExceptT(Control_Monad_Free_Trans.resume(dictFunctor1)(dictMonadRec)(v.value1)))(function (r) {
+                                          return Control_Applicative.pure(Control_Monad_Except_Trans.applicativeExceptT(dictMonadRec.Monad0()))(Data_Functor.map(dictFunctor2)(function (t) {
+                                              return Control_Monad_Free_Trans.freeT(function (v1) {
+                                                  return go(t);
+                                              });
+                                          })(zap(Data_Tuple.Tuple.create)(l)(r)));
+                                      });
+                                  }));
+                              };
+                              return Control_Monad_Free_Trans.freeT(function (v) {
+                                  return go(new Data_Tuple.Tuple(fs, gs));
+                              });
+                          };
+                      };
+                  };
+              };
+          };
+      };
+  };
+  var fuseWith = function (dictFunctor) {
+      return function (dictFunctor1) {
+          return function (dictFunctor2) {
+              return function (dictMonadRec) {
+                  return function (dictParallel) {
+                      return function (zap) {
+                          return function (fs) {
+                              return function (gs) {
+                                  var go = function (v) {
+                                      return Control_Bind.bind((dictMonadRec.Monad0()).Bind1())(Control_Parallel_Class.sequential(dictParallel)(Control_Apply.apply((dictParallel.Applicative1()).Apply0())(Data_Functor.map(((dictParallel.Applicative1()).Apply0()).Functor0())(Control_Apply.lift2(Data_Either.applyEither)(zap(Data_Tuple.Tuple.create)))(Control_Parallel_Class.parallel(dictParallel)(Control_Monad_Free_Trans.resume(dictFunctor)(dictMonadRec)(v.value0))))(Control_Parallel_Class.parallel(dictParallel)(Control_Monad_Free_Trans.resume(dictFunctor1)(dictMonadRec)(v.value1)))))(function (next) {
+                                          if (next instanceof Data_Either.Left) {
+                                              return Control_Applicative.pure((dictMonadRec.Monad0()).Applicative0())(new Data_Either.Left(next.value0));
+                                          };
+                                          if (next instanceof Data_Either.Right) {
+                                              return Control_Applicative.pure((dictMonadRec.Monad0()).Applicative0())(new Data_Either.Right(Data_Functor.map(dictFunctor2)(function (t) {
+                                                  return Control_Monad_Free_Trans.freeT(function (v1) {
+                                                      return go(t);
+                                                  });
+                                              })(next.value0)));
+                                          };
+                                          throw new Error("Failed pattern match at Control.Coroutine (line 79, column 5 - line 81, column 63): " + [ next.constructor.name ]);
+                                      });
+                                  };
+                                  return Control_Monad_Free_Trans.freeT(function (v) {
+                                      return go(new Data_Tuple.Tuple(fs, gs));
+                                  });
+                              };
+                          };
+                      };
+                  };
+              };
+          };
+      };
+  };
+  var functorAwait = new Data_Functor.Functor(Data_Profunctor.rmap(profunctorAwait));
+  var bifunctorEmit = new Data_Bifunctor.Bifunctor(function (f) {
+      return function (g) {
+          return function (v) {
+              return new Emit(f(v.value0), g(v.value1));
+          };
+      };
+  });
+  var functorEmit = new Data_Functor.Functor(Data_Bifunctor.rmap(bifunctorEmit));
+  var connect = function (dictMonadRec) {
+      return function (dictParallel) {
+          return fuseWith(functorEmit)(functorAwait)(Data_Identity.functorIdentity)(dictMonadRec)(dictParallel)(function (f) {
+              return function (v) {
+                  return function (v1) {
+                      return f(v.value1)(v1(v.value0));
+                  };
+              };
+          });
+      };
+  };
+  var emit = function (dictMonad) {
+      return function (o) {
+          return Control_Monad_Free_Trans.liftFreeT(functorEmit)(dictMonad)(new Emit(o, Data_Unit.unit));
+      };
+  };
+  var producer = function (dictMonad) {
+      return function (recv) {
+          return loop(functorEmit)(dictMonad)(Control_Bind.bind(Control_Monad_Free_Trans.bindFreeT(functorEmit)(dictMonad))(Control_Monad_Trans_Class.lift(Control_Monad_Free_Trans.monadTransFreeT(functorEmit))(dictMonad)(recv))(function (e) {
+              if (e instanceof Data_Either.Left) {
+                  return Data_Functor.voidLeft(Control_Monad_Free_Trans.functorFreeT(functorEmit)(((dictMonad.Bind1()).Apply0()).Functor0()))(emit(dictMonad)(e.value0))(Data_Maybe.Nothing.value);
+              };
+              if (e instanceof Data_Either.Right) {
+                  return Control_Applicative.pure(Control_Monad_Free_Trans.applicativeFreeT(functorEmit)(dictMonad))(new Data_Maybe.Just(e.value0));
+              };
+              throw new Error("Failed pattern match at Control.Coroutine (line 125, column 3 - line 127, column 29): " + [ e.constructor.name ]);
+          }));
+      };
+  };
+  var pullFrom = function (dictMonadRec) {
+      return fuseWithL(functorAwait)(functorEmit)(Data_Identity.functorIdentity)(dictMonadRec)(function (f) {
+          return function (v) {
+              return function (v1) {
+                  return Control_Applicative.pure(Data_Identity.applicativeIdentity)(f(v(v1.value0))(v1.value1));
+              };
+          };
+      });
+  };
+  var $$await = function (dictMonad) {
+      return Control_Monad_Free_Trans.liftFreeT(functorAwait)(dictMonad)(Control_Category.identity(Control_Category.categoryFn));
+  };
+  exports["runProcess"] = runProcess;
+  exports["producer"] = producer;
+  exports["await"] = $$await;
+  exports["connect"] = connect;
+  exports["pullFrom"] = pullFrom;
+  exports["functorEmit"] = functorEmit;
+  exports["functorAwait"] = functorAwait;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Monad.Error.Class"] = $PS["Control.Monad.Error.Class"] || {};
+  var exports = $PS["Control.Monad.Error.Class"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Data_Either = $PS["Data.Either"];
+  var Data_Functor = $PS["Data.Functor"];                        
+  var MonadThrow = function (Monad0, throwError) {
+      this.Monad0 = Monad0;
+      this.throwError = throwError;
+  };
+  var MonadError = function (MonadThrow0, catchError) {
+      this.MonadThrow0 = MonadThrow0;
+      this.catchError = catchError;
+  };
+  var throwError = function (dict) {
+      return dict.throwError;
+  };                                                      
+  var catchError = function (dict) {
+      return dict.catchError;
+  };
+  var $$try = function (dictMonadError) {
+      return function (a) {
+          return catchError(dictMonadError)(Data_Functor.map(((((dictMonadError.MonadThrow0()).Monad0()).Bind1()).Apply0()).Functor0())(Data_Either.Right.create)(a))((function () {
+              var $17 = Control_Applicative.pure(((dictMonadError.MonadThrow0()).Monad0()).Applicative0());
+              return function ($18) {
+                  return $17(Data_Either.Left.create($18));
+              };
+          })());
+      };
+  };
+  exports["throwError"] = throwError;
+  exports["MonadThrow"] = MonadThrow;
+  exports["MonadError"] = MonadError;
+  exports["try"] = $$try;
+})(PS);
+(function(exports) {
+  /* globals setImmediate, clearImmediate, setTimeout, clearTimeout */
+  /* jshint -W083, -W098, -W003 */
+  "use strict";
+
+  var Aff = function () {
+    // A unique value for empty.
+    var EMPTY = {};
+
+    /*
+
+  An awkward approximation. We elide evidence we would otherwise need in PS for
+  efficiency sake.
+
+  data Aff eff a
+    = Pure a
+    | Throw Error
+    | Catch (Aff eff a) (Error -> Aff eff a)
+    | Sync (Eff eff a)
+    | Async ((Either Error a -> Eff eff Unit) -> Eff eff (Canceler eff))
+    | forall b. Bind (Aff eff b) (b -> Aff eff a)
+    | forall b. Bracket (Aff eff b) (BracketConditions eff b) (b -> Aff eff a)
+    | forall b. Fork Boolean (Aff eff b) ?(Fiber eff b -> a)
+    | Sequential (ParAff aff a)
+
+  */  
+    var PURE    = "Pure";
+    var THROW   = "Throw";
+    var CATCH   = "Catch";
+    var SYNC    = "Sync";
+    var ASYNC   = "Async";
+    var BIND    = "Bind";
+    var BRACKET = "Bracket";
+    var FORK    = "Fork";
+    var SEQ     = "Sequential";
+
+    /*
+
+  data ParAff eff a
+    = forall b. Map (b -> a) (ParAff eff b)
+    | forall b. Apply (ParAff eff (b -> a)) (ParAff eff b)
+    | Alt (ParAff eff a) (ParAff eff a)
+    | ?Par (Aff eff a)
+
+  */  
+    var MAP   = "Map";
+    var APPLY = "Apply";
+    var ALT   = "Alt";
+
+    // Various constructors used in interpretation
+    var CONS      = "Cons";      // Cons-list, for stacks
+    var RESUME    = "Resume";    // Continue indiscriminately
+    var RELEASE   = "Release";   // Continue with bracket finalizers
+    var FINALIZER = "Finalizer"; // A non-interruptible effect
+    var FINALIZED = "Finalized"; // Marker for finalization
+    var FORKED    = "Forked";    // Reference to a forked fiber, with resumption stack
+    var FIBER     = "Fiber";     // Actual fiber reference
+    var THUNK     = "Thunk";     // Primed effect, ready to invoke
+
+    function Aff(tag, _1, _2, _3) {
+      this.tag = tag;
+      this._1  = _1;
+      this._2  = _2;
+      this._3  = _3;
+    }
+
+    function AffCtr(tag) {
+      var fn = function (_1, _2, _3) {
+        return new Aff(tag, _1, _2, _3);
+      };
+      fn.tag = tag;
+      return fn;
+    }
+
+    function nonCanceler(error) {
+      return new Aff(PURE, void 0);
+    }
+
+    function runEff(eff) {
+      try {
+        eff();
+      } catch (error) {
+        setTimeout(function () {
+          throw error;
+        }, 0);
+      }
+    }
+
+    function runSync(left, right, eff) {
+      try {
+        return right(eff());
+      } catch (error) {
+        return left(error);
+      }
+    }
+
+    function runAsync(left, eff, k) {
+      try {
+        return eff(k)();
+      } catch (error) {
+        k(left(error))();
+        return nonCanceler;
+      }
+    }
+
+    var Scheduler = function () {
+      var limit    = 1024;
+      var size     = 0;
+      var ix       = 0;
+      var queue    = new Array(limit);
+      var draining = false;
+
+      function drain() {
+        var thunk;
+        draining = true;
+        while (size !== 0) {
+          size--;
+          thunk     = queue[ix];
+          queue[ix] = void 0;
+          ix        = (ix + 1) % limit;
+          thunk();
+        }
+        draining = false;
+      }
+
+      return {
+        isDraining: function () {
+          return draining;
+        },
+        enqueue: function (cb) {
+          var i, tmp;
+          if (size === limit) {
+            tmp = draining;
+            drain();
+            draining = tmp;
+          }
+
+          queue[(ix + size) % limit] = cb;
+          size++;
+
+          if (!draining) {
+            drain();
+          }
+        }
+      };
+    }();
+
+    function Supervisor(util) {
+      var fibers  = {};
+      var fiberId = 0;
+      var count   = 0;
+
+      return {
+        register: function (fiber) {
+          var fid = fiberId++;
+          fiber.onComplete({
+            rethrow: true,
+            handler: function (result) {
+              return function () {
+                count--;
+                delete fibers[fid];
+              };
+            }
+          })();
+          fibers[fid] = fiber;
+          count++;
+        },
+        isEmpty: function () {
+          return count === 0;
+        },
+        killAll: function (killError, cb) {
+          return function () {
+            if (count === 0) {
+              return cb();
+            }
+
+            var killCount = 0;
+            var kills     = {};
+
+            function kill(fid) {
+              kills[fid] = fibers[fid].kill(killError, function (result) {
+                return function () {
+                  delete kills[fid];
+                  killCount--;
+                  if (util.isLeft(result) && util.fromLeft(result)) {
+                    setTimeout(function () {
+                      throw util.fromLeft(result);
+                    }, 0);
+                  }
+                  if (killCount === 0) {
+                    cb();
+                  }
+                };
+              })();
+            }
+
+            for (var k in fibers) {
+              if (fibers.hasOwnProperty(k)) {
+                killCount++;
+                kill(k);
+              }
+            }
+
+            fibers  = {};
+            fiberId = 0;
+            count   = 0;
+
+            return function (error) {
+              return new Aff(SYNC, function () {
+                for (var k in kills) {
+                  if (kills.hasOwnProperty(k)) {
+                    kills[k]();
+                  }
+                }
+              });
+            };
+          };
+        }
+      };
+    }
+
+    // Fiber state machine
+    var SUSPENDED   = 0; // Suspended, pending a join.
+    var CONTINUE    = 1; // Interpret the next instruction.
+    var STEP_BIND   = 2; // Apply the next bind.
+    var STEP_RESULT = 3; // Handle potential failure from a result.
+    var PENDING     = 4; // An async effect is running.
+    var RETURN      = 5; // The current stack has returned.
+    var COMPLETED   = 6; // The entire fiber has completed.
+
+    function Fiber(util, supervisor, aff) {
+      // Monotonically increasing tick, increased on each asynchronous turn.
+      var runTick = 0;
+
+      // The current branch of the state machine.
+      var status = SUSPENDED;
+
+      // The current point of interest for the state machine branch.
+      var step      = aff;  // Successful step
+      var fail      = null; // Failure step
+      var interrupt = null; // Asynchronous interrupt
+
+      // Stack of continuations for the current fiber.
+      var bhead = null;
+      var btail = null;
+
+      // Stack of attempts and finalizers for error recovery. Every `Cons` is also
+      // tagged with current `interrupt` state. We use this to track which items
+      // should be ignored or evaluated as a result of a kill.
+      var attempts = null;
+
+      // A special state is needed for Bracket, because it cannot be killed. When
+      // we enter a bracket acquisition or finalizer, we increment the counter,
+      // and then decrement once complete.
+      var bracketCount = 0;
+
+      // Each join gets a new id so they can be revoked.
+      var joinId  = 0;
+      var joins   = null;
+      var rethrow = true;
+
+      // Each invocation of `run` requires a tick. When an asynchronous effect is
+      // resolved, we must check that the local tick coincides with the fiber
+      // tick before resuming. This prevents multiple async continuations from
+      // accidentally resuming the same fiber. A common example may be invoking
+      // the provided callback in `makeAff` more than once, but it may also be an
+      // async effect resuming after the fiber was already cancelled.
+      function run(localRunTick) {
+        var tmp, result, attempt;
+        while (true) {
+          tmp       = null;
+          result    = null;
+          attempt   = null;
+
+          switch (status) {
+          case STEP_BIND:
+            status = CONTINUE;
+            try {
+              step   = bhead(step);
+              if (btail === null) {
+                bhead = null;
+              } else {
+                bhead = btail._1;
+                btail = btail._2;
+              }
+            } catch (e) {
+              status = RETURN;
+              fail   = util.left(e);
+              step   = null;
+            }
+            break;
+
+          case STEP_RESULT:
+            if (util.isLeft(step)) {
+              status = RETURN;
+              fail   = step;
+              step   = null;
+            } else if (bhead === null) {
+              status = RETURN;
+            } else {
+              status = STEP_BIND;
+              step   = util.fromRight(step);
+            }
+            break;
+
+          case CONTINUE:
+            switch (step.tag) {
+            case BIND:
+              if (bhead) {
+                btail = new Aff(CONS, bhead, btail);
+              }
+              bhead  = step._2;
+              status = CONTINUE;
+              step   = step._1;
+              break;
+
+            case PURE:
+              if (bhead === null) {
+                status = RETURN;
+                step   = util.right(step._1);
+              } else {
+                status = STEP_BIND;
+                step   = step._1;
+              }
+              break;
+
+            case SYNC:
+              status = STEP_RESULT;
+              step   = runSync(util.left, util.right, step._1);
+              break;
+
+            case ASYNC:
+              status = PENDING;
+              step   = runAsync(util.left, step._1, function (result) {
+                return function () {
+                  if (runTick !== localRunTick) {
+                    return;
+                  }
+                  runTick++;
+                  Scheduler.enqueue(function () {
+                    // It's possible to interrupt the fiber between enqueuing and
+                    // resuming, so we need to check that the runTick is still
+                    // valid.
+                    if (runTick !== localRunTick + 1) {
+                      return;
+                    }
+                    status = STEP_RESULT;
+                    step   = result;
+                    run(runTick);
+                  });
+                };
+              });
+              return;
+
+            case THROW:
+              status = RETURN;
+              fail   = util.left(step._1);
+              step   = null;
+              break;
+
+            // Enqueue the Catch so that we can call the error handler later on
+            // in case of an exception.
+            case CATCH:
+              if (bhead === null) {
+                attempts = new Aff(CONS, step, attempts, interrupt);
+              } else {
+                attempts = new Aff(CONS, step, new Aff(CONS, new Aff(RESUME, bhead, btail), attempts, interrupt), interrupt);
+              }
+              bhead    = null;
+              btail    = null;
+              status   = CONTINUE;
+              step     = step._1;
+              break;
+
+            // Enqueue the Bracket so that we can call the appropriate handlers
+            // after resource acquisition.
+            case BRACKET:
+              bracketCount++;
+              if (bhead === null) {
+                attempts = new Aff(CONS, step, attempts, interrupt);
+              } else {
+                attempts = new Aff(CONS, step, new Aff(CONS, new Aff(RESUME, bhead, btail), attempts, interrupt), interrupt);
+              }
+              bhead  = null;
+              btail  = null;
+              status = CONTINUE;
+              step   = step._1;
+              break;
+
+            case FORK:
+              status = STEP_RESULT;
+              tmp    = Fiber(util, supervisor, step._2);
+              if (supervisor) {
+                supervisor.register(tmp);
+              }
+              if (step._1) {
+                tmp.run();
+              }
+              step = util.right(tmp);
+              break;
+
+            case SEQ:
+              status = CONTINUE;
+              step   = sequential(util, supervisor, step._1);
+              break;
+            }
+            break;
+
+          case RETURN:
+            bhead = null;
+            btail = null;
+            // If the current stack has returned, and we have no other stacks to
+            // resume or finalizers to run, the fiber has halted and we can
+            // invoke all join callbacks. Otherwise we need to resume.
+            if (attempts === null) {
+              status = COMPLETED;
+              step   = interrupt || fail || step;
+            } else {
+              // The interrupt status for the enqueued item.
+              tmp      = attempts._3;
+              attempt  = attempts._1;
+              attempts = attempts._2;
+
+              switch (attempt.tag) {
+              // We cannot recover from an unmasked interrupt. Otherwise we should
+              // continue stepping, or run the exception handler if an exception
+              // was raised.
+              case CATCH:
+                // We should compare the interrupt status as well because we
+                // only want it to apply if there has been an interrupt since
+                // enqueuing the catch.
+                if (interrupt && interrupt !== tmp && bracketCount === 0) {
+                  status = RETURN;
+                } else if (fail) {
+                  status = CONTINUE;
+                  step   = attempt._2(util.fromLeft(fail));
+                  fail   = null;
+                }
+                break;
+
+              // We cannot resume from an unmasked interrupt or exception.
+              case RESUME:
+                // As with Catch, we only want to ignore in the case of an
+                // interrupt since enqueing the item.
+                if (interrupt && interrupt !== tmp && bracketCount === 0 || fail) {
+                  status = RETURN;
+                } else {
+                  bhead  = attempt._1;
+                  btail  = attempt._2;
+                  status = STEP_BIND;
+                  step   = util.fromRight(step);
+                }
+                break;
+
+              // If we have a bracket, we should enqueue the handlers,
+              // and continue with the success branch only if the fiber has
+              // not been interrupted. If the bracket acquisition failed, we
+              // should not run either.
+              case BRACKET:
+                bracketCount--;
+                if (fail === null) {
+                  result   = util.fromRight(step);
+                  // We need to enqueue the Release with the same interrupt
+                  // status as the Bracket that is initiating it.
+                  attempts = new Aff(CONS, new Aff(RELEASE, attempt._2, result), attempts, tmp);
+                  // We should only coninue as long as the interrupt status has not changed or
+                  // we are currently within a non-interruptable finalizer.
+                  if (interrupt === tmp || bracketCount > 0) {
+                    status = CONTINUE;
+                    step   = attempt._3(result);
+                  }
+                }
+                break;
+
+              // Enqueue the appropriate handler. We increase the bracket count
+              // because it should not be cancelled.
+              case RELEASE:
+                attempts = new Aff(CONS, new Aff(FINALIZED, step, fail), attempts, interrupt);
+                status   = CONTINUE;
+                // It has only been killed if the interrupt status has changed
+                // since we enqueued the item, and the bracket count is 0. If the
+                // bracket count is non-zero then we are in a masked state so it's
+                // impossible to be killed.
+                if (interrupt && interrupt !== tmp && bracketCount === 0) {
+                  step = attempt._1.killed(util.fromLeft(interrupt))(attempt._2);
+                } else if (fail) {
+                  step = attempt._1.failed(util.fromLeft(fail))(attempt._2);
+                } else {
+                  step = attempt._1.completed(util.fromRight(step))(attempt._2);
+                }
+                fail = null;
+                bracketCount++;
+                break;
+
+              case FINALIZER:
+                bracketCount++;
+                attempts = new Aff(CONS, new Aff(FINALIZED, step, fail), attempts, interrupt);
+                status   = CONTINUE;
+                step     = attempt._1;
+                break;
+
+              case FINALIZED:
+                bracketCount--;
+                status = RETURN;
+                step   = attempt._1;
+                fail   = attempt._2;
+                break;
+              }
+            }
+            break;
+
+          case COMPLETED:
+            for (var k in joins) {
+              if (joins.hasOwnProperty(k)) {
+                rethrow = rethrow && joins[k].rethrow;
+                runEff(joins[k].handler(step));
+              }
+            }
+            joins = null;
+            // If we have an interrupt and a fail, then the thread threw while
+            // running finalizers. This should always rethrow in a fresh stack.
+            if (interrupt && fail) {
+              setTimeout(function () {
+                throw util.fromLeft(fail);
+              }, 0);
+            // If we have an unhandled exception, and no other fiber has joined
+            // then we need to throw the exception in a fresh stack.
+            } else if (util.isLeft(step) && rethrow) {
+              setTimeout(function () {
+                // Guard on reathrow because a completely synchronous fiber can
+                // still have an observer which was added after-the-fact.
+                if (rethrow) {
+                  throw util.fromLeft(step);
+                }
+              }, 0);
+            }
+            return;
+          case SUSPENDED:
+            status = CONTINUE;
+            break;
+          case PENDING: return;
+          }
+        }
+      }
+
+      function onComplete(join) {
+        return function () {
+          if (status === COMPLETED) {
+            rethrow = rethrow && join.rethrow;
+            join.handler(step)();
+            return function () {};
+          }
+
+          var jid    = joinId++;
+          joins      = joins || {};
+          joins[jid] = join;
+
+          return function() {
+            if (joins !== null) {
+              delete joins[jid];
+            }
+          };
+        };
+      }
+
+      function kill(error, cb) {
+        return function () {
+          if (status === COMPLETED) {
+            cb(util.right(void 0))();
+            return function () {};
+          }
+
+          var canceler = onComplete({
+            rethrow: false,
+            handler: function (/* unused */) {
+              return cb(util.right(void 0));
+            }
+          })();
+
+          switch (status) {
+          case SUSPENDED:
+            interrupt = util.left(error);
+            status    = COMPLETED;
+            step      = interrupt;
+            run(runTick);
+            break;
+          case PENDING:
+            if (interrupt === null) {
+              interrupt = util.left(error);
+            }
+            if (bracketCount === 0) {
+              if (status === PENDING) {
+                attempts = new Aff(CONS, new Aff(FINALIZER, step(error)), attempts, interrupt);
+              }
+              status   = RETURN;
+              step     = null;
+              fail     = null;
+              run(++runTick);
+            }
+            break;
+          default:
+            if (interrupt === null) {
+              interrupt = util.left(error);
+            }
+            if (bracketCount === 0) {
+              status = RETURN;
+              step   = null;
+              fail   = null;
+            }
+          }
+
+          return canceler;
+        };
+      }
+
+      function join(cb) {
+        return function () {
+          var canceler = onComplete({
+            rethrow: false,
+            handler: cb
+          })();
+          if (status === SUSPENDED) {
+            run(runTick);
+          }
+          return canceler;
+        };
+      }
+
+      return {
+        kill: kill,
+        join: join,
+        onComplete: onComplete,
+        isSuspended: function () {
+          return status === SUSPENDED;
+        },
+        run: function () {
+          if (status === SUSPENDED) {
+            if (!Scheduler.isDraining()) {
+              Scheduler.enqueue(function () {
+                run(runTick);
+              });
+            } else {
+              run(runTick);
+            }
+          }
+        }
+      };
+    }
+
+    function runPar(util, supervisor, par, cb) {
+      // Table of all forked fibers.
+      var fiberId   = 0;
+      var fibers    = {};
+
+      // Table of currently running cancelers, as a product of `Alt` behavior.
+      var killId    = 0;
+      var kills     = {};
+
+      // Error used for early cancelation on Alt branches.
+      var early     = new Error("[ParAff] Early exit");
+
+      // Error used to kill the entire tree.
+      var interrupt = null;
+
+      // The root pointer of the tree.
+      var root      = EMPTY;
+
+      // Walks a tree, invoking all the cancelers. Returns the table of pending
+      // cancellation fibers.
+      function kill(error, par, cb) {
+        var step  = par;
+        var head  = null;
+        var tail  = null;
+        var count = 0;
+        var kills = {};
+        var tmp, kid;
+
+        loop: while (true) {
+          tmp = null;
+
+          switch (step.tag) {
+          case FORKED:
+            if (step._3 === EMPTY) {
+              tmp = fibers[step._1];
+              kills[count++] = tmp.kill(error, function (result) {
+                return function () {
+                  count--;
+                  if (count === 0) {
+                    cb(result)();
+                  }
+                };
+              });
+            }
+            // Terminal case.
+            if (head === null) {
+              break loop;
+            }
+            // Go down the right side of the tree.
+            step = head._2;
+            if (tail === null) {
+              head = null;
+            } else {
+              head = tail._1;
+              tail = tail._2;
+            }
+            break;
+          case MAP:
+            step = step._2;
+            break;
+          case APPLY:
+          case ALT:
+            if (head) {
+              tail = new Aff(CONS, head, tail);
+            }
+            head = step;
+            step = step._1;
+            break;
+          }
+        }
+
+        if (count === 0) {
+          cb(util.right(void 0))();
+        } else {
+          // Run the cancelation effects. We alias `count` because it's mutable.
+          kid = 0;
+          tmp = count;
+          for (; kid < tmp; kid++) {
+            kills[kid] = kills[kid]();
+          }
+        }
+
+        return kills;
+      }
+
+      // When a fiber resolves, we need to bubble back up the tree with the
+      // result, computing the applicative nodes.
+      function join(result, head, tail) {
+        var fail, step, lhs, rhs, tmp, kid;
+
+        if (util.isLeft(result)) {
+          fail = result;
+          step = null;
+        } else {
+          step = result;
+          fail = null;
+        }
+
+        loop: while (true) {
+          lhs = null;
+          rhs = null;
+          tmp = null;
+          kid = null;
+
+          // We should never continue if the entire tree has been interrupted.
+          if (interrupt !== null) {
+            return;
+          }
+
+          // We've made it all the way to the root of the tree, which means
+          // the tree has fully evaluated.
+          if (head === null) {
+            cb(fail || step)();
+            return;
+          }
+
+          // The tree has already been computed, so we shouldn't try to do it
+          // again. This should never happen.
+          // TODO: Remove this?
+          if (head._3 !== EMPTY) {
+            return;
+          }
+
+          switch (head.tag) {
+          case MAP:
+            if (fail === null) {
+              head._3 = util.right(head._1(util.fromRight(step)));
+              step    = head._3;
+            } else {
+              head._3 = fail;
+            }
+            break;
+          case APPLY:
+            lhs = head._1._3;
+            rhs = head._2._3;
+            // If we have a failure we should kill the other side because we
+            // can't possible yield a result anymore.
+            if (fail) {
+              head._3 = fail;
+              tmp     = true;
+              kid     = killId++;
+
+              kills[kid] = kill(early, fail === lhs ? head._2 : head._1, function (/* unused */) {
+                return function () {
+                  delete kills[kid];
+                  if (tmp) {
+                    tmp = false;
+                  } else if (tail === null) {
+                    join(fail, null, null);
+                  } else {
+                    join(fail, tail._1, tail._2);
+                  }
+                };
+              });
+
+              if (tmp) {
+                tmp = false;
+                return;
+              }
+            } else if (lhs === EMPTY || rhs === EMPTY) {
+              // We can only proceed if both sides have resolved.
+              return;
+            } else {
+              step    = util.right(util.fromRight(lhs)(util.fromRight(rhs)));
+              head._3 = step;
+            }
+            break;
+          case ALT:
+            lhs = head._1._3;
+            rhs = head._2._3;
+            // We can only proceed if both have resolved or we have a success
+            if (lhs === EMPTY && util.isLeft(rhs) || rhs === EMPTY && util.isLeft(lhs)) {
+              return;
+            }
+            // If both sides resolve with an error, we should continue with the
+            // first error
+            if (lhs !== EMPTY && util.isLeft(lhs) && rhs !== EMPTY && util.isLeft(rhs)) {
+              fail    = step === lhs ? rhs : lhs;
+              step    = null;
+              head._3 = fail;
+            } else {
+              head._3 = step;
+              tmp     = true;
+              kid     = killId++;
+              // Once a side has resolved, we need to cancel the side that is still
+              // pending before we can continue.
+              kills[kid] = kill(early, step === lhs ? head._2 : head._1, function (/* unused */) {
+                return function () {
+                  delete kills[kid];
+                  if (tmp) {
+                    tmp = false;
+                  } else if (tail === null) {
+                    join(step, null, null);
+                  } else {
+                    join(step, tail._1, tail._2);
+                  }
+                };
+              });
+
+              if (tmp) {
+                tmp = false;
+                return;
+              }
+            }
+            break;
+          }
+
+          if (tail === null) {
+            head = null;
+          } else {
+            head = tail._1;
+            tail = tail._2;
+          }
+        }
+      }
+
+      function resolve(fiber) {
+        return function (result) {
+          return function () {
+            delete fibers[fiber._1];
+            fiber._3 = result;
+            join(result, fiber._2._1, fiber._2._2);
+          };
+        };
+      }
+
+      // Walks the applicative tree, substituting non-applicative nodes with
+      // `FORKED` nodes. In this tree, all applicative nodes use the `_3` slot
+      // as a mutable slot for memoization. In an unresolved state, the `_3`
+      // slot is `EMPTY`. In the cases of `ALT` and `APPLY`, we always walk
+      // the left side first, because both operations are left-associative. As
+      // we `RETURN` from those branches, we then walk the right side.
+      function run() {
+        var status = CONTINUE;
+        var step   = par;
+        var head   = null;
+        var tail   = null;
+        var tmp, fid;
+
+        loop: while (true) {
+          tmp = null;
+          fid = null;
+
+          switch (status) {
+          case CONTINUE:
+            switch (step.tag) {
+            case MAP:
+              if (head) {
+                tail = new Aff(CONS, head, tail);
+              }
+              head = new Aff(MAP, step._1, EMPTY, EMPTY);
+              step = step._2;
+              break;
+            case APPLY:
+              if (head) {
+                tail = new Aff(CONS, head, tail);
+              }
+              head = new Aff(APPLY, EMPTY, step._2, EMPTY);
+              step = step._1;
+              break;
+            case ALT:
+              if (head) {
+                tail = new Aff(CONS, head, tail);
+              }
+              head = new Aff(ALT, EMPTY, step._2, EMPTY);
+              step = step._1;
+              break;
+            default:
+              // When we hit a leaf value, we suspend the stack in the `FORKED`.
+              // When the fiber resolves, it can bubble back up the tree.
+              fid    = fiberId++;
+              status = RETURN;
+              tmp    = step;
+              step   = new Aff(FORKED, fid, new Aff(CONS, head, tail), EMPTY);
+              tmp    = Fiber(util, supervisor, tmp);
+              tmp.onComplete({
+                rethrow: false,
+                handler: resolve(step)
+              })();
+              fibers[fid] = tmp;
+              if (supervisor) {
+                supervisor.register(tmp);
+              }
+            }
+            break;
+          case RETURN:
+            // Terminal case, we are back at the root.
+            if (head === null) {
+              break loop;
+            }
+            // If we are done with the right side, we need to continue down the
+            // left. Otherwise we should continue up the stack.
+            if (head._1 === EMPTY) {
+              head._1 = step;
+              status  = CONTINUE;
+              step    = head._2;
+              head._2 = EMPTY;
+            } else {
+              head._2 = step;
+              step    = head;
+              if (tail === null) {
+                head  = null;
+              } else {
+                head  = tail._1;
+                tail  = tail._2;
+              }
+            }
+          }
+        }
+
+        // Keep a reference to the tree root so it can be cancelled.
+        root = step;
+
+        for (fid = 0; fid < fiberId; fid++) {
+          fibers[fid].run();
+        }
+      }
+
+      // Cancels the entire tree. If there are already subtrees being canceled,
+      // we need to first cancel those joins. We will then add fresh joins for
+      // all pending branches including those that were in the process of being
+      // canceled.
+      function cancel(error, cb) {
+        interrupt = util.left(error);
+        var innerKills;
+        for (var kid in kills) {
+          if (kills.hasOwnProperty(kid)) {
+            innerKills = kills[kid];
+            for (kid in innerKills) {
+              if (innerKills.hasOwnProperty(kid)) {
+                innerKills[kid]();
+              }
+            }
+          }
+        }
+
+        kills = null;
+        var newKills = kill(error, root, cb);
+
+        return function (killError) {
+          return new Aff(ASYNC, function (killCb) {
+            return function () {
+              for (var kid in newKills) {
+                if (newKills.hasOwnProperty(kid)) {
+                  newKills[kid]();
+                }
+              }
+              return nonCanceler;
+            };
+          });
+        };
+      }
+
+      run();
+
+      return function (killError) {
+        return new Aff(ASYNC, function (killCb) {
+          return function () {
+            return cancel(killError, killCb);
+          };
+        });
+      };
+    }
+
+    function sequential(util, supervisor, par) {
+      return new Aff(ASYNC, function (cb) {
+        return function () {
+          return runPar(util, supervisor, par, cb);
+        };
+      });
+    }
+
+    Aff.EMPTY       = EMPTY;
+    Aff.Pure        = AffCtr(PURE);
+    Aff.Throw       = AffCtr(THROW);
+    Aff.Catch       = AffCtr(CATCH);
+    Aff.Sync        = AffCtr(SYNC);
+    Aff.Async       = AffCtr(ASYNC);
+    Aff.Bind        = AffCtr(BIND);
+    Aff.Bracket     = AffCtr(BRACKET);
+    Aff.Fork        = AffCtr(FORK);
+    Aff.Seq         = AffCtr(SEQ);
+    Aff.ParMap      = AffCtr(MAP);
+    Aff.ParApply    = AffCtr(APPLY);
+    Aff.ParAlt      = AffCtr(ALT);
+    Aff.Fiber       = Fiber;
+    Aff.Supervisor  = Supervisor;
+    Aff.Scheduler   = Scheduler;
+    Aff.nonCanceler = nonCanceler;
+
+    return Aff;
+  }();
+
+  exports._pure = Aff.Pure;
+
+  exports._throwError = Aff.Throw;
+
+  exports._catchError = function (aff) {
+    return function (k) {
+      return Aff.Catch(aff, k);
+    };
+  };
+
+  exports._map = function (f) {
+    return function (aff) {
+      if (aff.tag === Aff.Pure.tag) {
+        return Aff.Pure(f(aff._1));
+      } else {
+        return Aff.Bind(aff, function (value) {
+          return Aff.Pure(f(value));
+        });
+      }
+    };
+  };
+
+  exports._bind = function (aff) {
+    return function (k) {
+      return Aff.Bind(aff, k);
+    };
+  };
+
+  exports._fork = function (immediate) {
+    return function (aff) {
+      return Aff.Fork(immediate, aff);
+    };
+  };
+
+  exports._liftEffect = Aff.Sync;
+
+  exports._parAffMap = function (f) {
+    return function (aff) {
+      return Aff.ParMap(f, aff);
+    };
+  };
+
+  exports._parAffApply = function (aff1) {
+    return function (aff2) {
+      return Aff.ParApply(aff1, aff2);
+    };
+  };
+
+  exports.makeAff = Aff.Async;
+
+  exports.generalBracket = function (acquire) {
+    return function (options) {
+      return function (k) {
+        return Aff.Bracket(acquire, options, k);
+      };
+    };
+  };
+
+  exports._makeFiber = function (util, aff) {
+    return function () {
+      return Aff.Fiber(util, null, aff);
+    };
+  };
+
+  exports._delay = function () {
+    function setDelay(n, k) {
+      if (n === 0 && typeof setImmediate !== "undefined") {
+        return setImmediate(k);
+      } else {
+        return setTimeout(k, n);
+      }
+    }
+
+    function clearDelay(n, t) {
+      if (n === 0 && typeof clearImmediate !== "undefined") {
+        return clearImmediate(t);
+      } else {
+        return clearTimeout(t);
+      }
+    }
+
+    return function (right, ms) {
+      return Aff.Async(function (cb) {
+        return function () {
+          var timer = setDelay(ms, cb(right()));
+          return function () {
+            return Aff.Sync(function () {
+              return right(clearDelay(ms, timer));
+            });
+          };
+        };
+      });
+    };
+  }();
+
+  exports._sequential = Aff.Seq;
+})(PS["Effect.Aff"] = PS["Effect.Aff"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Effect.Class"] = $PS["Effect.Class"] || {};
+  var exports = $PS["Effect.Class"];         
+  var MonadEffect = function (Monad0, liftEffect) {
+      this.Monad0 = Monad0;
+      this.liftEffect = liftEffect;
+  };                                                         
+  var liftEffect = function (dict) {
+      return dict.liftEffect;
+  };
+  exports["liftEffect"] = liftEffect;
+  exports["MonadEffect"] = MonadEffect;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.unsafePerformEffect = function (f) {
+    return f();
+  };
+})(PS["Effect.Unsafe"] = PS["Effect.Unsafe"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Effect.Unsafe"] = $PS["Effect.Unsafe"] || {};
+  var exports = $PS["Effect.Unsafe"];
+  var $foreign = $PS["Effect.Unsafe"];
+  exports["unsafePerformEffect"] = $foreign.unsafePerformEffect;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  // module Partial.Unsafe
+
+  exports.unsafePartial = function (f) {
+    return f();
+  };
+})(PS["Partial.Unsafe"] = PS["Partial.Unsafe"] || {});
+(function(exports) {
+  "use strict";
+
+  // module Partial
+
+  exports.crashWith = function () {
+    return function (msg) {
+      throw new Error(msg);
+    };
+  };
+})(PS["Partial"] = PS["Partial"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Partial"] = $PS["Partial"] || {};
+  var exports = $PS["Partial"];
+  var $foreign = $PS["Partial"];
+  exports["crashWith"] = $foreign.crashWith;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Partial.Unsafe"] = $PS["Partial.Unsafe"] || {};
+  var exports = $PS["Partial.Unsafe"];
+  var $foreign = $PS["Partial.Unsafe"];
+  var Partial = $PS["Partial"];
+  var unsafeCrashWith = function (msg) {
+      return $foreign.unsafePartial(function (dictPartial) {
+          return Partial.crashWith()(msg);
+      });
+  };
+  exports["unsafeCrashWith"] = unsafeCrashWith;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Effect.Aff"] = $PS["Effect.Aff"] || {};
+  var exports = $PS["Effect.Aff"];
+  var $foreign = $PS["Effect.Aff"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Apply = $PS["Control.Apply"];
+  var Control_Bind = $PS["Control.Bind"];
+  var Control_Monad = $PS["Control.Monad"];
+  var Control_Monad_Error_Class = $PS["Control.Monad.Error.Class"];
+  var Control_Monad_Rec_Class = $PS["Control.Monad.Rec.Class"];
+  var Control_Parallel_Class = $PS["Control.Parallel.Class"];
+  var Data_Either = $PS["Data.Either"];
+  var Data_Function = $PS["Data.Function"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Unit = $PS["Data.Unit"];
+  var Effect = $PS["Effect"];
+  var Effect_Class = $PS["Effect.Class"];
+  var Effect_Unsafe = $PS["Effect.Unsafe"];
+  var Partial_Unsafe = $PS["Partial.Unsafe"];
+  var Unsafe_Coerce = $PS["Unsafe.Coerce"];
+  var Canceler = function (x) {
+      return x;
+  };
+  var suspendAff = $foreign["_fork"](false);
+  var functorParAff = new Data_Functor.Functor($foreign["_parAffMap"]);
+  var functorAff = new Data_Functor.Functor($foreign["_map"]);
+  var forkAff = $foreign["_fork"](true);
+  var ffiUtil = (function () {
+      var unsafeFromRight = function (v) {
+          if (v instanceof Data_Either.Right) {
+              return v.value0;
+          };
+          if (v instanceof Data_Either.Left) {
+              return Partial_Unsafe.unsafeCrashWith("unsafeFromRight: Left");
+          };
+          throw new Error("Failed pattern match at Effect.Aff (line 400, column 21 - line 402, column 54): " + [ v.constructor.name ]);
+      };
+      var unsafeFromLeft = function (v) {
+          if (v instanceof Data_Either.Left) {
+              return v.value0;
+          };
+          if (v instanceof Data_Either.Right) {
+              return Partial_Unsafe.unsafeCrashWith("unsafeFromLeft: Right");
+          };
+          throw new Error("Failed pattern match at Effect.Aff (line 395, column 20 - line 397, column 54): " + [ v.constructor.name ]);
+      };
+      var isLeft = function (v) {
+          if (v instanceof Data_Either.Left) {
+              return true;
+          };
+          if (v instanceof Data_Either.Right) {
+              return false;
+          };
+          throw new Error("Failed pattern match at Effect.Aff (line 390, column 12 - line 392, column 20): " + [ v.constructor.name ]);
+      };
+      return {
+          isLeft: isLeft,
+          fromLeft: unsafeFromLeft,
+          fromRight: unsafeFromRight,
+          left: Data_Either.Left.create,
+          right: Data_Either.Right.create
+      };
+  })();
+  var makeFiber = function (aff) {
+      return $foreign["_makeFiber"](ffiUtil, aff);
+  };
+  var launchAff = function (aff) {
+      return function __do() {
+          var fiber = makeFiber(aff)();
+          fiber.run();
+          return fiber;
+      };
+  };
+  var launchAff_ = (function () {
+      var $43 = Data_Functor["void"](Effect.functorEffect);
+      return function ($44) {
+          return $43(launchAff($44));
+      };
+  })();                              
+  var delay = function (v) {
+      return $foreign["_delay"](Data_Either.Right.create, v);
+  };
+  var bracket = function (acquire) {
+      return function (completed) {
+          return $foreign.generalBracket(acquire)({
+              killed: Data_Function["const"](completed),
+              failed: Data_Function["const"](completed),
+              completed: Data_Function["const"](completed)
+          });
+      };
+  };
+  var applyParAff = new Control_Apply.Apply(function () {
+      return functorParAff;
+  }, $foreign["_parAffApply"]);
+  var monadAff = new Control_Monad.Monad(function () {
+      return applicativeAff;
+  }, function () {
+      return bindAff;
+  });
+  var bindAff = new Control_Bind.Bind(function () {
+      return applyAff;
+  }, $foreign["_bind"]);
+  var applyAff = new Control_Apply.Apply(function () {
+      return functorAff;
+  }, Control_Monad.ap(monadAff));
+  var applicativeAff = new Control_Applicative.Applicative(function () {
+      return applyAff;
+  }, $foreign["_pure"]);
+  var $$finally = function (fin) {
+      return function (a) {
+          return bracket(Control_Applicative.pure(applicativeAff)(Data_Unit.unit))(Data_Function["const"](fin))(Data_Function["const"](a));
+      };
+  };
+  var monadEffectAff = new Effect_Class.MonadEffect(function () {
+      return monadAff;
+  }, $foreign["_liftEffect"]);
+  var effectCanceler = (function () {
+      var $45 = Effect_Class.liftEffect(monadEffectAff);
+      return function ($46) {
+          return Canceler(Data_Function["const"]($45($46)));
+      };
+  })();
+  var joinFiber = function (v) {
+      return $foreign.makeAff(function (k) {
+          return Data_Functor.map(Effect.functorEffect)(effectCanceler)(v.join(k));
+      });
+  };
+  var functorFiber = new Data_Functor.Functor(function (f) {
+      return function (t) {
+          return Effect_Unsafe.unsafePerformEffect(makeFiber(Data_Functor.map(functorAff)(f)(joinFiber(t))));
+      };
+  });
+  var killFiber = function (e) {
+      return function (v) {
+          return Control_Bind.bind(bindAff)(Effect_Class.liftEffect(monadEffectAff)(v.isSuspended))(function (v1) {
+              if (v1) {
+                  return Effect_Class.liftEffect(monadEffectAff)(Data_Functor["void"](Effect.functorEffect)(v.kill(e, Data_Function["const"](Control_Applicative.pure(Effect.applicativeEffect)(Data_Unit.unit)))));
+              };
+              return $foreign.makeAff(function (k) {
+                  return Data_Functor.map(Effect.functorEffect)(effectCanceler)(v.kill(e, k));
+              });
+          });
+      };
+  };   
+  var monadThrowAff = new Control_Monad_Error_Class.MonadThrow(function () {
+      return monadAff;
+  }, $foreign["_throwError"]);
+  var monadErrorAff = new Control_Monad_Error_Class.MonadError(function () {
+      return monadThrowAff;
+  }, $foreign["_catchError"]);
+  var attempt = Control_Monad_Error_Class["try"](monadErrorAff);
+  var runAff = function (k) {
+      return function (aff) {
+          return launchAff(Control_Bind.bindFlipped(bindAff)((function () {
+              var $49 = Effect_Class.liftEffect(monadEffectAff);
+              return function ($50) {
+                  return $49(k($50));
+              };
+          })())(Control_Monad_Error_Class["try"](monadErrorAff)(aff)));
+      };
+  };
+  var runAff_ = function (k) {
+      return function (aff) {
+          return Data_Functor["void"](Effect.functorEffect)(runAff(k)(aff));
+      };
+  };
+  var parallelAff = new Control_Parallel_Class.Parallel(function () {
+      return applicativeParAff;
+  }, function () {
+      return monadAff;
+  }, Unsafe_Coerce.unsafeCoerce, $foreign["_sequential"]);
+  var applicativeParAff = new Control_Applicative.Applicative(function () {
+      return applyParAff;
+  }, (function () {
+      var $53 = Control_Parallel_Class.parallel(parallelAff);
+      var $54 = Control_Applicative.pure(applicativeAff);
+      return function ($55) {
+          return $53($54($55));
+      };
+  })());
+  var monadRecAff = new Control_Monad_Rec_Class.MonadRec(function () {
+      return monadAff;
+  }, function (k) {
+      var go = function (a) {
+          return Control_Bind.bind(bindAff)(k(a))(function (res) {
+              if (res instanceof Control_Monad_Rec_Class.Done) {
+                  return Control_Applicative.pure(applicativeAff)(res.value0);
+              };
+              if (res instanceof Control_Monad_Rec_Class.Loop) {
+                  return go(res.value0);
+              };
+              throw new Error("Failed pattern match at Effect.Aff (line 100, column 7 - line 102, column 22): " + [ res.constructor.name ]);
+          });
+      };
+      return go;
+  });
+  var nonCanceler = Data_Function["const"](Control_Applicative.pure(applicativeAff)(Data_Unit.unit));
+  exports["launchAff_"] = launchAff_;
+  exports["runAff_"] = runAff_;
+  exports["forkAff"] = forkAff;
+  exports["suspendAff"] = suspendAff;
+  exports["attempt"] = attempt;
+  exports["delay"] = delay;
+  exports["finally"] = $$finally;
+  exports["killFiber"] = killFiber;
+  exports["joinFiber"] = joinFiber;
+  exports["nonCanceler"] = nonCanceler;
+  exports["effectCanceler"] = effectCanceler;
+  exports["functorAff"] = functorAff;
+  exports["applicativeAff"] = applicativeAff;
+  exports["bindAff"] = bindAff;
+  exports["monadAff"] = monadAff;
+  exports["monadRecAff"] = monadRecAff;
+  exports["monadThrowAff"] = monadThrowAff;
+  exports["monadErrorAff"] = monadErrorAff;
+  exports["monadEffectAff"] = monadEffectAff;
+  exports["applicativeParAff"] = applicativeParAff;
+  exports["parallelAff"] = parallelAff;
+  exports["functorFiber"] = functorFiber;
+  exports["makeAff"] = $foreign.makeAff;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Monad.Fork.Class"] = $PS["Control.Monad.Fork.Class"] || {};
+  var exports = $PS["Control.Monad.Fork.Class"];
+  var Effect_Aff = $PS["Effect.Aff"];
+  var MonadFork = function (Functor1, Monad0, fork, join, suspend) {
+      this.Functor1 = Functor1;
+      this.Monad0 = Monad0;
+      this.fork = fork;
+      this.join = join;
+      this.suspend = suspend;
+  };
+  var monadForkAff = new MonadFork(function () {
+      return Effect_Aff.functorFiber;
+  }, function () {
+      return Effect_Aff.monadAff;
+  }, Effect_Aff.forkAff, Effect_Aff.joinFiber, Effect_Aff.suspendAff);
+  var fork = function (dict) {
+      return dict.fork;
+  };
+  exports["fork"] = fork;
+  exports["monadForkAff"] = monadForkAff;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.List"] = $PS["Data.List"] || {};
+  var exports = $PS["Data.List"];
+  var Data_List_Types = $PS["Data.List.Types"];
+  var reverse = (function () {
+      var go = function ($copy_acc) {
+          return function ($copy_v) {
+              var $tco_var_acc = $copy_acc;
+              var $tco_done = false;
+              var $tco_result;
+              function $tco_loop(acc, v) {
+                  if (v instanceof Data_List_Types.Nil) {
+                      $tco_done = true;
+                      return acc;
+                  };
+                  if (v instanceof Data_List_Types.Cons) {
+                      $tco_var_acc = new Data_List_Types.Cons(v.value0, acc);
+                      $copy_v = v.value1;
+                      return;
+                  };
+                  throw new Error("Failed pattern match at Data.List (line 368, column 3 - line 368, column 19): " + [ acc.constructor.name, v.constructor.name ]);
+              };
+              while (!$tco_done) {
+                  $tco_result = $tco_loop($tco_var_acc, $copy_v);
+              };
+              return $tco_result;
+          };
+      };
+      return go(Data_List_Types.Nil.value);
+  })();
+  var $$null = function (v) {
+      if (v instanceof Data_List_Types.Nil) {
+          return true;
+      };
+      return false;
+  };
+  exports["null"] = $$null;
+  exports["reverse"] = reverse;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.CatQueue"] = $PS["Data.CatQueue"] || {};
+  var exports = $PS["Data.CatQueue"];
+  var Data_List = $PS["Data.List"];
+  var Data_List_Types = $PS["Data.List.Types"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Data_Tuple = $PS["Data.Tuple"];                            
+  var CatQueue = (function () {
+      function CatQueue(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      CatQueue.create = function (value0) {
+          return function (value1) {
+              return new CatQueue(value0, value1);
+          };
+      };
+      return CatQueue;
+  })();
+  var uncons = function ($copy_v) {
+      var $tco_done = false;
+      var $tco_result;
+      function $tco_loop(v) {
+          if (v.value0 instanceof Data_List_Types.Nil && v.value1 instanceof Data_List_Types.Nil) {
+              $tco_done = true;
+              return Data_Maybe.Nothing.value;
+          };
+          if (v.value0 instanceof Data_List_Types.Nil) {
+              $copy_v = new CatQueue(Data_List.reverse(v.value1), Data_List_Types.Nil.value);
+              return;
+          };
+          if (v.value0 instanceof Data_List_Types.Cons) {
+              $tco_done = true;
+              return new Data_Maybe.Just(new Data_Tuple.Tuple(v.value0.value0, new CatQueue(v.value0.value1, v.value1)));
+          };
+          throw new Error("Failed pattern match at Data.CatQueue (line 83, column 1 - line 83, column 63): " + [ v.constructor.name ]);
+      };
+      while (!$tco_done) {
+          $tco_result = $tco_loop($copy_v);
+      };
+      return $tco_result;
+  };
+  var snoc = function (v) {
+      return function (a) {
+          return new CatQueue(v.value0, new Data_List_Types.Cons(a, v.value1));
+      };
+  };
+  var $$null = function (v) {
+      if (v.value0 instanceof Data_List_Types.Nil && v.value1 instanceof Data_List_Types.Nil) {
+          return true;
+      };
+      return false;
+  };                                                                                                
+  var empty = new CatQueue(Data_List_Types.Nil.value, Data_List_Types.Nil.value);
+  exports["empty"] = empty;
+  exports["null"] = $$null;
+  exports["snoc"] = snoc;
+  exports["uncons"] = uncons;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.CatList"] = $PS["Data.CatList"] || {};
+  var exports = $PS["Data.CatList"];
+  var Data_CatQueue = $PS["Data.CatQueue"];
+  var Data_List_Types = $PS["Data.List.Types"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Data_Semigroup = $PS["Data.Semigroup"];
+  var Data_Tuple = $PS["Data.Tuple"];                            
+  var CatNil = (function () {
+      function CatNil() {
+
+      };
+      CatNil.value = new CatNil();
+      return CatNil;
+  })();
+  var CatCons = (function () {
+      function CatCons(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      CatCons.create = function (value0) {
+          return function (value1) {
+              return new CatCons(value0, value1);
+          };
+      };
+      return CatCons;
+  })();
+  var link = function (v) {
+      return function (v1) {
+          if (v instanceof CatNil) {
+              return v1;
+          };
+          if (v1 instanceof CatNil) {
+              return v;
+          };
+          if (v instanceof CatCons) {
+              return new CatCons(v.value0, Data_CatQueue.snoc(v.value1)(v1));
+          };
+          throw new Error("Failed pattern match at Data.CatList (line 109, column 1 - line 109, column 54): " + [ v.constructor.name, v1.constructor.name ]);
+      };
+  };
+  var foldr = function (k) {
+      return function (b) {
+          return function (q) {
+              var foldl = function ($copy_v) {
+                  return function ($copy_c) {
+                      return function ($copy_v1) {
+                          var $tco_var_v = $copy_v;
+                          var $tco_var_c = $copy_c;
+                          var $tco_done = false;
+                          var $tco_result;
+                          function $tco_loop(v, c, v1) {
+                              if (v1 instanceof Data_List_Types.Nil) {
+                                  $tco_done = true;
+                                  return c;
+                              };
+                              if (v1 instanceof Data_List_Types.Cons) {
+                                  $tco_var_v = v;
+                                  $tco_var_c = v(c)(v1.value0);
+                                  $copy_v1 = v1.value1;
+                                  return;
+                              };
+                              throw new Error("Failed pattern match at Data.CatList (line 125, column 3 - line 125, column 59): " + [ v.constructor.name, c.constructor.name, v1.constructor.name ]);
+                          };
+                          while (!$tco_done) {
+                              $tco_result = $tco_loop($tco_var_v, $tco_var_c, $copy_v1);
+                          };
+                          return $tco_result;
+                      };
+                  };
+              };
+              var go = function ($copy_xs) {
+                  return function ($copy_ys) {
+                      var $tco_var_xs = $copy_xs;
+                      var $tco_done = false;
+                      var $tco_result;
+                      function $tco_loop(xs, ys) {
+                          var v = Data_CatQueue.uncons(xs);
+                          if (v instanceof Data_Maybe.Nothing) {
+                              $tco_done = true;
+                              return foldl(function (x) {
+                                  return function (i) {
+                                      return i(x);
+                                  };
+                              })(b)(ys);
+                          };
+                          if (v instanceof Data_Maybe.Just) {
+                              $tco_var_xs = v.value0.value1;
+                              $copy_ys = new Data_List_Types.Cons(k(v.value0.value0), ys);
+                              return;
+                          };
+                          throw new Error("Failed pattern match at Data.CatList (line 121, column 14 - line 123, column 67): " + [ v.constructor.name ]);
+                      };
+                      while (!$tco_done) {
+                          $tco_result = $tco_loop($tco_var_xs, $copy_ys);
+                      };
+                      return $tco_result;
+                  };
+              };
+              return go(q)(Data_List_Types.Nil.value);
+          };
+      };
+  };
+  var uncons = function (v) {
+      if (v instanceof CatNil) {
+          return Data_Maybe.Nothing.value;
+      };
+      if (v instanceof CatCons) {
+          return new Data_Maybe.Just(new Data_Tuple.Tuple(v.value0, (function () {
+              var $44 = Data_CatQueue["null"](v.value1);
+              if ($44) {
+                  return CatNil.value;
+              };
+              return foldr(link)(CatNil.value)(v.value1);
+          })()));
+      };
+      throw new Error("Failed pattern match at Data.CatList (line 100, column 1 - line 100, column 61): " + [ v.constructor.name ]);
+  };
+  var empty = CatNil.value;
+  var append = link;
+  var semigroupCatList = new Data_Semigroup.Semigroup(append);
+  var snoc = function (cat) {
+      return function (a) {
+          return append(cat)(new CatCons(a, Data_CatQueue.empty));
+      };
+  };
+  exports["empty"] = empty;
+  exports["snoc"] = snoc;
+  exports["uncons"] = uncons;
+  exports["semigroupCatList"] = semigroupCatList;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Monad.Free"] = $PS["Control.Monad.Free"] || {};
+  var exports = $PS["Control.Monad.Free"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Apply = $PS["Control.Apply"];
+  var Control_Bind = $PS["Control.Bind"];
+  var Control_Monad = $PS["Control.Monad"];
+  var Control_Monad_Rec_Class = $PS["Control.Monad.Rec.Class"];
+  var Data_CatList = $PS["Data.CatList"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Data_Monoid = $PS["Data.Monoid"];
+  var Data_Semigroup = $PS["Data.Semigroup"];
+  var Free = (function () {
+      function Free(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Free.create = function (value0) {
+          return function (value1) {
+              return new Free(value0, value1);
+          };
+      };
+      return Free;
+  })();
+  var Return = (function () {
+      function Return(value0) {
+          this.value0 = value0;
+      };
+      Return.create = function (value0) {
+          return new Return(value0);
+      };
+      return Return;
+  })();
+  var Bind = (function () {
+      function Bind(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Bind.create = function (value0) {
+          return function (value1) {
+              return new Bind(value0, value1);
+          };
+      };
+      return Bind;
+  })();
+  var toView = function ($copy_v) {
+      var $tco_done = false;
+      var $tco_result;
+      function $tco_loop(v) {
+          var runExpF = function (v2) {
+              return v2;
+          };
+          var concatF = function (v2) {
+              return function (r) {
+                  return new Free(v2.value0, Data_Semigroup.append(Data_CatList.semigroupCatList)(v2.value1)(r));
+              };
+          };
+          if (v.value0 instanceof Return) {
+              var v2 = Data_CatList.uncons(v.value1);
+              if (v2 instanceof Data_Maybe.Nothing) {
+                  $tco_done = true;
+                  return new Return(v.value0.value0);
+              };
+              if (v2 instanceof Data_Maybe.Just) {
+                  $copy_v = concatF(runExpF(v2.value0.value0)(v.value0.value0))(v2.value0.value1);
+                  return;
+              };
+              throw new Error("Failed pattern match at Control.Monad.Free (line 227, column 7 - line 231, column 64): " + [ v2.constructor.name ]);
+          };
+          if (v.value0 instanceof Bind) {
+              $tco_done = true;
+              return new Bind(v.value0.value0, function (a) {
+                  return concatF(v.value0.value1(a))(v.value1);
+              });
+          };
+          throw new Error("Failed pattern match at Control.Monad.Free (line 225, column 3 - line 233, column 56): " + [ v.value0.constructor.name ]);
+      };
+      while (!$tco_done) {
+          $tco_result = $tco_loop($copy_v);
+      };
+      return $tco_result;
+  };
+  var fromView = function (f) {
+      return new Free(f, Data_CatList.empty);
+  };
+  var freeMonad = new Control_Monad.Monad(function () {
+      return freeApplicative;
+  }, function () {
+      return freeBind;
+  });
+  var freeFunctor = new Data_Functor.Functor(function (k) {
+      return function (f) {
+          return Control_Bind.bindFlipped(freeBind)((function () {
+              var $120 = Control_Applicative.pure(freeApplicative);
+              return function ($121) {
+                  return $120(k($121));
+              };
+          })())(f);
+      };
+  });
+  var freeBind = new Control_Bind.Bind(function () {
+      return freeApply;
+  }, function (v) {
+      return function (k) {
+          return new Free(v.value0, Data_CatList.snoc(v.value1)(k));
+      };
+  });
+  var freeApply = new Control_Apply.Apply(function () {
+      return freeFunctor;
+  }, Control_Monad.ap(freeMonad));
+  var freeApplicative = new Control_Applicative.Applicative(function () {
+      return freeApply;
+  }, function ($122) {
+      return fromView(Return.create($122));
+  });
+  var semigroupFree = function (dictSemigroup) {
+      return new Data_Semigroup.Semigroup(Control_Apply.lift2(freeApply)(Data_Semigroup.append(dictSemigroup)));
+  }; 
+  var liftF = function (f) {
+      return fromView(new Bind(f, (function () {
+          var $123 = Control_Applicative.pure(freeApplicative);
+          return function ($124) {
+              return $123($124);
+          };
+      })()));
+  }; 
+  var monoidFree = function (dictMonoid) {
+      return new Data_Monoid.Monoid(function () {
+          return semigroupFree(dictMonoid.Semigroup0());
+      }, Control_Applicative.pure(freeApplicative)(Data_Monoid.mempty(dictMonoid)));
+  };
+  var foldFree = function (dictMonadRec) {
+      return function (k) {
+          var go = function (f) {
+              var v = toView(f);
+              if (v instanceof Return) {
+                  return Data_Functor.map((((dictMonadRec.Monad0()).Bind1()).Apply0()).Functor0())(Control_Monad_Rec_Class.Done.create)(Control_Applicative.pure((dictMonadRec.Monad0()).Applicative0())(v.value0));
+              };
+              if (v instanceof Bind) {
+                  return Data_Functor.map((((dictMonadRec.Monad0()).Bind1()).Apply0()).Functor0())(function ($136) {
+                      return Control_Monad_Rec_Class.Loop.create(v.value1($136));
+                  })(k(v.value0));
+              };
+              throw new Error("Failed pattern match at Control.Monad.Free (line 158, column 10 - line 160, column 37): " + [ v.constructor.name ]);
+          };
+          return Control_Monad_Rec_Class.tailRecM(dictMonadRec)(go);
+      };
+  };
+  exports["liftF"] = liftF;
+  exports["foldFree"] = foldFree;
+  exports["freeFunctor"] = freeFunctor;
+  exports["freeBind"] = freeBind;
+  exports["freeApplicative"] = freeApplicative;
+  exports["freeMonad"] = freeMonad;
+  exports["monoidFree"] = monoidFree;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Monad.State.Class"] = $PS["Control.Monad.State.Class"] || {};
+  var exports = $PS["Control.Monad.State.Class"];
+  var Data_Tuple = $PS["Data.Tuple"];
+  var Data_Unit = $PS["Data.Unit"];                
+  var MonadState = function (Monad0, state) {
+      this.Monad0 = Monad0;
+      this.state = state;
+  };
+  var state = function (dict) {
+      return dict.state;
+  };
+  var put = function (dictMonadState) {
+      return function (s) {
+          return state(dictMonadState)(function (v) {
+              return new Data_Tuple.Tuple(Data_Unit.unit, s);
+          });
+      };
+  };
+  var modify_ = function (dictMonadState) {
+      return function (f) {
+          return state(dictMonadState)(function (s) {
+              return new Data_Tuple.Tuple(Data_Unit.unit, f(s));
+          });
+      };
+  };
+  var get = function (dictMonadState) {
+      return state(dictMonadState)(function (s) {
+          return new Data_Tuple.Tuple(s, s);
+      });
+  };
+  exports["MonadState"] = MonadState;
+  exports["get"] = get;
+  exports["put"] = put;
+  exports["modify_"] = modify_;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Control.Parallel"] = $PS["Control.Parallel"] || {};
+  var exports = $PS["Control.Parallel"];
+  var Control_Category = $PS["Control.Category"];
+  var Control_Parallel_Class = $PS["Control.Parallel.Class"];
+  var Data_Foldable = $PS["Data.Foldable"];                      
+  var parTraverse_ = function (dictParallel) {
+      return function (dictFoldable) {
+          return function (f) {
+              var $17 = Control_Parallel_Class.sequential(dictParallel);
+              var $18 = Data_Foldable.traverse_(dictParallel.Applicative1())(dictFoldable)((function () {
+                  var $20 = Control_Parallel_Class.parallel(dictParallel);
+                  return function ($21) {
+                      return $20(f($21));
+                  };
+              })());
+              return function ($19) {
+                  return $17($18($19));
+              };
+          };
+      };
+  };
+  var parSequence_ = function (dictParallel) {
+      return function (dictFoldable) {
+          return parTraverse_(dictParallel)(dictFoldable)(Control_Category.identity(Control_Category.categoryFn));
+      };
+  };
+  exports["parSequence_"] = parSequence_;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Boolean"] = $PS["Data.Boolean"] || {};
+  var exports = $PS["Data.Boolean"];
+  var otherwise = true;
+  exports["otherwise"] = otherwise;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.topInt = 2147483647;
+  exports.bottomInt = -2147483648;
+})(PS["Data.Bounded"] = PS["Data.Bounded"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Bounded"] = $PS["Data.Bounded"] || {};
+  var exports = $PS["Data.Bounded"];
+  var $foreign = $PS["Data.Bounded"];
+  var Data_Ord = $PS["Data.Ord"];                  
+  var Bounded = function (Ord0, bottom, top) {
+      this.Ord0 = Ord0;
+      this.bottom = bottom;
+      this.top = top;
+  };
+  var top = function (dict) {
+      return dict.top;
+  };                                            
+  var boundedInt = new Bounded(function () {
+      return Data_Ord.ordInt;
+  }, $foreign.bottomInt, $foreign.topInt);
+  var bottom = function (dict) {
+      return dict.bottom;
+  };
+  exports["bottom"] = bottom;
+  exports["top"] = top;
+  exports["boundedInt"] = boundedInt;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Coyoneda"] = $PS["Data.Coyoneda"] || {};
+  var exports = $PS["Data.Coyoneda"];
+  var Control_Category = $PS["Control.Category"];
+  var Data_Exists = $PS["Data.Exists"];
+  var Data_Functor = $PS["Data.Functor"];                        
+  var CoyonedaF = (function () {
+      function CoyonedaF(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      CoyonedaF.create = function (value0) {
+          return function (value1) {
+              return new CoyonedaF(value0, value1);
+          };
+      };
+      return CoyonedaF;
+  })();
+  var Coyoneda = function (x) {
+      return x;
+  };
+  var unCoyoneda = function (f) {
+      return function (v) {
+          return Data_Exists.runExists(function (v1) {
+              return f(v1.value0)(v1.value1);
+          })(v);
+      };
+  };
+  var coyoneda = function (k) {
+      return function (fi) {
+          return Coyoneda(Data_Exists.mkExists(new CoyonedaF(k, fi)));
+      };
+  };
+  var functorCoyoneda = new Data_Functor.Functor(function (f) {
+      return function (v) {
+          return Data_Exists.runExists(function (v1) {
+              return coyoneda(function ($85) {
+                  return f(v1.value0($85));
+              })(v1.value1);
+          })(v);
+      };
+  });
+  var liftCoyoneda = coyoneda(Control_Category.identity(Control_Category.categoryFn));
+  exports["unCoyoneda"] = unCoyoneda;
+  exports["liftCoyoneda"] = liftCoyoneda;
+  exports["functorCoyoneda"] = functorCoyoneda;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.fromNumberImpl = function (just) {
+    return function (nothing) {
+      return function (n) {
+        /* jshint bitwise: false */
+        return (n | 0) === n ? just(n) : nothing;
+      };
+    };
+  };
+
+  exports.toNumber = function (n) {
+    return n;
+  };
+})(PS["Data.Int"] = PS["Data.Int"] || {});
+(function(exports) {
+  /* globals exports */
+  "use strict";         
+
+  exports.infinity = Infinity;
+})(PS["Global"] = PS["Global"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Global"] = $PS["Global"] || {};
+  var exports = $PS["Global"];
+  var $foreign = $PS["Global"];
+  exports["infinity"] = $foreign.infinity;
+})(PS);
+(function(exports) {
+  "use strict";          
+
+  exports.floor = Math.floor;
+})(PS["Math"] = PS["Math"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Math"] = $PS["Math"] || {};
+  var exports = $PS["Math"];
+  var $foreign = $PS["Math"];
+  exports["floor"] = $foreign.floor;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Int"] = $PS["Data.Int"] || {};
+  var exports = $PS["Data.Int"];
+  var $foreign = $PS["Data.Int"];
+  var Data_Boolean = $PS["Data.Boolean"];
+  var Data_Bounded = $PS["Data.Bounded"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Global = $PS["Global"];
+  var $$Math = $PS["Math"];         
+  var fromNumber = $foreign.fromNumberImpl(Data_Maybe.Just.create)(Data_Maybe.Nothing.value);
+  var unsafeClamp = function (x) {
+      if (x === Global.infinity) {
+          return 0;
+      };
+      if (x === -Global.infinity) {
+          return 0;
+      };
+      if (x >= $foreign.toNumber(Data_Bounded.top(Data_Bounded.boundedInt))) {
+          return Data_Bounded.top(Data_Bounded.boundedInt);
+      };
+      if (x <= $foreign.toNumber(Data_Bounded.bottom(Data_Bounded.boundedInt))) {
+          return Data_Bounded.bottom(Data_Bounded.boundedInt);
+      };
+      if (Data_Boolean.otherwise) {
+          return Data_Maybe.fromMaybe(0)(fromNumber(x));
+      };
+      throw new Error("Failed pattern match at Data.Int (line 66, column 1 - line 66, column 29): " + [ x.constructor.name ]);
+  };
+  var floor = function ($24) {
+      return unsafeClamp($$Math.floor($24));
+  };
+  exports["floor"] = floor;
+  exports["toNumber"] = $foreign.toNumber;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Map.Internal"] = $PS["Data.Map.Internal"] || {};
+  var exports = $PS["Data.Map.Internal"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Data_Foldable = $PS["Data.Foldable"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_List_Types = $PS["Data.List.Types"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Data_Ord = $PS["Data.Ord"];
+  var Data_Ordering = $PS["Data.Ordering"];
+  var Data_Semigroup = $PS["Data.Semigroup"];
+  var Data_Tuple = $PS["Data.Tuple"];                          
+  var Leaf = (function () {
+      function Leaf() {
+
+      };
+      Leaf.value = new Leaf();
+      return Leaf;
+  })();
+  var Two = (function () {
+      function Two(value0, value1, value2, value3) {
+          this.value0 = value0;
+          this.value1 = value1;
+          this.value2 = value2;
+          this.value3 = value3;
+      };
+      Two.create = function (value0) {
+          return function (value1) {
+              return function (value2) {
+                  return function (value3) {
+                      return new Two(value0, value1, value2, value3);
+                  };
+              };
+          };
+      };
+      return Two;
+  })();
+  var Three = (function () {
+      function Three(value0, value1, value2, value3, value4, value5, value6) {
+          this.value0 = value0;
+          this.value1 = value1;
+          this.value2 = value2;
+          this.value3 = value3;
+          this.value4 = value4;
+          this.value5 = value5;
+          this.value6 = value6;
+      };
+      Three.create = function (value0) {
+          return function (value1) {
+              return function (value2) {
+                  return function (value3) {
+                      return function (value4) {
+                          return function (value5) {
+                              return function (value6) {
+                                  return new Three(value0, value1, value2, value3, value4, value5, value6);
+                              };
+                          };
+                      };
+                  };
+              };
+          };
+      };
+      return Three;
+  })();
+  var TwoLeft = (function () {
+      function TwoLeft(value0, value1, value2) {
+          this.value0 = value0;
+          this.value1 = value1;
+          this.value2 = value2;
+      };
+      TwoLeft.create = function (value0) {
+          return function (value1) {
+              return function (value2) {
+                  return new TwoLeft(value0, value1, value2);
+              };
+          };
+      };
+      return TwoLeft;
+  })();
+  var TwoRight = (function () {
+      function TwoRight(value0, value1, value2) {
+          this.value0 = value0;
+          this.value1 = value1;
+          this.value2 = value2;
+      };
+      TwoRight.create = function (value0) {
+          return function (value1) {
+              return function (value2) {
+                  return new TwoRight(value0, value1, value2);
+              };
+          };
+      };
+      return TwoRight;
+  })();
+  var ThreeLeft = (function () {
+      function ThreeLeft(value0, value1, value2, value3, value4, value5) {
+          this.value0 = value0;
+          this.value1 = value1;
+          this.value2 = value2;
+          this.value3 = value3;
+          this.value4 = value4;
+          this.value5 = value5;
+      };
+      ThreeLeft.create = function (value0) {
+          return function (value1) {
+              return function (value2) {
+                  return function (value3) {
+                      return function (value4) {
+                          return function (value5) {
+                              return new ThreeLeft(value0, value1, value2, value3, value4, value5);
+                          };
+                      };
+                  };
+              };
+          };
+      };
+      return ThreeLeft;
+  })();
+  var ThreeMiddle = (function () {
+      function ThreeMiddle(value0, value1, value2, value3, value4, value5) {
+          this.value0 = value0;
+          this.value1 = value1;
+          this.value2 = value2;
+          this.value3 = value3;
+          this.value4 = value4;
+          this.value5 = value5;
+      };
+      ThreeMiddle.create = function (value0) {
+          return function (value1) {
+              return function (value2) {
+                  return function (value3) {
+                      return function (value4) {
+                          return function (value5) {
+                              return new ThreeMiddle(value0, value1, value2, value3, value4, value5);
+                          };
+                      };
+                  };
+              };
+          };
+      };
+      return ThreeMiddle;
+  })();
+  var ThreeRight = (function () {
+      function ThreeRight(value0, value1, value2, value3, value4, value5) {
+          this.value0 = value0;
+          this.value1 = value1;
+          this.value2 = value2;
+          this.value3 = value3;
+          this.value4 = value4;
+          this.value5 = value5;
+      };
+      ThreeRight.create = function (value0) {
+          return function (value1) {
+              return function (value2) {
+                  return function (value3) {
+                      return function (value4) {
+                          return function (value5) {
+                              return new ThreeRight(value0, value1, value2, value3, value4, value5);
+                          };
+                      };
+                  };
+              };
+          };
+      };
+      return ThreeRight;
+  })();
+  var KickUp = (function () {
+      function KickUp(value0, value1, value2, value3) {
+          this.value0 = value0;
+          this.value1 = value1;
+          this.value2 = value2;
+          this.value3 = value3;
+      };
+      KickUp.create = function (value0) {
+          return function (value1) {
+              return function (value2) {
+                  return function (value3) {
+                      return new KickUp(value0, value1, value2, value3);
+                  };
+              };
+          };
+      };
+      return KickUp;
+  })();
+  var values = function (v) {
+      if (v instanceof Leaf) {
+          return Data_List_Types.Nil.value;
+      };
+      if (v instanceof Two) {
+          return Data_Semigroup.append(Data_List_Types.semigroupList)(values(v.value0))(Data_Semigroup.append(Data_List_Types.semigroupList)(Control_Applicative.pure(Data_List_Types.applicativeList)(v.value2))(values(v.value3)));
+      };
+      if (v instanceof Three) {
+          return Data_Semigroup.append(Data_List_Types.semigroupList)(values(v.value0))(Data_Semigroup.append(Data_List_Types.semigroupList)(Control_Applicative.pure(Data_List_Types.applicativeList)(v.value2))(Data_Semigroup.append(Data_List_Types.semigroupList)(values(v.value3))(Data_Semigroup.append(Data_List_Types.semigroupList)(Control_Applicative.pure(Data_List_Types.applicativeList)(v.value5))(values(v.value6)))));
+      };
+      throw new Error("Failed pattern match at Data.Map.Internal (line 612, column 1 - line 612, column 40): " + [ v.constructor.name ]);
+  };
+  var lookup = function (dictOrd) {
+      return function (k) {
+          var comp = Data_Ord.compare(dictOrd);
+          var go = function ($copy_v) {
+              var $tco_done = false;
+              var $tco_result;
+              function $tco_loop(v) {
+                  if (v instanceof Leaf) {
+                      $tco_done = true;
+                      return Data_Maybe.Nothing.value;
+                  };
+                  if (v instanceof Two) {
+                      var v2 = comp(k)(v.value1);
+                      if (v2 instanceof Data_Ordering.EQ) {
+                          $tco_done = true;
+                          return new Data_Maybe.Just(v.value2);
+                      };
+                      if (v2 instanceof Data_Ordering.LT) {
+                          $copy_v = v.value0;
+                          return;
+                      };
+                      $copy_v = v.value3;
+                      return;
+                  };
+                  if (v instanceof Three) {
+                      var v3 = comp(k)(v.value1);
+                      if (v3 instanceof Data_Ordering.EQ) {
+                          $tco_done = true;
+                          return new Data_Maybe.Just(v.value2);
+                      };
+                      var v4 = comp(k)(v.value4);
+                      if (v4 instanceof Data_Ordering.EQ) {
+                          $tco_done = true;
+                          return new Data_Maybe.Just(v.value5);
+                      };
+                      if (v3 instanceof Data_Ordering.LT) {
+                          $copy_v = v.value0;
+                          return;
+                      };
+                      if (v4 instanceof Data_Ordering.GT) {
+                          $copy_v = v.value6;
+                          return;
+                      };
+                      $copy_v = v.value3;
+                      return;
+                  };
+                  throw new Error("Failed pattern match at Data.Map.Internal (line 200, column 5 - line 200, column 22): " + [ v.constructor.name ]);
+              };
+              while (!$tco_done) {
+                  $tco_result = $tco_loop($copy_v);
+              };
+              return $tco_result;
+          };
+          return go;
+      };
+  };
+  var member = function (dictOrd) {
+      return function (k) {
+          return function (m) {
+              return Data_Maybe.isJust(lookup(dictOrd)(k)(m));
+          };
+      };
+  };
+  var functorMap = new Data_Functor.Functor(function (v) {
+      return function (v1) {
+          if (v1 instanceof Leaf) {
+              return Leaf.value;
+          };
+          if (v1 instanceof Two) {
+              return new Two(Data_Functor.map(functorMap)(v)(v1.value0), v1.value1, v(v1.value2), Data_Functor.map(functorMap)(v)(v1.value3));
+          };
+          if (v1 instanceof Three) {
+              return new Three(Data_Functor.map(functorMap)(v)(v1.value0), v1.value1, v(v1.value2), Data_Functor.map(functorMap)(v)(v1.value3), v1.value4, v(v1.value5), Data_Functor.map(functorMap)(v)(v1.value6));
+          };
+          throw new Error("Failed pattern match at Data.Map.Internal (line 96, column 1 - line 99, column 110): " + [ v.constructor.name, v1.constructor.name ]);
+      };
+  });
+  var fromZipper = function ($copy_dictOrd) {
+      return function ($copy_v) {
+          return function ($copy_tree) {
+              var $tco_var_dictOrd = $copy_dictOrd;
+              var $tco_var_v = $copy_v;
+              var $tco_done = false;
+              var $tco_result;
+              function $tco_loop(dictOrd, v, tree) {
+                  if (v instanceof Data_List_Types.Nil) {
+                      $tco_done = true;
+                      return tree;
+                  };
+                  if (v instanceof Data_List_Types.Cons) {
+                      if (v.value0 instanceof TwoLeft) {
+                          $tco_var_dictOrd = dictOrd;
+                          $tco_var_v = v.value1;
+                          $copy_tree = new Two(tree, v.value0.value0, v.value0.value1, v.value0.value2);
+                          return;
+                      };
+                      if (v.value0 instanceof TwoRight) {
+                          $tco_var_dictOrd = dictOrd;
+                          $tco_var_v = v.value1;
+                          $copy_tree = new Two(v.value0.value0, v.value0.value1, v.value0.value2, tree);
+                          return;
+                      };
+                      if (v.value0 instanceof ThreeLeft) {
+                          $tco_var_dictOrd = dictOrd;
+                          $tco_var_v = v.value1;
+                          $copy_tree = new Three(tree, v.value0.value0, v.value0.value1, v.value0.value2, v.value0.value3, v.value0.value4, v.value0.value5);
+                          return;
+                      };
+                      if (v.value0 instanceof ThreeMiddle) {
+                          $tco_var_dictOrd = dictOrd;
+                          $tco_var_v = v.value1;
+                          $copy_tree = new Three(v.value0.value0, v.value0.value1, v.value0.value2, tree, v.value0.value3, v.value0.value4, v.value0.value5);
+                          return;
+                      };
+                      if (v.value0 instanceof ThreeRight) {
+                          $tco_var_dictOrd = dictOrd;
+                          $tco_var_v = v.value1;
+                          $copy_tree = new Three(v.value0.value0, v.value0.value1, v.value0.value2, v.value0.value3, v.value0.value4, v.value0.value5, tree);
+                          return;
+                      };
+                      throw new Error("Failed pattern match at Data.Map.Internal (line 418, column 3 - line 423, column 88): " + [ v.value0.constructor.name ]);
+                  };
+                  throw new Error("Failed pattern match at Data.Map.Internal (line 415, column 1 - line 415, column 80): " + [ v.constructor.name, tree.constructor.name ]);
+              };
+              while (!$tco_done) {
+                  $tco_result = $tco_loop($tco_var_dictOrd, $tco_var_v, $copy_tree);
+              };
+              return $tco_result;
+          };
+      };
+  };
+  var insert = function (dictOrd) {
+      return function (k) {
+          return function (v) {
+              var up = function ($copy_v1) {
+                  return function ($copy_v2) {
+                      var $tco_var_v1 = $copy_v1;
+                      var $tco_done = false;
+                      var $tco_result;
+                      function $tco_loop(v1, v2) {
+                          if (v1 instanceof Data_List_Types.Nil) {
+                              $tco_done = true;
+                              return new Two(v2.value0, v2.value1, v2.value2, v2.value3);
+                          };
+                          if (v1 instanceof Data_List_Types.Cons) {
+                              if (v1.value0 instanceof TwoLeft) {
+                                  $tco_done = true;
+                                  return fromZipper(dictOrd)(v1.value1)(new Three(v2.value0, v2.value1, v2.value2, v2.value3, v1.value0.value0, v1.value0.value1, v1.value0.value2));
+                              };
+                              if (v1.value0 instanceof TwoRight) {
+                                  $tco_done = true;
+                                  return fromZipper(dictOrd)(v1.value1)(new Three(v1.value0.value0, v1.value0.value1, v1.value0.value2, v2.value0, v2.value1, v2.value2, v2.value3));
+                              };
+                              if (v1.value0 instanceof ThreeLeft) {
+                                  $tco_var_v1 = v1.value1;
+                                  $copy_v2 = new KickUp(new Two(v2.value0, v2.value1, v2.value2, v2.value3), v1.value0.value0, v1.value0.value1, new Two(v1.value0.value2, v1.value0.value3, v1.value0.value4, v1.value0.value5));
+                                  return;
+                              };
+                              if (v1.value0 instanceof ThreeMiddle) {
+                                  $tco_var_v1 = v1.value1;
+                                  $copy_v2 = new KickUp(new Two(v1.value0.value0, v1.value0.value1, v1.value0.value2, v2.value0), v2.value1, v2.value2, new Two(v2.value3, v1.value0.value3, v1.value0.value4, v1.value0.value5));
+                                  return;
+                              };
+                              if (v1.value0 instanceof ThreeRight) {
+                                  $tco_var_v1 = v1.value1;
+                                  $copy_v2 = new KickUp(new Two(v1.value0.value0, v1.value0.value1, v1.value0.value2, v1.value0.value3), v1.value0.value4, v1.value0.value5, new Two(v2.value0, v2.value1, v2.value2, v2.value3));
+                                  return;
+                              };
+                              throw new Error("Failed pattern match at Data.Map.Internal (line 454, column 5 - line 459, column 108): " + [ v1.value0.constructor.name, v2.constructor.name ]);
+                          };
+                          throw new Error("Failed pattern match at Data.Map.Internal (line 451, column 3 - line 451, column 56): " + [ v1.constructor.name, v2.constructor.name ]);
+                      };
+                      while (!$tco_done) {
+                          $tco_result = $tco_loop($tco_var_v1, $copy_v2);
+                      };
+                      return $tco_result;
+                  };
+              };
+              var comp = Data_Ord.compare(dictOrd);
+              var down = function ($copy_ctx) {
+                  return function ($copy_v1) {
+                      var $tco_var_ctx = $copy_ctx;
+                      var $tco_done = false;
+                      var $tco_result;
+                      function $tco_loop(ctx, v1) {
+                          if (v1 instanceof Leaf) {
+                              $tco_done = true;
+                              return up(ctx)(new KickUp(Leaf.value, k, v, Leaf.value));
+                          };
+                          if (v1 instanceof Two) {
+                              var v2 = comp(k)(v1.value1);
+                              if (v2 instanceof Data_Ordering.EQ) {
+                                  $tco_done = true;
+                                  return fromZipper(dictOrd)(ctx)(new Two(v1.value0, k, v, v1.value3));
+                              };
+                              if (v2 instanceof Data_Ordering.LT) {
+                                  $tco_var_ctx = new Data_List_Types.Cons(new TwoLeft(v1.value1, v1.value2, v1.value3), ctx);
+                                  $copy_v1 = v1.value0;
+                                  return;
+                              };
+                              $tco_var_ctx = new Data_List_Types.Cons(new TwoRight(v1.value0, v1.value1, v1.value2), ctx);
+                              $copy_v1 = v1.value3;
+                              return;
+                          };
+                          if (v1 instanceof Three) {
+                              var v3 = comp(k)(v1.value1);
+                              if (v3 instanceof Data_Ordering.EQ) {
+                                  $tco_done = true;
+                                  return fromZipper(dictOrd)(ctx)(new Three(v1.value0, k, v, v1.value3, v1.value4, v1.value5, v1.value6));
+                              };
+                              var v4 = comp(k)(v1.value4);
+                              if (v4 instanceof Data_Ordering.EQ) {
+                                  $tco_done = true;
+                                  return fromZipper(dictOrd)(ctx)(new Three(v1.value0, v1.value1, v1.value2, v1.value3, k, v, v1.value6));
+                              };
+                              if (v3 instanceof Data_Ordering.LT) {
+                                  $tco_var_ctx = new Data_List_Types.Cons(new ThreeLeft(v1.value1, v1.value2, v1.value3, v1.value4, v1.value5, v1.value6), ctx);
+                                  $copy_v1 = v1.value0;
+                                  return;
+                              };
+                              if (v3 instanceof Data_Ordering.GT && v4 instanceof Data_Ordering.LT) {
+                                  $tco_var_ctx = new Data_List_Types.Cons(new ThreeMiddle(v1.value0, v1.value1, v1.value2, v1.value4, v1.value5, v1.value6), ctx);
+                                  $copy_v1 = v1.value3;
+                                  return;
+                              };
+                              $tco_var_ctx = new Data_List_Types.Cons(new ThreeRight(v1.value0, v1.value1, v1.value2, v1.value3, v1.value4, v1.value5), ctx);
+                              $copy_v1 = v1.value6;
+                              return;
+                          };
+                          throw new Error("Failed pattern match at Data.Map.Internal (line 434, column 3 - line 434, column 55): " + [ ctx.constructor.name, v1.constructor.name ]);
+                      };
+                      while (!$tco_done) {
+                          $tco_result = $tco_loop($tco_var_ctx, $copy_v1);
+                      };
+                      return $tco_result;
+                  };
+              };
+              return down(Data_List_Types.Nil.value);
+          };
+      };
+  };
+  var pop = function (dictOrd) {
+      return function (k) {
+          var up = function ($copy_ctxs) {
+              return function ($copy_tree) {
+                  var $tco_var_ctxs = $copy_ctxs;
+                  var $tco_done = false;
+                  var $tco_result;
+                  function $tco_loop(ctxs, tree) {
+                      if (ctxs instanceof Data_List_Types.Nil) {
+                          $tco_done = true;
+                          return tree;
+                      };
+                      if (ctxs instanceof Data_List_Types.Cons) {
+                          if (ctxs.value0 instanceof TwoLeft && (ctxs.value0.value2 instanceof Leaf && tree instanceof Leaf)) {
+                              $tco_done = true;
+                              return fromZipper(dictOrd)(ctxs.value1)(new Two(Leaf.value, ctxs.value0.value0, ctxs.value0.value1, Leaf.value));
+                          };
+                          if (ctxs.value0 instanceof TwoRight && (ctxs.value0.value0 instanceof Leaf && tree instanceof Leaf)) {
+                              $tco_done = true;
+                              return fromZipper(dictOrd)(ctxs.value1)(new Two(Leaf.value, ctxs.value0.value1, ctxs.value0.value2, Leaf.value));
+                          };
+                          if (ctxs.value0 instanceof TwoLeft && ctxs.value0.value2 instanceof Two) {
+                              $tco_var_ctxs = ctxs.value1;
+                              $copy_tree = new Three(tree, ctxs.value0.value0, ctxs.value0.value1, ctxs.value0.value2.value0, ctxs.value0.value2.value1, ctxs.value0.value2.value2, ctxs.value0.value2.value3);
+                              return;
+                          };
+                          if (ctxs.value0 instanceof TwoRight && ctxs.value0.value0 instanceof Two) {
+                              $tco_var_ctxs = ctxs.value1;
+                              $copy_tree = new Three(ctxs.value0.value0.value0, ctxs.value0.value0.value1, ctxs.value0.value0.value2, ctxs.value0.value0.value3, ctxs.value0.value1, ctxs.value0.value2, tree);
+                              return;
+                          };
+                          if (ctxs.value0 instanceof TwoLeft && ctxs.value0.value2 instanceof Three) {
+                              $tco_done = true;
+                              return fromZipper(dictOrd)(ctxs.value1)(new Two(new Two(tree, ctxs.value0.value0, ctxs.value0.value1, ctxs.value0.value2.value0), ctxs.value0.value2.value1, ctxs.value0.value2.value2, new Two(ctxs.value0.value2.value3, ctxs.value0.value2.value4, ctxs.value0.value2.value5, ctxs.value0.value2.value6)));
+                          };
+                          if (ctxs.value0 instanceof TwoRight && ctxs.value0.value0 instanceof Three) {
+                              $tco_done = true;
+                              return fromZipper(dictOrd)(ctxs.value1)(new Two(new Two(ctxs.value0.value0.value0, ctxs.value0.value0.value1, ctxs.value0.value0.value2, ctxs.value0.value0.value3), ctxs.value0.value0.value4, ctxs.value0.value0.value5, new Two(ctxs.value0.value0.value6, ctxs.value0.value1, ctxs.value0.value2, tree)));
+                          };
+                          if (ctxs.value0 instanceof ThreeLeft && (ctxs.value0.value2 instanceof Leaf && (ctxs.value0.value5 instanceof Leaf && tree instanceof Leaf))) {
+                              $tco_done = true;
+                              return fromZipper(dictOrd)(ctxs.value1)(new Three(Leaf.value, ctxs.value0.value0, ctxs.value0.value1, Leaf.value, ctxs.value0.value3, ctxs.value0.value4, Leaf.value));
+                          };
+                          if (ctxs.value0 instanceof ThreeMiddle && (ctxs.value0.value0 instanceof Leaf && (ctxs.value0.value5 instanceof Leaf && tree instanceof Leaf))) {
+                              $tco_done = true;
+                              return fromZipper(dictOrd)(ctxs.value1)(new Three(Leaf.value, ctxs.value0.value1, ctxs.value0.value2, Leaf.value, ctxs.value0.value3, ctxs.value0.value4, Leaf.value));
+                          };
+                          if (ctxs.value0 instanceof ThreeRight && (ctxs.value0.value0 instanceof Leaf && (ctxs.value0.value3 instanceof Leaf && tree instanceof Leaf))) {
+                              $tco_done = true;
+                              return fromZipper(dictOrd)(ctxs.value1)(new Three(Leaf.value, ctxs.value0.value1, ctxs.value0.value2, Leaf.value, ctxs.value0.value4, ctxs.value0.value5, Leaf.value));
+                          };
+                          if (ctxs.value0 instanceof ThreeLeft && ctxs.value0.value2 instanceof Two) {
+                              $tco_done = true;
+                              return fromZipper(dictOrd)(ctxs.value1)(new Two(new Three(tree, ctxs.value0.value0, ctxs.value0.value1, ctxs.value0.value2.value0, ctxs.value0.value2.value1, ctxs.value0.value2.value2, ctxs.value0.value2.value3), ctxs.value0.value3, ctxs.value0.value4, ctxs.value0.value5));
+                          };
+                          if (ctxs.value0 instanceof ThreeMiddle && ctxs.value0.value0 instanceof Two) {
+                              $tco_done = true;
+                              return fromZipper(dictOrd)(ctxs.value1)(new Two(new Three(ctxs.value0.value0.value0, ctxs.value0.value0.value1, ctxs.value0.value0.value2, ctxs.value0.value0.value3, ctxs.value0.value1, ctxs.value0.value2, tree), ctxs.value0.value3, ctxs.value0.value4, ctxs.value0.value5));
+                          };
+                          if (ctxs.value0 instanceof ThreeMiddle && ctxs.value0.value5 instanceof Two) {
+                              $tco_done = true;
+                              return fromZipper(dictOrd)(ctxs.value1)(new Two(ctxs.value0.value0, ctxs.value0.value1, ctxs.value0.value2, new Three(tree, ctxs.value0.value3, ctxs.value0.value4, ctxs.value0.value5.value0, ctxs.value0.value5.value1, ctxs.value0.value5.value2, ctxs.value0.value5.value3)));
+                          };
+                          if (ctxs.value0 instanceof ThreeRight && ctxs.value0.value3 instanceof Two) {
+                              $tco_done = true;
+                              return fromZipper(dictOrd)(ctxs.value1)(new Two(ctxs.value0.value0, ctxs.value0.value1, ctxs.value0.value2, new Three(ctxs.value0.value3.value0, ctxs.value0.value3.value1, ctxs.value0.value3.value2, ctxs.value0.value3.value3, ctxs.value0.value4, ctxs.value0.value5, tree)));
+                          };
+                          if (ctxs.value0 instanceof ThreeLeft && ctxs.value0.value2 instanceof Three) {
+                              $tco_done = true;
+                              return fromZipper(dictOrd)(ctxs.value1)(new Three(new Two(tree, ctxs.value0.value0, ctxs.value0.value1, ctxs.value0.value2.value0), ctxs.value0.value2.value1, ctxs.value0.value2.value2, new Two(ctxs.value0.value2.value3, ctxs.value0.value2.value4, ctxs.value0.value2.value5, ctxs.value0.value2.value6), ctxs.value0.value3, ctxs.value0.value4, ctxs.value0.value5));
+                          };
+                          if (ctxs.value0 instanceof ThreeMiddle && ctxs.value0.value0 instanceof Three) {
+                              $tco_done = true;
+                              return fromZipper(dictOrd)(ctxs.value1)(new Three(new Two(ctxs.value0.value0.value0, ctxs.value0.value0.value1, ctxs.value0.value0.value2, ctxs.value0.value0.value3), ctxs.value0.value0.value4, ctxs.value0.value0.value5, new Two(ctxs.value0.value0.value6, ctxs.value0.value1, ctxs.value0.value2, tree), ctxs.value0.value3, ctxs.value0.value4, ctxs.value0.value5));
+                          };
+                          if (ctxs.value0 instanceof ThreeMiddle && ctxs.value0.value5 instanceof Three) {
+                              $tco_done = true;
+                              return fromZipper(dictOrd)(ctxs.value1)(new Three(ctxs.value0.value0, ctxs.value0.value1, ctxs.value0.value2, new Two(tree, ctxs.value0.value3, ctxs.value0.value4, ctxs.value0.value5.value0), ctxs.value0.value5.value1, ctxs.value0.value5.value2, new Two(ctxs.value0.value5.value3, ctxs.value0.value5.value4, ctxs.value0.value5.value5, ctxs.value0.value5.value6)));
+                          };
+                          if (ctxs.value0 instanceof ThreeRight && ctxs.value0.value3 instanceof Three) {
+                              $tco_done = true;
+                              return fromZipper(dictOrd)(ctxs.value1)(new Three(ctxs.value0.value0, ctxs.value0.value1, ctxs.value0.value2, new Two(ctxs.value0.value3.value0, ctxs.value0.value3.value1, ctxs.value0.value3.value2, ctxs.value0.value3.value3), ctxs.value0.value3.value4, ctxs.value0.value3.value5, new Two(ctxs.value0.value3.value6, ctxs.value0.value4, ctxs.value0.value5, tree)));
+                          };
+                          throw new Error("Failed pattern match at Data.Map.Internal (line 511, column 9 - line 528, column 136): " + [ ctxs.value0.constructor.name, tree.constructor.name ]);
+                      };
+                      throw new Error("Failed pattern match at Data.Map.Internal (line 508, column 5 - line 528, column 136): " + [ ctxs.constructor.name ]);
+                  };
+                  while (!$tco_done) {
+                      $tco_result = $tco_loop($tco_var_ctxs, $copy_tree);
+                  };
+                  return $tco_result;
+              };
+          };
+          var removeMaxNode = function ($copy_ctx) {
+              return function ($copy_m) {
+                  var $tco_var_ctx = $copy_ctx;
+                  var $tco_done = false;
+                  var $tco_result;
+                  function $tco_loop(ctx, m) {
+                      if (m instanceof Two && (m.value0 instanceof Leaf && m.value3 instanceof Leaf)) {
+                          $tco_done = true;
+                          return up(ctx)(Leaf.value);
+                      };
+                      if (m instanceof Two) {
+                          $tco_var_ctx = new Data_List_Types.Cons(new TwoRight(m.value0, m.value1, m.value2), ctx);
+                          $copy_m = m.value3;
+                          return;
+                      };
+                      if (m instanceof Three && (m.value0 instanceof Leaf && (m.value3 instanceof Leaf && m.value6 instanceof Leaf))) {
+                          $tco_done = true;
+                          return up(new Data_List_Types.Cons(new TwoRight(Leaf.value, m.value1, m.value2), ctx))(Leaf.value);
+                      };
+                      if (m instanceof Three) {
+                          $tco_var_ctx = new Data_List_Types.Cons(new ThreeRight(m.value0, m.value1, m.value2, m.value3, m.value4, m.value5), ctx);
+                          $copy_m = m.value6;
+                          return;
+                      };
+                      throw new Error("Failed pattern match at Data.Map.Internal (line 540, column 5 - line 544, column 107): " + [ m.constructor.name ]);
+                  };
+                  while (!$tco_done) {
+                      $tco_result = $tco_loop($tco_var_ctx, $copy_m);
+                  };
+                  return $tco_result;
+              };
+          };
+          var maxNode = function ($copy_m) {
+              var $tco_done = false;
+              var $tco_result;
+              function $tco_loop(m) {
+                  if (m instanceof Two && m.value3 instanceof Leaf) {
+                      $tco_done = true;
+                      return {
+                          key: m.value1,
+                          value: m.value2
+                      };
+                  };
+                  if (m instanceof Two) {
+                      $copy_m = m.value3;
+                      return;
+                  };
+                  if (m instanceof Three && m.value6 instanceof Leaf) {
+                      $tco_done = true;
+                      return {
+                          key: m.value4,
+                          value: m.value5
+                      };
+                  };
+                  if (m instanceof Three) {
+                      $copy_m = m.value6;
+                      return;
+                  };
+                  throw new Error("Failed pattern match at Data.Map.Internal (line 531, column 33 - line 535, column 45): " + [ m.constructor.name ]);
+              };
+              while (!$tco_done) {
+                  $tco_result = $tco_loop($copy_m);
+              };
+              return $tco_result;
+          };
+          var comp = Data_Ord.compare(dictOrd);
+          var down = function ($copy_ctx) {
+              return function ($copy_m) {
+                  var $tco_var_ctx = $copy_ctx;
+                  var $tco_done = false;
+                  var $tco_result;
+                  function $tco_loop(ctx, m) {
+                      if (m instanceof Leaf) {
+                          $tco_done = true;
+                          return Data_Maybe.Nothing.value;
+                      };
+                      if (m instanceof Two) {
+                          var v = comp(k)(m.value1);
+                          if (m.value3 instanceof Leaf && v instanceof Data_Ordering.EQ) {
+                              $tco_done = true;
+                              return new Data_Maybe.Just(new Data_Tuple.Tuple(m.value2, up(ctx)(Leaf.value)));
+                          };
+                          if (v instanceof Data_Ordering.EQ) {
+                              var max = maxNode(m.value0);
+                              $tco_done = true;
+                              return new Data_Maybe.Just(new Data_Tuple.Tuple(m.value2, removeMaxNode(new Data_List_Types.Cons(new TwoLeft(max.key, max.value, m.value3), ctx))(m.value0)));
+                          };
+                          if (v instanceof Data_Ordering.LT) {
+                              $tco_var_ctx = new Data_List_Types.Cons(new TwoLeft(m.value1, m.value2, m.value3), ctx);
+                              $copy_m = m.value0;
+                              return;
+                          };
+                          $tco_var_ctx = new Data_List_Types.Cons(new TwoRight(m.value0, m.value1, m.value2), ctx);
+                          $copy_m = m.value3;
+                          return;
+                      };
+                      if (m instanceof Three) {
+                          var leaves = (function () {
+                              if (m.value0 instanceof Leaf && (m.value3 instanceof Leaf && m.value6 instanceof Leaf)) {
+                                  return true;
+                              };
+                              return false;
+                          })();
+                          var v = comp(k)(m.value4);
+                          var v3 = comp(k)(m.value1);
+                          if (leaves && v3 instanceof Data_Ordering.EQ) {
+                              $tco_done = true;
+                              return new Data_Maybe.Just(new Data_Tuple.Tuple(m.value2, fromZipper(dictOrd)(ctx)(new Two(Leaf.value, m.value4, m.value5, Leaf.value))));
+                          };
+                          if (leaves && v instanceof Data_Ordering.EQ) {
+                              $tco_done = true;
+                              return new Data_Maybe.Just(new Data_Tuple.Tuple(m.value5, fromZipper(dictOrd)(ctx)(new Two(Leaf.value, m.value1, m.value2, Leaf.value))));
+                          };
+                          if (v3 instanceof Data_Ordering.EQ) {
+                              var max = maxNode(m.value0);
+                              $tco_done = true;
+                              return new Data_Maybe.Just(new Data_Tuple.Tuple(m.value2, removeMaxNode(new Data_List_Types.Cons(new ThreeLeft(max.key, max.value, m.value3, m.value4, m.value5, m.value6), ctx))(m.value0)));
+                          };
+                          if (v instanceof Data_Ordering.EQ) {
+                              var max = maxNode(m.value3);
+                              $tco_done = true;
+                              return new Data_Maybe.Just(new Data_Tuple.Tuple(m.value5, removeMaxNode(new Data_List_Types.Cons(new ThreeMiddle(m.value0, m.value1, m.value2, max.key, max.value, m.value6), ctx))(m.value3)));
+                          };
+                          if (v3 instanceof Data_Ordering.LT) {
+                              $tco_var_ctx = new Data_List_Types.Cons(new ThreeLeft(m.value1, m.value2, m.value3, m.value4, m.value5, m.value6), ctx);
+                              $copy_m = m.value0;
+                              return;
+                          };
+                          if (v3 instanceof Data_Ordering.GT && v instanceof Data_Ordering.LT) {
+                              $tco_var_ctx = new Data_List_Types.Cons(new ThreeMiddle(m.value0, m.value1, m.value2, m.value4, m.value5, m.value6), ctx);
+                              $copy_m = m.value3;
+                              return;
+                          };
+                          $tco_var_ctx = new Data_List_Types.Cons(new ThreeRight(m.value0, m.value1, m.value2, m.value3, m.value4, m.value5), ctx);
+                          $copy_m = m.value6;
+                          return;
+                      };
+                      throw new Error("Failed pattern match at Data.Map.Internal (line 481, column 34 - line 504, column 80): " + [ m.constructor.name ]);
+                  };
+                  while (!$tco_done) {
+                      $tco_result = $tco_loop($tco_var_ctx, $copy_m);
+                  };
+                  return $tco_result;
+              };
+          };
+          return down(Data_List_Types.Nil.value);
+      };
+  };
+  var foldableMap = new Data_Foldable.Foldable(function (dictMonoid) {
+      return function (f) {
+          return function (m) {
+              return Data_Foldable.foldMap(Data_List_Types.foldableList)(dictMonoid)(f)(values(m));
+          };
+      };
+  }, function (f) {
+      return function (z) {
+          return function (m) {
+              return Data_Foldable.foldl(Data_List_Types.foldableList)(f)(z)(values(m));
+          };
+      };
+  }, function (f) {
+      return function (z) {
+          return function (m) {
+              return Data_Foldable.foldr(Data_List_Types.foldableList)(f)(z)(values(m));
+          };
+      };
+  });
+  var empty = Leaf.value;
+  var $$delete = function (dictOrd) {
+      return function (k) {
+          return function (m) {
+              return Data_Maybe.maybe(m)(Data_Tuple.snd)(pop(dictOrd)(k)(m));
+          };
+      };
+  }; 
+  var alter = function (dictOrd) {
+      return function (f) {
+          return function (k) {
+              return function (m) {
+                  var v = f(lookup(dictOrd)(k)(m));
+                  if (v instanceof Data_Maybe.Nothing) {
+                      return $$delete(dictOrd)(k)(m);
+                  };
+                  if (v instanceof Data_Maybe.Just) {
+                      return insert(dictOrd)(k)(v.value0)(m);
+                  };
+                  throw new Error("Failed pattern match at Data.Map.Internal (line 549, column 15 - line 551, column 25): " + [ v.constructor.name ]);
+              };
+          };
+      };
+  };
+  exports["empty"] = empty;
+  exports["insert"] = insert;
+  exports["lookup"] = lookup;
+  exports["delete"] = $$delete;
+  exports["pop"] = pop;
+  exports["member"] = member;
+  exports["alter"] = alter;
+  exports["functorMap"] = functorMap;
+  exports["foldableMap"] = foldableMap;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Symbol"] = $PS["Data.Symbol"] || {};
+  var exports = $PS["Data.Symbol"];      
+  var SProxy = (function () {
+      function SProxy() {
+
+      };
+      SProxy.value = new SProxy();
+      return SProxy;
+  })();
+  var IsSymbol = function (reflectSymbol) {
+      this.reflectSymbol = reflectSymbol;
+  };
+  var reflectSymbol = function (dict) {
+      return dict.reflectSymbol;
+  };
+  exports["IsSymbol"] = IsSymbol;
+  exports["reflectSymbol"] = reflectSymbol;
+  exports["SProxy"] = SProxy;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Data.Void"] = $PS["Data.Void"] || {};
+  var exports = $PS["Data.Void"];
+  var absurd = function (a) {
+      var spin = function ($copy_v) {
+          var $tco_result;
+          function $tco_loop(v) {
+              $copy_v = v;
+              return;
+          };
+          while (!false) {
+              $tco_result = $tco_loop($copy_v);
+          };
+          return $tco_result;
+      };
+      return spin(a);
+  };
+  exports["absurd"] = absurd;
+})(PS);
+(function(exports) {
+  /* globals exports, setTimeout */
+  "use strict";
+
+  var AVar = function () {
+
+    function MutableQueue () {
+      this.head = null;
+      this.last = null;
+      this.size = 0;
+    }
+
+    function MutableCell (queue, value) {
+      this.queue = queue;
+      this.value = value;
+      this.next  = null;
+      this.prev  = null;
+    }
+
+    function AVar (value) {
+      this.draining = false;
+      this.error    = null;
+      this.value    = value;
+      this.takes    = new MutableQueue();
+      this.reads    = new MutableQueue();
+      this.puts     = new MutableQueue();
+    }
+
+    var EMPTY = {};
+
+    function runEff(eff) {
+      try {
+        eff();
+      } catch (error) {
+        setTimeout(function () {
+          throw error;
+        }, 0);
+      }
+    }
+
+    function putLast (queue, value) {
+      var cell = new MutableCell(queue, value);
+      switch (queue.size) {
+      case 0:
+        queue.head = cell;
+        break;
+      case 1:
+        cell.prev = queue.head;
+        queue.head.next = cell;
+        queue.last = cell;
+        break;
+      default:
+        cell.prev = queue.last;
+        queue.last.next = cell;
+        queue.last = cell;
+      }
+      queue.size++;
+      return cell;
+    }
+
+    function takeLast (queue) {
+      var cell;
+      switch (queue.size) {
+      case 0:
+        return null;
+      case 1:
+        cell = queue.head;
+        queue.head = null;
+        break;
+      case 2:
+        cell = queue.last;
+        queue.head.next = null;
+        queue.last = null;
+        break;
+      default:
+        cell = queue.last;
+        queue.last = cell.prev;
+        queue.last.next = null;
+      }
+      cell.prev = null;
+      cell.queue = null;
+      queue.size--;
+      return cell.value;
+    }
+
+    function takeHead (queue) {
+      var cell;
+      switch (queue.size) {
+      case 0:
+        return null;
+      case 1:
+        cell = queue.head;
+        queue.head = null;
+        break;
+      case 2:
+        cell = queue.head;
+        queue.last.prev = null;
+        queue.head = queue.last;
+        queue.last = null;
+        break;
+      default:
+        cell = queue.head;
+        queue.head = cell.next;
+        queue.head.prev = null;
+      }
+      cell.next = null;
+      cell.queue = null;
+      queue.size--;
+      return cell.value;
+    }
+
+    function deleteCell (cell) {
+      if (cell.queue === null) {
+        return;
+      }
+      if (cell.queue.last === cell) {
+        takeLast(cell.queue);
+        return;
+      }
+      if (cell.queue.head === cell) {
+        takeHead(cell.queue);
+        return;
+      }
+      if (cell.prev) {
+        cell.prev.next = cell.next;
+      }
+      if (cell.next) {
+        cell.next.prev = cell.prev;
+      }
+      cell.queue.size--;
+      cell.queue = null;
+      cell.value = null;
+      cell.next  = null;
+      cell.prev  = null;
+    }
+
+    function drainVar (util, avar) {
+      if (avar.draining) {
+        return;
+      }
+
+      var ps = avar.puts;
+      var ts = avar.takes;
+      var rs = avar.reads;
+      var p, r, t, value, rsize;
+
+      avar.draining = true;
+
+      while (1) { // eslint-disable-line no-constant-condition
+        p = null;
+        r = null;
+        t = null;
+        value = avar.value;
+        rsize = rs.size;
+
+        if (avar.error !== null) {
+          value = util.left(avar.error);
+          while (p = takeHead(ps)) { // eslint-disable-line no-cond-assign
+            runEff(p.cb(value));
+          }
+          while (r = takeHead(rs)) { // eslint-disable-line no-cond-assign
+            runEff(r(value));
+          }
+          while (t = takeHead(ts)) { // eslint-disable-line no-cond-assign
+            runEff(t(value));
+          }
+          break;
+        }
+
+        // Process the next put. We do not immediately invoke the callback
+        // because we want to preserve ordering. If there are takes/reads
+        // we want to run those first.
+        if (value === EMPTY && (p = takeHead(ps))) {
+          avar.value = value = p.value;
+        }
+
+        if (value !== EMPTY) {
+          // We go ahead and queue up the next take for the same reasons as
+          // above. Invoking the read callbacks can affect the mutable queue.
+          t = takeHead(ts);
+          // We only want to process the reads queued up before running these
+          // callbacks so we guard on rsize.
+          while (rsize-- && (r = takeHead(rs))) {
+            runEff(r(util.right(value)));
+          }
+          if (t !== null) {
+            avar.value = EMPTY;
+            runEff(t(util.right(value)));
+          }
+        }
+
+        if (p !== null) {
+          runEff(p.cb(util.right(void 0)));
+        }
+
+        // Callbacks could have queued up more items so we need to guard on the
+        // actual mutable properties.
+        if (avar.value === EMPTY && ps.size === 0 || avar.value !== EMPTY && ts.size === 0) {
+          break;
+        }
+      }
+      avar.draining = false;
+    }
+
+    AVar.EMPTY      = EMPTY;
+    AVar.putLast    = putLast;
+    AVar.takeLast   = takeLast;
+    AVar.takeHead   = takeHead;
+    AVar.deleteCell = deleteCell;
+    AVar.drainVar   = drainVar;
+
+    return AVar;
+  }();
+
+  exports.empty = function () {
+    return new AVar(AVar.EMPTY);
+  };
+
+  exports._killVar = function (util, error, avar) {
+    return function () {
+      if (avar.error === null) {
+        avar.error = error;
+        avar.value = AVar.EMPTY;
+        AVar.drainVar(util, avar);
+      }
+    };
+  };
+
+  exports._putVar = function (util, value, avar, cb) {
+    return function () {
+      var cell = AVar.putLast(avar.puts, { cb: cb, value: value });
+      AVar.drainVar(util, avar);
+      return function () {
+        AVar.deleteCell(cell);
+      };
+    };
+  };
+
+  exports._takeVar = function (util, avar, cb) {
+    return function () {
+      var cell = AVar.putLast(avar.takes, cb);
+      AVar.drainVar(util, avar);
+      return function () {
+        AVar.deleteCell(cell);
+      };
+    };
+  };
+})(PS["Effect.AVar"] = PS["Effect.AVar"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Effect.AVar"] = $PS["Effect.AVar"] || {};
+  var exports = $PS["Effect.AVar"];
+  var $foreign = $PS["Effect.AVar"];
+  var Data_Either = $PS["Data.Either"];
+  var Data_Maybe = $PS["Data.Maybe"];                
+  var Killed = (function () {
+      function Killed(value0) {
+          this.value0 = value0;
+      };
+      Killed.create = function (value0) {
+          return new Killed(value0);
+      };
+      return Killed;
+  })();
+  var Filled = (function () {
+      function Filled(value0) {
+          this.value0 = value0;
+      };
+      Filled.create = function (value0) {
+          return new Filled(value0);
+      };
+      return Filled;
+  })();
+  var Empty = (function () {
+      function Empty() {
+
+      };
+      Empty.value = new Empty();
+      return Empty;
+  })();
+  var ffiUtil = {
+      left: Data_Either.Left.create,
+      right: Data_Either.Right.create,
+      nothing: Data_Maybe.Nothing.value,
+      just: Data_Maybe.Just.create,
+      killed: Killed.create,
+      filled: Filled.create,
+      empty: Empty.value
+  };
+  var kill = function (err) {
+      return function (avar) {
+          return $foreign["_killVar"](ffiUtil, err, avar);
+      };
+  };
+  var put = function (value) {
+      return function (avar) {
+          return function (cb) {
+              return $foreign["_putVar"](ffiUtil, value, avar, cb);
+          };
+      };
+  };
+  var take = function (avar) {
+      return function (cb) {
+          return $foreign["_takeVar"](ffiUtil, avar, cb);
+      };
+  };
+  exports["take"] = take;
+  exports["put"] = put;
+  exports["kill"] = kill;
+  exports["empty"] = $foreign.empty;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Effect.Aff.AVar"] = $PS["Effect.Aff.AVar"] || {};
+  var exports = $PS["Effect.Aff.AVar"];
+  var Effect_AVar = $PS["Effect.AVar"];
+  var Effect_Aff = $PS["Effect.Aff"];
+  var Effect_Class = $PS["Effect.Class"];
+  var take = function (avar) {
+      return Effect_Aff.makeAff(function (k) {
+          return function __do() {
+              var c = Effect_AVar.take(avar)(k)();
+              return Effect_Aff.effectCanceler(c);
+          };
+      });
+  };
+  var put = function (value) {
+      return function (avar) {
+          return Effect_Aff.makeAff(function (k) {
+              return function __do() {
+                  var c = Effect_AVar.put(value)(avar)(k)();
+                  return Effect_Aff.effectCanceler(c);
+              };
+          });
+      };
+  };   
+  var kill = function (error) {
+      var $11 = Effect_Class.liftEffect(Effect_Aff.monadEffectAff);
+      var $12 = Effect_AVar.kill(error);
+      return function ($13) {
+          return $11($12($13));
+      };
+  };
+  var empty = Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_AVar.empty);
+  exports["empty"] = empty;
+  exports["take"] = take;
+  exports["put"] = put;
+  exports["kill"] = kill;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Effect.Aff.Class"] = $PS["Effect.Aff.Class"] || {};
+  var exports = $PS["Effect.Aff.Class"];
+  var Control_Category = $PS["Control.Category"];
+  var Effect_Aff = $PS["Effect.Aff"];                
+  var MonadAff = function (MonadEffect0, liftAff) {
+      this.MonadEffect0 = MonadEffect0;
+      this.liftAff = liftAff;
+  };
+  var monadAffAff = new MonadAff(function () {
+      return Effect_Aff.monadEffectAff;
+  }, Control_Category.identity(Control_Category.categoryFn));
+  var liftAff = function (dict) {
+      return dict.liftAff;
+  };
+  exports["liftAff"] = liftAff;
+  exports["monadAffAff"] = monadAffAff;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.warn = function (s) {
+    return function () {
+      console.warn(s);
+      return {};
+    };
+  };
+})(PS["Effect.Console"] = PS["Effect.Console"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Effect.Console"] = $PS["Effect.Console"] || {};
+  var exports = $PS["Effect.Console"];
+  var $foreign = $PS["Effect.Console"];
+  exports["warn"] = $foreign.warn;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.error = function (msg) {
+    return new Error(msg);
+  };
+
+  exports.throwException = function (e) {
+    return function () {
+      throw e;
+    };
+  };
+})(PS["Effect.Exception"] = PS["Effect.Exception"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Effect.Exception"] = $PS["Effect.Exception"] || {};
+  var exports = $PS["Effect.Exception"];
+  var $foreign = $PS["Effect.Exception"];
+  var $$throw = function ($2) {
+      return $foreign.throwException($foreign.error($2));
+  };
+  exports["throw"] = $$throw;
+  exports["error"] = $foreign.error;
+  exports["throwException"] = $foreign.throwException;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.random = Math.random;
+})(PS["Effect.Random"] = PS["Effect.Random"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Effect.Random"] = $PS["Effect.Random"] || {};
+  var exports = $PS["Effect.Random"];
+  var $foreign = $PS["Effect.Random"];
+  var Data_Int = $PS["Data.Int"];
+  var randomInt = function (low) {
+      return function (high) {
+          return function __do() {
+              var n = $foreign.random();
+              var asNumber = ((Data_Int.toNumber(high) - Data_Int.toNumber(low)) + 1) * n + Data_Int.toNumber(low);
+              return Data_Int.floor(asNumber);
+          };
+      };
+  };
+  exports["randomInt"] = randomInt;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.Data.OrdBox"] = $PS["Halogen.Data.OrdBox"] || {};
+  var exports = $PS["Halogen.Data.OrdBox"];
+  var Data_Eq = $PS["Data.Eq"];
+  var Data_Ord = $PS["Data.Ord"];                
+  var OrdBox = (function () {
+      function OrdBox(value0, value1, value2) {
+          this.value0 = value0;
+          this.value1 = value1;
+          this.value2 = value2;
+      };
+      OrdBox.create = function (value0) {
+          return function (value1) {
+              return function (value2) {
+                  return new OrdBox(value0, value1, value2);
+              };
+          };
+      };
+      return OrdBox;
+  })();
+  var mkOrdBox = function (dictOrd) {
+      return OrdBox.create(Data_Eq.eq(dictOrd.Eq0()))(Data_Ord.compare(dictOrd));
+  };
+  var eqOrdBox = new Data_Eq.Eq(function (v) {
+      return function (v1) {
+          return v.value0(v.value2)(v1.value2);
+      };
+  });
+  var ordOrdBox = new Data_Ord.Ord(function () {
+      return eqOrdBox;
+  }, function (v) {
+      return function (v1) {
+          return v.value1(v.value2)(v1.value2);
+      };
+  });
+  exports["mkOrdBox"] = mkOrdBox;
+  exports["ordOrdBox"] = ordOrdBox;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.Data.Slot"] = $PS["Halogen.Data.Slot"] || {};
+  var exports = $PS["Halogen.Data.Slot"];
+  var Data_Foldable = $PS["Data.Foldable"];
+  var Data_Map_Internal = $PS["Data.Map.Internal"];
+  var Data_Ord = $PS["Data.Ord"];
+  var Data_Symbol = $PS["Data.Symbol"];
+  var Data_Tuple = $PS["Data.Tuple"];
+  var Halogen_Data_OrdBox = $PS["Halogen.Data.OrdBox"];
+  var pop = function (dictCons) {
+      return function (dictIsSymbol) {
+          return function (dictOrd) {
+              return function (sym) {
+                  return function (key) {
+                      return function (v) {
+                          return Data_Map_Internal.pop(Data_Tuple.ordTuple(Data_Ord.ordString)(Halogen_Data_OrdBox.ordOrdBox))(new Data_Tuple.Tuple(Data_Symbol.reflectSymbol(dictIsSymbol)(sym), Halogen_Data_OrdBox.mkOrdBox(dictOrd)(key)))(v);
+                      };
+                  };
+              };
+          };
+      };
+  };
+  var lookup = function (dictCons) {
+      return function (dictIsSymbol) {
+          return function (dictOrd) {
+              return function (sym) {
+                  return function (key) {
+                      return function (v) {
+                          return Data_Map_Internal.lookup(Data_Tuple.ordTuple(Data_Ord.ordString)(Halogen_Data_OrdBox.ordOrdBox))(new Data_Tuple.Tuple(Data_Symbol.reflectSymbol(dictIsSymbol)(sym), Halogen_Data_OrdBox.mkOrdBox(dictOrd)(key)))(v);
+                      };
+                  };
+              };
+          };
+      };
+  };
+  var insert = function (dictCons) {
+      return function (dictIsSymbol) {
+          return function (dictOrd) {
+              return function (sym) {
+                  return function (key) {
+                      return function (val) {
+                          return function (v) {
+                              return Data_Map_Internal.insert(Data_Tuple.ordTuple(Data_Ord.ordString)(Halogen_Data_OrdBox.ordOrdBox))(new Data_Tuple.Tuple(Data_Symbol.reflectSymbol(dictIsSymbol)(sym), Halogen_Data_OrdBox.mkOrdBox(dictOrd)(key)))(val)(v);
+                          };
+                      };
+                  };
+              };
+          };
+      };
+  };
+  var foreachSlot = function (dictApplicative) {
+      return function (v) {
+          return function (k) {
+              return Data_Foldable.traverse_(dictApplicative)(Data_Map_Internal.foldableMap)(function ($37) {
+                  return k($37);
+              })(v);
+          };
+      };
+  };
+  var empty = Data_Map_Internal.empty;
+  exports["empty"] = empty;
+  exports["lookup"] = lookup;
+  exports["insert"] = insert;
+  exports["pop"] = pop;
+  exports["foreachSlot"] = foreachSlot;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.Aff.Driver.State"] = $PS["Halogen.Aff.Driver.State"] || {};
+  var exports = $PS["Halogen.Aff.Driver.State"];
+  var Data_Foldable = $PS["Data.Foldable"];
+  var Data_List_Types = $PS["Data.List.Types"];
+  var Data_Map_Internal = $PS["Data.Map.Internal"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Effect_Ref = $PS["Effect.Ref"];
+  var Halogen_Data_Slot = $PS["Halogen.Data.Slot"];
+  var Unsafe_Coerce = $PS["Unsafe.Coerce"];
+  var unRenderStateX = Unsafe_Coerce.unsafeCoerce;
+  var unDriverStateX = Unsafe_Coerce.unsafeCoerce;
+  var renderStateX_ = function (dictApplicative) {
+      return function (f) {
+          return unDriverStateX(function (st) {
+              return Data_Foldable.traverse_(dictApplicative)(Data_Foldable.foldableMaybe)(f)(st.rendering);
+          });
+      };
+  };
+  var mkRenderStateX = Unsafe_Coerce.unsafeCoerce;
+  var renderStateX = function (dictFunctor) {
+      return function (f) {
+          return unDriverStateX(function (st) {
+              return mkRenderStateX(f(st.rendering));
+          });
+      };
+  };
+  var mkDriverStateXRef = Unsafe_Coerce.unsafeCoerce;
+  var mapDriverState = function (f) {
+      return function (v) {
+          return f(v);
+      };
+  };
+  var initDriverState = function (component) {
+      return function (input) {
+          return function (handler) {
+              return function (lchs) {
+                  return function __do() {
+                      var selfRef = Effect_Ref["new"]({})();
+                      var childrenIn = Effect_Ref["new"](Halogen_Data_Slot.empty)();
+                      var childrenOut = Effect_Ref["new"](Halogen_Data_Slot.empty)();
+                      var handlerRef = Effect_Ref["new"](handler)();
+                      var pendingQueries = Effect_Ref["new"](new Data_Maybe.Just(Data_List_Types.Nil.value))();
+                      var pendingOuts = Effect_Ref["new"](new Data_Maybe.Just(Data_List_Types.Nil.value))();
+                      var pendingHandlers = Effect_Ref["new"](Data_Maybe.Nothing.value)();
+                      var fresh = Effect_Ref["new"](1)();
+                      var subscriptions = Effect_Ref["new"](new Data_Maybe.Just(Data_Map_Internal.empty))();
+                      var forks = Effect_Ref["new"](Data_Map_Internal.empty)();
+                      var ds = {
+                          component: component,
+                          state: component.initialState(input),
+                          refs: Data_Map_Internal.empty,
+                          children: Halogen_Data_Slot.empty,
+                          childrenIn: childrenIn,
+                          childrenOut: childrenOut,
+                          selfRef: selfRef,
+                          handlerRef: handlerRef,
+                          pendingQueries: pendingQueries,
+                          pendingOuts: pendingOuts,
+                          pendingHandlers: pendingHandlers,
+                          rendering: Data_Maybe.Nothing.value,
+                          fresh: fresh,
+                          subscriptions: subscriptions,
+                          forks: forks,
+                          lifecycleHandlers: lchs
+                      };
+                      Effect_Ref.write(ds)(selfRef)();
+                      return mkDriverStateXRef(selfRef);
+                  };
+              };
+          };
+      };
+  };
+  exports["mapDriverState"] = mapDriverState;
+  exports["unDriverStateX"] = unDriverStateX;
+  exports["renderStateX"] = renderStateX;
+  exports["renderStateX_"] = renderStateX_;
+  exports["unRenderStateX"] = unRenderStateX;
+  exports["initDriverState"] = initDriverState;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.Query.ChildQuery"] = $PS["Halogen.Query.ChildQuery"] || {};
+  var exports = $PS["Halogen.Query.ChildQuery"];
+  var Unsafe_Coerce = $PS["Unsafe.Coerce"];
+  var unChildQueryBox = Unsafe_Coerce.unsafeCoerce;
+  exports["unChildQueryBox"] = unChildQueryBox;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.Query.EventSource"] = $PS["Halogen.Query.EventSource"] || {};
+  var exports = $PS["Halogen.Query.EventSource"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Apply = $PS["Control.Apply"];
+  var Control_Bind = $PS["Control.Bind"];
+  var Control_Coroutine = $PS["Control.Coroutine"];
+  var Control_Monad_Free_Trans = $PS["Control.Monad.Free.Trans"];
+  var Control_Monad_Trans_Class = $PS["Control.Monad.Trans.Class"];
+  var Data_Either = $PS["Data.Either"];
+  var Data_Function = $PS["Data.Function"];
+  var Data_Monoid = $PS["Data.Monoid"];
+  var Data_Semigroup = $PS["Data.Semigroup"];
+  var Data_Unit = $PS["Data.Unit"];
+  var Effect_Aff = $PS["Effect.Aff"];
+  var Effect_Aff_AVar = $PS["Effect.Aff.AVar"];
+  var Effect_Aff_Class = $PS["Effect.Aff.Class"];
+  var Effect_Exception = $PS["Effect.Exception"];
+  var EventSource = function (x) {
+      return x;
+  };
+  var semigroupFinalizer = function (dictApply) {
+      return new Data_Semigroup.Semigroup(function (v) {
+          return function (v1) {
+              return Control_Apply.applySecond(dictApply)(v)(v1);
+          };
+      });
+  };              
+  var monoidFinalizer = function (dictApplicative) {
+      return new Data_Monoid.Monoid(function () {
+          return semigroupFinalizer(dictApplicative.Apply0());
+      }, Control_Applicative.pure(dictApplicative)(Data_Unit.unit));
+  };
+  var finalize = function (v) {
+      return v;
+  };
+  var emit = function (v) {
+      return function (a) {
+          return v(new Data_Either.Left(a));
+      };
+  };
+  var affEventSource = function (dictMonadAff) {
+      return function (recv) {
+          return EventSource(Effect_Aff_Class.liftAff(dictMonadAff)(Control_Bind.bind(Effect_Aff.bindAff)(Effect_Aff_AVar.empty)(function (inputVar) {
+              return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Aff_AVar.empty)(function (finalizeVar) {
+                  var producer = Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Free_Trans.bindFreeT(Control_Coroutine.functorEmit)((dictMonadAff.MonadEffect0()).Monad0()))(Control_Monad_Trans_Class.lift(Control_Monad_Free_Trans.monadTransFreeT(Control_Coroutine.functorEmit))((dictMonadAff.MonadEffect0()).Monad0())(Effect_Aff_Class.liftAff(dictMonadAff)(Control_Bind.bindFlipped(Effect_Aff.bindAff)(Data_Function.flip(Effect_Aff_AVar.put)(finalizeVar))(recv(Data_Function.flip(Effect_Aff_AVar.put)(inputVar))))))(function () {
+                      return Control_Coroutine.producer((dictMonadAff.MonadEffect0()).Monad0())(Effect_Aff_Class.liftAff(dictMonadAff)(Effect_Aff_AVar.take(inputVar)));
+                  });
+                  var finalizer = Control_Bind.bind(((dictMonadAff.MonadEffect0()).Monad0()).Bind1())(Effect_Aff_Class.liftAff(dictMonadAff)(Effect_Aff.attempt(Effect_Aff_AVar.take(finalizeVar))))(function (v) {
+                      if (v instanceof Data_Either.Left) {
+                          return Control_Applicative.pure(((dictMonadAff.MonadEffect0()).Monad0()).Applicative0())(Data_Unit.unit);
+                      };
+                      if (v instanceof Data_Either.Right) {
+                          return Effect_Aff_Class.liftAff(dictMonadAff)(Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Effect_Aff_AVar.kill(Effect_Exception.error("finalized"))(finalizeVar))(function () {
+                              return finalize(v.value0);
+                          }));
+                      };
+                      throw new Error("Failed pattern match at Halogen.Query.EventSource (line 71, column 51 - line 75, column 21): " + [ v.constructor.name ]);
+                  });
+                  return Control_Applicative.pure(Effect_Aff.applicativeAff)({
+                      producer: producer,
+                      finalizer: finalizer
+                  });
+              });
+          })));
+      };
+  };
+  exports["affEventSource"] = affEventSource;
+  exports["emit"] = emit;
+  exports["finalize"] = finalize;
+  exports["monoidFinalizer"] = monoidFinalizer;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.Query.HalogenM"] = $PS["Halogen.Query.HalogenM"] || {};
+  var exports = $PS["Halogen.Query.HalogenM"];
+  var Control_Category = $PS["Control.Category"];
+  var Control_Monad_Free = $PS["Control.Monad.Free"];
+  var Control_Monad_State_Class = $PS["Control.Monad.State.Class"];
+  var Data_Ord = $PS["Data.Ord"];
+  var Effect_Class = $PS["Effect.Class"];                                          
+  var SubscriptionId = function (x) {
+      return x;
+  };
+  var ForkId = function (x) {
+      return x;
+  };
+  var State = (function () {
+      function State(value0) {
+          this.value0 = value0;
+      };
+      State.create = function (value0) {
+          return new State(value0);
+      };
+      return State;
+  })();
+  var Subscribe = (function () {
+      function Subscribe(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Subscribe.create = function (value0) {
+          return function (value1) {
+              return new Subscribe(value0, value1);
+          };
+      };
+      return Subscribe;
+  })();
+  var Unsubscribe = (function () {
+      function Unsubscribe(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Unsubscribe.create = function (value0) {
+          return function (value1) {
+              return new Unsubscribe(value0, value1);
+          };
+      };
+      return Unsubscribe;
+  })();
+  var Lift = (function () {
+      function Lift(value0) {
+          this.value0 = value0;
+      };
+      Lift.create = function (value0) {
+          return new Lift(value0);
+      };
+      return Lift;
+  })();
+  var ChildQuery = (function () {
+      function ChildQuery(value0) {
+          this.value0 = value0;
+      };
+      ChildQuery.create = function (value0) {
+          return new ChildQuery(value0);
+      };
+      return ChildQuery;
+  })();
+  var Raise = (function () {
+      function Raise(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Raise.create = function (value0) {
+          return function (value1) {
+              return new Raise(value0, value1);
+          };
+      };
+      return Raise;
+  })();
+  var Par = (function () {
+      function Par(value0) {
+          this.value0 = value0;
+      };
+      Par.create = function (value0) {
+          return new Par(value0);
+      };
+      return Par;
+  })();
+  var Fork = (function () {
+      function Fork(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Fork.create = function (value0) {
+          return function (value1) {
+              return new Fork(value0, value1);
+          };
+      };
+      return Fork;
+  })();
+  var Kill = (function () {
+      function Kill(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Kill.create = function (value0) {
+          return function (value1) {
+              return new Kill(value0, value1);
+          };
+      };
+      return Kill;
+  })();
+  var GetRef = (function () {
+      function GetRef(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      GetRef.create = function (value0) {
+          return function (value1) {
+              return new GetRef(value0, value1);
+          };
+      };
+      return GetRef;
+  })();
+  var HalogenM = function (x) {
+      return x;
+  };
+  var subscribe = function (es) {
+      return HalogenM(Control_Monad_Free.liftF(new Subscribe(function (v) {
+          return es;
+      }, Control_Category.identity(Control_Category.categoryFn))));
+  };
+  var ordSubscriptionId = Data_Ord.ordInt;
+  var ordForkId = Data_Ord.ordInt;
+  var monoidHalogenM = function (dictMonoid) {
+      return Control_Monad_Free.monoidFree(dictMonoid);
+  }; 
+  var monadHalogenM = Control_Monad_Free.freeMonad;
+  var monadStateHalogenM = new Control_Monad_State_Class.MonadState(function () {
+      return monadHalogenM;
+  }, function ($139) {
+      return HalogenM(Control_Monad_Free.liftF(State.create($139)));
+  });
+  var monadEffectHalogenM = function (dictMonadEffect) {
+      return new Effect_Class.MonadEffect(function () {
+          return monadHalogenM;
+      }, (function () {
+          var $144 = Effect_Class.liftEffect(dictMonadEffect);
+          return function ($145) {
+              return HalogenM(Control_Monad_Free.liftF(Lift.create($144($145))));
+          };
+      })());
+  };
+  var functorHalogenM = Control_Monad_Free.freeFunctor;
+  var bindHalogenM = Control_Monad_Free.freeBind;           
+  var applicativeHalogenM = Control_Monad_Free.freeApplicative;
+  exports["State"] = State;
+  exports["Subscribe"] = Subscribe;
+  exports["Unsubscribe"] = Unsubscribe;
+  exports["Lift"] = Lift;
+  exports["ChildQuery"] = ChildQuery;
+  exports["Raise"] = Raise;
+  exports["Par"] = Par;
+  exports["Fork"] = Fork;
+  exports["Kill"] = Kill;
+  exports["GetRef"] = GetRef;
+  exports["SubscriptionId"] = SubscriptionId;
+  exports["subscribe"] = subscribe;
+  exports["ForkId"] = ForkId;
+  exports["functorHalogenM"] = functorHalogenM;
+  exports["applicativeHalogenM"] = applicativeHalogenM;
+  exports["bindHalogenM"] = bindHalogenM;
+  exports["monoidHalogenM"] = monoidHalogenM;
+  exports["monadEffectHalogenM"] = monadEffectHalogenM;
+  exports["monadStateHalogenM"] = monadStateHalogenM;
+  exports["ordSubscriptionId"] = ordSubscriptionId;
+  exports["ordForkId"] = ordForkId;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.Query.HalogenQ"] = $PS["Halogen.Query.HalogenQ"] || {};
+  var exports = $PS["Halogen.Query.HalogenQ"];           
+  var Initialize = (function () {
+      function Initialize(value0) {
+          this.value0 = value0;
+      };
+      Initialize.create = function (value0) {
+          return new Initialize(value0);
+      };
+      return Initialize;
+  })();
+  var Finalize = (function () {
+      function Finalize(value0) {
+          this.value0 = value0;
+      };
+      Finalize.create = function (value0) {
+          return new Finalize(value0);
+      };
+      return Finalize;
+  })();
+  var Receive = (function () {
+      function Receive(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Receive.create = function (value0) {
+          return function (value1) {
+              return new Receive(value0, value1);
+          };
+      };
+      return Receive;
+  })();
+  var Action = (function () {
+      function Action(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Action.create = function (value0) {
+          return function (value1) {
+              return new Action(value0, value1);
+          };
+      };
+      return Action;
+  })();
+  var Query = (function () {
+      function Query(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      Query.create = function (value0) {
+          return function (value1) {
+              return new Query(value0, value1);
+          };
+      };
+      return Query;
+  })();
+  exports["Initialize"] = Initialize;
+  exports["Finalize"] = Finalize;
+  exports["Receive"] = Receive;
+  exports["Action"] = Action;
+  exports["Query"] = Query;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.Query.Input"] = $PS["Halogen.Query.Input"] || {};
+  var exports = $PS["Halogen.Query.Input"];
+  var RefUpdate = (function () {
+      function RefUpdate(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      RefUpdate.create = function (value0) {
+          return function (value1) {
+              return new RefUpdate(value0, value1);
+          };
+      };
+      return RefUpdate;
+  })();
+  var Action = (function () {
+      function Action(value0) {
+          this.value0 = value0;
+      };
+      Action.create = function (value0) {
+          return new Action(value0);
+      };
+      return Action;
+  })();
+  exports["RefUpdate"] = RefUpdate;
+  exports["Action"] = Action;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.reallyUnsafeRefEq = function (a) {
+    return function (b) {
+      return a === b;
+    };
+  };
+})(PS["Unsafe.Reference"] = PS["Unsafe.Reference"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Unsafe.Reference"] = $PS["Unsafe.Reference"] || {};
+  var exports = $PS["Unsafe.Reference"];
+  var $foreign = $PS["Unsafe.Reference"];
+  var unsafeRefEq = $foreign.reallyUnsafeRefEq;
+  exports["unsafeRefEq"] = unsafeRefEq;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.Aff.Driver.Eval"] = $PS["Halogen.Aff.Driver.Eval"] || {};
+  var exports = $PS["Halogen.Aff.Driver.Eval"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Applicative_Free = $PS["Control.Applicative.Free"];
+  var Control_Bind = $PS["Control.Bind"];
+  var Control_Coroutine = $PS["Control.Coroutine"];
+  var Control_Monad = $PS["Control.Monad"];
+  var Control_Monad_Fork_Class = $PS["Control.Monad.Fork.Class"];
+  var Control_Monad_Free = $PS["Control.Monad.Free"];
+  var Control_Monad_Free_Trans = $PS["Control.Monad.Free.Trans"];
+  var Control_Monad_Trans_Class = $PS["Control.Monad.Trans.Class"];
+  var Control_Parallel = $PS["Control.Parallel"];
+  var Control_Parallel_Class = $PS["Control.Parallel.Class"];
+  var Data_Boolean = $PS["Data.Boolean"];
+  var Data_Coyoneda = $PS["Data.Coyoneda"];
+  var Data_Eq = $PS["Data.Eq"];
+  var Data_Foldable = $PS["Data.Foldable"];
+  var Data_Function = $PS["Data.Function"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_List_Types = $PS["Data.List.Types"];
+  var Data_Map_Internal = $PS["Data.Map.Internal"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Data_Ord = $PS["Data.Ord"];
+  var Data_Unit = $PS["Data.Unit"];
+  var Effect = $PS["Effect"];
+  var Effect_Aff = $PS["Effect.Aff"];
+  var Effect_Class = $PS["Effect.Class"];
+  var Effect_Exception = $PS["Effect.Exception"];
+  var Effect_Ref = $PS["Effect.Ref"];
+  var Halogen_Aff_Driver_State = $PS["Halogen.Aff.Driver.State"];
+  var Halogen_Query_ChildQuery = $PS["Halogen.Query.ChildQuery"];
+  var Halogen_Query_EventSource = $PS["Halogen.Query.EventSource"];
+  var Halogen_Query_HalogenM = $PS["Halogen.Query.HalogenM"];
+  var Halogen_Query_HalogenQ = $PS["Halogen.Query.HalogenQ"];
+  var Halogen_Query_Input = $PS["Halogen.Query.Input"];
+  var Unsafe_Reference = $PS["Unsafe.Reference"];                
+  var unsubscribe = function (sid) {
+      return function (ref) {
+          return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(ref)))(function (v) {
+              return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(v.subscriptions)))(function (subs) {
+                  return Data_Foldable.traverse_(Effect_Aff.applicativeAff)(Data_Foldable.foldableMaybe)(Halogen_Query_EventSource.finalize)(Control_Bind.bindFlipped(Data_Maybe.bindMaybe)(Data_Map_Internal.lookup(Halogen_Query_HalogenM.ordSubscriptionId)(sid))(subs));
+              });
+          });
+      };
+  };
+  var queueOrRun = function (ref) {
+      return function (au) {
+          return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(ref)))(function (v) {
+              if (v instanceof Data_Maybe.Nothing) {
+                  return au;
+              };
+              if (v instanceof Data_Maybe.Just) {
+                  return Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.write(new Data_Maybe.Just(new Data_List_Types.Cons(au, v.value0)))(ref));
+              };
+              throw new Error("Failed pattern match at Halogen.Aff.Driver.Eval (line 195, column 33 - line 197, column 57): " + [ v.constructor.name ]);
+          });
+      };
+  };
+  var handleLifecycle = function (lchs) {
+      return function (f) {
+          return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.write({
+              initializers: Data_List_Types.Nil.value,
+              finalizers: Data_List_Types.Nil.value
+          })(lchs)))(function () {
+              return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(f))(function (result) {
+                  return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(lchs)))(function (v) {
+                      return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Foldable.traverse_(Effect_Aff.applicativeAff)(Data_List_Types.foldableList)(Control_Monad_Fork_Class.fork(Control_Monad_Fork_Class.monadForkAff))(v.finalizers))(function () {
+                          return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Control_Parallel.parSequence_(Effect_Aff.parallelAff)(Data_List_Types.foldableList)(v.initializers))(function () {
+                              return Control_Applicative.pure(Effect_Aff.applicativeAff)(result);
+                          });
+                      });
+                  });
+              });
+          });
+      };
+  };
+  var fresh = function (f) {
+      return function (ref) {
+          return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(ref)))(function (v) {
+              return Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref["modify'"](function (i) {
+                  return {
+                      state: i + 1 | 0,
+                      value: f(i)
+                  };
+              })(v.fresh));
+          });
+      };
+  };
+  var evalQ = function (render) {
+      return function (ref) {
+          return function (q) {
+              return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(ref)))(function (v) {
+                  return evalM(render)(ref)(v["component"]["eval"](new Halogen_Query_HalogenQ.Query(Data_Functor.map(Data_Coyoneda.functorCoyoneda)(Data_Maybe.Just.create)(Data_Coyoneda.liftCoyoneda(q)), Data_Function["const"](Data_Maybe.Nothing.value))));
+              });
+          };
+      };
+  };
+  var evalM = function (render) {
+      return function (initRef) {
+          return function (v) {
+              var evalChildQuery = function (ref) {
+                  return function (cqb) {
+                      return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(ref)))(function (v1) {
+                          return Halogen_Query_ChildQuery.unChildQueryBox(function (v2) {
+                              var evalChild = function (v3) {
+                                  return Control_Parallel_Class.parallel(Effect_Aff.parallelAff)(Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(v3)))(function (dsx) {
+                                      return Halogen_Aff_Driver_State.unDriverStateX(function (ds) {
+                                          return evalQ(render)(ds.selfRef)(v2.value1);
+                                      })(dsx);
+                                  }));
+                              };
+                              return Data_Functor.map(Effect_Aff.functorAff)(v2.value2)(Control_Parallel_Class.sequential(Effect_Aff.parallelAff)(v2.value0(Effect_Aff.applicativeParAff)(evalChild)(v1.children)));
+                          })(cqb);
+                      });
+                  };
+              };
+              var go = function (ref) {
+                  return function (v1) {
+                      if (v1 instanceof Halogen_Query_HalogenM.State) {
+                          return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(ref)))(function (v2) {
+                              var v3 = v1.value0(v2.state);
+                              if (Unsafe_Reference.unsafeRefEq(v2.state)(v3.value1)) {
+                                  return Control_Applicative.pure(Effect_Aff.applicativeAff)(v3.value0);
+                              };
+                              if (Data_Boolean.otherwise) {
+                                  return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.write({
+                                      component: v2.component,
+                                      state: v3.value1,
+                                      refs: v2.refs,
+                                      children: v2.children,
+                                      childrenIn: v2.childrenIn,
+                                      childrenOut: v2.childrenOut,
+                                      selfRef: v2.selfRef,
+                                      handlerRef: v2.handlerRef,
+                                      pendingQueries: v2.pendingQueries,
+                                      pendingOuts: v2.pendingOuts,
+                                      pendingHandlers: v2.pendingHandlers,
+                                      rendering: v2.rendering,
+                                      fresh: v2.fresh,
+                                      subscriptions: v2.subscriptions,
+                                      forks: v2.forks,
+                                      lifecycleHandlers: v2.lifecycleHandlers
+                                  })(ref)))(function () {
+                                      return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(handleLifecycle(v2.lifecycleHandlers)(render(v2.lifecycleHandlers)(ref)))(function () {
+                                          return Control_Applicative.pure(Effect_Aff.applicativeAff)(v3.value0);
+                                      });
+                                  });
+                              };
+                              throw new Error("Failed pattern match at Halogen.Aff.Driver.Eval (line 85, column 7 - line 91, column 21): " + [ v3.constructor.name ]);
+                          });
+                      };
+                      if (v1 instanceof Halogen_Query_HalogenM.Subscribe) {
+                          return Control_Bind.bind(Effect_Aff.bindAff)(fresh(Halogen_Query_HalogenM.SubscriptionId)(ref))(function (sid) {
+                              var v2 = v1.value0(sid);
+                              return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(ref)))(function (v3) {
+                                  return Control_Bind.bind(Effect_Aff.bindAff)(Control_Monad_Fork_Class.fork(Control_Monad_Fork_Class.monadForkAff)(Control_Bind.bind(Effect_Aff.bindAff)(v2)(function (v4) {
+                                      var done = Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(v3.subscriptions)))(function (subs) {
+                                          return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.modify_(Data_Functor.map(Data_Maybe.functorMaybe)(Data_Map_Internal["delete"](Halogen_Query_HalogenM.ordSubscriptionId)(sid)))(v3.subscriptions)))(function () {
+                                              return Control_Applicative.when(Effect_Aff.applicativeAff)(Data_Maybe.maybe(false)(Data_Map_Internal.member(Halogen_Query_HalogenM.ordSubscriptionId)(sid))(subs))(Halogen_Query_EventSource.finalize(v4.finalizer));
+                                          });
+                                      });
+                                      var consumer = Control_Bind.bind(Control_Monad_Free_Trans.bindFreeT(Control_Coroutine.functorAwait)(Effect_Aff.monadAff))(Control_Coroutine["await"](Effect_Aff.monadAff))(function (act) {
+                                          return Control_Bind.bind(Control_Monad_Free_Trans.bindFreeT(Control_Coroutine.functorAwait)(Effect_Aff.monadAff))(Control_Monad_Trans_Class.lift(Control_Monad_Free_Trans.monadTransFreeT(Control_Coroutine.functorAwait))(Effect_Aff.monadAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(v3.subscriptions))))(function (subs) {
+                                              return Control_Applicative.when(Control_Monad_Free_Trans.applicativeFreeT(Control_Coroutine.functorAwait)(Effect_Aff.monadAff))(Data_Eq.eq(Data_Maybe.eqMaybe(Data_Eq.eqBoolean))(Data_Functor.map(Data_Maybe.functorMaybe)(Data_Map_Internal.member(Halogen_Query_HalogenM.ordSubscriptionId)(sid))(subs))(new Data_Maybe.Just(true)))(Control_Bind.bind(Control_Monad_Free_Trans.bindFreeT(Control_Coroutine.functorAwait)(Effect_Aff.monadAff))(Control_Monad_Trans_Class.lift(Control_Monad_Free_Trans.monadTransFreeT(Control_Coroutine.functorAwait))(Effect_Aff.monadAff)(Control_Monad_Fork_Class.fork(Control_Monad_Fork_Class.monadForkAff)(evalF(render)(ref)(new Halogen_Query_Input.Action(act)))))(function () {
+                                                  return consumer;
+                                              }));
+                                          });
+                                      });
+                                      return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.modify_(Data_Functor.map(Data_Maybe.functorMaybe)(Data_Map_Internal.insert(Halogen_Query_HalogenM.ordSubscriptionId)(sid)(done)))(v3.subscriptions)))(function () {
+                                          return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Control_Coroutine.runProcess(Effect_Aff.monadRecAff)(Control_Coroutine.pullFrom(Effect_Aff.monadRecAff)(consumer)(v4.producer)))(function () {
+                                              return Halogen_Query_EventSource.finalize(done);
+                                          });
+                                      });
+                                  })))(function () {
+                                      return Control_Applicative.pure(Effect_Aff.applicativeAff)(v1.value1(sid));
+                                  });
+                              });
+                          });
+                      };
+                      if (v1 instanceof Halogen_Query_HalogenM.Unsubscribe) {
+                          return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(unsubscribe(v1.value0)(ref))(function () {
+                              return Control_Applicative.pure(Effect_Aff.applicativeAff)(v1.value1);
+                          });
+                      };
+                      if (v1 instanceof Halogen_Query_HalogenM.Lift) {
+                          return v1.value0;
+                      };
+                      if (v1 instanceof Halogen_Query_HalogenM.ChildQuery) {
+                          return evalChildQuery(ref)(v1.value0);
+                      };
+                      if (v1 instanceof Halogen_Query_HalogenM.Raise) {
+                          return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(ref)))(function (v2) {
+                              return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(v2.handlerRef)))(function (handler) {
+                                  return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(queueOrRun(v2.pendingOuts)(handler(v1.value0)))(function () {
+                                      return Control_Applicative.pure(Effect_Aff.applicativeAff)(v1.value1);
+                                  });
+                              });
+                          });
+                      };
+                      if (v1 instanceof Halogen_Query_HalogenM.Par) {
+                          return Control_Parallel_Class.sequential(Effect_Aff.parallelAff)(Control_Applicative_Free.retractFreeAp(Effect_Aff.applicativeParAff)(Control_Applicative_Free.hoistFreeAp((function () {
+                              var $85 = Control_Parallel_Class.parallel(Effect_Aff.parallelAff);
+                              var $86 = evalM(render)(ref);
+                              return function ($87) {
+                                  return $85($86($87));
+                              };
+                          })())(v1.value0)));
+                      };
+                      if (v1 instanceof Halogen_Query_HalogenM.Fork) {
+                          return Control_Bind.bind(Effect_Aff.bindAff)(fresh(Halogen_Query_HalogenM.ForkId)(ref))(function (fid) {
+                              return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(ref)))(function (v2) {
+                                  return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref["new"](false)))(function (doneRef) {
+                                      return Control_Bind.bind(Effect_Aff.bindAff)(Control_Monad_Fork_Class.fork(Control_Monad_Fork_Class.monadForkAff)(Effect_Aff["finally"](Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(function __do() {
+                                          Effect_Ref.modify_(Data_Map_Internal["delete"](Halogen_Query_HalogenM.ordForkId)(fid))(v2.forks)();
+                                          return Effect_Ref.write(true)(doneRef)();
+                                      }))(evalM(render)(ref)(v1.value0))))(function (fiber) {
+                                          return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Control_Monad.unlessM(Effect.monadEffect)(Effect_Ref.read(doneRef))(Effect_Ref.modify_(Data_Map_Internal.insert(Halogen_Query_HalogenM.ordForkId)(fid)(fiber))(v2.forks))))(function () {
+                                              return Control_Applicative.pure(Effect_Aff.applicativeAff)(v1.value1(fid));
+                                          });
+                                      });
+                                  });
+                              });
+                          });
+                      };
+                      if (v1 instanceof Halogen_Query_HalogenM.Kill) {
+                          return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(ref)))(function (v2) {
+                              return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(v2.forks)))(function (forkMap) {
+                                  return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Foldable.traverse_(Effect_Aff.applicativeAff)(Data_Foldable.foldableMaybe)(Effect_Aff.killFiber(Effect_Exception.error("Cancelled")))(Data_Map_Internal.lookup(Halogen_Query_HalogenM.ordForkId)(v1.value0)(forkMap)))(function () {
+                                      return Control_Applicative.pure(Effect_Aff.applicativeAff)(v1.value1);
+                                  });
+                              });
+                          });
+                      };
+                      if (v1 instanceof Halogen_Query_HalogenM.GetRef) {
+                          return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(ref)))(function (v2) {
+                              return Control_Applicative.pure(Effect_Aff.applicativeAff)(v1.value1(Data_Map_Internal.lookup(Data_Ord.ordString)(v1.value0)(v2.refs)));
+                          });
+                      };
+                      throw new Error("Failed pattern match at Halogen.Aff.Driver.Eval (line 82, column 12 - line 146, column 33): " + [ v1.constructor.name ]);
+                  };
+              };
+              return Control_Monad_Free.foldFree(Effect_Aff.monadRecAff)(go(initRef))(v);
+          };
+      };
+  };
+  var evalF = function (render) {
+      return function (ref) {
+          return function (v) {
+              if (v instanceof Halogen_Query_Input.RefUpdate) {
+                  return Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Data_Function.flip(Effect_Ref.modify_)(ref)(Halogen_Aff_Driver_State.mapDriverState(function (st) {
+                      return {
+                          component: st.component,
+                          state: st.state,
+                          refs: Data_Map_Internal.alter(Data_Ord.ordString)(Data_Function["const"](v.value1))(v.value0)(st.refs),
+                          children: st.children,
+                          childrenIn: st.childrenIn,
+                          childrenOut: st.childrenOut,
+                          selfRef: st.selfRef,
+                          handlerRef: st.handlerRef,
+                          pendingQueries: st.pendingQueries,
+                          pendingOuts: st.pendingOuts,
+                          pendingHandlers: st.pendingHandlers,
+                          rendering: st.rendering,
+                          fresh: st.fresh,
+                          subscriptions: st.subscriptions,
+                          forks: st.forks,
+                          lifecycleHandlers: st.lifecycleHandlers
+                      };
+                  })));
+              };
+              if (v instanceof Halogen_Query_Input.Action) {
+                  return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(ref)))(function (v1) {
+                      return evalM(render)(ref)(v1["component"]["eval"](new Halogen_Query_HalogenQ.Action(v.value0, Data_Unit.unit)));
+                  });
+              };
+              throw new Error("Failed pattern match at Halogen.Aff.Driver.Eval (line 51, column 20 - line 57, column 62): " + [ v.constructor.name ]);
+          };
+      };
+  };
+  exports["evalF"] = evalF;
+  exports["evalQ"] = evalQ;
+  exports["evalM"] = evalM;
+  exports["handleLifecycle"] = handleLifecycle;
+  exports["queueOrRun"] = queueOrRun;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.Component"] = $PS["Halogen.Component"] || {};
+  var exports = $PS["Halogen.Component"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Data_Coyoneda = $PS["Data.Coyoneda"];
+  var Data_Foldable = $PS["Data.Foldable"];
+  var Data_Function = $PS["Data.Function"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Data_Unit = $PS["Data.Unit"];
+  var Halogen_Data_Slot = $PS["Halogen.Data.Slot"];
+  var Halogen_Query_HalogenM = $PS["Halogen.Query.HalogenM"];
+  var Halogen_Query_HalogenQ = $PS["Halogen.Query.HalogenQ"];
+  var Unsafe_Coerce = $PS["Unsafe.Coerce"];                
+  var ComponentSlot = (function () {
+      function ComponentSlot(value0) {
+          this.value0 = value0;
+      };
+      ComponentSlot.create = function (value0) {
+          return new ComponentSlot(value0);
+      };
+      return ComponentSlot;
+  })();
+  var ThunkSlot = (function () {
+      function ThunkSlot(value0) {
+          this.value0 = value0;
+      };
+      ThunkSlot.create = function (value0) {
+          return new ThunkSlot(value0);
+      };
+      return ThunkSlot;
+  })();
+  var unComponentSlot = Unsafe_Coerce.unsafeCoerce;
+  var unComponent = Unsafe_Coerce.unsafeCoerce;
+  var mkEval = function (args) {
+      return function (v) {
+          if (v instanceof Halogen_Query_HalogenQ.Initialize) {
+              return Data_Functor.voidLeft(Halogen_Query_HalogenM.functorHalogenM)(Data_Foldable.traverse_(Halogen_Query_HalogenM.applicativeHalogenM)(Data_Foldable.foldableMaybe)(args.handleAction)(args.initialize))(v.value0);
+          };
+          if (v instanceof Halogen_Query_HalogenQ.Finalize) {
+              return Data_Functor.voidLeft(Halogen_Query_HalogenM.functorHalogenM)(Data_Foldable.traverse_(Halogen_Query_HalogenM.applicativeHalogenM)(Data_Foldable.foldableMaybe)(args.handleAction)(args.finalize))(v.value0);
+          };
+          if (v instanceof Halogen_Query_HalogenQ.Receive) {
+              return Data_Functor.voidLeft(Halogen_Query_HalogenM.functorHalogenM)(Data_Foldable.traverse_(Halogen_Query_HalogenM.applicativeHalogenM)(Data_Foldable.foldableMaybe)(args.handleAction)(args.receive(v.value0)))(v.value1);
+          };
+          if (v instanceof Halogen_Query_HalogenQ.Action) {
+              return Data_Functor.voidLeft(Halogen_Query_HalogenM.functorHalogenM)(args.handleAction(v.value0))(v.value1);
+          };
+          if (v instanceof Halogen_Query_HalogenQ.Query) {
+              return Data_Coyoneda.unCoyoneda(function (g) {
+                  var $28 = Data_Functor.map(Halogen_Query_HalogenM.functorHalogenM)(Data_Maybe.maybe(v.value1(Data_Unit.unit))(g));
+                  return function ($29) {
+                      return $28(args.handleQuery($29));
+                  };
+              })(v.value0);
+          };
+          throw new Error("Failed pattern match at Halogen.Component (line 187, column 15 - line 197, column 70): " + [ v.constructor.name ]);
+      };
+  };
+  var mkComponentSlot = Unsafe_Coerce.unsafeCoerce;
+  var mkComponent = Unsafe_Coerce.unsafeCoerce;
+  var defaultEval = {
+      handleAction: Data_Function["const"](Control_Applicative.pure(Halogen_Query_HalogenM.applicativeHalogenM)(Data_Unit.unit)),
+      handleQuery: Data_Function["const"](Control_Applicative.pure(Halogen_Query_HalogenM.applicativeHalogenM)(Data_Maybe.Nothing.value)),
+      receive: Data_Function["const"](Data_Maybe.Nothing.value),
+      initialize: Data_Maybe.Nothing.value,
+      finalize: Data_Maybe.Nothing.value
+  };
+  var componentSlot = function (dictCons) {
+      return function (dictIsSymbol) {
+          return function (dictOrd) {
+              return function (label) {
+                  return function (p) {
+                      return function (comp) {
+                          return function (input) {
+                              return function (output) {
+                                  return mkComponentSlot({
+                                      get: Halogen_Data_Slot.lookup()(dictIsSymbol)(dictOrd)(label)(p),
+                                      pop: Halogen_Data_Slot.pop()(dictIsSymbol)(dictOrd)(label)(p),
+                                      set: Halogen_Data_Slot.insert()(dictIsSymbol)(dictOrd)(label)(p),
+                                      component: comp,
+                                      input: input,
+                                      output: output
+                                  });
+                              };
+                          };
+                      };
+                  };
+              };
+          };
+      };
+  };
+  exports["mkComponent"] = mkComponent;
+  exports["unComponent"] = unComponent;
+  exports["mkEval"] = mkEval;
+  exports["defaultEval"] = defaultEval;
+  exports["ComponentSlot"] = ComponentSlot;
+  exports["ThunkSlot"] = ThunkSlot;
+  exports["componentSlot"] = componentSlot;
+  exports["unComponentSlot"] = unComponentSlot;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.Aff.Driver"] = $PS["Halogen.Aff.Driver"] || {};
+  var exports = $PS["Halogen.Aff.Driver"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Bind = $PS["Control.Bind"];
+  var Control_Category = $PS["Control.Category"];
+  var Control_Coroutine = $PS["Control.Coroutine"];
+  var Control_Monad_Error_Class = $PS["Control.Monad.Error.Class"];
+  var Control_Monad_Fork_Class = $PS["Control.Monad.Fork.Class"];
+  var Control_Monad_Rec_Class = $PS["Control.Monad.Rec.Class"];
+  var Control_Parallel = $PS["Control.Parallel"];
+  var Data_Either = $PS["Data.Either"];
+  var Data_Foldable = $PS["Data.Foldable"];
+  var Data_Function = $PS["Data.Function"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_List = $PS["Data.List"];
+  var Data_List_Types = $PS["Data.List.Types"];
+  var Data_Map_Internal = $PS["Data.Map.Internal"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Data_Ord = $PS["Data.Ord"];
+  var Data_Unit = $PS["Data.Unit"];
+  var Effect = $PS["Effect"];
+  var Effect_Aff = $PS["Effect.Aff"];
+  var Effect_Aff_AVar = $PS["Effect.Aff.AVar"];
+  var Effect_Class = $PS["Effect.Class"];
+  var Effect_Console = $PS["Effect.Console"];
+  var Effect_Exception = $PS["Effect.Exception"];
+  var Effect_Ref = $PS["Effect.Ref"];
+  var Halogen_Aff_Driver_Eval = $PS["Halogen.Aff.Driver.Eval"];
+  var Halogen_Aff_Driver_State = $PS["Halogen.Aff.Driver.State"];
+  var Halogen_Component = $PS["Halogen.Component"];
+  var Halogen_Data_Slot = $PS["Halogen.Data.Slot"];
+  var Halogen_Query_EventSource = $PS["Halogen.Query.EventSource"];
+  var Halogen_Query_HalogenQ = $PS["Halogen.Query.HalogenQ"];
+  var Halogen_Query_Input = $PS["Halogen.Query.Input"];                
+  var newLifecycleHandlers = Effect_Ref["new"]({
+      initializers: Data_List_Types.Nil.value,
+      finalizers: Data_List_Types.Nil.value
+  });
+  var handleAff = Effect_Aff.runAff_(Data_Either.either(Effect_Exception.throwException)(Data_Function["const"](Control_Applicative.pure(Effect.applicativeEffect)(Data_Unit.unit))));
+  var handlePending = function (ref) {
+      return function __do() {
+          var queue = Effect_Ref.read(ref)();
+          Effect_Ref.write(Data_Maybe.Nothing.value)(ref)();
+          return Data_Foldable.for_(Effect.applicativeEffect)(Data_Foldable.foldableMaybe)(queue)((function () {
+              var $25 = Data_Foldable.traverse_(Effect_Aff.applicativeAff)(Data_List_Types.foldableList)(Control_Monad_Fork_Class.fork(Control_Monad_Fork_Class.monadForkAff));
+              return function ($26) {
+                  return handleAff($25(Data_List.reverse($26)));
+              };
+          })())();
+      };
+  };
+  var cleanupSubscriptionsAndForks = function (v) {
+      return function __do() {
+          Control_Bind.bindFlipped(Effect.bindEffect)(Data_Foldable.traverse_(Effect.applicativeEffect)(Data_Foldable.foldableMaybe)((function () {
+              var $27 = Data_Foldable.traverse_(Effect_Aff.applicativeAff)(Data_Map_Internal.foldableMap)((function () {
+                  var $29 = Control_Monad_Fork_Class.fork(Control_Monad_Fork_Class.monadForkAff);
+                  return function ($30) {
+                      return $29(Halogen_Query_EventSource.finalize($30));
+                  };
+              })());
+              return function ($28) {
+                  return handleAff($27($28));
+              };
+          })()))(Effect_Ref.read(v.subscriptions))();
+          Effect_Ref.write(Data_Maybe.Nothing.value)(v.subscriptions)();
+          Control_Bind.bindFlipped(Effect.bindEffect)(Data_Foldable.traverse_(Effect.applicativeEffect)(Data_Map_Internal.foldableMap)((function () {
+              var $31 = Effect_Aff.killFiber(Effect_Exception.error("finalized"));
+              return function ($32) {
+                  return handleAff($31($32));
+              };
+          })()))(Effect_Ref.read(v.forks))();
+          return Effect_Ref.write(Data_Map_Internal.empty)(v.forks)();
+      };
+  };
+  var runUI = function (renderSpec) {
+      return function (component) {
+          return function (i) {
+              var subscribe = function (fresh) {
+                  return function (ref) {
+                      return function (consumer) {
+                          return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Aff_AVar.empty)(function (inputVar) {
+                              return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(function __do() {
+                                  var listenerId = Effect_Ref.read(fresh)();
+                                  Effect_Ref.modify_(function (v) {
+                                      return v + 1 | 0;
+                                  })(fresh)();
+                                  Effect_Ref.modify_(Data_Map_Internal.insert(Data_Ord.ordInt)(listenerId)(inputVar))(ref)();
+                                  return listenerId;
+                              }))(function (listenerId) {
+                                  var producer = Control_Coroutine.producer(Effect_Aff.monadAff)(Data_Functor.map(Effect_Aff.functorAff)(Data_Either.either(Data_Function["const"](new Data_Either.Right(Data_Unit.unit)))(Data_Either.Left.create))(Control_Monad_Error_Class["try"](Effect_Aff.monadErrorAff)(Effect_Aff_AVar.take(inputVar))));
+                                  return Data_Functor["void"](Effect_Aff.functorAff)(Control_Monad_Fork_Class.fork(Control_Monad_Fork_Class.monadForkAff)(Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Control_Coroutine.runProcess(Effect_Aff.monadRecAff)(Control_Coroutine.connect(Effect_Aff.monadRecAff)(Effect_Aff.parallelAff)(producer)(consumer)))(function () {
+                                      return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.modify_(Data_Map_Internal["delete"](Data_Ord.ordInt)(listenerId))(ref)))(function () {
+                                          return Effect_Aff_AVar.kill(Effect_Exception.error("ended"))(inputVar);
+                                      });
+                                  })));
+                              });
+                          });
+                      };
+                  };
+              };
+              var rootHandler = function (ref) {
+                  return function (message) {
+                      return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(ref)))(function (listeners) {
+                          return Data_Foldable.traverse_(Effect_Aff.applicativeAff)(Data_Map_Internal.foldableMap)(Control_Monad_Fork_Class.fork(Control_Monad_Fork_Class.monadForkAff))(Data_Functor.map(Data_Map_Internal.functorMap)(Effect_Aff_AVar.put(message))(listeners));
+                      });
+                  };
+              };
+              var squashChildInitializers = function (lchs) {
+                  return function (preInits) {
+                      return Halogen_Aff_Driver_State.unDriverStateX(function (st) {
+                          var parentInitializer = Halogen_Aff_Driver_Eval.evalM(render)(st.selfRef)(st["component"]["eval"](new Halogen_Query_HalogenQ.Initialize(Data_Unit.unit)));
+                          return Effect_Ref.modify_(function (handlers) {
+                              return {
+                                  initializers: new Data_List_Types.Cons(Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Control_Parallel.parSequence_(Effect_Aff.parallelAff)(Data_List_Types.foldableList)(Data_List.reverse(handlers.initializers)))(function () {
+                                      return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(parentInitializer)(function () {
+                                          return Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(function __do() {
+                                              handlePending(st.pendingQueries)();
+                                              return handlePending(st.pendingOuts)();
+                                          });
+                                      });
+                                  }), preInits),
+                                  finalizers: handlers.finalizers
+                              };
+                          })(lchs);
+                      });
+                  };
+              };
+              var runComponent = function (lchs) {
+                  return function (handler) {
+                      return function (j) {
+                          return Halogen_Component.unComponent(function (c) {
+                              return function __do() {
+                                  var lchs$prime = newLifecycleHandlers();
+                                  var $$var = Halogen_Aff_Driver_State.initDriverState(c)(j)(handler)(lchs$prime)();
+                                  var pre = Effect_Ref.read(lchs)();
+                                  Effect_Ref.write({
+                                      initializers: Data_List_Types.Nil.value,
+                                      finalizers: pre.finalizers
+                                  })(lchs)();
+                                  Control_Bind.bindFlipped(Effect.bindEffect)(Halogen_Aff_Driver_State.unDriverStateX((function () {
+                                      var $33 = render(lchs);
+                                      return function ($34) {
+                                          return $33((function (v) {
+                                              return v.selfRef;
+                                          })($34));
+                                      };
+                                  })()))(Effect_Ref.read($$var))();
+                                  Control_Bind.bindFlipped(Effect.bindEffect)(squashChildInitializers(lchs)(pre.initializers))(Effect_Ref.read($$var))();
+                                  return $$var;
+                              };
+                          });
+                      };
+                  };
+              };
+              var renderChild = function (lchs) {
+                  return function (handler) {
+                      return function (childrenInRef) {
+                          return function (childrenOutRef) {
+                              return Halogen_Component.unComponentSlot(function (slot) {
+                                  return function __do() {
+                                      var childrenIn = Data_Functor.map(Effect.functorEffect)(slot.pop)(Effect_Ref.read(childrenInRef))();
+                                      var $$var = (function () {
+                                          if (childrenIn instanceof Data_Maybe.Just) {
+                                              Effect_Ref.write(childrenIn.value0.value1)(childrenInRef)();
+                                              var dsx = Effect_Ref.read(childrenIn.value0.value0)();
+                                              Halogen_Aff_Driver_State.unDriverStateX(function (st) {
+                                                  return function __do() {
+                                                      Data_Function.flip(Effect_Ref.write)(st.handlerRef)((function () {
+                                                          var $35 = Data_Maybe.maybe(Control_Applicative.pure(Effect_Aff.applicativeAff)(Data_Unit.unit))(handler);
+                                                          return function ($36) {
+                                                              return $35(slot.output($36));
+                                                          };
+                                                      })())();
+                                                      return handleAff(Halogen_Aff_Driver_Eval.evalM(render)(st.selfRef)(st["component"]["eval"](new Halogen_Query_HalogenQ.Receive(slot.input, Data_Unit.unit))))();
+                                                  };
+                                              })(dsx)();
+                                              return childrenIn.value0.value0;
+                                          };
+                                          if (childrenIn instanceof Data_Maybe.Nothing) {
+                                              return runComponent(lchs)((function () {
+                                                  var $37 = Data_Maybe.maybe(Control_Applicative.pure(Effect_Aff.applicativeAff)(Data_Unit.unit))(handler);
+                                                  return function ($38) {
+                                                      return $37(slot.output($38));
+                                                  };
+                                              })())(slot.input)(slot.component)();
+                                          };
+                                          throw new Error("Failed pattern match at Halogen.Aff.Driver (line 236, column 14 - line 245, column 98): " + [ childrenIn.constructor.name ]);
+                                      })();
+                                      var isDuplicate = Data_Functor.map(Effect.functorEffect)(function ($39) {
+                                          return Data_Maybe.isJust(slot.get($39));
+                                      })(Effect_Ref.read(childrenOutRef))();
+                                      Control_Applicative.when(Effect.applicativeEffect)(isDuplicate)(Effect_Console.warn("Halogen: Duplicate slot address was detected during rendering, unexpected results may occur"))();
+                                      Effect_Ref.modify_(slot.set($$var))(childrenOutRef)();
+                                      return Control_Bind.bind(Effect.bindEffect)(Effect_Ref.read($$var))(Halogen_Aff_Driver_State.renderStateX(Effect.functorEffect)(function (v) {
+                                          if (v instanceof Data_Maybe.Nothing) {
+                                              return Effect_Exception["throw"]("Halogen internal error: child was not initialized in renderChild");
+                                          };
+                                          if (v instanceof Data_Maybe.Just) {
+                                              return Control_Applicative.pure(Effect.applicativeEffect)(renderSpec.renderChild(v.value0));
+                                          };
+                                          throw new Error("Failed pattern match at Halogen.Aff.Driver (line 250, column 37 - line 252, column 50): " + [ v.constructor.name ]);
+                                      }))();
+                                  };
+                              });
+                          };
+                      };
+                  };
+              };
+              var render = function (lchs) {
+                  return function ($$var) {
+                      return function __do() {
+                          var v = Effect_Ref.read($$var)();
+                          var shouldProcessHandlers = Data_Functor.map(Effect.functorEffect)(Data_Maybe.isNothing)(Effect_Ref.read(v.pendingHandlers))();
+                          Control_Applicative.when(Effect.applicativeEffect)(shouldProcessHandlers)(Effect_Ref.write(new Data_Maybe.Just(Data_List_Types.Nil.value))(v.pendingHandlers))();
+                          Effect_Ref.write(Halogen_Data_Slot.empty)(v.childrenOut)();
+                          Effect_Ref.write(v.children)(v.childrenIn)();
+                          var selfRef = Control_Category.identity(Control_Category.categoryFn)(v.selfRef);
+                          var pendingQueries = Control_Category.identity(Control_Category.categoryFn)(v.pendingQueries);
+                          var pendingHandlers = Control_Category.identity(Control_Category.categoryFn)(v.pendingHandlers);
+                          var handler = (function () {
+                              var $40 = Halogen_Aff_Driver_Eval.queueOrRun(pendingHandlers);
+                              var $41 = Data_Functor["void"](Effect_Aff.functorAff);
+                              var $42 = Halogen_Aff_Driver_Eval.evalF(render)(selfRef);
+                              return function ($43) {
+                                  return $40($41($42($43)));
+                              };
+                          })();
+                          var childHandler = (function () {
+                              var $44 = Halogen_Aff_Driver_Eval.queueOrRun(pendingQueries);
+                              return function ($45) {
+                                  return $44(handler(Halogen_Query_Input.Action.create($45)));
+                              };
+                          })();
+                          var rendering = renderSpec.render(function ($46) {
+                              return handleAff(handler($46));
+                          })(renderChild(lchs)(childHandler)(v.childrenIn)(v.childrenOut))(v.component.render(v.state))(v.rendering)();
+                          var children = Effect_Ref.read(v.childrenOut)();
+                          var childrenIn = Effect_Ref.read(v.childrenIn)();
+                          Halogen_Data_Slot.foreachSlot(Effect.applicativeEffect)(childrenIn)(function (v1) {
+                              return function __do() {
+                                  var childDS = Effect_Ref.read(v1)();
+                                  Halogen_Aff_Driver_State.renderStateX_(Effect.applicativeEffect)(renderSpec.removeChild)(childDS)();
+                                  return finalize(lchs)(childDS)();
+                              };
+                          })();
+                          Data_Function.flip(Effect_Ref.modify_)(v.selfRef)(Halogen_Aff_Driver_State.mapDriverState(function (ds$prime) {
+                              return {
+                                  component: ds$prime.component,
+                                  state: ds$prime.state,
+                                  refs: ds$prime.refs,
+                                  children: children,
+                                  childrenIn: ds$prime.childrenIn,
+                                  childrenOut: ds$prime.childrenOut,
+                                  selfRef: ds$prime.selfRef,
+                                  handlerRef: ds$prime.handlerRef,
+                                  pendingQueries: ds$prime.pendingQueries,
+                                  pendingOuts: ds$prime.pendingOuts,
+                                  pendingHandlers: ds$prime.pendingHandlers,
+                                  rendering: new Data_Maybe.Just(rendering),
+                                  fresh: ds$prime.fresh,
+                                  subscriptions: ds$prime.subscriptions,
+                                  forks: ds$prime.forks,
+                                  lifecycleHandlers: ds$prime.lifecycleHandlers
+                              };
+                          }))();
+                          return Control_Applicative.when(Effect.applicativeEffect)(shouldProcessHandlers)(Data_Function.flip(Control_Monad_Rec_Class.tailRecM(Control_Monad_Rec_Class.monadRecEffect))(Data_Unit.unit)(function (v1) {
+                              return function __do() {
+                                  var handlers = Effect_Ref.read(pendingHandlers)();
+                                  Effect_Ref.write(new Data_Maybe.Just(Data_List_Types.Nil.value))(pendingHandlers)();
+                                  Data_Foldable.traverse_(Effect.applicativeEffect)(Data_Foldable.foldableMaybe)((function () {
+                                      var $47 = Data_Foldable.traverse_(Effect_Aff.applicativeAff)(Data_List_Types.foldableList)(Control_Monad_Fork_Class.fork(Control_Monad_Fork_Class.monadForkAff));
+                                      return function ($48) {
+                                          return handleAff($47(Data_List.reverse($48)));
+                                      };
+                                  })())(handlers)();
+                                  var mmore = Effect_Ref.read(pendingHandlers)();
+                                  var $21 = Data_Maybe.maybe(false)(Data_List["null"])(mmore);
+                                  if ($21) {
+                                      return Data_Functor.voidLeft(Effect.functorEffect)(Effect_Ref.write(Data_Maybe.Nothing.value)(pendingHandlers))(new Control_Monad_Rec_Class.Done(Data_Unit.unit))();
+                                  };
+                                  return new Control_Monad_Rec_Class.Loop(Data_Unit.unit);
+                              };
+                          }))();
+                      };
+                  };
+              };
+              var finalize = function (lchs) {
+                  return Halogen_Aff_Driver_State.unDriverStateX(function (st) {
+                      return function __do() {
+                          cleanupSubscriptionsAndForks(st)();
+                          var f = Halogen_Aff_Driver_Eval.evalM(render)(st.selfRef)(st["component"]["eval"](new Halogen_Query_HalogenQ.Finalize(Data_Unit.unit)));
+                          Effect_Ref.modify_(function (handlers) {
+                              return {
+                                  initializers: handlers.initializers,
+                                  finalizers: new Data_List_Types.Cons(f, handlers.finalizers)
+                              };
+                          })(lchs)();
+                          return Halogen_Data_Slot.foreachSlot(Effect.applicativeEffect)(st.children)(function (v) {
+                              return function __do() {
+                                  var dsx = Effect_Ref.read(v)();
+                                  return finalize(lchs)(dsx)();
+                              };
+                          })();
+                      };
+                  });
+              };
+              var evalDriver = function (disposed) {
+                  return function (ref) {
+                      return function (q) {
+                          return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref.read(disposed)))(function (v) {
+                              if (v) {
+                                  return Control_Applicative.pure(Effect_Aff.applicativeAff)(Data_Maybe.Nothing.value);
+                              };
+                              return Halogen_Aff_Driver_Eval.evalQ(render)(ref)(q);
+                          });
+                      };
+                  };
+              };
+              var dispose = function (disposed) {
+                  return function (lchs) {
+                      return function (dsx) {
+                          return function (subsRef) {
+                              return Halogen_Aff_Driver_Eval.handleLifecycle(lchs)(function __do() {
+                                  var v = Effect_Ref.read(disposed)();
+                                  if (v) {
+                                      return Data_Unit.unit;
+                                  };
+                                  Effect_Ref.write(true)(disposed)();
+                                  Control_Bind.bindFlipped(Effect.bindEffect)(Data_Foldable.traverse_(Effect.applicativeEffect)(Data_Map_Internal.foldableMap)((function () {
+                                      var $49 = Effect_Aff_AVar.kill(Effect_Exception.error("disposed"));
+                                      return function ($50) {
+                                          return Effect_Aff.launchAff_($49($50));
+                                      };
+                                  })()))(Effect_Ref.read(subsRef))();
+                                  finalize(lchs)(dsx)();
+                                  return Halogen_Aff_Driver_State.unDriverStateX((function () {
+                                      var $51 = Data_Foldable.traverse_(Effect.applicativeEffect)(Data_Foldable.foldableMaybe)(renderSpec.dispose);
+                                      return function ($52) {
+                                          return $51((function (v1) {
+                                              return v1.rendering;
+                                          })($52));
+                                      };
+                                  })())(dsx)();
+                              });
+                          };
+                      };
+                  };
+              };
+              return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(newLifecycleHandlers))(function (lchs) {
+                  return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref["new"](0)))(function (fresh) {
+                      return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Effect_Ref["new"](false)))(function (disposed) {
+                          return Halogen_Aff_Driver_Eval.handleLifecycle(lchs)(function __do() {
+                              var listeners = Effect_Ref["new"](Data_Map_Internal.empty)();
+                              var dsx = Control_Bind.bindFlipped(Effect.bindEffect)(Effect_Ref.read)(runComponent(lchs)(rootHandler(listeners))(i)(component))();
+                              return Halogen_Aff_Driver_State.unDriverStateX(function (st) {
+                                  return Control_Applicative.pure(Effect.applicativeEffect)({
+                                      query: evalDriver(disposed)(st.selfRef),
+                                      subscribe: subscribe(fresh)(listeners),
+                                      dispose: dispose(disposed)(lchs)(dsx)(listeners)
+                                  });
+                              })(dsx)();
+                          });
+                      });
+                  });
+              });
+          };
+      };
+  };
+  exports["runUI"] = runUI;
+})(PS);
+(function(exports) {
+  "use strict";                                               
+
+  exports._querySelector = function (selector) {
+    return function (node) {
+      return function () {
+        return node.querySelector(selector);
+      };
+    };
+  };
+})(PS["Web.DOM.ParentNode"] = PS["Web.DOM.ParentNode"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Web.DOM.ParentNode"] = $PS["Web.DOM.ParentNode"] || {};
+  var exports = $PS["Web.DOM.ParentNode"];
+  var $foreign = $PS["Web.DOM.ParentNode"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Nullable = $PS["Data.Nullable"];
+  var Effect = $PS["Effect"];
+  var querySelector = function (qs) {
+      var $3 = Data_Functor.map(Effect.functorEffect)(Data_Nullable.toMaybe);
+      var $4 = $foreign["_querySelector"](qs);
+      return function ($5) {
+          return $3($4($5));
+      };
+  };
+  exports["querySelector"] = querySelector;
+})(PS);
+(function(exports) {
+  /* global window */
+  "use strict";
+
+  exports.window = function () {
+    return window;
+  };
+})(PS["Web.HTML"] = PS["Web.HTML"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Web.HTML"] = $PS["Web.HTML"] || {};
+  var exports = $PS["Web.HTML"];
+  var $foreign = $PS["Web.HTML"];
+  exports["window"] = $foreign.window;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Web.HTML.Event.EventTypes"] = $PS["Web.HTML.Event.EventTypes"] || {};
+  var exports = $PS["Web.HTML.Event.EventTypes"];
+  var domcontentloaded = "DOMContentLoaded";
+  exports["domcontentloaded"] = domcontentloaded;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports._readyState = function (doc) {
+    return function () {
+      return doc.readyState;
+    };
+  };
+})(PS["Web.HTML.HTMLDocument"] = PS["Web.HTML.HTMLDocument"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Web.HTML.HTMLDocument.ReadyState"] = $PS["Web.HTML.HTMLDocument.ReadyState"] || {};
+  var exports = $PS["Web.HTML.HTMLDocument.ReadyState"];
+  var Data_Maybe = $PS["Data.Maybe"];              
+  var Loading = (function () {
+      function Loading() {
+
+      };
+      Loading.value = new Loading();
+      return Loading;
+  })();
+  var Interactive = (function () {
+      function Interactive() {
+
+      };
+      Interactive.value = new Interactive();
+      return Interactive;
+  })();
+  var Complete = (function () {
+      function Complete() {
+
+      };
+      Complete.value = new Complete();
+      return Complete;
+  })();
+  var parse = function (v) {
+      if (v === "loading") {
+          return new Data_Maybe.Just(Loading.value);
+      };
+      if (v === "interactive") {
+          return new Data_Maybe.Just(Interactive.value);
+      };
+      if (v === "complete") {
+          return new Data_Maybe.Just(Complete.value);
+      };
+      return Data_Maybe.Nothing.value;
+  };
+  exports["Loading"] = Loading;
+  exports["parse"] = parse;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Web.HTML.HTMLDocument"] = $PS["Web.HTML.HTMLDocument"] || {};
+  var exports = $PS["Web.HTML.HTMLDocument"];
+  var $foreign = $PS["Web.HTML.HTMLDocument"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Effect = $PS["Effect"];
+  var Unsafe_Coerce = $PS["Unsafe.Coerce"];
+  var Web_HTML_HTMLDocument_ReadyState = $PS["Web.HTML.HTMLDocument.ReadyState"];
+  var toParentNode = Unsafe_Coerce.unsafeCoerce; 
+  var toDocument = Unsafe_Coerce.unsafeCoerce;
+  var readyState = (function () {
+      var $0 = Data_Functor.map(Effect.functorEffect)((function () {
+          var $2 = Data_Maybe.fromMaybe(Web_HTML_HTMLDocument_ReadyState.Loading.value);
+          return function ($3) {
+              return $2(Web_HTML_HTMLDocument_ReadyState.parse($3));
+          };
+      })());
+      return function ($1) {
+          return $0($foreign["_readyState"]($1));
+      };
+  })();
+  exports["toDocument"] = toDocument;
+  exports["toParentNode"] = toParentNode;
+  exports["readyState"] = readyState;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports._read = function (nothing, just, value) {
+    var tag = Object.prototype.toString.call(value);
+    if (tag.indexOf("[object HTML") === 0 && tag.indexOf("Element]") === tag.length - 8) {
+      return just(value);
+    } else {
+      return nothing;
+    }
+  };
+})(PS["Web.HTML.HTMLElement"] = PS["Web.HTML.HTMLElement"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Web.HTML.HTMLElement"] = $PS["Web.HTML.HTMLElement"] || {};
+  var exports = $PS["Web.HTML.HTMLElement"];
+  var $foreign = $PS["Web.HTML.HTMLElement"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Unsafe_Coerce = $PS["Unsafe.Coerce"];                   
+  var toNode = Unsafe_Coerce.unsafeCoerce;
+  var fromElement = function (x) {
+      return $foreign["_read"](Data_Maybe.Nothing.value, Data_Maybe.Just.create, x);
+  };
+  exports["fromElement"] = fromElement;
+  exports["toNode"] = toNode;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  exports.document = function (window) {
+    return function () {
+      return window.document;
+    };
+  };
+})(PS["Web.HTML.Window"] = PS["Web.HTML.Window"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Web.HTML.Window"] = $PS["Web.HTML.Window"] || {};
+  var exports = $PS["Web.HTML.Window"];
+  var $foreign = $PS["Web.HTML.Window"];
+  var Unsafe_Coerce = $PS["Unsafe.Coerce"];
+  var toEventTarget = Unsafe_Coerce.unsafeCoerce;
+  exports["toEventTarget"] = toEventTarget;
+  exports["document"] = $foreign.document;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.Aff.Util"] = $PS["Halogen.Aff.Util"] || {};
+  var exports = $PS["Halogen.Aff.Util"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Bind = $PS["Control.Bind"];
+  var Control_Monad_Error_Class = $PS["Control.Monad.Error.Class"];
+  var Data_Either = $PS["Data.Either"];
+  var Data_Function = $PS["Data.Function"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Data_Unit = $PS["Data.Unit"];
+  var Effect = $PS["Effect"];
+  var Effect_Aff = $PS["Effect.Aff"];
+  var Effect_Class = $PS["Effect.Class"];
+  var Effect_Exception = $PS["Effect.Exception"];
+  var Web_DOM_ParentNode = $PS["Web.DOM.ParentNode"];
+  var Web_Event_EventTarget = $PS["Web.Event.EventTarget"];
+  var Web_HTML = $PS["Web.HTML"];
+  var Web_HTML_Event_EventTypes = $PS["Web.HTML.Event.EventTypes"];
+  var Web_HTML_HTMLDocument = $PS["Web.HTML.HTMLDocument"];
+  var Web_HTML_HTMLDocument_ReadyState = $PS["Web.HTML.HTMLDocument.ReadyState"];
+  var Web_HTML_HTMLElement = $PS["Web.HTML.HTMLElement"];
+  var Web_HTML_Window = $PS["Web.HTML.Window"];                
+  var selectElement = function (query) {
+      return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Control_Bind.bindFlipped(Effect.bindEffect)(Control_Bind.composeKleisliFlipped(Effect.bindEffect)((function () {
+          var $2 = Web_DOM_ParentNode.querySelector(query);
+          return function ($3) {
+              return $2(Web_HTML_HTMLDocument.toParentNode($3));
+          };
+      })())(Web_HTML_Window.document))(Web_HTML.window)))(function (mel) {
+          return Control_Applicative.pure(Effect_Aff.applicativeAff)(Control_Bind.bindFlipped(Data_Maybe.bindMaybe)(Web_HTML_HTMLElement.fromElement)(mel));
+      });
+  };
+  var runHalogenAff = Effect_Aff.runAff_(Data_Either.either(Effect_Exception.throwException)(Data_Function["const"](Control_Applicative.pure(Effect.applicativeEffect)(Data_Unit.unit))));
+  var awaitLoad = Effect_Aff.makeAff(function (callback) {
+      return function __do() {
+          var rs = Control_Bind.bindFlipped(Effect.bindEffect)(Web_HTML_HTMLDocument.readyState)(Control_Bind.bindFlipped(Effect.bindEffect)(Web_HTML_Window.document)(Web_HTML.window))();
+          if (rs instanceof Web_HTML_HTMLDocument_ReadyState.Loading) {
+              var et = Data_Functor.map(Effect.functorEffect)(Web_HTML_Window.toEventTarget)(Web_HTML.window)();
+              var listener = Web_Event_EventTarget.eventListener(function (v) {
+                  return callback(new Data_Either.Right(Data_Unit.unit));
+              })();
+              Web_Event_EventTarget.addEventListener(Web_HTML_Event_EventTypes.domcontentloaded)(listener)(false)(et)();
+              return Effect_Aff.effectCanceler(Web_Event_EventTarget.removeEventListener(Web_HTML_Event_EventTypes.domcontentloaded)(listener)(false)(et));
+          };
+          callback(new Data_Either.Right(Data_Unit.unit))();
+          return Effect_Aff.nonCanceler;
+      };
+  });
+  var awaitBody = Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(awaitLoad)(function () {
+      return Control_Bind.bind(Effect_Aff.bindAff)(selectElement("body"))(function (body) {
+          return Data_Maybe.maybe(Control_Monad_Error_Class.throwError(Effect_Aff.monadThrowAff)(Effect_Exception.error("Could not find body")))(Control_Applicative.pure(Effect_Aff.applicativeAff))(body);
+      });
+  });
+  exports["awaitBody"] = awaitBody;
+  exports["runHalogenAff"] = runHalogenAff;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.HTML"] = $PS["Halogen.HTML"] || {};
+  var exports = $PS["Halogen.HTML"];
+  var Halogen_Component = $PS["Halogen.Component"];
+  var Halogen_HTML_Core = $PS["Halogen.HTML.Core"];        
+  var slot = function (dictCons) {
+      return function (dictIsSymbol) {
+          return function (dictOrd) {
+              return function (label) {
+                  return function (p) {
+                      return function (component) {
+                          return function (input) {
+                              return function (outputQuery) {
+                                  return Halogen_HTML_Core.widget(new Halogen_Component.ComponentSlot(Halogen_Component.componentSlot()(dictIsSymbol)(dictOrd)(label)(p)(component)(input)(outputQuery)));
+                              };
+                          };
+                      };
+                  };
+              };
+          };
+      };
+  };
+  exports["slot"] = slot;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Web.UIEvent.MouseEvent.EventTypes"] = $PS["Web.UIEvent.MouseEvent.EventTypes"] || {};
+  var exports = $PS["Web.UIEvent.MouseEvent.EventTypes"];
+  var click = "click";
+  exports["click"] = click;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.HTML.Events"] = $PS["Halogen.HTML.Events"] || {};
+  var exports = $PS["Halogen.HTML.Events"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Halogen_HTML_Core = $PS["Halogen.HTML.Core"];
+  var Halogen_Query_Input = $PS["Halogen.Query.Input"];
+  var Unsafe_Coerce = $PS["Unsafe.Coerce"];
+  var Web_UIEvent_MouseEvent_EventTypes = $PS["Web.UIEvent.MouseEvent.EventTypes"];
+  var mouseHandler = Unsafe_Coerce.unsafeCoerce;
+  var handler = function (et) {
+      var $1 = Halogen_HTML_Core.handler(et);
+      var $2 = Data_Functor.map(Data_Functor.functorFn)(Data_Functor.map(Data_Maybe.functorMaybe)(Halogen_Query_Input.Action.create));
+      return function ($3) {
+          return $1($2($3));
+      };
+  };                                                       
+  var onClick = (function () {
+      var $4 = handler(Web_UIEvent_MouseEvent_EventTypes.click);
+      return function ($5) {
+          return $4(mouseHandler($5));
+      };
+  })();
+  exports["onClick"] = onClick;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Web.DOM.Element"] = $PS["Web.DOM.Element"] || {};
+  var exports = $PS["Web.DOM.Element"];
+  var Unsafe_Coerce = $PS["Unsafe.Coerce"];                   
+  var toNode = Unsafe_Coerce.unsafeCoerce;
+  exports["toNode"] = toNode;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.VDom.DOM"] = $PS["Halogen.VDom.DOM"] || {};
+  var exports = $PS["Halogen.VDom.DOM"];
+  var Data_Array = $PS["Data.Array"];
+  var Data_Boolean = $PS["Data.Boolean"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Data_Nullable = $PS["Data.Nullable"];
+  var Data_Tuple = $PS["Data.Tuple"];
+  var Halogen_VDom_Machine = $PS["Halogen.VDom.Machine"];
+  var Halogen_VDom_Types = $PS["Halogen.VDom.Types"];
+  var Halogen_VDom_Util = $PS["Halogen.VDom.Util"];
+  var Web_DOM_Element = $PS["Web.DOM.Element"];
+  var haltWidget = function (v) {
+      return Halogen_VDom_Machine.halt(v.widget);
+  };
+  var patchWidget = function (state, vdom) {
+      if (vdom instanceof Halogen_VDom_Types.Grafted) {
+          return patchWidget(state, Halogen_VDom_Types.runGraft(vdom.value0));
+      };
+      if (vdom instanceof Halogen_VDom_Types.Widget) {
+          var res = Halogen_VDom_Machine.step(state.widget, vdom.value0);
+          var res$prime = Halogen_VDom_Machine.unStep(function (v) {
+              return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(v.value0, {
+                  build: state.build,
+                  widget: res
+              }, patchWidget, haltWidget));
+          })(res);
+          return res$prime;
+      };
+      haltWidget(state);
+      return state.build(vdom);
+  };
+  var haltText = function (v) {
+      var parent = Halogen_VDom_Util.parentNode(v.node);
+      return Halogen_VDom_Util.removeChild(v.node, parent);
+  };
+  var patchText = function (state, vdom) {
+      if (vdom instanceof Halogen_VDom_Types.Grafted) {
+          return patchText(state, Halogen_VDom_Types.runGraft(vdom.value0));
+      };
+      if (vdom instanceof Halogen_VDom_Types.Text) {
+          if (state.value === vdom.value0) {
+              return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(state.node, state, patchText, haltText));
+          };
+          if (Data_Boolean.otherwise) {
+              var nextState = {
+                  build: state.build,
+                  node: state.node,
+                  value: vdom.value0
+              };
+              Halogen_VDom_Util.setTextContent(vdom.value0, state.node);
+              return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(state.node, nextState, patchText, haltText));
+          };
+      };
+      haltText(state);
+      return state.build(vdom);
+  };
+  var haltKeyed = function (v) {
+      var parent = Halogen_VDom_Util.parentNode(v.node);
+      Halogen_VDom_Util.removeChild(v.node, parent);
+      Halogen_VDom_Util.forInE(v.children, function (v1, s) {
+          return Halogen_VDom_Machine.halt(s);
+      });
+      return Halogen_VDom_Machine.halt(v.attrs);
+  };
+  var haltElem = function (v) {
+      var parent = Halogen_VDom_Util.parentNode(v.node);
+      Halogen_VDom_Util.removeChild(v.node, parent);
+      Halogen_VDom_Util.forEachE(v.children, Halogen_VDom_Machine.halt);
+      return Halogen_VDom_Machine.halt(v.attrs);
+  };
+  var eqElemSpec = function (ns1, v, ns2, v1) {
+      var $56 = v === v1;
+      if ($56) {
+          if (ns1 instanceof Data_Maybe.Just && (ns2 instanceof Data_Maybe.Just && ns1.value0 === ns2.value0)) {
+              return true;
+          };
+          if (ns1 instanceof Data_Maybe.Nothing && ns2 instanceof Data_Maybe.Nothing) {
+              return true;
+          };
+          return false;
+      };
+      return false;
+  };
+  var patchElem = function (state, vdom) {
+      if (vdom instanceof Halogen_VDom_Types.Grafted) {
+          return patchElem(state, Halogen_VDom_Types.runGraft(vdom.value0));
+      };
+      if (vdom instanceof Halogen_VDom_Types.Elem && eqElemSpec(state.ns, state.name, vdom.value0, vdom.value1)) {
+          var v = Data_Array.length(vdom.value3);
+          var v1 = Data_Array.length(state.children);
+          if (v1 === 0 && v === 0) {
+              var attrs2 = Halogen_VDom_Machine.step(state.attrs, vdom.value2);
+              var nextState = {
+                  build: state.build,
+                  node: state.node,
+                  attrs: attrs2,
+                  ns: vdom.value0,
+                  name: vdom.value1,
+                  children: state.children
+              };
+              return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(state.node, nextState, patchElem, haltElem));
+          };
+          var onThis = function (ix, s) {
+              return Halogen_VDom_Machine.halt(s);
+          };
+          var onThese = function (ix, s, v2) {
+              var res = Halogen_VDom_Machine.step(s, v2);
+              Halogen_VDom_Util.insertChildIx(ix, Halogen_VDom_Machine.extract(res), state.node);
+              return res;
+          };
+          var onThat = function (ix, v2) {
+              var res = state.build(v2);
+              Halogen_VDom_Util.insertChildIx(ix, Halogen_VDom_Machine.extract(res), state.node);
+              return res;
+          };
+          var children2 = Halogen_VDom_Util.diffWithIxE(state.children, vdom.value3, onThese, onThis, onThat);
+          var attrs2 = Halogen_VDom_Machine.step(state.attrs, vdom.value2);
+          var nextState = {
+              build: state.build,
+              node: state.node,
+              attrs: attrs2,
+              ns: vdom.value0,
+              name: vdom.value1,
+              children: children2
+          };
+          return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(state.node, nextState, patchElem, haltElem));
+      };
+      haltElem(state);
+      return state.build(vdom);
+  };
+  var patchKeyed = function (state, vdom) {
+      if (vdom instanceof Halogen_VDom_Types.Grafted) {
+          return patchKeyed(state, Halogen_VDom_Types.runGraft(vdom.value0));
+      };
+      if (vdom instanceof Halogen_VDom_Types.Keyed && eqElemSpec(state.ns, state.name, vdom.value0, vdom.value1)) {
+          var v = Data_Array.length(vdom.value3);
+          if (state.length === 0 && v === 0) {
+              var attrs2 = Halogen_VDom_Machine.step(state.attrs, vdom.value2);
+              var nextState = {
+                  build: state.build,
+                  node: state.node,
+                  attrs: attrs2,
+                  ns: vdom.value0,
+                  name: vdom.value1,
+                  children: state.children,
+                  length: 0
+              };
+              return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(state.node, nextState, patchKeyed, haltKeyed));
+          };
+          var onThis = function (v2, s) {
+              return Halogen_VDom_Machine.halt(s);
+          };
+          var onThese = function (v2, ix$prime, s, v3) {
+              var res = Halogen_VDom_Machine.step(s, v3.value1);
+              Halogen_VDom_Util.insertChildIx(ix$prime, Halogen_VDom_Machine.extract(res), state.node);
+              return res;
+          };
+          var onThat = function (v2, ix, v3) {
+              var res = state.build(v3.value1);
+              Halogen_VDom_Util.insertChildIx(ix, Halogen_VDom_Machine.extract(res), state.node);
+              return res;
+          };
+          var children2 = Halogen_VDom_Util.diffWithKeyAndIxE(state.children, vdom.value3, Data_Tuple.fst, onThese, onThis, onThat);
+          var attrs2 = Halogen_VDom_Machine.step(state.attrs, vdom.value2);
+          var nextState = {
+              build: state.build,
+              node: state.node,
+              attrs: attrs2,
+              ns: vdom.value0,
+              name: vdom.value1,
+              children: children2,
+              length: v
+          };
+          return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(state.node, nextState, patchKeyed, haltKeyed));
+      };
+      haltKeyed(state);
+      return state.build(vdom);
+  };
+  var buildWidget = function (v, build, w) {
+      var res = v.buildWidget(v)(w);
+      var res$prime = Halogen_VDom_Machine.unStep(function (v1) {
+          return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(v1.value0, {
+              build: build,
+              widget: res
+          }, patchWidget, haltWidget));
+      })(res);
+      return res$prime;
+  };
+  var buildText = function (v, build, s) {
+      var node = Halogen_VDom_Util.createTextNode(s, v.document);
+      var state = {
+          build: build,
+          node: node,
+          value: s
+      };
+      return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(node, state, patchText, haltText));
+  };
+  var buildKeyed = function (v, build, ns1, name1, as1, ch1) {
+      var el = Halogen_VDom_Util.createElement(Data_Nullable.toNullable(ns1), name1, v.document);
+      var node = Web_DOM_Element.toNode(el);
+      var onChild = function (k, ix, v1) {
+          var res = build(v1.value1);
+          Halogen_VDom_Util.insertChildIx(ix, Halogen_VDom_Machine.extract(res), node);
+          return res;
+      };
+      var children = Halogen_VDom_Util.strMapWithIxE(ch1, Data_Tuple.fst, onChild);
+      var attrs = v.buildAttributes(el)(as1);
+      var state = {
+          build: build,
+          node: node,
+          attrs: attrs,
+          ns: ns1,
+          name: name1,
+          children: children,
+          length: Data_Array.length(ch1)
+      };
+      return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(node, state, patchKeyed, haltKeyed));
+  };
+  var buildElem = function (v, build, ns1, name1, as1, ch1) {
+      var el = Halogen_VDom_Util.createElement(Data_Nullable.toNullable(ns1), name1, v.document);
+      var node = Web_DOM_Element.toNode(el);
+      var onChild = function (ix, child) {
+          var res = build(child);
+          Halogen_VDom_Util.insertChildIx(ix, Halogen_VDom_Machine.extract(res), node);
+          return res;
+      };
+      var children = Halogen_VDom_Util.forE(ch1, onChild);
+      var attrs = v.buildAttributes(el)(as1);
+      var state = {
+          build: build,
+          node: node,
+          attrs: attrs,
+          ns: ns1,
+          name: name1,
+          children: children
+      };
+      return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(node, state, patchElem, haltElem));
+  };
+  var buildVDom = function (spec) {
+      var build = function (v) {
+          if (v instanceof Halogen_VDom_Types.Text) {
+              return buildText(spec, build, v.value0);
+          };
+          if (v instanceof Halogen_VDom_Types.Elem) {
+              return buildElem(spec, build, v.value0, v.value1, v.value2, v.value3);
+          };
+          if (v instanceof Halogen_VDom_Types.Keyed) {
+              return buildKeyed(spec, build, v.value0, v.value1, v.value2, v.value3);
+          };
+          if (v instanceof Halogen_VDom_Types.Widget) {
+              return buildWidget(spec, build, v.value0);
+          };
+          if (v instanceof Halogen_VDom_Types.Grafted) {
+              return build(Halogen_VDom_Types.runGraft(v.value0));
+          };
+          throw new Error("Failed pattern match at Halogen.VDom.DOM (line 58, column 27 - line 63, column 52): " + [ v.constructor.name ]);
+      };
+      return build;
+  };
+  exports["buildVDom"] = buildVDom;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.VDom.Thunk"] = $PS["Halogen.VDom.Thunk"] || {};
+  var exports = $PS["Halogen.VDom.Thunk"];
+  var Halogen_VDom_DOM = $PS["Halogen.VDom.DOM"];
+  var Halogen_VDom_Machine = $PS["Halogen.VDom.Machine"];
+  var Halogen_VDom_Util = $PS["Halogen.VDom.Util"];        
+  var Thunk = (function () {
+      function Thunk(value0, value1, value2, value3) {
+          this.value0 = value0;
+          this.value1 = value1;
+          this.value2 = value2;
+          this.value3 = value3;
+      };
+      Thunk.create = function (value0) {
+          return function (value1) {
+              return function (value2) {
+                  return function (value3) {
+                      return new Thunk(value0, value1, value2, value3);
+                  };
+              };
+          };
+      };
+      return Thunk;
+  })();                                          
+  var unsafeEqThunk = function (v, v1) {
+      return Halogen_VDom_Util.refEq(v.value0, v1.value0) && (Halogen_VDom_Util.refEq(v.value1, v1.value1) && v.value1(v.value3, v1.value3));
+  };
+  var thunk = function (tid, eqFn, f, a) {
+      return new Thunk(tid, eqFn, f, a);
+  };
+  var runThunk = function (v) {
+      return v.value2(v.value3);
+  };
+  var buildThunk = function (toVDom) {
+      var haltThunk = function (state) {
+          return Halogen_VDom_Machine.halt(state.vdom);
+      };
+      var patchThunk = function (state, t2) {
+          var $43 = unsafeEqThunk(state.thunk, t2);
+          if ($43) {
+              return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(Halogen_VDom_Machine.extract(state.vdom), state, patchThunk, haltThunk));
+          };
+          var vdom = Halogen_VDom_Machine.step(state.vdom, toVDom(runThunk(t2)));
+          return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(Halogen_VDom_Machine.extract(vdom), {
+              vdom: vdom,
+              thunk: t2
+          }, patchThunk, haltThunk));
+      };
+      var renderThunk = function (spec) {
+          return function (t) {
+              var vdom = Halogen_VDom_DOM.buildVDom(spec)(toVDom(runThunk(t)));
+              return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(Halogen_VDom_Machine.extract(vdom), {
+                  thunk: t,
+                  vdom: vdom
+              }, patchThunk, haltThunk));
+          };
+      };
+      return renderThunk;
+  };
+  exports["buildThunk"] = buildThunk;
+})(PS);
+(function(exports) {
+  "use strict";
+
+  var getEffProp = function (name) {
+    return function (node) {
+      return function () {
+        return node[name];
+      };
+    };
+  };                                                   
+
+  exports._parentNode = getEffProp("parentNode");          
+
+  exports._nextSibling = getEffProp("nextSibling");
+
+  exports.insertBefore = function (node1) {
+    return function (node2) {
+      return function (parent) {
+        return function () {
+          return parent.insertBefore(node1, node2);
+        };
+      };
+    };
+  };
+
+  exports.appendChild = function (node) {
+    return function (parent) {
+      return function () {
+        return parent.appendChild(node);
+      };
+    };
+  };
+
+  exports.removeChild = function (node) {
+    return function (parent) {
+      return function () {
+        return parent.removeChild(node);
+      };
+    };
+  };
+})(PS["Web.DOM.Node"] = PS["Web.DOM.Node"] || {});
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Web.DOM.Node"] = $PS["Web.DOM.Node"] || {};
+  var exports = $PS["Web.DOM.Node"];
+  var $foreign = $PS["Web.DOM.Node"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Nullable = $PS["Data.Nullable"];
+  var Effect = $PS["Effect"];
+  var parentNode = (function () {
+      var $3 = Data_Functor.map(Effect.functorEffect)(Data_Nullable.toMaybe);
+      return function ($4) {
+          return $3($foreign["_parentNode"]($4));
+      };
+  })();
+  var nextSibling = (function () {
+      var $14 = Data_Functor.map(Effect.functorEffect)(Data_Nullable.toMaybe);
+      return function ($15) {
+          return $14($foreign["_nextSibling"]($15));
+      };
+  })();
+  exports["parentNode"] = parentNode;
+  exports["nextSibling"] = nextSibling;
+  exports["insertBefore"] = $foreign.insertBefore;
+  exports["appendChild"] = $foreign.appendChild;
+  exports["removeChild"] = $foreign.removeChild;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Halogen.VDom.Driver"] = $PS["Halogen.VDom.Driver"] || {};
+  var exports = $PS["Halogen.VDom.Driver"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Bind = $PS["Control.Bind"];
+  var Control_Category = $PS["Control.Category"];
+  var Data_Foldable = $PS["Data.Foldable"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_HeytingAlgebra = $PS["Data.HeytingAlgebra"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Data_Newtype = $PS["Data.Newtype"];
+  var Data_Unit = $PS["Data.Unit"];
+  var Effect = $PS["Effect"];
+  var Effect_Aff = $PS["Effect.Aff"];
+  var Effect_Class = $PS["Effect.Class"];
+  var Effect_Ref = $PS["Effect.Ref"];
+  var Halogen_Aff_Driver = $PS["Halogen.Aff.Driver"];
+  var Halogen_Aff_Driver_State = $PS["Halogen.Aff.Driver.State"];
+  var Halogen_Component = $PS["Halogen.Component"];
+  var Halogen_HTML_Core = $PS["Halogen.HTML.Core"];
+  var Halogen_VDom_DOM = $PS["Halogen.VDom.DOM"];
+  var Halogen_VDom_DOM_Prop = $PS["Halogen.VDom.DOM.Prop"];
+  var Halogen_VDom_Machine = $PS["Halogen.VDom.Machine"];
+  var Halogen_VDom_Thunk = $PS["Halogen.VDom.Thunk"];
+  var Unsafe_Reference = $PS["Unsafe.Reference"];
+  var Web_DOM_Node = $PS["Web.DOM.Node"];
+  var Web_HTML = $PS["Web.HTML"];
+  var Web_HTML_HTMLDocument = $PS["Web.HTML.HTMLDocument"];
+  var Web_HTML_HTMLElement = $PS["Web.HTML.HTMLElement"];
+  var Web_HTML_Window = $PS["Web.HTML.Window"];
+  var substInParent = function (v) {
+      return function (v1) {
+          return function (v2) {
+              if (v1 instanceof Data_Maybe.Just && v2 instanceof Data_Maybe.Just) {
+                  return Data_Functor["void"](Effect.functorEffect)(Web_DOM_Node.insertBefore(v)(v1.value0)(v2.value0));
+              };
+              if (v1 instanceof Data_Maybe.Nothing && v2 instanceof Data_Maybe.Just) {
+                  return Data_Functor["void"](Effect.functorEffect)(Web_DOM_Node.appendChild(v)(v2.value0));
+              };
+              return Control_Applicative.pure(Effect.applicativeEffect)(Data_Unit.unit);
+          };
+      };
+  };
+  var removeChild = function (v) {
+      return function __do() {
+          var npn = Web_DOM_Node.parentNode(v.node)();
+          return Data_Foldable.traverse_(Effect.applicativeEffect)(Data_Foldable.foldableMaybe)(function (pn) {
+              return Web_DOM_Node.removeChild(v.node)(pn);
+          })(npn)();
+      };
+  };
+  var mkSpec = function (handler) {
+      return function (renderChildRef) {
+          return function (document) {
+              var getNode = Halogen_Aff_Driver_State.unRenderStateX(function (v) {
+                  return v.node;
+              });
+              var done = function (st) {
+                  if (st instanceof Data_Maybe.Just) {
+                      return Halogen_VDom_Machine.halt(st.value0);
+                  };
+                  return Data_Unit.unit;
+              };
+              var buildWidget = function (spec) {
+                  var buildThunk = Halogen_VDom_Thunk.buildThunk(Data_Newtype.unwrap(Halogen_HTML_Core.newtypeHTML))(spec);
+                  var renderComponentSlot = function (cs) {
+                      var renderChild = Effect_Ref.read(renderChildRef)();
+                      var rsx = renderChild(cs)();
+                      var node = getNode(rsx);
+                      return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(node, Data_Maybe.Nothing.value, patch, done));
+                  };
+                  var render = function (slot) {
+                      if (slot instanceof Halogen_Component.ComponentSlot) {
+                          return renderComponentSlot(slot.value0);
+                      };
+                      if (slot instanceof Halogen_Component.ThunkSlot) {
+                          var step = buildThunk(slot.value0);
+                          return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(Halogen_VDom_Machine.extract(step), new Data_Maybe.Just(step), patch, done));
+                      };
+                      throw new Error("Failed pattern match at Halogen.VDom.Driver (line 85, column 7 - line 90, column 75): " + [ slot.constructor.name ]);
+                  };
+                  var patch = function (st, slot) {
+                      if (st instanceof Data_Maybe.Just) {
+                          if (slot instanceof Halogen_Component.ComponentSlot) {
+                              Halogen_VDom_Machine.halt(st.value0);
+                              return renderComponentSlot(slot.value0);
+                          };
+                          if (slot instanceof Halogen_Component.ThunkSlot) {
+                              var step$prime = Halogen_VDom_Machine.step(st.value0, slot.value0);
+                              return Halogen_VDom_Machine.mkStep(new Halogen_VDom_Machine.Step(Halogen_VDom_Machine.extract(step$prime), new Data_Maybe.Just(step$prime), patch, done));
+                          };
+                          throw new Error("Failed pattern match at Halogen.VDom.Driver (line 98, column 22 - line 104, column 79): " + [ slot.constructor.name ]);
+                      };
+                      return render(slot);
+                  };
+                  return render;
+              };
+              var buildAttributes = Halogen_VDom_DOM_Prop.buildProp(handler);
+              return {
+                  buildWidget: buildWidget,
+                  buildAttributes: buildAttributes,
+                  document: document
+              };
+          };
+      };
+  };
+  var renderSpec = function (document) {
+      return function (container) {
+          var render = function (handler) {
+              return function (child) {
+                  return function (v) {
+                      return function (v1) {
+                          if (v1 instanceof Data_Maybe.Nothing) {
+                              return function __do() {
+                                  var renderChildRef = Effect_Ref["new"](child)();
+                                  var spec = mkSpec(handler)(renderChildRef)(document);
+                                  var machine = Halogen_VDom_DOM.buildVDom(spec)(v);
+                                  var node = Halogen_VDom_Machine.extract(machine);
+                                  Data_Functor["void"](Effect.functorEffect)(Web_DOM_Node.appendChild(node)(Web_HTML_HTMLElement.toNode(container)))();
+                                  return {
+                                      machine: machine,
+                                      node: node,
+                                      renderChildRef: renderChildRef
+                                  };
+                              };
+                          };
+                          if (v1 instanceof Data_Maybe.Just) {
+                              return function __do() {
+                                  Effect_Ref.write(child)(v1.value0.renderChildRef)();
+                                  var parent = Web_DOM_Node.parentNode(v1.value0.node)();
+                                  var nextSib = Web_DOM_Node.nextSibling(v1.value0.node)();
+                                  var machine$prime = Halogen_VDom_Machine.step(v1.value0.machine, v);
+                                  var newNode = Halogen_VDom_Machine.extract(machine$prime);
+                                  Control_Applicative.when(Effect.applicativeEffect)(Data_HeytingAlgebra.not(Data_HeytingAlgebra.heytingAlgebraFunction(Data_HeytingAlgebra.heytingAlgebraFunction(Data_HeytingAlgebra.heytingAlgebraBoolean)))(Unsafe_Reference.unsafeRefEq)(v1.value0.node)(newNode))(substInParent(newNode)(nextSib)(parent))();
+                                  return {
+                                      machine: machine$prime,
+                                      node: newNode,
+                                      renderChildRef: v1.value0.renderChildRef
+                                  };
+                              };
+                          };
+                          throw new Error("Failed pattern match at Halogen.VDom.Driver (line 159, column 5 - line 175, column 80): " + [ v1.constructor.name ]);
+                      };
+                  };
+              };
+          };
+          return {
+              render: render,
+              renderChild: Control_Category.identity(Control_Category.categoryFn),
+              removeChild: removeChild,
+              dispose: removeChild
+          };
+      };
+  };
+  var runUI = function (component) {
+      return function (i) {
+          return function (element) {
+              return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(Data_Functor.map(Effect.functorEffect)(Web_HTML_HTMLDocument.toDocument)(Control_Bind.bindFlipped(Effect.bindEffect)(Web_HTML_Window.document)(Web_HTML.window))))(function (document) {
+                  return Halogen_Aff_Driver.runUI(renderSpec(document)(element))(component)(i);
+              });
+          };
+      };
+  };
+  exports["runUI"] = runUI;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Sections"] = $PS["Sections"] || {};
+  var exports = $PS["Sections"];
+  var Card = $PS["Card"];
+  var Color = $PS["Color"];
+  var Data_Eq = $PS["Data.Eq"];
+  var Data_Ord = $PS["Data.Ord"];
+  var Data_Show = $PS["Data.Show"];                
+  var Past = (function () {
+      function Past() {
+
+      };
+      Past.value = new Past();
+      return Past;
+  })();
+  var Present = (function () {
+      function Present() {
+
+      };
+      Present.value = new Present();
+      return Present;
+  })();
+  var Future = (function () {
+      function Future() {
+
+      };
+      Future.value = new Future();
+      return Future;
+  })();
+  var showSection = new Data_Show.Show(function (v) {
+      if (v instanceof Past) {
+          return "Where I've Been";
+      };
+      if (v instanceof Present) {
+          return "Who I Am";
+      };
+      if (v instanceof Future) {
+          return "Where I'm Going";
+      };
+      throw new Error("Failed pattern match at Sections (line 23, column 1 - line 26, column 34): " + [ v.constructor.name ]);
+  });
+  var getColor = function (v) {
+      if (v instanceof Past) {
+          return Color.Blue.value;
+      };
+      if (v instanceof Present) {
+          return Color.Green.value;
+      };
+      if (v instanceof Future) {
+          return Color.Yellow.value;
+      };
+      throw new Error("Failed pattern match at Sections (line 36, column 1 - line 36, column 30): " + [ v.constructor.name ]);
+  };
+  var getCards = function (v) {
+      if (v instanceof Present) {
+          return [ Card.qualities, Card.contact, Card.projects ];
+      };
+      if (v instanceof Past) {
+          return [ Card.work, Card.education, Card.projects ];
+      };
+      if (v instanceof Future) {
+          return [  ];
+      };
+      throw new Error("Failed pattern match at Sections (line 41, column 1 - line 41, column 52): " + [ v.constructor.name ]);
+  };
+  var asInt = function (v) {
+      if (v instanceof Past) {
+          return 0;
+      };
+      if (v instanceof Present) {
+          return 1;
+      };
+      if (v instanceof Future) {
+          return 2;
+      };
+      throw new Error("Failed pattern match at Sections (line 12, column 1 - line 12, column 24): " + [ v.constructor.name ]);
+  };
+  var eqSection = new Data_Eq.Eq(function (a) {
+      return function (b) {
+          return asInt(a) === asInt(b);
+      };
+  });
+  var ordSection = new Data_Ord.Ord(function () {
+      return eqSection;
+  }, function (a) {
+      return function (b) {
+          return Data_Ord.compare(Data_Ord.ordInt)(asInt(a))(asInt(b));
+      };
+  });
+  var allSections = [ Past.value, Present.value ];
+  exports["Present"] = Present;
+  exports["allSections"] = allSections;
+  exports["getColor"] = getColor;
+  exports["getCards"] = getCards;
+  exports["eqSection"] = eqSection;
+  exports["ordSection"] = ordSection;
+  exports["showSection"] = showSection;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Subheader"] = $PS["Subheader"] || {};
+  var exports = $PS["Subheader"];
+  var Color = $PS["Color"];
+  var Control_Applicative = $PS["Control.Applicative"];
+  var Control_Bind = $PS["Control.Bind"];
+  var Control_Category = $PS["Control.Category"];
+  var Control_Monad_State_Class = $PS["Control.Monad.State.Class"];
+  var Data_Array = $PS["Data.Array"];
+  var Data_Eq = $PS["Data.Eq"];
+  var Data_Foldable = $PS["Data.Foldable"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Data_Monoid = $PS["Data.Monoid"];
+  var Data_Newtype = $PS["Data.Newtype"];
+  var Data_Semigroup = $PS["Data.Semigroup"];
+  var Effect_Aff = $PS["Effect.Aff"];
+  var Effect_Class = $PS["Effect.Class"];
+  var Effect_Random = $PS["Effect.Random"];
+  var Halogen_Component = $PS["Halogen.Component"];
+  var Halogen_HTML_Core = $PS["Halogen.HTML.Core"];
+  var Halogen_HTML_Elements = $PS["Halogen.HTML.Elements"];
+  var Halogen_HTML_Properties = $PS["Halogen.HTML.Properties"];
+  var Halogen_Query_EventSource = $PS["Halogen.Query.EventSource"];
+  var Halogen_Query_HalogenM = $PS["Halogen.Query.HalogenM"];
+  var Sections = $PS["Sections"];
+  var Utils = $PS["Utils"];                
+  var Weight = function (x) {
+      return x;
+  };
+  var TextOption = (function () {
+      function TextOption(value0, value1) {
+          this.value0 = value0;
+          this.value1 = value1;
+      };
+      TextOption.create = function (value0) {
+          return function (value1) {
+              return new TextOption(value0, value1);
+          };
+      };
+      return TextOption;
+  })();
+  var ChooseNewText = (function () {
+      function ChooseNewText() {
+
+      };
+      ChooseNewText.value = new ChooseNewText();
+      return ChooseNewText;
+  })();
+  var Initialize = (function () {
+      function Initialize() {
+
+      };
+      Initialize.value = new Initialize();
+      return Initialize;
+  })();
+  var Finalize = (function () {
+      function Finalize() {
+
+      };
+      Finalize.value = new Finalize();
+      return Finalize;
+  })();
+  var SectionChanged = (function () {
+      function SectionChanged(value0) {
+          this.value0 = value0;
+      };
+      SectionChanged.create = function (value0) {
+          return new SectionChanged(value0);
+      };
+      return SectionChanged;
+  })();
+  var oopsText = "Oops! My code farted.";
+  var newtypeWeight = new Data_Newtype.Newtype(function (n) {
+      return n;
+  }, Weight);
+  var defaultText = "Orion Kindel";
+  var render = function (v) {
+      return Halogen_HTML_Elements.div([ Utils.classes([ "app-title", "flex", "center-children-sec-axis", "center-children-main-axis" ]) ])([ Halogen_HTML_Elements.h1([ Halogen_HTML_Properties.classes(Data_Semigroup.append(Data_Semigroup.semigroupArray)([ Color.ribbonClass(Sections.getColor(v.section)) ])(Data_Functor.map(Data_Functor.functorArray)(Halogen_HTML_Core.ClassName)([ "huge", "ribbon" ]))) ])([ Halogen_HTML_Core.text(Data_Maybe.maybe(defaultText)(Control_Category.identity(Control_Category.categoryFn))(v.text)) ]) ]);
+  };
+  var textOptionsWeighted = [ new TextOption(20, defaultText), new TextOption(15, "Always Learning"), new TextOption(15, "User Advocate"), new TextOption(15, "Beginner's Mind"), new TextOption(15, "Product Engineer"), new TextOption(15, "Master of None"), new TextOption(10, "Teacher"), new TextOption(10, "Swiss Army Knife"), new TextOption(10, "Student"), new TextOption(5, "Open-Source Lover"), new TextOption(2, "Glad you're here"), new TextOption(1, "Average Climber"), new TextOption(1, "<buzzwords here>") ];
+  var textOptions = Control_Bind.bind(Control_Bind.bindArray)(textOptionsWeighted)(function (v) {
+      return Data_Array.replicate(Data_Newtype.unwrap(newtypeWeight)(v.value0))(v.value1);
+  });
+  var textOptionsMaxIx = Data_Array.length(textOptions) - 1 | 0;
+  var handleAction = function (dictMonadAff) {
+      var updateSection = function (dictMonadAff1) {
+          return function (section) {
+              return Control_Monad_State_Class.modify_(Halogen_Query_HalogenM.monadStateHalogenM)(function (v) {
+                  var $24 = {};
+                  for (var $25 in v) {
+                      if ({}.hasOwnProperty.call(v, $25)) {
+                          $24[$25] = v[$25];
+                      };
+                  };
+                  $24.section = section;
+                  return $24;
+              });
+          };
+      };
+      var tailOrEmpty = function (arr) {
+          var v = Data_Array.tail(arr);
+          if (v instanceof Data_Maybe.Just) {
+              return v.value0;
+          };
+          if (v instanceof Data_Maybe.Nothing) {
+              return [  ];
+          };
+          throw new Error("Failed pattern match at Subheader (line 90, column 23 - line 92, column 20): " + [ v.constructor.name ]);
+      };
+      var updatePrev = function (newIx) {
+          return function (prev) {
+              if (Data_Array.length(prev) >= 3) {
+                  return Data_Array.snoc(tailOrEmpty(prev))(newIx);
+              };
+              return Data_Array.snoc(prev)(newIx);
+          };
+      };
+      var randomText = function ($copy_prev) {
+          return function __do() {
+              var $tco_var_prev = $copy_prev;
+              var $tco_done = false;
+              var $tco_result;
+              function $tco_loop(prev) {
+                  var ix = Effect_Random.randomInt(0)(textOptionsMaxIx)();
+                  var v = Data_Array.index(textOptions)(ix);
+                  if (v instanceof Data_Maybe.Just && Data_Foldable.elem(Data_Foldable.foldableArray)(Data_Eq.eqString)(v.value0)(prev)) {
+                      $tco_var_prev = prev;
+                      return;
+                  };
+                  if (v instanceof Data_Maybe.Just) {
+                      $tco_done = true;
+                      return v.value0;
+                  };
+                  $tco_done = true;
+                  return oopsText;
+              };
+              while (!$tco_done) {
+                  $tco_result = $tco_loop($tco_var_prev);
+              };
+              return $tco_result;
+          };
+      };
+      var chooseNewAfterDelay = function (dictMonadAff1) {
+          return Halogen_Query_EventSource.affEventSource(dictMonadAff1)(function (emitter) {
+              return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Effect_Aff.delay(5000.0))(function () {
+                  return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Halogen_Query_EventSource.emit(emitter)(ChooseNewText.value))(function () {
+                      return Control_Applicative.pure(Effect_Aff.applicativeAff)(Data_Monoid.mempty(Halogen_Query_EventSource.monoidFinalizer(Effect_Aff.applicativeAff)));
+                  });
+              });
+          });
+      };
+      var go = function (dictMonadAff1) {
+          return function (prev) {
+              return Control_Bind.bind(Halogen_Query_HalogenM.bindHalogenM)(Data_Functor["void"](Halogen_Query_HalogenM.functorHalogenM)(Halogen_Query_HalogenM.subscribe(chooseNewAfterDelay(dictMonadAff1))))(function () {
+                  return Control_Bind.bind(Halogen_Query_HalogenM.bindHalogenM)(Effect_Class.liftEffect(Halogen_Query_HalogenM.monadEffectHalogenM(dictMonadAff1.MonadEffect0()))(randomText(prev)))(function (text) {
+                      return Control_Monad_State_Class.modify_(Halogen_Query_HalogenM.monadStateHalogenM)(function (v) {
+                          var $34 = {};
+                          for (var $35 in v) {
+                              if ({}.hasOwnProperty.call(v, $35)) {
+                                  $34[$35] = v[$35];
+                              };
+                          };
+                          $34.text = Control_Applicative.pure(Data_Maybe.applicativeMaybe)(text);
+                          $34.prev = updatePrev(text)(prev);
+                          return $34;
+                      });
+                  });
+              });
+          };
+      };
+      var init = function (dictMonadAff1) {
+          return Control_Bind.bind(Halogen_Query_HalogenM.bindHalogenM)(Halogen_Query_HalogenM.subscribe(chooseNewAfterDelay(dictMonadAff1)))(function () {
+              return Data_Monoid.mempty(Halogen_Query_HalogenM.monoidHalogenM(Data_Monoid.monoidUnit));
+          });
+      };
+      return function (v) {
+          if (v instanceof ChooseNewText) {
+              return Control_Bind.bind(Halogen_Query_HalogenM.bindHalogenM)(Control_Monad_State_Class.get(Halogen_Query_HalogenM.monadStateHalogenM))(function (v1) {
+                  return go(dictMonadAff)(v1.prev);
+              });
+          };
+          if (v instanceof Initialize) {
+              return init(dictMonadAff);
+          };
+          if (v instanceof Finalize) {
+              return Data_Monoid.mempty(Halogen_Query_HalogenM.monoidHalogenM(Data_Monoid.monoidUnit));
+          };
+          if (v instanceof SectionChanged) {
+              return updateSection(dictMonadAff)(v.value0);
+          };
+          throw new Error("Failed pattern match at Subheader (line 121, column 5 - line 125, column 54): " + [ v.constructor.name ]);
+      };
+  };
+  var subheader = function (dictMonadAff) {
+      var initialState = function (section) {
+          return {
+              text: Data_Maybe.Nothing.value,
+              prev: [ defaultText ],
+              section: section
+          };
+      };
+      return Halogen_Component.mkComponent({
+          initialState: initialState,
+          render: render,
+          "eval": Halogen_Component.mkEval({
+              handleAction: handleAction(dictMonadAff),
+              handleQuery: Halogen_Component.defaultEval.handleQuery,
+              receive: function ($41) {
+                  return Data_Maybe.Just.create(SectionChanged.create($41));
+              },
+              initialize: new Data_Maybe.Just(Initialize.value),
+              finalize: new Data_Maybe.Just(Finalize.value)
+          })
+      });
+  };
+  exports["subheader"] = subheader;
+})(PS);
+(function($PS) {
+  // Generated by purs version 0.13.8
+  "use strict";
+  $PS["Main"] = $PS["Main"] || {};
+  var exports = $PS["Main"];
+  var Card = $PS["Card"];
+  var Color = $PS["Color"];
+  var Control_Bind = $PS["Control.Bind"];
+  var Control_Monad_State_Class = $PS["Control.Monad.State.Class"];
+  var Data_Array = $PS["Data.Array"];
+  var Data_Eq = $PS["Data.Eq"];
+  var Data_Functor = $PS["Data.Functor"];
+  var Data_Maybe = $PS["Data.Maybe"];
+  var Data_Ord = $PS["Data.Ord"];
+  var Data_Ordering = $PS["Data.Ordering"];
+  var Data_Semigroup = $PS["Data.Semigroup"];
+  var Data_Show = $PS["Data.Show"];
+  var Data_Symbol = $PS["Data.Symbol"];
+  var Data_Unit = $PS["Data.Unit"];
+  var Data_Void = $PS["Data.Void"];
+  var Effect_Aff = $PS["Effect.Aff"];
+  var Effect_Aff_Class = $PS["Effect.Aff.Class"];
+  var Halogen_Aff_Util = $PS["Halogen.Aff.Util"];
+  var Halogen_Component = $PS["Halogen.Component"];
+  var Halogen_HTML = $PS["Halogen.HTML"];
+  var Halogen_HTML_Core = $PS["Halogen.HTML.Core"];
+  var Halogen_HTML_Elements = $PS["Halogen.HTML.Elements"];
+  var Halogen_HTML_Events = $PS["Halogen.HTML.Events"];
+  var Halogen_HTML_Properties = $PS["Halogen.HTML.Properties"];
+  var Halogen_Query_HalogenM = $PS["Halogen.Query.HalogenM"];
+  var Halogen_VDom_Driver = $PS["Halogen.VDom.Driver"];
+  var Sections = $PS["Sections"];
+  var Subheader = $PS["Subheader"];
+  var Utils = $PS["Utils"];                
+  var ChooseSection = (function () {
+      function ChooseSection(value0) {
+          this.value0 = value0;
+      };
+      ChooseSection.create = function (value0) {
+          return new ChooseSection(value0);
+      };
+      return ChooseSection;
+  })();
+  var handleAction = function (dictMonadState) {
+      return function (v) {
+          return Control_Monad_State_Class.put(dictMonadState)(v.value0);
+      };
+  };
+  var appNavbar = function (selectedSection) {
+      var title = Halogen_HTML_Elements.h1([ Utils.classes([ "huge" ]) ])([ Halogen_HTML_Core.text("Orion Kindel") ]);
+      var navBtnText = function (section) {
+          return function (selected) {
+              return Halogen_HTML_Core.text((function () {
+                  var v = Data_Ord.compare(Sections.ordSection)(section)(selected);
+                  if (v instanceof Data_Ordering.EQ) {
+                      return Data_Show.show(Sections.showSection)(section);
+                  };
+                  if (v instanceof Data_Ordering.LT) {
+                      return "<- " + Data_Show.show(Sections.showSection)(section);
+                  };
+                  if (v instanceof Data_Ordering.GT) {
+                      return Data_Show.show(Sections.showSection)(section) + " ->";
+                  };
+                  throw new Error("Failed pattern match at Main (line 67, column 45 - line 70, column 34): " + [ v.constructor.name ]);
+              })());
+          };
+      };
+      var renderNavBtn = function (selected) {
+          return function (section) {
+              return Halogen_HTML_Elements.button([ Halogen_HTML_Properties.classes(Data_Array.cons(Color.bgClass(Sections.getColor(section)))(Data_Functor.map(Data_Functor.functorArray)(Halogen_HTML_Core.ClassName)((function () {
+                  var $11 = Data_Eq.eq(Sections.eqSection)(section)(selected);
+                  if ($11) {
+                      return [ "selected" ];
+                  };
+                  return [  ];
+              })()))), Halogen_HTML_Events.onClick(function (v) {
+                  var $12 = Data_Eq.eq(Sections.eqSection)(section)(selected);
+                  if ($12) {
+                      return Data_Maybe.Nothing.value;
+                  };
+                  return new Data_Maybe.Just(new ChooseSection(section));
+              }) ])([ Halogen_HTML_Elements.span([  ])([ navBtnText(section)(selected) ]) ]);
+          };
+      };
+      return Halogen_HTML_Elements.div([ Utils.classes([ "app-navbar", "flex", "center-children-sec-axis", "stretch-children-main-axis" ]) ])(Data_Functor.map(Data_Functor.functorArray)(renderNavBtn(selectedSection))(Sections.allSections));
+  };
+  var appContent = function (selectedSection) {
+      var renderCardItem = function (i) {
+          return Halogen_HTML_Elements.div([ Utils.classes([ "card-item" ]) ])([ Halogen_HTML_Elements.h2_([ Halogen_HTML_Core.text(i.title) ]), i.contents ]);
+      };
+      var classCardSize = function (card) {
+          if (card.size instanceof Card.Large) {
+              return Data_Maybe.Just.create("lg");
+          };
+          return Data_Maybe.Nothing.value;
+      };
+      var renderCard = function (card) {
+          return Halogen_HTML_Elements.div([ Halogen_HTML_Properties.classes(Data_Array.snoc(Utils.snocMaybe(Data_Functor.map(Data_Functor.functorArray)(Halogen_HTML_Core.ClassName)([ "card", "flex", "inline", "vert" ]))(classCardSize(card)))(Color.bgClass(Sections.getColor(selectedSection)))) ])([ Halogen_HTML_Elements.h1_([ Halogen_HTML_Core.text(card.title) ]), Halogen_HTML_Elements.div([ Utils.classes([ "card-content" ]) ])(Data_Functor.map(Data_Functor.functorArray)(renderCardItem)(card.items)) ]);
+      };
+      return Data_Functor.map(Data_Functor.functorArray)(renderCard)(Sections.getCards(selectedSection));
+  };
+  var _subheader = Data_Symbol.SProxy.value;
+  var render = function (dictMonadAff) {
+      return function (section) {
+          return Halogen_HTML_Elements.div([ Utils.classes([ "app-root" ]) ])(Data_Semigroup.append(Data_Semigroup.semigroupArray)(Data_Array.cons(Halogen_HTML.slot()(new Data_Symbol.IsSymbol(function () {
+              return "subheader";
+          }))(Data_Ord.ordInt)(_subheader)(0)(Subheader.subheader(dictMonadAff))(section)(Data_Void.absurd))([ appNavbar(section) ]))(appContent(section)));
+      };
+  };
+  var component = function (dictMonadAff) {
+      var initialState = function (v) {
+          return Sections.Present.value;
+      };
+      return Halogen_Component.mkComponent({
+          initialState: initialState,
+          render: render(dictMonadAff),
+          "eval": Halogen_Component.mkEval({
+              handleAction: handleAction(Halogen_Query_HalogenM.monadStateHalogenM),
+              handleQuery: Halogen_Component.defaultEval.handleQuery,
+              receive: Halogen_Component.defaultEval.receive,
+              initialize: Halogen_Component.defaultEval.initialize,
+              finalize: Halogen_Component.defaultEval.finalize
+          })
+      });
+  };
+  var main = Halogen_Aff_Util.runHalogenAff(Control_Bind.bind(Effect_Aff.bindAff)(Halogen_Aff_Util.awaitBody)(function (body) {
+      return Halogen_VDom_Driver.runUI(component(Effect_Aff_Class.monadAffAff))(Data_Unit.unit)(body);
+  }));
+  exports["main"] = main;
+  exports["ChooseSection"] = ChooseSection;
+  exports["_subheader"] = _subheader;
+  exports["component"] = component;
+  exports["render"] = render;
+  exports["appNavbar"] = appNavbar;
+  exports["appContent"] = appContent;
+  exports["handleAction"] = handleAction;
+})(PS);
+PS["Main"].main();
