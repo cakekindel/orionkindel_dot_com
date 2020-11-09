@@ -1,8 +1,11 @@
 bundleOutput
-*.bs.js
 **/node_modules
 target
-**/pkg
+output
+dist
+.cache
+.spago
+.psc-ide*
 
 *.exe
 *.obj
