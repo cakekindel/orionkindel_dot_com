@@ -19,14 +19,11 @@ jobs:
         restore-keys: ${{runner.os}}-node-
     - run: "npm ci"
     - run: "npm run build-prod"
-    - run: "git fetch --all"
     - run: "git switch hostme"
     - run: |
         git config --global user.email "${{ github.actor }}@users.noreply.github.com"
         git config --global user.name "${{ github.actor }}"
-    - run: "git merge --strategy-option=ours"
-    - run: "git add -A"
     - run: "git add prod"
-    - run: "git commit -m 'ci: publish'"
+    - run: "git commit -m 'publish'"
     # https://stackoverflow.com/questions/36782467/set-subdirectory-as-website-root-on-github-pages
-    - run: "git subtree push --prefix prod origin hostme"
+    - run: "git push hostme `git subtree split --prefix prod main`:main --force"
