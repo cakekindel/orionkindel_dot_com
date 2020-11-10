@@ -16,3 +16,7 @@ maybeArray Nothing  = []
 snocMaybe :: forall a. Array a -> Maybe a -> Array a
 snocMaybe arr (Just a) = snoc arr a
 snocMaybe arr Nothing  = arr
+
+test :: forall a. Boolean -> a -> Maybe a
+test bool a | bool == true = Just a
+            | otherwise    = Nothing

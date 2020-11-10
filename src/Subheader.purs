@@ -30,6 +30,7 @@ data Action = ChooseNewText
 oopsText :: String
 oopsText = "Oops! My code farted."
 
+subheader :: forall q o m. MonadAff m => H.Component HH.HTML q Section o m
 subheader =
   H.mkComponent
     { initialState

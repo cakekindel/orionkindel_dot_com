@@ -2,13 +2,17 @@ module Main where
 
 import Prelude
 import Subheader (subheader)
-import Utils (maybeArray, snocMaybe, classes)
+import Utils (test, maybeArray, snocMaybe, classes)
 import Card (CardSize(..))
 import Color (bgClass)
 import Sections (Section(..), getCards, getColor, allSections)
 import Effect (Effect)
+import Effect.Class (class MonadEffect)
+import Effect.Aff as Aff
+import Effect.Aff.Class (class MonadAff)
+import Effect.Console (error)
 import Data.Symbol (SProxy(..))
-import Data.Maybe (Maybe(..))
+import Data.Maybe (Maybe(..), isJust)
 import Data.Array (snoc, (:))
 import Halogen as H
 import Halogen.HTML as HH
@@ -23,12 +27,27 @@ main = HA.runHalogenAff do
   body <- HA.awaitBody
   runUI component unit body
 
-type State = Section
-type Slots = { button :: forall query. H.Slot query Void Int }
-data Action = ChooseSection Section
+data Fade = Out
+          | In
+          | Settled
+
+fadeClass :: Fade -> Maybe HC.ClassName
+fadeClass Out = Just $ HC.ClassName "fade-out"
+fadeClass In  = Just $ HC.ClassName "fade-in"
+fadeClass _   = Nothing
+
+type State = { selectedSection :: Section
+             , newSection      :: Maybe Section
+             , fade            :: Fade
+             }
+
+type Slots = ( subheader :: forall query. H.Slot query Void Int )
+
+data Action = SectionPicked Section
 
 _subheader = SProxy :: SProxy "subheader"
 
+component :: forall q i o m. MonadAff m => H.Component HH.HTML q i o m
 component =
   H.mkComponent
     { initialState
@@ -36,51 +55,63 @@ component =
     , eval: H.mkEval H.defaultEval { handleAction = handleAction }
     }
   where
-    initialState _ = Present
+    initialState _ = { selectedSection: Present, newSection: Nothing, fade: Settled }
 
-render section =
-  HH.div
-    [ classes [ "app-root" ] ]
-    $ (HH.slot _subheader 0 subheader section absurd)
-        : [ appNavbar section ]
-        <> appContent section
+    render :: State -> H.ComponentHTML Action Slots m
+    render { selectedSection, newSection, fade } =
+      HH.div
+        [ classes [ "app-root" ] ]
+        $ (HH.slot _subheader
+                   0
+                   subheader
+                   selectedSection
+                   absurd
+          )
+            : [ appNavbar case newSection of
+                  Just sec -> sec
+                  Nothing  -> selectedSection
+              ]
+            <> appContent selectedSection fade
 
+appNavbar :: forall w. Section -> HH.HTML w Action
 appNavbar selectedSection =
   HH.div
-    [ classes [ "app-navbar", "flex", "center-children-sec-axis", "stretch-children-main-axis" ] ]
+    [ classes [ "app-navbar"
+              , "flex"
+              , "center-children-sec-axis"
+              , "stretch-children-main-axis"
+              ]
+    ]
     (renderNavBtn selectedSection <$> allSections)
   where
     renderNavBtn selected section =
       HH.button
-        [ HP.classes
-            $ (getColor section # bgClass)
-            : ( HC.ClassName <$> if section == selected
-                                 then ["selected"]
-                                 else []
-              )
-        , HE.onClick \_ -> if section == selected
-                           then Nothing
-                           else Just (ChooseSection section)
+        [ HP.classes [ (getColor section # bgClass)
+                     , navBtnClass selected section
+                     ]
+        , HE.onClick \_ -> test (section /= selected) (SectionPicked section)
         ]
-        [ HH.span [] [ navBtnText section selected ] ]
+        [ HH.span_ [ HH.text $ show section ] ]
 
-    navBtnText section selected = HH.text $ case section `compare` selected of
-      EQ -> show section
-      LT -> "<- " <> show section
-      GT -> show section <> " ->"
+    navBtnClass section selected = HC.ClassName
+      $ case compare selected section of
+        EQ -> "selected"
+        LT -> "before-selected"
+        GT -> "after-selected"
 
     title = HH.h1
       [ classes [ "huge" ] ]
       [ HH.text "Orion Kindel" ]
 
-appContent selectedSection =
-  (renderCard <$> getCards selectedSection)
+appContent :: forall w. Section -> Fade -> Array (HH.HTML w Action)
+appContent selectedSection fade = renderCard <$> getCards selectedSection
   where
     renderCard card =
       HH.div
         [ HP.classes
             $ (HC.ClassName <$> [ "card", "flex", "inline", "vert" ])
             `snocMaybe` classCardSize card
+            `snocMaybe` fadeClass fade
             `snoc` (getColor selectedSection # bgClass)
         ]
         [ HH.h1_ [ HH.text card.title ]
@@ -94,5 +125,21 @@ appContent selectedSection =
       Large -> Just $ HC.ClassName "lg"
       _     -> Nothing
 
+handleAction :: forall o m. MonadEffect m => MonadAff m => Action -> H.HalogenM State Action Slots o m Unit
 handleAction = case _ of
-  ChooseSection s -> H.put s
+  SectionPicked s -> do
+    H.modify_ _ { fade = Out
+                , newSection = Just s
+                }
+    _ <- waitMs 250.0
+    H.modify_ _ { fade = In
+                , selectedSection = s
+                , newSection = Nothing
+                }
+    _ <- waitMs 250.0
+    H.modify_ _ { fade = Settled }
+
+  where
+    waitMs :: forall state action slots output m. MonadAff m => Number -> H.HalogenM state action slots output m Unit
+    waitMs delay =
+      H.liftAff $ Aff.delay $ Aff.Milliseconds delay
