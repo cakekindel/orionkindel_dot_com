@@ -21,6 +21,8 @@
 
 /* Variables */
 :root {
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
   --hue-bg: 60deg;
   --sat-bg: 33%;
   --lum-bg: 90%;
@@ -152,6 +154,24 @@ body {
   background: var( --color-bg );
 }
 
+.fade-out {
+  animation: fadeout 0.25s var( --ease ) forwards;
+}
+
+@keyframes fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fade-in {
+  animation: fadein 0.25s var( --ease ) forwards;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 img.plant {
   width: 100%;
   transform: scaleY( -1 );
@@ -163,7 +183,10 @@ img.plant {
 }
 
 button {
+  --hover-lum-diff: -5%;
+  --active-lum-diff: -10%;
   cursor: pointer;
+  transition: background 0.1s var( --ease );
 }
 
 .bg-green {
@@ -176,11 +199,6 @@ button {
 
 .bg-blue {
   background: var( --color-accent-blue );
-}
-
-button {
-  --hover-lum-diff: -5%;
-  --active-lum-diff: -10%;
 }
 
 button.bg-green:hover {
@@ -260,11 +278,49 @@ button.bg-blue:active {
   border-radius: 100px;
   font-weight: 700;
   font-size: 16pt;
+  transition: background 0.1s var( --ease )
+            , flex-grow  0.5s var( --ease )
+            ;
 }
 
 .app-navbar button.selected {
   /* Selected title item is 3 times width of non-selected */
   flex-grow: 3;
+}
+
+.app-navbar button.after-selected span,
+.app-navbar button.before-selected span {
+  position: relative;
+}
+
+.app-navbar button.after-selected span::before,
+.app-navbar button.before-selected span::before {
+  --width: 32px;
+  width: var( --width );
+  position: absolute;
+  transition: left 0.2s var( --ease )
+            , right 0.2s var( --ease )
+            ;
+}
+
+.app-navbar button.after-selected span::before {
+  content: "-->";
+  right: calc( -1.5 * var( --width ) );
+}
+
+.app-navbar button.after-selected:hover span::before {
+  content: "-->";
+  right: calc( -1.75 * var( --width ) );
+}
+
+.app-navbar button.before-selected span::before {
+  content: "<--";
+  left: calc( -1.5 * var( --width ) );
+}
+
+.app-navbar button.before-selected:hover span::before {
+  content: "<--";
+  left: calc( -1.75 * var( --width ) );
 }
 
 .app-navbar h1 {
@@ -290,6 +346,7 @@ h1, h2, h3, h4, h5, h6, div, span, button {
   left: -5%;
   bottom: 5%;
   z-index: -1;
+  transition: background 0.5s var( --ease );
 }
 
 .ribbon-yellow::before {
