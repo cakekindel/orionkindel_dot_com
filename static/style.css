@@ -174,12 +174,11 @@ body {
 
 img.plant {
   width: 100%;
-  transform: scaleY( -1 );
   opacity: 0.5;
   position: fixed;
   z-index: -1;
   top: -40%;
-  left: 0;
+  bottom: 0;
 }
 
 button {
