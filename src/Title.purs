@@ -1,18 +1,17 @@
-module Subheader where
+module Title where
 
 import Prelude
-import Utils (classes, test, snocMaybe, maybeArray)
+import Utils (classes, snocMaybe, test)
 import Anim (Fade(..), fadeClass)
 import Color (bgClass)
 import Sections (Section, getColor)
 import Effect (Effect)
 import Effect.Aff as Aff
-import Effect.Console (log)
 import Effect.Aff.Class (class MonadAff)
 import Effect.Random (randomInt)
 import Data.Traversable (traverse)
 import Data.Newtype (class Newtype, unwrap)
-import Data.Maybe (maybe, Maybe(..))
+import Data.Maybe (Maybe(..))
 import Data.Array (replicate, snoc, tail, elem, length, (!!))
 import Web.HTML.HTMLElement as El
 import Web.DOM.ParentNode (querySelector, QuerySelector(..))
@@ -20,7 +19,6 @@ import Halogen as H
 import Halogen.HTML as HH
 import Halogen.HTML.Core as HC
 import Halogen.HTML.Properties as HP
-import Halogen.Query.EventSource as HES
 
 newtype PrevText = PrevText (Array String)
 
@@ -58,8 +56,8 @@ oopsText = "Oops! My code farted."
 containerRef :: H.RefLabel
 containerRef = H.RefLabel "container"
 
-subheader :: forall q o m. MonadAff m => H.Component HH.HTML q Section o m
-subheader =
+title :: forall q o m. MonadAff m => H.Component HH.HTML q Section o m
+title =
   H.mkComponent
     { initialState
     , render

@@ -1,7 +1,7 @@
 module Main where
 
 import Prelude
-import Subheader (subheader)
+import Title (title)
 import Anim (Fade(..), fadeClass)
 import Utils (test, maybeArray, snocMaybe, classes)
 import Card (CardSize(..))
@@ -33,11 +33,11 @@ type State = { selectedSection :: Section
              , fade            :: Maybe Fade
              }
 
-type Slots = ( subheader :: forall query. H.Slot query Void Int )
+type Slots = ( title :: forall query. H.Slot query Void Int )
 
 data Action = SectionPicked Section
 
-_subheader = SProxy :: SProxy "subheader"
+_title = SProxy :: SProxy "title"
 
 component :: forall q i o m. MonadAff m => H.Component HH.HTML q i o m
 component =
@@ -53,9 +53,9 @@ component =
     render { selectedSection, newSection, fade } =
       HH.div
         [ classes [ "app-root" ] ]
-        $ (HH.slot _subheader
+        $ (HH.slot _title
                    0
-                   subheader
+                   title
                    selectedSection
                    absurd
           )
