@@ -1,25 +1,50 @@
 module Subheader where
 
 import Prelude
-import Utils (classes)
-import Color (ribbonClass)
+import Utils (classes, test, snocMaybe, maybeArray)
+import Anim (Fade(..), fadeClass)
+import Color (bgClass)
 import Sections (Section, getColor)
 import Effect (Effect)
 import Effect.Aff as Aff
+import Effect.Console (log)
 import Effect.Aff.Class (class MonadAff)
 import Effect.Random (randomInt)
+import Data.Traversable (traverse)
 import Data.Newtype (class Newtype, unwrap)
 import Data.Maybe (maybe, Maybe(..))
 import Data.Array (replicate, snoc, tail, elem, length, (!!))
+import Web.HTML.HTMLElement as El
+import Web.DOM.ParentNode (querySelector, QuerySelector(..))
 import Halogen as H
 import Halogen.HTML as HH
 import Halogen.HTML.Core as HC
 import Halogen.HTML.Properties as HP
 import Halogen.Query.EventSource as HES
 
-type State = { text :: Maybe String -- text to display
-             , prev :: Array String -- Array containing the last 3 randomly chosen text values
-             , section :: Section
+newtype PrevText = PrevText (Array String)
+
+derive instance newtypePrevText :: Newtype PrevText _
+
+updatePrev :: String -> PrevText -> PrevText
+updatePrev new (PrevText prev) | length prev >= 3 = PrevText $ tailOrEmpty prev `snoc` new
+                               | otherwise        = PrevText $ prev `snoc` new
+
+-- | Get the tail of an array, and return empty array
+-- | if input array was empty
+tailOrEmpty :: forall a. Array a -> Array a
+tailOrEmpty arr = case tail arr of
+  Just arrTail -> arrTail
+  Nothing -> []
+
+type State = { text          :: String
+             , nextText      :: Maybe String
+             , nextTextWidth :: Maybe Number
+             , huge          :: Boolean
+             , nextHuge      :: Boolean
+             , prev          :: PrevText
+             , section       :: Section
+             , fade          :: Maybe Fade
              }
 
 data Action = ChooseNewText
@@ -29,6 +54,9 @@ data Action = ChooseNewText
 
 oopsText :: String
 oopsText = "Oops! My code farted."
+
+containerRef :: H.RefLabel
+containerRef = H.RefLabel "container"
 
 subheader :: forall q o m. MonadAff m => H.Component HH.HTML q Section o m
 subheader =
@@ -42,88 +70,129 @@ subheader =
                                      }
     }
   where
-    initialState section = { text: Nothing
-                           , prev: [defaultText]
+    initialState section = { text: defaultText
+                           , prev: PrevText []
                            , section
+                           , nextText: Nothing
+                           , nextTextWidth: Nothing
+                           , fade: Nothing
+                           , huge: true
+                           , nextHuge: true
                            }
 
-render { text, section } = HH.div
-      [ classes [ "app-title"
-                , "flex"
-                , "center-children-sec-axis"
-                , "center-children-main-axis"
-                ]
-      ]
-      [ HH.h1 [ HP.classes $ [ (getColor section # ribbonClass) ]
-                             <> (HC.ClassName <$> [ "huge", "ribbon" ])
-              ]
-              [ HH.text $ maybe defaultText identity text ]
-      ]
+    render :: State -> H.ComponentHTML Action () m
+    render { text, huge, nextHuge, section, nextText, nextTextWidth, fade } = HH.div
+          [ classes [ "app-title"
+                    , "flex"
+                    , "center-children-sec-axis"
+                    , "relative"
+                    ]
+          , HP.ref containerRef
+          ]
+          ([ HH.h1 [ HP.classes $ [HC.ClassName "app-title-text"]
+                                    `snocMaybe` (test huge $ HC.ClassName "huge")
+                                    `snocMaybe` (fade <#> fadeClass)
+                   ]
+                   [ HH.text text ]
+           , HH.div ([ HP.classes $ [ HC.ClassName "ribbon", (getColor >>> bgClass) section ]
+                     ]
+                       `snocMaybe` (((_ + 32.0) >>> width) <$> nextTextWidth)
+                    )
+                    []
+           ]
+           `snocMaybe` (nextText <#> (nextTextH1 nextHuge))
+          )
+
+    width :: forall r i. Number -> HP.IProp r i
+    width w = HP.attr (HC.AttrName "style") ("width: " <> (show w) <> "px;")
+
+    nextTextH1 :: forall w i. Boolean -> String -> HH.HTML w i
+    nextTextH1 huge nextText = HH.h1 [ HP.classes $ (HC.ClassName <$> [ "title-width-hack" ]) `snocMaybe` (test huge $ HC.ClassName "huge") ]
+                                     [ HH.text nextText ]
 
 type EvalM o m = H.HalogenM State Action () o m Unit
 
 handleAction :: forall o m. MonadAff m => Action -> EvalM o m
 handleAction =
   let
-    -- | Implementation of handleAction
-    -- | shared between `Initialize` and `ChooseNewText`
-    go :: forall o m. MonadAff m => Array String -> EvalM o m
-    go prev = do
-      -- i _think_ it's safe to not explicitly
-      -- unsubscribe, since it should end with the
-      -- Aff.delay
-      _ <- void $ H.subscribe $ chooseNewAfterDelay
-      text <- H.liftEffect $ randomText prev
-      H.modify_ _ { text = pure text
-                  , prev = updatePrev text prev
-                  }
-
-    -- | Updates the list of previously chosen indexes
-    -- | If the list is at max length, it removes the head (oldest) and appends the new index.
-    -- | If the list is below max length, it just appends the new index.
-    updatePrev :: String -> Array String -> Array String
-    updatePrev newIx prev | length prev >= 3 = tailOrEmpty prev `snoc` newIx
-    updatePrev newIx prev                    = prev `snoc` newIx
-
-    -- | Get the tail of an array, and return empty array
-    -- | if input array was empty
-    tailOrEmpty :: forall a. Array a -> Array a
-    tailOrEmpty arr = case tail arr of
-      Just arrTail -> arrTail
-      Nothing -> []
-
-    -- | Get random text from `textOptions`
     randomText :: Array String -> Effect String
     randomText prev = do
       ix <- randomInt 0 textOptionsMaxIx
       case textOptions !! ix of
         Just text | elem text prev -> randomText prev
-        Just text                  -> pure text
+                  | otherwise      -> pure text
         otherwise                  -> pure oopsText
 
-    -- | A fixed-delay EventSource that will
-    -- | cause the component to choose a new
-    -- | `text` item from `textOptions`
-    chooseNewAfterDelay :: forall m. MonadAff m => HES.EventSource m Action
-    chooseNewAfterDelay =
-      HES.affEventSource \emitter -> do
-        Aff.delay $ Aff.Milliseconds 5000.0
-        HES.emit emitter ChooseNewText
-        pure mempty
+    waitMs :: forall o m. MonadAff m => Number -> EvalM o m
+    waitMs num = H.liftAff $ Aff.delay $ Aff.Milliseconds num
 
-    updateSection :: forall o m. MonadAff m => Section -> EvalM o m
-    updateSection section = H.modify_ _ { section = section }
+    query :: String -> El.HTMLElement -> Effect (Maybe El.HTMLElement)
+    query selector = El.toParentNode >>> (querySelector (QuerySelector selector)) >>> (map \m -> m >>= El.fromElement)
 
-    init :: forall o m. MonadAff m => EvalM o m
-    init = do
-      _ <- H.subscribe $ chooseNewAfterDelay
-      mempty
+    queryWidth :: String -> El.HTMLElement -> Effect (Maybe Number)
+    queryWidth selector el = do
+      queried <- query selector el
+      traverse El.offsetWidth queried
   in
     case _ of
-      ChooseNewText -> H.get >>= \{prev} -> go prev
-      Initialize    -> init
-      Finalize      -> mempty
-      SectionChanged section -> updateSection section
+      ChooseNewText -> do
+        {prev} <- H.get
+        -- generate next text
+        newText <- H.liftEffect $ randomText $ unwrap prev
+        -- get container ref
+        container <- H.getHTMLElementRef containerRef
+        -- update state with next text
+        H.modify_ _ { nextText = Just newText
+                    , prev = updatePrev newText prev
+                    }
+
+        -- get width of container
+        containerWidth <- H.liftEffect $ traverse El.offsetWidth container
+        -- get next text h1 el
+        textWidth <- H.liftEffect $ case container of
+                                       Just el -> queryWidth "h1.app-title-text" el
+                                       Nothing -> pure Nothing
+
+        H.modify_ _ {nextTextWidth = textWidth}
+        -- get next text h1 el
+        nextTextWidth <- H.liftEffect $ case container of
+                                          Just el -> queryWidth "h1.title-width-hack" el
+                                          Nothing -> pure Nothing
+        -- does it spill out of the container?
+        let huge = case [nextTextWidth, containerWidth] of
+                     [Just nw, Just cw] -> nw <= (cw - 32.0)
+                     otherwise          -> true
+        s <- H.get
+
+        -- if so, make next text smaller
+        case huge == s.nextHuge of
+          false -> H.modify_ _ {nextHuge = huge}
+          otherwise -> mempty
+
+        -- recheck width
+        nextTextWidth2 <- H.liftEffect $ case container of
+                                          Just el -> queryWidth "h1.title-width-hack" el
+                                          Nothing -> pure Nothing
+        _ <- waitMs 5000.0
+
+        -- fade out
+        H.modify_ _ { fade = Just Out
+                    , nextTextWidth = nextTextWidth2
+                    }
+        _ <- waitMs 250.0
+
+        -- fade in
+        H.modify_ _ { fade = Just In, huge = huge, text = newText }
+        _ <- waitMs 250.0
+
+        -- settled
+        H.modify_ _ { fade = Nothing, text = newText }
+
+        -- aw shit, here we go again
+        handleAction ChooseNewText
+      Initialize -> handleAction ChooseNewText
+      Finalize -> mempty
+      SectionChanged section -> H.modify_ _ { section = section }
 
 newtype Weight = Weight Int
 derive instance newtypeWeight :: Newtype Weight _

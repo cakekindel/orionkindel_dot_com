@@ -2,6 +2,7 @@ module Main where
 
 import Prelude
 import Subheader (subheader)
+import Anim (Fade(..), fadeClass)
 import Utils (test, maybeArray, snocMaybe, classes)
 import Card (CardSize(..))
 import Color (bgClass)
@@ -27,18 +28,9 @@ main = HA.runHalogenAff do
   body <- HA.awaitBody
   runUI component unit body
 
-data Fade = Out
-          | In
-          | Settled
-
-fadeClass :: Fade -> Maybe HC.ClassName
-fadeClass Out = Just $ HC.ClassName "fade-out"
-fadeClass In  = Just $ HC.ClassName "fade-in"
-fadeClass _   = Nothing
-
 type State = { selectedSection :: Section
              , newSection      :: Maybe Section
-             , fade            :: Fade
+             , fade            :: Maybe Fade
              }
 
 type Slots = ( subheader :: forall query. H.Slot query Void Int )
@@ -55,7 +47,7 @@ component =
     , eval: H.mkEval H.defaultEval { handleAction = handleAction }
     }
   where
-    initialState _ = { selectedSection: Present, newSection: Nothing, fade: Settled }
+    initialState _ = { selectedSection: Present, newSection: Nothing, fade: Nothing }
 
     render :: State -> H.ComponentHTML Action Slots m
     render { selectedSection, newSection, fade } =
@@ -103,7 +95,7 @@ appNavbar selectedSection =
       [ classes [ "huge" ] ]
       [ HH.text "Orion Kindel" ]
 
-appContent :: forall w. Section -> Fade -> Array (HH.HTML w Action)
+appContent :: forall w. Section -> Maybe Fade -> Array (HH.HTML w Action)
 appContent selectedSection fade = renderCard <$> getCards selectedSection
   where
     renderCard card =
@@ -111,8 +103,8 @@ appContent selectedSection fade = renderCard <$> getCards selectedSection
         [ HP.classes
             $ (HC.ClassName <$> [ "card", "flex", "inline", "vert" ])
             `snocMaybe` classCardSize card
-            `snocMaybe` fadeClass fade
-            `snoc` (getColor selectedSection # bgClass)
+            `snocMaybe` (fadeClass <$> fade)
+            `snoc`      (getColor selectedSection # bgClass)
         ]
         [ HH.h1_ [ HH.text card.title ]
         , HH.div [ classes [ "card-content" ] ] (renderCardItem <$> card.items)
@@ -128,16 +120,16 @@ appContent selectedSection fade = renderCard <$> getCards selectedSection
 handleAction :: forall o m. MonadEffect m => MonadAff m => Action -> H.HalogenM State Action Slots o m Unit
 handleAction = case _ of
   SectionPicked s -> do
-    H.modify_ _ { fade = Out
+    H.modify_ _ { fade = Just Out
                 , newSection = Just s
                 }
     _ <- waitMs 250.0
-    H.modify_ _ { fade = In
+    H.modify_ _ { fade = Just In
                 , selectedSection = s
                 , newSection = Nothing
                 }
     _ <- waitMs 250.0
-    H.modify_ _ { fade = Settled }
+    H.modify_ _ { fade = Nothing }
 
   where
     waitMs :: forall state action slots output m. MonadAff m => Number -> H.HalogenM state action slots output m Unit

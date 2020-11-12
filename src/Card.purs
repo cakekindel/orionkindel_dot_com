@@ -34,7 +34,7 @@ qualities =
              , contents: HH.div [ classes [ "flex", "vert", "mt-0" ] ]
                                 $ [ p "My thirst for knowledge drives me to learn as much as I can, about as much as I can."
                                   , p "This includes technical skills, tooling, and areas in my career that I have yet to explore."
-                                  , p "I'm passionate about functional programming, but the values that FP fully embraces can be found within idiomatic Java, C#, or Javascript."
+                                  , p "I'm passionate about functional programming, but those values can be found & explored within idiomatic Java, C#, or Javascript."
                                   , HH.h3_ [ HH.text "I care much less about How, than What and Why." ]
                                   ]
              }
