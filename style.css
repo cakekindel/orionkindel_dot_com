@@ -107,9 +107,9 @@ h1, h2, h3, h4, h5, p, body {
 
 .app-root {
   display: grid;
-  grid: " title navbar navbar   " auto
-        " lg-1  lg-1   .     " auto
-        " lg-1  lg-1   .     " auto
+  grid: " title navbar navbar " 64px
+        " lg-1  lg-1   .      " auto
+        " lg-1  lg-1   .      " auto
       /   1fr   1fr    1fr
     ;
 
@@ -152,6 +152,12 @@ h1, h2, h3, h4, h5, p, body {
 /* Appearance */
 body {
   background: var( --color-bg );
+}
+
+.title-width-hack {
+  position: fixed;
+  top: -50%;
+  left: 0;
 }
 
 .fade-out {
@@ -251,9 +257,14 @@ button.bg-blue:active {
 }
 
 .app-title {
-  margin-left: 16px;
+  width: 100%; /* fill grid cell */
+  white-space: nowrap;
   grid-area: title;
   justify-self: start;
+}
+
+.app-title h1 {
+  margin-left: 16px;
 }
 
 .app-navbar {
@@ -330,33 +341,20 @@ h1, h2, h3, h4, h5, h6, div, span, button {
   color: var( --color-fg );
 }
 
-.ribbon {
-  isolation: isolate;
+.relative {
   position: relative;
 }
 
-.ribbon::before {
-  content: '';
+.ribbon {
+  z-index: -1;
   position: absolute;
   border-radius: 1000px;
-  height: 50%;
-  width: 115%;
-  left: -5%;
-  bottom: 5%;
-  z-index: -1;
-  transition: background 0.5s var( --ease );
-}
-
-.ribbon-yellow::before {
-  background: var( --color-accent-yellow );
-}
-
-.ribbon-blue::before {
-  background: var( --color-accent-blue );
-}
-
-.ribbon-green::before {
-  background: var( --color-accent-green );
+  height: 35%;
+  left: 8px;
+  bottom: 4px;
+  transition: background 0.5s  var( --ease )
+            , width      0.25s var( --ease )
+            ;
 }
 
 .card.lg {
