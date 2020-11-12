@@ -9543,7 +9543,7 @@ var PS = {};
                                               var huge = (function () {
                                                   var $47 = [ nextTextWidth, containerWidth ];
                                                   if ($47.length === 2 && ($47[0] instanceof Data_Maybe.Just && $47[1] instanceof Data_Maybe.Just)) {
-                                                      return $47[0].value0 <= $47[1].value0 - 32.0;
+                                                      return $47[0].value0 <= $47[1].value0 - 64.0;
                                                   };
                                                   return true;
                                               })();
