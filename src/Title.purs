@@ -158,7 +158,7 @@ handleAction =
                                           Nothing -> pure Nothing
         -- does it spill out of the container?
         let huge = case [nextTextWidth, containerWidth] of
-                     [Just nw, Just cw] -> nw <= (cw - 32.0)
+                     [Just nw, Just cw] -> nw <= (cw - 64.0)
                      otherwise          -> true
         s <- H.get
 

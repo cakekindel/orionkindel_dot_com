@@ -75,15 +75,40 @@
                             );
 }
 
+@media only screen and (min-width: 1200px) {
+  .app-root {
+    --font-basis: 8pt;
+    --sizing-basis: 24px;
+    grid: " title navbar navbar " 64px
+          " lg-1  lg-1   .      " auto
+          " lg-1  lg-1   .      " auto
+          / 1fr   1fr    1fr
+          ;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .app-root {
+    --font-basis: 6pt;
+    --sizing-basis: 16px;
+    grid: " title  " 48px
+          " navbar " 48px
+          " lg-1   " auto
+          " lg-1   " auto
+          / 1fr
+          ;
+  }
+}
+
 /* Type */
 h1 {
   font-family: 'GlamourExtended';
-  font-size: 40pt;
+  font-size: calc( var( --font-basis ) * 5 );
   font-variant-ligatures: discretionary-ligatures;
 }
 
 h1.huge {
-  font-size: 48pt;
+  font-size: calc( var( --font-basis ) * 6 );
 }
 
 h2, h3, h4, h5, p, span, body, button {
@@ -107,14 +132,8 @@ h1, h2, h3, h4, h5, p, body {
 
 .app-root {
   display: grid;
-  grid: " title navbar navbar " 64px
-        " lg-1  lg-1   .      " auto
-        " lg-1  lg-1   .      " auto
-      /   1fr   1fr    1fr
-    ;
 
-  grid-gap: 32px;
-  grid-auto-rows: 256px;
+  grid-gap: calc( var( --sizing-basis ) * 1.5 );
 }
 
 .grid-name {
@@ -249,7 +268,7 @@ button.bg-blue:active {
 
 /* App Elements */
 .app-root {
-  padding: 32px;
+  padding: calc( var( --sizing-basis ) * 1.5 );
 }
 
 .app-root * {
@@ -264,7 +283,7 @@ button.bg-blue:active {
 }
 
 .app-title h1 {
-  margin-left: 16px;
+  margin-left: calc( var( --sizing-basis ) * 0.75 );
 }
 
 .app-navbar {
@@ -272,7 +291,7 @@ button.bg-blue:active {
 }
 
 .app-navbar > * {
-  margin-left: 32px;
+  margin-left: calc( var( --sizing-basis ) * 1.5 );
 }
 
 .app-navbar :first-child {
@@ -281,12 +300,12 @@ button.bg-blue:active {
 
 .app-navbar button {
   display: inline-block;
-  padding: 12px;
+  padding: calc( var( --sizing-basis ) * 0.5 );
   flex-grow: 1;
   border: none;
   border-radius: 100px;
   font-weight: 700;
-  font-size: 16pt;
+  font-size: calc( var( --font-basis ) * 2 );
   transition: background 0.1s var( --ease )
             , flex-grow  0.5s var( --ease )
             ;
@@ -297,39 +316,41 @@ button.bg-blue:active {
   flex-grow: 3;
 }
 
-.app-navbar button.after-selected span,
-.app-navbar button.before-selected span {
-  position: relative;
-}
+@media only screen and (min-width: 1200px) {
+  .app-navbar button.after-selected span,
+  .app-navbar button.before-selected span {
+    position: relative;
+  }
 
-.app-navbar button.after-selected span::before,
-.app-navbar button.before-selected span::before {
-  --width: 32px;
-  width: var( --width );
-  position: absolute;
-  transition: left 0.2s var( --ease )
-            , right 0.2s var( --ease )
-            ;
-}
+  .app-navbar button.after-selected span::before,
+  .app-navbar button.before-selected span::before {
+    --width: calc( var( --sizing-basis ) * 1.5 );
+    width: var( --width );
+    position: absolute;
+    transition: left 0.2s var( --ease )
+              , right 0.2s var( --ease )
+              ;
+  }
 
-.app-navbar button.after-selected span::before {
-  content: "-->";
-  right: calc( -1.5 * var( --width ) );
-}
+  .app-navbar button.after-selected span::before {
+    content: "-->";
+    right: calc( -1.5 * var( --width ) );
+  }
 
-.app-navbar button.after-selected:hover span::before {
-  content: "-->";
-  right: calc( -1.75 * var( --width ) );
-}
+  .app-navbar button.after-selected:hover span::before {
+    content: "-->";
+    right: calc( -1.75 * var( --width ) );
+  }
 
-.app-navbar button.before-selected span::before {
-  content: "<--";
-  left: calc( -1.5 * var( --width ) );
-}
+  .app-navbar button.before-selected span::before {
+    content: "<--";
+    left: calc( -1.5 * var( --width ) );
+  }
 
-.app-navbar button.before-selected:hover span::before {
-  content: "<--";
-  left: calc( -1.75 * var( --width ) );
+  .app-navbar button.before-selected:hover span::before {
+    content: "<--";
+    left: calc( -1.75 * var( --width ) );
+  }
 }
 
 .app-navbar h1 {
@@ -349,26 +370,26 @@ h1, h2, h3, h4, h5, h6, div, span, button {
   z-index: -1;
   position: absolute;
   border-radius: 1000px;
-  height: 35%;
-  left: 8px;
-  bottom: 4px;
+  height: 40%;
+  left: calc( var( --sizing-basis ) * 0.2 );
+  bottom: calc( var( --sizing-basis ) * 0.2 );
   transition: background 0.5s  var( --ease )
             , width      0.25s var( --ease )
             ;
 }
 
 .card.lg {
-  --card-basis: 32px;
+  --card-basis: calc( var( --sizing-basis ) * 1.5 );
 }
 
 .card:not( .lg ) {
-  --card-basis: 24px;
+  --card-basis: var( --sizing-basis );
 }
 
 .card {
   padding: var( --card-basis );
   align-self: start;
-  border-radius: 24px;
+  border-radius: var( --sizing-basis );
 }
 
 .card.yellow:not( .lg ) {
@@ -388,25 +409,20 @@ h1, h2, h3, h4, h5, h6, div, span, button {
 }
 
 .card code {
-  font-size: 14pt;
-}
-
-.card h1.ribbon::before {
-  height: 40%;
-  width: 125%;
+  font-size: calc( var( --font-basis ) * 2 );
 }
 
 .card.lg h1 {
-  font-size: 56pt;
-  margin: 16px;
+  font-size: calc( var( --font-basis ) * 6 );
+  margin: calc( var( --sizing-basis ) * 0.6 );
 }
 
 .card.lg h2 {
-  font-size: 24pt;
+  font-size: calc( var( --font-basis ) * 3 );
 }
 
 .card.lg p {
-  font-size: 14pt;
+  font-size: calc( var( --font-basis ) * 2 );
 }
 
 .card .card-content {
